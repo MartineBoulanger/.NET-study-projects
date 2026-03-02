@@ -1,0 +1,15 @@
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/bin/Debug/net10.0/CLIHallo
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/bin/Debug/net10.0/CLIHallo.deps.json
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/bin/Debug/net10.0/CLIHallo.runtimeconfig.json
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/bin/Debug/net10.0/CLIHallo.dll
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/bin/Debug/net10.0/CLIHallo.pdb
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.AssemblyInfoInputs.cache
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.AssemblyInfo.cs
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.csproj.CoreCompileInputs.cache
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.sourcelink.json
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.dll
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/refint/CLIHallo.dll
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.pdb
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/CLIHallo.genruntimeconfig.cache
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/CLIHallo/obj/Debug/net10.0/ref/CLIHallo.dll

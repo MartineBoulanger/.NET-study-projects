@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="CSharpPFCursus/CSharpPFCursus.csproj" />
+  <Project Path="HalloWereld/HalloWereld.csproj" />
+  <Project Path="CLIHallo/CLIHallo.csproj" />
 </Solution>

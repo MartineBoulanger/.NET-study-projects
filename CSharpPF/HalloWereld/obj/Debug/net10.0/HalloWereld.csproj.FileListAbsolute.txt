@@ -1,0 +1,15 @@
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/bin/Debug/net10.0/HalloWereld
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/bin/Debug/net10.0/HalloWereld.deps.json
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/bin/Debug/net10.0/HalloWereld.runtimeconfig.json
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/bin/Debug/net10.0/HalloWereld.dll
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/bin/Debug/net10.0/HalloWereld.pdb
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.AssemblyInfoInputs.cache
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.AssemblyInfo.cs
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.csproj.CoreCompileInputs.cache
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.sourcelink.json
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.dll
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/refint/HalloWereld.dll
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.pdb
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/HalloWereld.genruntimeconfig.cache
+/Users/fwen/Developing/DOTNET/DOTNET/CSharpPF/HalloWereld/obj/Debug/net10.0/ref/HalloWereld.dll
