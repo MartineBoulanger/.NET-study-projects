@@ -35,7 +35,7 @@
 // Console.WriteLine(kinderen);
 
 // const float CmInch = 2.54f;
-// Console .Write("Geef een lengte in cm: ");
+// Console.Write("Geef een lengte in cm: ");
 // float lengteInCm = float.Parse(Console.ReadLine()); 
 // Console.WriteLine("lengte in inch: " + lengteInCm / CmInch);
 
