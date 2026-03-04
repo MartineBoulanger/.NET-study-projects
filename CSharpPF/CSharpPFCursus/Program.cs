@@ -164,6 +164,94 @@
 // Console.WriteLine(datumVandaag);
 // Console.WriteLine(nu);
 // Parse()
-Console.Write("Begintijd? ");
-TimeOnly begintijd = TimeOnly.Parse(Console.ReadLine());
-Console.WriteLine(begintijd);
+// Console.Write("Begintijd? ");
+// TimeOnly begintijd = TimeOnly.Parse(Console.ReadLine());
+// Console.WriteLine(begintijd);
+
+/* Selecties */
+// if structuur
+// Console.Write("Geef je leeftijd: ");
+// int leeftijd = int.Parse(Console.ReadLine());
+// Console.Write("Je bent");
+// met 1 opdracht
+// if (leeftijd < 18) Console.Write(" niet");
+// met meerdere opdrachten
+// if (leeftijd < 18)
+// {
+//   Console.WriteLine("Je bent niet toegelaten.");
+//   Console.WriteLine("Kom later terug.");
+// }
+// Console.WriteLine(" toegelaten.");
+// Console.WriteLine("Dag");
+// if ... else ... structuur
+// if (leeftijd < 18)
+// {
+//   Console.WriteLine("Niet toegelaten.");
+//   Console.WriteLine("Kom later terug.");
+// }
+// else
+// {
+//   Console.WriteLine("Kom binnen.");
+//   Console.WriteLine("Geniet van de voorstelling!");
+// }
+// if ... else if ... structuur
+// Console.Write("Geef een teken in: ");
+// char c = (char)Console.Read();
+// if (Char.IsUpper(c))
+// {
+//   Console.WriteLine("Het teken is een hoofdletter.");
+// }
+// else if (Char.IsLower(c))
+// {
+//   Console.WriteLine("Het teken is een kleine letter.");
+// }
+// else if (Char.IsDigit(c))
+// {
+//   Console.WriteLine("Het teken is een cijfer.");
+// }
+// else
+// {
+//   Console.WriteLine("Het teken is geen letter of cijfer.");
+// }
+// de ? operator -> verkorte if structuur
+// Console.Write("Geef je leeftijd: ");
+// byte leeftijd = byte.Parse(Console.ReadLine());
+// Console.WriteLine(leeftijd < 18 ? "Niet toegelaten" : "Kom maar binnen");
+// Switch
+// Console.Write("Typ eerste getal: ");
+// decimal getal1 = decimal.Parse(Console.ReadLine());
+// Console.Write("Typ tweede getal: ");
+// decimal getal2 = decimal.Parse(Console.ReadLine());
+// Console.Write("Typ bewerking (+, - ,/,: of *): ");
+// char bewerking = char.Parse(Console.ReadLine());
+// switch (bewerking)
+// {
+// case '+':
+//   Console.WriteLine(getal1 + getal2);
+//   break;
+// case '-':
+//   Console.WriteLine(getal1 - getal2);
+//   break;
+// case '*':
+//   Console.WriteLine(getal1 * getal2);
+//   break;
+// case '/' or ':':
+//   if (getal2 == 0m) Console.WriteLine("Delen door nul is niet mogelijk.");
+//   else Console.WriteLine(getal1 / getal2);
+//   break;
+// default:
+//   Console.WriteLine("Verkeerde bewerking ingetypt.");
+//   break;
+// }
+// switch expression
+Console.Write("Getal tussen 10 en 100? ");
+int getal = int.Parse(Console.ReadLine());
+string bericht = getal switch
+{
+  < 0 => "negatief",
+  0 => "nul",
+  < 10 or > 100 => "een foutief getal",
+  >= 10 and <= 50 => "een getal tussen 10 en 50",
+  > 50 and <= 100 => "een getal tussen 50 en 100"
+};
+Console.WriteLine($"Het getal is {bericht}.");
