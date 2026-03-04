@@ -29,6 +29,7 @@
 // Console.WriteLine(4.2 != 4);
 // Console.WriteLine('A' < 'E');
 
+/* Strings gebruiken */
 // using System;
 // string kinderenWoord = "7";
 // Byte kinderen = Convert.ToByte(kinderenWoord);
@@ -88,3 +89,81 @@
 // }
 // """ ;
 // Console .WriteLine(json);
+
+/* DateTime gebruiken */
+// DateTime beginTijdRekening = new DateTime();
+// DateTime beginEuro = new DateTime(2000, 1, 1);
+// DateTime mijnGeboorteDatum = new DateTime(1982, 12, 8, 21, 0, 0);
+// Console.WriteLine(beginTijdRekening);
+// Console.WriteLine(beginEuro);
+// Console.WriteLine(mijnGeboorteDatum);
+// Verschillende manieren van datum en tijd afbeelden
+// DateTime eenDatumTijd = new DateTime (2026, 7, 1, 9, 30, 0); //Belgische landinstellingen
+// Console.WriteLine(eenDatumTijd.ToString());
+// Console.WriteLine(eenDatumTijd.ToShortDateString());
+// Console.WriteLine(eenDatumTijd.ToLongDateString());
+// Console.WriteLine(eenDatumTijd.ToShortTimeString());
+// Console.WriteLine(eenDatumTijd.ToLongTimeString());
+// Console.WriteLine(eenDatumTijd.ToString("yyyy-MM-dd"));
+// Console.WriteLine("De datum is {0:dddd d MMMM yyyy}.",eenDatumTijd);
+// Console.WriteLine($"De datum is {eenDatumTijd: dd-MM-yyyy}.");
+// Datums vergelijken
+// DateTime datum1 = new DateTime (2026 , 1, 1);
+// DateTime datum2 = new DateTime (2026 , 1, 1);
+// DateTime datum3 = new DateTime (2026 , 1, 2);
+// Console.WriteLine(datum1 == datum2);
+// Console.WriteLine(datum3 > datum2);
+// Methods en properties
+// DateTime factuurDatum = new DateTime(2026, 2, 1);
+// Console.WriteLine(factuurDatum.AddDays(40));
+// Console.WriteLine(factuurDatum.DayOfYear);
+// DateTime vandaag = DateTime.Today;
+// Console.WriteLine(vandaag.DayOfWeek);
+// Console.WriteLine(vandaag.DayOfYear);
+// Console.WriteLine(vandaag.AddDays(1));
+// TimeSpan
+// DateTime beginDatum = new DateTime(2026, 1, 1, 8, 0, 0);
+// DateTime eindDatum = new DateTime(2026, 2, 1, 12, 30, 50);
+// Console.WriteLine(beginDatum);
+// Console.WriteLine(eindDatum);
+// Console.WriteLine();
+// TimeSpan interval = eindDatum - beginDatum;
+// Console.WriteLine(interval.ToString());
+// DateOnly en TimeOnly
+// DateOnly beginZomer = new DateOnly(2026, 6, 21);
+// Console.WriteLine(beginZomer);
+// Console.WriteLine(beginZomer.ToLongDateString());
+// Console.WriteLine(beginZomer.ToShortDateString());
+// Console.WriteLine(beginZomer.ToString("dd-MM-yyyy"));
+// Console.WriteLine(beginZomer.ToString("dd MM yyyy"));
+// TimeOnly sluitingsuur = new TimeOnly(16, 0);
+// Console.WriteLine(sluitingsuur);
+// Console.WriteLine(sluitingsuur.ToLongTimeString());
+// Console.WriteLine(sluitingsuur.ToShortTimeString());
+// DateOnly factuurDatum = new DateOnly(2026, 2, 1);
+// DateOnly betaalDatum = factuurDatum.AddDays(60);
+// Console.WriteLine($"factuurDatum: {factuurDatum.ToShortDateString()}");
+// Console.WriteLine($"betaalDatum: {betaalDatum.ToShortDateString()}");
+// TimeOnly beginTijd = new TimeOnly (18,0,0);
+// TimeOnly eindTijd = new TimeOnly (23,59,59);
+// Console.WriteLine($"begin tijd: {beginTijd}");
+// Console.WriteLine($"eind tijd: {beginTijd.AddHours(7.5).ToLongTimeString()}");
+// // TimeOnly eindTijd = beginTijd.Add(new TimeSpan(7, 50, 0));
+// Console.WriteLine($"eind tijd: {eindTijd.ToLongTimeString()}");
+// TimeSpan duurtijd = eindTijd - beginTijd;
+// Console.WriteLine($"duurtijd: {duurtijd.Hours} uur en {duurtijd.Minutes} minuten");
+// TimeOnly nu = new TimeOnly(19, 30, 0);
+// Console.WriteLine(nu.IsBetween(beginTijd, eindTijd));
+// nu = new TimeOnly(17, 30, 0);
+// Console.WriteLine(nu.IsBetween(beginTijd, eindTijd));
+// FromDateTime()
+// DateTime vandaag = DateTime.Now;
+// DateOnly datumVandaag = DateOnly.FromDateTime(vandaag);
+// TimeOnly nu = TimeOnly.FromDateTime(vandaag);
+// Console.WriteLine(vandaag);
+// Console.WriteLine(datumVandaag);
+// Console.WriteLine(nu);
+// Parse()
+Console.Write("Begintijd? ");
+TimeOnly begintijd = TimeOnly.Parse(Console.ReadLine());
+Console.WriteLine(begintijd);
