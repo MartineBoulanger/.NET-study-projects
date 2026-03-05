@@ -103,26 +103,137 @@
 // Console.WriteLine($"Het jaar {jaar} is {schrikjaar} schrikkeljaar");
 // Console.WriteLine("------------------------------------------------------------------");
 // 3.3 Lichtkrant
+//using System.Text;
+//Console.WriteLine("------------------------------------------------------------------");
+//Console.Write("Wat is de datum? ");
+//DateOnly vandaag = DateOnly.Parse(Console.ReadLine() ?? "");
+//StringBuilder boodschap = new StringBuilder("Openingsuren: ");
+//switch (vandaag.DayOfWeek)
+//{
+//  case DayOfWeek.Monday or DayOfWeek.Tuesday or DayOfWeek.Wednesday or DayOfWeek.Thursday or DayOfWeek.Friday:
+//    boodschap.AppendLine("9u00-12u00 en 13u00-18u00");
+//    boodschap.Append("We wensen u een prettige werkdag!");
+//    break;
+//  case DayOfWeek.Saturday:
+//    boodschap.AppendLine("10u00-12u00");
+//    boodschap.Append("We wensen u een fijn weekend!");
+//    break;
+//  case DayOfWeek.Sunday:
+//    boodschap.Append("We zijn gesloten! Fijne Zondag gewenst!");
+//    break;
+//  default:
+//    break;
+//}
+//Console.WriteLine(boodschap.ToString());
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 4. Iteraties
+// 4.1 kleinste, grootste en gemiddelde
+//Console.WriteLine("------------------------------------------------------------------");
+//int getal;
+//do
+//{
+//    Console.Write("Voer een positief geheel getal in of -1 (stoppen): ");
+//    getal = int.Parse(Console.ReadLine() ?? "");
+//}
+//while (getal < 0 && getal != -1);
+//int kleinste = getal, grootste = getal, totaal = 0, aantal = 0;
+//while (getal != -1)
+//{
+//    if (getal < kleinste) kleinste = getal;
+//    else if (getal > grootste) grootste = getal;
+//    totaal += getal;
+//    aantal++;
+//    do
+//    {
+//       Console.Write("Voer een positief geheel getal in of -1 (stoppen): ");
+//        getal = int.Parse(Console.ReadLine() ?? "");
+//    }
+//    while (getal < 0 && getal != -1);
+//};
+//if (aantal > 0)
+//{
+//    Console.WriteLine("Kleinste getal is: {0}", kleinste);
+//    Console.WriteLine("Grootste getal is: {0}", grootste);
+//    Console.WriteLine("Gemiddelde is: {0}", (double)totaal / aantal);
+//}
+//else
+//{
+//    Console.WriteLine("Er werden geen getallen ingevoerd");
+//};
+//Console.WriteLine("------------------------------------------------------------------");
+// 4.2 Priemgetal
+//Console.WriteLine("------------------------------------------------------------------");
+//int delers = 1;
+//Console.Write("Voer een positief getal in dat is groter dan 1: ");
+//int getal = int.Parse(Console.ReadLine() ?? "");
+//if (getal > 1)
+//{
+//    for (int teller = 2; teller <= getal / 2; teller++)
+//    {
+//        if (getal % teller == 0)
+//        {
+//            Console.WriteLine($"{getal} is deelbaar door {teller}");
+//            delers++;
+//        }
+//    }
+//    if (delers > 1) Console.WriteLine("Het getal is geen priemgetal");
+//    else Console.WriteLine("Het getal is een priemgetal");
+//}
+//else Console.WriteLine("Verkeerde invoer, probeer opnieuw.");
+//Console.WriteLine("------------------------------------------------------------------");
+// 4.3 IBAN rekeningnummer generator
+//using System.Text;
+//Console.WriteLine("------------------------------------------------------------------");
+//const string ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//string beRekeningNr, ibanRekeningNr, ibanControle, controleGetal;
+//ulong rest97;
+//Console.Write("Typ het Belgisch rekening nummer in: ");
+//beRekeningNr = Console.ReadLine() ?? "";
+//ibanControle = beRekeningNr.Replace("-", "") + "BE00";
+//StringBuilder nr = new StringBuilder();
+//char teken;
+//for (int teller = 0; teller < ibanControle.Length; teller++)
+//{
+//    teken = ibanControle[teller];
+//    if (char.IsLetter(teken)) nr.Append(ALFABET.IndexOf(teken) + 10);
+//    else nr.Append(teken);
+//}
+//rest97 = ulong.Parse(nr.ToString()) % 97ul;
+//controleGetal = (98 - rest97).ToString();
+//ibanRekeningNr = "BE" + (controleGetal.Length == 2 ? controleGetal : "0" + controleGetal) + ibanControle.Substring(0, ibanControle.Length - 4);
+//ibanRekeningNr = ibanRekeningNr.Insert(12, " ");
+//ibanRekeningNr = ibanRekeningNr.Insert(8, " ");
+//ibanRekeningNr = ibanRekeningNr.Insert(4, " ");
+//Console.WriteLine($"Het BE rekening nummer: {beRekeningNr} is het volgende IBAN nummer: {ibanRekeningNr}");
+//Console.WriteLine("------------------------------------------------------------------");
+// 4.4 Controle IBAN nummers
 using System.Text;
 Console.WriteLine("------------------------------------------------------------------");
-Console.Write("Wat is de datum? ");
-DateOnly vandaag = DateOnly.Parse(Console.ReadLine() ?? "");
-StringBuilder boodschap = new StringBuilder("Openingsuren: ");
-switch (vandaag.DayOfWeek)
-{
-  case DayOfWeek.Monday or DayOfWeek.Tuesday or DayOfWeek.Wednesday or DayOfWeek.Thursday or DayOfWeek.Friday:
-    boodschap.AppendLine("9u00-12u00 en 13u00-18u00");
-    boodschap.Append("We wensen u een prettige werkdag!");
-    break;
-  case DayOfWeek.Saturday:
-    boodschap.AppendLine("10u00-12u00");
-    boodschap.Append("We wensen u een fijn weekend!");
-    break;
-  case DayOfWeek.Sunday:
-    boodschap.Append("We zijn gesloten! Fijne Zondag gewenst!");
-    break;
-  default:
-    break;
+const string ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+string ibanNr, controleNr;
+ulong rest97;
+Console.Write("Geef het IBAN nummer in om te controle of het geldig is: ");
+ibanNr = Console.ReadLine() ?? "";
+controleNr = ibanNr.Trim().Replace(" ", "");
+controleNr = controleNr.Substring(4) + controleNr.Substring(0, 4);
+if (controleNr.Length == 16)
+{    
+    StringBuilder nr = new StringBuilder();
+    char teken;
+    for (int teller = 0; teller < controleNr.Length; teller++)
+    {
+        teken = controleNr[teller];
+        if (char.IsLetter(teken)) nr.Append(ALFABET.IndexOf(teken) + 10);
+        else nr.Append(teken);
+    }
+    rest97 = ulong.Parse(nr.ToString()) % 97ul;
+    if (rest97 == 1) Console.WriteLine("Dit is een geldig IBAN nummer");
+    else Console.WriteLine("Dit is geen geldig IBAN nummer");
 }
-Console.WriteLine(boodschap.ToString());
+else
+{
+    Console.WriteLine($"{ibanNr} is geen rekening nummer.");
+};
 Console.WriteLine("------------------------------------------------------------------");
+
