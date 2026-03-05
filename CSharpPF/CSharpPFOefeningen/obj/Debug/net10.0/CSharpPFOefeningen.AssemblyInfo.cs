@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSharpPFOefeningen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+469c0e4fdd6005d8e1dac0c7a847aba226d1f122")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a52ea7bc3461f03784fe204507cb6e4ad3a4ba5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpPFOefeningen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpPFOefeningen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
