@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HalloWereld")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+886036c098bc8cc7143a396689cb24527f95747b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+469c0e4fdd6005d8e1dac0c7a847aba226d1f122")]
 [assembly: System.Reflection.AssemblyProductAttribute("HalloWereld")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HalloWereld")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
