@@ -272,16 +272,133 @@
 //    totaal += decimal.Parse(Console.ReadLine());
 //}
 //Console.WriteLine($"Totaal: {totaal}");
-Console.Write("Type een woord: ");
-string woord = Console.ReadLine() ?? "";
+//Console.Write("Type een woord: ");
+//string woord = Console.ReadLine() ?? "";
 //bool palindroom = true;
-int vanafBegin, vanafEinde;
+//int vanafBegin, vanafEinde;
 //for (int vanafBegin = 0, vanafEinde = woord.Length - 1; vanafBegin < vanafEinde; vanafBegin++, vanafEinde--)
 //    if (woord[vanafBegin] != woord[vanafEinde]) palindroom = false;
 //    if (palindroom) Console.WriteLine("Dit woord is een palindroom");
 //    else Console.WriteLine("Dit woord is geen palindroom");
 //;
-for (vanafBegin = 0, vanafEinde = woord.Length - 1; vanafBegin < vanafEinde && woord[vanafBegin] == woord[vanafEinde]; vanafBegin++, vanafEinde--)
-    if (woord[vanafBegin] == woord[vanafEinde]) Console.WriteLine("Dit woord is een palindroom");
-    else Console.WriteLine("Dit woord is geen palindroom");
-;
+//for (vanafBegin = 0, vanafEinde = woord.Length - 1; vanafBegin < vanafEinde && woord[vanafBegin] == woord[vanafEinde]; vanafBegin++, vanafEinde--)
+//    if (woord[vanafBegin] == woord[vanafEinde]) Console.WriteLine("Dit woord is een palindroom");
+//    else Console.WriteLine("Dit woord is geen palindroom");
+//;
+
+/* Functions & Procedures */
+// Procedure 
+//void TekenLijn()
+//{
+//    for (int teller = 0; teller < 20; teller++)
+//    {
+//        Console.Write("-");
+//    }
+//    Console.WriteLine();
+//}
+//Console.WriteLine("Asterix");
+//TekenLijn();
+//Console.WriteLine("Obelix");
+//TekenLijn();
+//Console.WriteLine("Einde programma");
+//TekenLijn();
+// Function met terruggeef waarde
+//float LeesPunten()
+//{
+//    Console.Write("Geef een cijfer tussen 0 en 10: ");
+//    float punten = float.Parse(Console.ReadLine() ?? "");
+//    while (punten < 0 || punten > 10)
+//    {
+//        Console.Write("Foutief cijfer! Geef een cijfer tussen 0 en 10: ");
+//        punten = float.Parse(Console.ReadLine() ?? "");
+//    }
+//    return punten;
+//}
+//Console.WriteLine("Punten Wiskunde?");
+//LeesPunten();
+//Console.WriteLine("Punten Engels?");
+//LeesPunten();
+//Console.WriteLine("Punten Informatica?");
+//LeesPunten();
+// Function of procedure met 1 parameter
+//void TekenLijn(int lengte)
+//{
+//    for (int teller = 0; teller < lengte; teller++)
+//    {
+//        Console.Write("-");
+//    }
+//    Console.WriteLine();
+//}
+//Console.WriteLine("Asterix");
+//TekenLijn(7);
+//Console.WriteLine("Obelix");
+//TekenLijn(6);
+//Console.WriteLine("Einde programma");
+//TekenLijn(15);
+// Function of procedure met meeredere parameters
+//void TekenLijn(int lengte, char teken)
+//{
+//    for (int teller = 0; teller < lengte; teller++)
+//    {
+//        Console.Write(teken);
+//    }
+//    Console.WriteLine();
+//}
+//Console.WriteLine("Asterix");
+//TekenLijn(7, '-');
+//Console.WriteLine("Obelix");
+//TekenLijn(6, '=');
+//// named parameters
+//Console.WriteLine("Idefix");
+//TekenLijn(teken: '~', lengte: 6);
+//Console.WriteLine("Einde programma");
+//TekenLijn(15, '*');
+// Optional parameters
+//void TekenLijn(int lengte, char teken = '-')
+//{
+//    for (int teller = 0; teller < lengte; teller++)
+//    {
+//        Console.Write(teken);
+//    }
+//    Console.WriteLine();
+//}
+//Console.WriteLine("Asterix");
+//TekenLijn(7);
+//Console.WriteLine("Obelix");
+//TekenLijn(6, '=');
+//Console.WriteLine("Idefix");
+//TekenLijn(lengte: 6);
+//Console.WriteLine("Einde programma");
+//TekenLijn(15, '*');
+// Function met een parameter
+//double CmToInch(double cm) { return cm / 2.54; };
+//double InchToCm(double inch) { return inch * 2.54; };
+//Console.Write("Afstand in cm: ");
+//double cm = double.Parse(Console.ReadLine() ?? "");
+//Console.WriteLine($"{cm} cm = {CmToInch(cm)} inches");
+//TekenLijn(20);
+//Console.Write("Afstand in inches: ");
+//double inch = double.Parse(Console.ReadLine() ?? "");
+//Console.WriteLine($"{inch} inch = {InchToCm(inch)} cm");
+// Sleutelwoord ref
+//void Verwissel(ref int getal1, ref int getal2) {
+//    int tussen = getal1;
+//    getal1 = getal2;
+//    getal2 = tussen;
+//};
+//int eerste = 10, tweede = 20;
+//Verwissel(ref eerste, ref tweede);
+//Console.WriteLine(eerste);
+//Console.WriteLine(tweede);
+// Sleutelwoord out
+//void VerwisselNaarAndereVars(int getal1, int getal2, out int verwisseld1, out int verwisseld2)
+//{
+//    verwisseld1 = getal2;
+//    verwisseld2 = getal1;
+//};
+//int eerste = 10, tweede = 20;
+//VerwisselNaarAndereVars(eerste, tweede, out int resultaat1, out int resultaat2);
+//Console.WriteLine(resultaat1);
+//Console.WriteLine(resultaat2);
+// Toespassing TryParse
+Console.WriteLine("TryParse");
