@@ -208,32 +208,88 @@
 //Console.WriteLine($"Het BE rekening nummer: {beRekeningNr} is het volgende IBAN nummer: {ibanRekeningNr}");
 //Console.WriteLine("------------------------------------------------------------------");
 // 4.4 Controle IBAN nummers
-using System.Text;
+// using System.Text;
+// Console.WriteLine("------------------------------------------------------------------");
+// const string ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// string ibanNr, controleNr;
+// ulong rest97;
+// Console.Write("Geef het IBAN nummer in om te controle of het geldig is: ");
+// ibanNr = Console.ReadLine() ?? "";
+// controleNr = ibanNr.Trim().Replace(" ", "");
+// controleNr = controleNr.Substring(4) + controleNr.Substring(0, 4);
+// if (controleNr.Length == 16)
+// {    
+//     StringBuilder nr = new StringBuilder();
+//     char teken;
+//     for (int teller = 0; teller < controleNr.Length; teller++)
+//     {
+//         teken = controleNr[teller];
+//         if (char.IsLetter(teken)) nr.Append(ALFABET.IndexOf(teken) + 10);
+//         else nr.Append(teken);
+//     }
+//     rest97 = ulong.Parse(nr.ToString()) % 97ul;
+//     if (rest97 == 1) Console.WriteLine("Dit is een geldig IBAN nummer");
+//     else Console.WriteLine("Dit is geen geldig IBAN nummer");
+// }
+// else
+// {
+//     Console.WriteLine($"{ibanNr} is geen rekening nummer.");
+// };
+// Console.WriteLine("------------------------------------------------------------------");
+
+// 5. Functies
+// 5.1 Even
+// Console.WriteLine("------------------------------------------------------------------");
+// Console.Write("Geef een geheel getal in: ");
+// bool IsEven (int getal) {return getal % 2 == 0;};
+// if (int.TryParse(Console.ReadLine(), out int getal))
+// {
+//   Console.WriteLine($"{getal} is een {(IsEven(getal) ? "even" : "oneven")} getal.");
+// }
+// Console.WriteLine("------------------------------------------------------------------");
+// 5.2 Examens
 Console.WriteLine("------------------------------------------------------------------");
-const string ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-string ibanNr, controleNr;
-ulong rest97;
-Console.Write("Geef het IBAN nummer in om te controle of het geldig is: ");
-ibanNr = Console.ReadLine() ?? "";
-controleNr = ibanNr.Trim().Replace(" ", "");
-controleNr = controleNr.Substring(4) + controleNr.Substring(0, 4);
-if (controleNr.Length == 16)
-{    
-    StringBuilder nr = new StringBuilder();
-    char teken;
-    for (int teller = 0; teller < controleNr.Length; teller++)
-    {
-        teken = controleNr[teller];
-        if (char.IsLetter(teken)) nr.Append(ALFABET.IndexOf(teken) + 10);
-        else nr.Append(teken);
-    }
-    rest97 = ulong.Parse(nr.ToString()) % 97ul;
-    if (rest97 == 1) Console.WriteLine("Dit is een geldig IBAN nummer");
-    else Console.WriteLine("Dit is geen geldig IBAN nummer");
+double LeesCijfer(string vak)
+{
+  double cijfer;
+  Console.Write($"Punten voor {vak} (tussen 0 en 10)> ");
+  while (!double.TryParse(Console.ReadLine(), out cijfer) || cijfer < 0 || cijfer > 10)
+  {
+    Console.Write($"Verkeerde invoer, geef de punten voor {vak} opnieuw in (tussen 0 en 10): ");
+  }
+  return cijfer;
+}
+bool OpAllesGeslaagd(double puntWis, double puntBoek, double puntIT)
+{
+  return puntWis >= 5 && puntBoek >= 5 && puntIT >= 5;
+}
+double Percentage(double puntWis, double puntBoek, double puntIT)
+{
+  return Math.Round((puntWis + puntBoek + puntIT) / 30.0 * 100.00, 0, MidpointRounding.AwayFromZero);
+}
+string Resultaat(double percentage)
+{
+  string result = percentage switch
+  {
+    < 68 => "voldoende",
+    < 77 => "onderscheiding",
+    < 85 => "grote onderscheiding",
+    _ => "grootste onderscheiding"
+  };
+  return result;
+}
+
+double puntenWiskunde = LeesCijfer("wiskunde");
+double puntenBoekhouden = LeesCijfer("boekhouden");
+double puntenInformatica = LeesCijfer("informatica");
+if (OpAllesGeslaagd(puntenWiskunde, puntenBoekhouden, puntenInformatica))
+{
+  double percentage = Percentage(puntenWiskunde, puntenBoekhouden, puntenInformatica);
+  string result = Resultaat(percentage);
+  Console.WriteLine($"Student behaalde {percentage}% met als resultaat {result}.");
 }
 else
 {
-    Console.WriteLine($"{ibanNr} is geen rekening nummer.");
-};
+  Console.WriteLine("Student is niet voor alles geslaagd.");
+}
 Console.WriteLine("------------------------------------------------------------------");
-
