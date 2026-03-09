@@ -13,7 +13,7 @@ namespace CSharpPFCursus
         {
             return inch * CentimetersPerInch;
         }
-        static void TekenLijn(int lengte, char teken = "-")
+        static void TekenLijn(int lengte, char teken = '-')
         {
             for (int i = 0; i < lengte; i++)
             {

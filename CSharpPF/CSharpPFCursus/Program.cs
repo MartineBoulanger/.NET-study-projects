@@ -490,17 +490,25 @@
 //Console.WriteLine(string.Join(' ', deelArray));
 // 2-dimensionele arrays (array in array dus)
 // De class Array met de methods
-string[] namen = ["Asterix", "Obelix", "Idefix"];
-Console.WriteLine("Beginsituatie:");
-foreach (string naam in namen) Console.WriteLine(naam);
-Array.Sort(namen);
-Console.WriteLine("Na Sort:");
-foreach (string naam in namen) Console.WriteLine(naam);
-Array.Reverse(namen);
-Console.WriteLine("Na Reverse:");
-foreach (string naam in namen) Console.WriteLine(naam);
-string[] kopie = new string[namen.Length];
-Array.Copy(namen,kopie,namen.Length);
-Console.WriteLine("Kopie:");
-foreach (string naam in kopie) Console.WriteLine(naam);
-Console.WriteLine("Eerste Idefix op positie: " + Array.IndexOf(namen, "Idefix"));
+//string[] namen = ["Asterix", "Obelix", "Idefix"];
+//Console.WriteLine("Beginsituatie:");
+//foreach (string naam in namen) Console.WriteLine(naam);
+//Array.Sort(namen);
+//Console.WriteLine("Na Sort:");
+//foreach (string naam in namen) Console.WriteLine(naam);
+//Array.Reverse(namen);
+//Console.WriteLine("Na Reverse:");
+//foreach (string naam in namen) Console.WriteLine(naam);
+//string[] kopie = new string[namen.Length];
+//Array.Copy(namen,kopie,namen.Length);
+//Console.WriteLine("Kopie:");
+//foreach (string naam in kopie) Console.WriteLine(naam);
+//Console.WriteLine("Eerste Idefix op positie: " + Array.IndexOf(namen, "Idefix"));
+
+/* Enum */
+// De enum is gedefinieerd in de file: Seizoen.cs
+//Seizoen plukSeizoen = Seizoen.Herfst;
+//Console.WriteLine(plukSeizoen);
+//Console.WriteLine((int)plukSeizoen);
+
+/* Classes en Objecten */
