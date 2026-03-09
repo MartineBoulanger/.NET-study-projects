@@ -371,8 +371,8 @@
 //Console.WriteLine("Einde programma");
 //TekenLijn(15, '*');
 // Function met een parameter
-//double CmToInch(double cm) { return cm / 2.54; };
-//double InchToCm(double inch) { return inch * 2.54; };
+// double CmToInch(double cm) { return cm / 2.54; };
+// double InchToCm(double inch) { return inch * 2.54; };
 //Console.Write("Afstand in cm: ");
 //double cm = double.Parse(Console.ReadLine() ?? "");
 //Console.WriteLine($"{cm} cm = {CmToInch(cm)} inches");
@@ -400,6 +400,26 @@
 //VerwisselNaarAndereVars(eerste, tweede, out int resultaat1, out int resultaat2);
 //Console.WriteLine(resultaat1);
 //Console.WriteLine(resultaat2);
+// Toespassing TryParse
+// Console.Write("Afstand in cm: ");
+// if (double.TryParse(Console.ReadLine(), out double cm))
+// {
+//   Console.WriteLine($"{CmToInch(cm)} inches");
+// }
+// else
+// {
+//   Console.WriteLine("Geen correct getal");
+// }
+// TimeOnly.Add()
+// TimeOnly begintijd = new TimeOnly(8, 30, 0);
+// Console.WriteLine($"begintijd: {begintijd}");
+// TimeOnly eindtijd = begintijd.Add(new TimeSpan(50, 30, 0), out int aantalDagen);
+// Console.WriteLine($"eindtijd: {eindtijd} en {aantalDagen} dag(en) later");
+// Declaratie plaatsen
+//Console.Write("Afstand in cm: ");
+//double cm = double.Parse(Console.ReadLine() ?? "");
+//Console.WriteLine($"{cm} cm = {CmToInch(cm)} inches");
+//TekenLijn(20);
 
 /* Arrays */
 //const int AantalMaanden = 12;
