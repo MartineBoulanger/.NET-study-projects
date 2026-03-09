@@ -400,5 +400,87 @@
 //VerwisselNaarAndereVars(eerste, tweede, out int resultaat1, out int resultaat2);
 //Console.WriteLine(resultaat1);
 //Console.WriteLine(resultaat2);
-// Toespassing TryParse
-Console.WriteLine("TryParse");
+
+/* Arrays */
+//const int AantalMaanden = 12;
+//double[] temperaturen = new double[AantalMaanden];
+//for (int maand = 1; maand <= AantalMaanden; maand++)
+//{
+//    Console.Write("Geef de temperatuur voor {0}: ", maand);
+//    temperaturen[maand - 1] = double.Parse(Console.ReadLine()!);
+//}
+//Console.WriteLine("Je typte volgende temperaturen:");
+//for (int maand = 1; maand <= AantalMaanden; maand++)
+//{
+//    Console.WriteLine($"Maand {maand}: {temperaturen[maand-1]}");
+//}
+//Console.WriteLine(temperaturen.Length);
+// met accolades {}
+//int[] dagenPerMaand = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//for (int maand = 0; maand < dagenPerMaand.Length; maand++)
+//{
+//    Console.WriteLine(dagenPerMaand[maand]);
+//}
+// met een collection expression
+//int[] dagenPerMaand = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+//for (int maand = 0; maand < dagenPerMaand.Length; maand++)
+//{
+//    Console.WriteLine(dagenPerMaand[maand]);
+//}
+// foreach iteratie met arrays
+//string[] striphelden = ["Asterix", "Obelix", "Idefix"];
+//foreach (string held in striphelden)
+//{
+//    Console.WriteLine(held);
+//}
+// ook met de sleutelwoord var
+//var maanden = new string[] { "Jan", "Feb", "Maa", "Apr", "Mei", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
+//foreach (var maand in maanden)
+//{
+//    Console.WriteLine(maand.ToUpper());
+//}
+//Console.Write("Aantal bankrekeningen: ");
+//int aantalrekenignen = int.Parse(Console.ReadLine()!);
+//ulong[] rekeningNrs = new ulong[aantalrekenignen];
+//for (int teller = 1; teller <= aantalrekenignen; teller++)
+//{
+//    Console.Write("Nummer van {0} rekening: ", teller);
+//    rekeningNrs[teller - 1] = ulong.Parse(Console.ReadLine()!);
+//}
+//Console.WriteLine("Dit zijn de nummers van je rekeningen: ");
+//foreach (ulong rekeningNr in rekeningNrs)
+//{
+//    Console.WriteLine(rekeningNr);
+//}
+// index en range cyntaxes
+//string[] striphelden = { "Asterix", "Obelix", "Idefix", "Panoramix" };
+//string[] deelArray;
+//deelArray = striphelden[1..3]; // Obelix Idefix
+//Console.WriteLine(string.Join(' ', deelArray));
+//deelArray = striphelden[0..]; // alle elementen
+//Console.WriteLine(string.Join(' ', deelArray));
+//deelArray = striphelden[..2]; // Asterix Obelix
+//Console.WriteLine(string.Join(' ', deelArray));
+//deelArray = striphelden[2..]; // Idefix Panoramix
+//Console.WriteLine(string.Join(' ', deelArray));
+//deelArray = striphelden[..^1]; // Asterix Obelix Idefix
+//Console.WriteLine(string.Join(' ', deelArray));
+//Range range = new Range(1,3);
+//deelArray = striphelden[range]; // Obelix en Idefix
+//Console.WriteLine(string.Join(' ', deelArray));
+// 2-dimensionele arrays (array in array dus)
+// De class Array met de methods
+string[] namen = ["Asterix", "Obelix", "Idefix"];
+Console.WriteLine("Beginsituatie:");
+foreach (string naam in namen) Console.WriteLine(naam);
+Array.Sort(namen);
+Console.WriteLine("Na Sort:");
+foreach (string naam in namen) Console.WriteLine(naam);
+Array.Reverse(namen);
+Console.WriteLine("Na Reverse:");
+foreach (string naam in namen) Console.WriteLine(naam);
+string[] kopie = new string[namen.Length];
+Array.Copy(namen,kopie,namen.Length);
+Console.WriteLine("Kopie:");
+foreach (string naam in kopie) Console.WriteLine(naam);
+Console.WriteLine("Eerste Idefix op positie: " + Array.IndexOf(namen, "Idefix"));

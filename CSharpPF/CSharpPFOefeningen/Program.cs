@@ -208,32 +208,33 @@
 //Console.WriteLine($"Het BE rekening nummer: {beRekeningNr} is het volgende IBAN nummer: {ibanRekeningNr}");
 //Console.WriteLine("------------------------------------------------------------------");
 // 4.4 Controle IBAN nummers
-using System.Text;
-Console.WriteLine("------------------------------------------------------------------");
-const string ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-string ibanNr, controleNr;
-ulong rest97;
-Console.Write("Geef het IBAN nummer in om te controle of het geldig is: ");
-ibanNr = Console.ReadLine() ?? "";
-controleNr = ibanNr.Trim().Replace(" ", "");
-controleNr = controleNr.Substring(4) + controleNr.Substring(0, 4);
-if (controleNr.Length == 16)
-{    
-    StringBuilder nr = new StringBuilder();
-    char teken;
-    for (int teller = 0; teller < controleNr.Length; teller++)
-    {
-        teken = controleNr[teller];
-        if (char.IsLetter(teken)) nr.Append(ALFABET.IndexOf(teken) + 10);
-        else nr.Append(teken);
-    }
-    rest97 = ulong.Parse(nr.ToString()) % 97ul;
-    if (rest97 == 1) Console.WriteLine("Dit is een geldig IBAN nummer");
-    else Console.WriteLine("Dit is geen geldig IBAN nummer");
-}
-else
-{
-    Console.WriteLine($"{ibanNr} is geen rekening nummer.");
-};
-Console.WriteLine("------------------------------------------------------------------");
+//using System.Text;
+//Console.WriteLine("------------------------------------------------------------------");
+//const string ALFABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//string ibanNr, controleNr;
+//ulong rest97;
+//Console.Write("Geef het IBAN nummer in om te controle of het geldig is: ");
+//ibanNr = Console.ReadLine() ?? "";
+//controleNr = ibanNr.Trim().Replace(" ", "");
+//controleNr = controleNr.Substring(4) + controleNr.Substring(0, 4);
+//if (controleNr.Length == 16)
+//{    
+//    StringBuilder nr = new StringBuilder();
+//    char teken;
+//    for (int teller = 0; teller < controleNr.Length; teller++)
+//    {
+//        teken = controleNr[teller];
+//        if (char.IsLetter(teken)) nr.Append(ALFABET.IndexOf(teken) + 10);
+//        else nr.Append(teken);
+//    }
+//    rest97 = ulong.Parse(nr.ToString()) % 97ul;
+//    if (rest97 == 1) Console.WriteLine("Dit is een geldig IBAN nummer");
+//    else Console.WriteLine("Dit is geen geldig IBAN nummer");
+//}
+//else
+//{
+//    Console.WriteLine($"{ibanNr} is geen rekening nummer.");
+//};
+//Console.WriteLine("------------------------------------------------------------------");
 
+// 5. 
