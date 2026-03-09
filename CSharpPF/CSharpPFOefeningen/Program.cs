@@ -248,48 +248,111 @@
 // }
 // Console.WriteLine("------------------------------------------------------------------");
 // 5.2 Examens
+//Console.WriteLine("------------------------------------------------------------------");
+//double LeesCijfer(string vak)
+//{
+//  double cijfer;
+//  Console.Write($"Punten voor {vak} (tussen 0 en 10)> ");
+//  while (!double.TryParse(Console.ReadLine(), out cijfer) || cijfer < 0 || cijfer > 10)
+//  {
+//    Console.Write($"Verkeerde invoer, geef de punten voor {vak} opnieuw in (tussen 0 en 10): ");
+//  }
+//  return cijfer;
+//}
+//bool OpAllesGeslaagd(double puntWis, double puntBoek, double puntIT)
+//{
+//  return puntWis >= 5 && puntBoek >= 5 && puntIT >= 5;
+//}
+//double Percentage(double puntWis, double puntBoek, double puntIT)
+//{
+//  return Math.Round((puntWis + puntBoek + puntIT) / 30.0 * 100.00, 0, MidpointRounding.AwayFromZero);
+//}
+//string Resultaat(double percentage)
+//{
+//  string result = percentage switch
+//  {
+//    < 68 => "voldoende",
+//    < 77 => "onderscheiding",
+//    < 85 => "grote onderscheiding",
+//    _ => "grootste onderscheiding"
+//  };
+//  return result;
+//}
+
+//double puntenWiskunde = LeesCijfer("wiskunde");
+//double puntenBoekhouden = LeesCijfer("boekhouden");
+//double puntenInformatica = LeesCijfer("informatica");
+//if (OpAllesGeslaagd(puntenWiskunde, puntenBoekhouden, puntenInformatica))
+//{
+//  double percentage = Percentage(puntenWiskunde, puntenBoekhouden, puntenInformatica);
+//  string result = Resultaat(percentage);
+//  Console.WriteLine($"Student behaalde {percentage}% met als resultaat {result}.");
+//}
+//else
+//{
+//  Console.WriteLine("Student is niet voor alles geslaagd.");
+//}
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 6. Arrays
+// 6.1 Codeerprogramma
+//Console.WriteLine("------------------------------------------------------------------");
+//char[] sleutel = { 'Q', 'S', 'P', 'A', 'T', 'V', 'X', 'B', 'C', 'R', 'J', 'Y', 'E', 'D', 'U', 'O', 'H', 'Z', 'G', 'I', 'F', 'L', 'N', 'W', 'K', 'M' };
+//Console.Write("Voer tekst in: ");
+//string tekst = Console.ReadLine()!.ToUpper();
+//string geheim = string.Empty;
+//for (int letter = 0; letter < tekst.Length; letter++)
+//{
+//    if (char.IsUpper(tekst[letter])) geheim += sleutel[(int)tekst[letter] - (int)'A'];
+//    else geheim += tekst[letter];
+//}
+//Console.WriteLine($"In code: {geheim}");
+//Console.WriteLine("------------------------------------------------------------------");
+// 6.2 Examens 2
 Console.WriteLine("------------------------------------------------------------------");
 double LeesCijfer(string vak)
 {
-  double cijfer;
-  Console.Write($"Punten voor {vak} (tussen 0 en 10)> ");
-  while (!double.TryParse(Console.ReadLine(), out cijfer) || cijfer < 0 || cijfer > 10)
-  {
-    Console.Write($"Verkeerde invoer, geef de punten voor {vak} opnieuw in (tussen 0 en 10): ");
-  }
-  return cijfer;
+    double cijfer;
+    Console.Write($"Punten voor {vak} (tussen 0 en 10)> ");
+    while (!double.TryParse(Console.ReadLine(), out cijfer) || cijfer < 0 || cijfer > 10)
+    {
+        Console.Write($"Verkeerde invoer, geef de punten voor {vak} opnieuw in (tussen 0 en 10): ");
+    }
+    return cijfer;
 }
-bool OpAllesGeslaagd(double puntWis, double puntBoek, double puntIT)
+bool OpAllesGeslaagd(double[] punten)
 {
-  return puntWis >= 5 && puntBoek >= 5 && puntIT >= 5;
+    foreach (var punt in punten) if (punt < 5) return false;
+    return true;
 }
-double Percentage(double puntWis, double puntBoek, double puntIT)
+double Percentage(double[] punten)
 {
-  return Math.Round((puntWis + puntBoek + puntIT) / 30.0 * 100.00, 0, MidpointRounding.AwayFromZero);
+    double sum = 0;
+    for (int i = 0; i < punten.Length; i++) sum += punten[i];
+    return Math.Round(sum / (punten.Length * 10) * 100.00, 0, MidpointRounding.AwayFromZero);
 }
 string Resultaat(double percentage)
 {
-  string result = percentage switch
-  {
-    < 68 => "voldoende",
-    < 77 => "onderscheiding",
-    < 85 => "grote onderscheiding",
-    _ => "grootste onderscheiding"
-  };
-  return result;
+    string result = percentage switch
+    {
+        < 68 => "voldoende",
+        < 77 => "onderscheiding",
+        < 85 => "grote onderscheiding",
+        _ => "grootste onderscheiding"
+    };
+    return result;
 }
-
-double puntenWiskunde = LeesCijfer("wiskunde");
-double puntenBoekhouden = LeesCijfer("boekhouden");
-double puntenInformatica = LeesCijfer("informatica");
-if (OpAllesGeslaagd(puntenWiskunde, puntenBoekhouden, puntenInformatica))
+string[] vakken = ["wiskunde","boekhouden","informatica"];
+double[] punten = new double[vakken.Length];
+for (int i = 0; i < vakken.Length; i++) punten[i] = LeesCijfer(vakken[i]);
+if (OpAllesGeslaagd(punten))
 {
-  double percentage = Percentage(puntenWiskunde, puntenBoekhouden, puntenInformatica);
-  string result = Resultaat(percentage);
-  Console.WriteLine($"Student behaalde {percentage}% met als resultaat {result}.");
+    double percentage = Percentage(punten);
+    string resultaat = Resultaat(percentage);
+    Console.WriteLine($"Student behaalde {percentage}% met als resultaat {resultaat}.");
 }
 else
 {
-  Console.WriteLine("Student is niet voor alles geslaagd.");
+    Console.WriteLine("Student is niet voor alles geslaagd.");
 }
 Console.WriteLine("------------------------------------------------------------------");
