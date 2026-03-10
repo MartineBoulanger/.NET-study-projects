@@ -309,50 +309,66 @@
 //Console.WriteLine($"In code: {geheim}");
 //Console.WriteLine("------------------------------------------------------------------");
 // 6.2 Examens 2
+// Console.WriteLine("------------------------------------------------------------------");
+// double LeesCijfer(string vak)
+// {
+//     double cijfer;
+//     Console.Write($"Punten voor {vak} (tussen 0 en 10)> ");
+//     while (!double.TryParse(Console.ReadLine(), out cijfer) || cijfer < 0 || cijfer > 10)
+//     {
+//         Console.Write($"Verkeerde invoer, geef de punten voor {vak} opnieuw in (tussen 0 en 10): ");
+//     }
+//     return cijfer;
+// }
+// bool OpAllesGeslaagd(double[] punten)
+// {
+//     foreach (var punt in punten) if (punt < 5) return false;
+//     return true;
+// }
+// double Percentage(double[] punten)
+// {
+//     double sum = 0;
+//     for (int i = 0; i < punten.Length; i++) sum += punten[i];
+//     return Math.Round(sum / (punten.Length * 10) * 100.00, 0, MidpointRounding.AwayFromZero);
+// }
+// string Resultaat(double percentage)
+// {
+//     string result = percentage switch
+//     {
+//         < 68 => "voldoende",
+//         < 77 => "onderscheiding",
+//         < 85 => "grote onderscheiding",
+//         _ => "grootste onderscheiding"
+//     };
+//     return result;
+// }
+// string[] vakken = ["wiskunde","boekhouden","informatica"];
+// double[] punten = new double[vakken.Length];
+// for (int i = 0; i < vakken.Length; i++) punten[i] = LeesCijfer(vakken[i]);
+// if (OpAllesGeslaagd(punten))
+// {
+//     double percentage = Percentage(punten);
+//     string resultaat = Resultaat(percentage);
+//     Console.WriteLine($"Student behaalde {percentage}% met als resultaat {resultaat}.");
+// }
+// else
+// {
+//     Console.WriteLine("Student is niet voor alles geslaagd.");
+// }
+// Console.WriteLine("------------------------------------------------------------------");
+
+// 7. Classes en Objects
+// 7.1 De class Rekening - zie file Rekening.cs
+// 7.2 Het Hoofdprogramma
+using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
-double LeesCijfer(string vak)
-{
-    double cijfer;
-    Console.Write($"Punten voor {vak} (tussen 0 en 10)> ");
-    while (!double.TryParse(Console.ReadLine(), out cijfer) || cijfer < 0 || cijfer > 10)
-    {
-        Console.Write($"Verkeerde invoer, geef de punten voor {vak} opnieuw in (tussen 0 en 10): ");
-    }
-    return cijfer;
-}
-bool OpAllesGeslaagd(double[] punten)
-{
-    foreach (var punt in punten) if (punt < 5) return false;
-    return true;
-}
-double Percentage(double[] punten)
-{
-    double sum = 0;
-    for (int i = 0; i < punten.Length; i++) sum += punten[i];
-    return Math.Round(sum / (punten.Length * 10) * 100.00, 0, MidpointRounding.AwayFromZero);
-}
-string Resultaat(double percentage)
-{
-    string result = percentage switch
-    {
-        < 68 => "voldoende",
-        < 77 => "onderscheiding",
-        < 85 => "grote onderscheiding",
-        _ => "grootste onderscheiding"
-    };
-    return result;
-}
-string[] vakken = ["wiskunde","boekhouden","informatica"];
-double[] punten = new double[vakken.Length];
-for (int i = 0; i < vakken.Length; i++) punten[i] = LeesCijfer(vakken[i]);
-if (OpAllesGeslaagd(punten))
-{
-    double percentage = Percentage(punten);
-    string resultaat = Resultaat(percentage);
-    Console.WriteLine($"Student behaalde {percentage}% met als resultaat {resultaat}.");
-}
-else
-{
-    Console.WriteLine("Student is niet voor alles geslaagd.");
-}
+// DateTime d = new(); // this is to test the check for the CreatieDatum property.
+Rekening mijnRekening = new Rekening("001-4479468-84", 235m, DateOnly.FromDateTime(DateTime.Today));
+Console.WriteLine(mijnRekening.GetInfo());
+Console.WriteLine("------------------------------------------------------------------");
+// 7.3 De class Voertuig - zie file Voertuig.cs
+// 7.4 Het hoofdprogramma
+Console.WriteLine("------------------------------------------------------------------");
+Voertuig auto = new Voertuig("Anna Dackus", 499.99m, 119, 4.5f, "2-HDC-811");
+Console.WriteLine(auto.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");
