@@ -512,3 +512,20 @@
 //Console.WriteLine((int)plukSeizoen);
 
 /* Classes en Objecten */
+using CSharpPFCursus;
+Werknemer ik = new()
+{
+  Naam = "Asterix",
+  Geslacht = Geslacht.Man,
+  InDienst = new DateTime(2021, 3, 10)
+};
+Console.WriteLine(ik.Naam);
+Console.WriteLine(ik.Geslacht);
+Console.WriteLine(ik.InDienst);
+// Werknemer mezelf = ik;
+// Console.WriteLine(mezelf.Naam);
+// Console.WriteLine(ik == mezelf);
+// ik = null!;
+// Console.WriteLine(ik == mezelf);
+// Console.WriteLine(mezelf.Naam);
+Console.WriteLine(ik.VerjaarAncien);
