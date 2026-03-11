@@ -38,5 +38,10 @@
                 return InDienst.Month == DateTime.Today.Month && InDienst.Day == DateTime.Today.Day;
             }
         }
+
+        public string GetInfo()
+        {
+            return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}";
+        }
     }
 }

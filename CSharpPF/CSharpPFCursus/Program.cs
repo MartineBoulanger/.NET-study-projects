@@ -513,19 +513,46 @@
 
 /* Classes en Objecten */
 using CSharpPFCursus;
-Werknemer ik = new()
-{
-  Naam = "Asterix",
-  Geslacht = Geslacht.Man,
-  InDienst = new DateTime(2021, 3, 10)
-};
-Console.WriteLine(ik.Naam);
-Console.WriteLine(ik.Geslacht);
-Console.WriteLine(ik.InDienst);
+// Werknemer ik = new()
+// {
+//   Naam = "Asterix",
+//   Geslacht = Geslacht.Man,
+//   InDienst = new DateTime(2021, 3, 10)
+// };
+// Werknemer jij = new()
+// {
+//   Naam = "Obelix",
+//   Geslacht = Geslacht.Man,
+//   InDienst = new DateTime(2026, 1, 2)
+// };
+// LijnenTrekker lijnenTrekker = new LijnenTrekker();
+// Console.WriteLine(ik.GetInfo());
+// lijnenTrekker.TekenLijn(30, '=');
+// Console.WriteLine(jij.GetInfo());
+// lijnenTrekker.TekenLijn(79, '~');
+// lijnenTrekker.TekenLijn();
+// lijnenTrekker.TekenLijn(30);
+// Console.WriteLine(ik.Naam);
+// Console.WriteLine(ik.Geslacht);
+// Console.WriteLine(ik.InDienst);
 // Werknemer mezelf = ik;
 // Console.WriteLine(mezelf.Naam);
 // Console.WriteLine(ik == mezelf);
 // ik = null!;
 // Console.WriteLine(ik == mezelf);
 // Console.WriteLine(mezelf.Naam);
-Console.WriteLine(ik.VerjaarAncien);
+// Console.WriteLine(ik.VerjaarAncien);
+// Console.Write("Afstand in cm: ");
+// double cm = double.Parse(Console.ReadLine()!);
+// Console.WriteLine($"{lijnenTrekker.CmNaarInch(cm)} inches");
+// lijnenTrekker.TekenLijn();
+// Console.Write("Afstand in inch: ");
+// double inch = double.Parse(Console.ReadLine()!);
+// Console.WriteLine($"{lijnenTrekker.InchNaarCm(inch)} cm");
+// lijnenTrekker.TekenLijn();
+int eerste = 10, tweede = 20;
+Verwisselaar verwisselaar = new Verwisselaar();
+// ook hier ref gebruiken
+verwisselaar.Verwissel(ref eerste, ref tweede);
+Console.WriteLine(eerste);
+Console.WriteLine(tweede);
