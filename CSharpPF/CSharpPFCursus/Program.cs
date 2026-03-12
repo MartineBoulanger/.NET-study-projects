@@ -567,13 +567,20 @@ using CSharpPFCursus;
 //Werknemer jij = new();
 //Werknemer jij = new("Obelix", new DateTime(2026,2,1));
 //Console.WriteLine(jij.GetInfo());
-Werknemer2 ik = new("Martine", DateTime.Today, Geslacht.Vrouw);
+//Werknemer2 ik = new("Martine", DateTime.Today, Geslacht.Vrouw);
+//Console.WriteLine(ik.GetInfo());
+//Werknemer2 jij = new();
+//Console.WriteLine(jij.GetInfo());
+//Werknemer2 mezelf = new("", new DateTime(2025,3,1), Geslacht.Man);
+//Console.WriteLine(mezelf.GetInfo());
+//mezelf.Naam = "Asterix";
+//Console.WriteLine(mezelf.GetInfo());
+//mezelf.Naam = string.Empty;
+//Console.WriteLine(mezelf.GetInfo());
+Werknemer ik = new()
+{
+    Naam = "Asterix",
+    InDienst = new DateTime(2026, 2, 1),
+    Geslacht = Geslacht.Man
+};
 Console.WriteLine(ik.GetInfo());
-Werknemer2 jij = new();
-Console.WriteLine(jij.GetInfo());
-Werknemer2 mezelf = new("", new DateTime(2025,3,1), Geslacht.Man);
-Console.WriteLine(mezelf.GetInfo());
-mezelf.Naam = "Asterix";
-Console.WriteLine(mezelf.GetInfo());
-mezelf.Naam = string.Empty;
-Console.WriteLine(mezelf.GetInfo());
