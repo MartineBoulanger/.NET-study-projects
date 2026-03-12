@@ -23,7 +23,7 @@ namespace CSharpPFOefeningen
 
         public string GetInfo()
         {
-            return $"Voertuig van {Polishouder} met plaat {Nummerplaat}; heeft {Pk}pk en rijdt gem {GemiddeldVerbruik}/100km - met een kostprijs van {Kostprijs} Euro.";
+            return $"polishouder: {Polishouder}\nnummerplaat: {Nummerplaat}\naantal pk: {Pk}pk\ngemiddeld verbruik: {GemiddeldVerbruik}/100km\nkostprijs van: {Kostprijs} euro";
         }
     }
 }

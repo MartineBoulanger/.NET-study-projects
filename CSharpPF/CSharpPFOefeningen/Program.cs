@@ -361,11 +361,12 @@
 // 7.1 De class Rekening - zie file Rekening.cs
 // 7.2 Het Hoofdprogramma
 using CSharpPFOefeningen;
-Console.WriteLine("------------------------------------------------------------------");
-// DateTime d = new(); // this is to test the check for the CreatieDatum property.
-Rekening mijnRekening = new Rekening("001-4479468-84", 235m, DateOnly.FromDateTime(DateTime.Today));
-Console.WriteLine(mijnRekening.GetInfo());
-Console.WriteLine("------------------------------------------------------------------");
+//Console.WriteLine("------------------------------------------------------------------");
+//Rekening mijnRekening = new Rekening("BE03001447946884", 235m, DateOnly.FromDateTime(DateTime.Today));
+//Console.WriteLine(mijnRekening.GetInfo());
+//decimal newSaldo = mijnRekening.Storten(100m);
+//Console.WriteLine(mijnRekening.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
 // 7.3 De class Voertuig - zie file Voertuig.cs
 // 7.4 Het hoofdprogramma
 Console.WriteLine("------------------------------------------------------------------");

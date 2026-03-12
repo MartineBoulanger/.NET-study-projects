@@ -41,12 +41,12 @@ namespace CSharpPFOefeningen
 
         public string GetInfo()
         {
-            return $"Rekening: {Rekeningnummer} heeft een saldo van: {Saldo:0.00} op: {CreatieDatum}";
+            return $"Rekening: {Rekeningnummer}\nheeft een saldo van: {Saldo:0.00}\nop datum: {CreatieDatum}";
         }
         
-        public void Storten(decimal bedrag)
+        public decimal Storten(decimal bedrag)
         {
-            Saldo += bedrag;
+            return Saldo += bedrag;
         }
     }
 }
