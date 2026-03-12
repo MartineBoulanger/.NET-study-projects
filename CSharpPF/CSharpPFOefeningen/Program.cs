@@ -357,9 +357,9 @@
 // }
 // Console.WriteLine("------------------------------------------------------------------");
 
-// 7. Classes en Objects
-// 7.1 De class Rekening - zie file Rekening.cs
-// 7.2 Het Hoofdprogramma
+// 7. Classes en Objects + 8. Methods + 9. Constructors
+// 7.1 + 8.1 + 9.1 De class Rekening - zie file Rekening.cs
+// 7.2 + 8.2 + 9.2 Het Hoofdprogramma
 using CSharpPFOefeningen;
 //Console.WriteLine("------------------------------------------------------------------");
 //Rekening mijnRekening = new Rekening("BE03001447946884", 235m, DateOnly.FromDateTime(DateTime.Today));
@@ -367,9 +367,17 @@ using CSharpPFOefeningen;
 //decimal newSaldo = mijnRekening.Storten(100m);
 //Console.WriteLine(mijnRekening.GetInfo());
 //Console.WriteLine("------------------------------------------------------------------");
-// 7.3 De class Voertuig - zie file Voertuig.cs
-// 7.4 Het hoofdprogramma
+// 7.3 + 8.3 + 9.3 De class Voertuig - zie file Voertuig.cs
+// 7.4 + 8.4 + 9.4 Het hoofdprogramma
 Console.WriteLine("------------------------------------------------------------------");
-Voertuig auto = new Voertuig("Anna Dackus", 499.99m, 119, 4.5f, "2-HDC-811");
-Console.WriteLine(auto.GetInfo());
+Voertuig auto1 = new Voertuig("Anna Dackus", 499.99m, 119, 4.5f, "2-HDC-811");
+Voertuig auto2 = new Voertuig();
+Voertuig auto3 = new Voertuig("Martine");
+Voertuig auto4 = new Voertuig("Emile", 23m);
+Voertuig auto5 = new Voertuig(nummerplaat: "1-sug-546");
+Console.WriteLine(auto1.GetInfo());
+Console.WriteLine(auto2.GetInfo());
+Console.WriteLine(auto3.GetInfo());
+Console.WriteLine(auto4.GetInfo());
+Console.WriteLine(auto5.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");

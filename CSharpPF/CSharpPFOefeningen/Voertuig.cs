@@ -2,13 +2,14 @@ namespace CSharpPFOefeningen
 {
     public class Voertuig
     {
-        public Voertuig(string polishouder, decimal kostprijs, int pk, float gemiddeldVerbruik, string nummerplaat)
+        // constructor
+        public Voertuig(string polishouder = "onbepaald", decimal kostprijs = 0m, int pk = 0, float gemiddeldVerbruik = 0f, string nummerplaat = "onbepaald")
         {
-            Polishouder = polishouder;
-            Kostprijs = kostprijs;
-            Pk = pk;
-            GemiddeldVerbruik = gemiddeldVerbruik;
-            Nummerplaat = nummerplaat;
+            this.Polishouder = polishouder;
+            this.Kostprijs = kostprijs;
+            this.Pk = pk;
+            this.GemiddeldVerbruik = gemiddeldVerbruik;
+            this.Nummerplaat = nummerplaat;
         }
 
         public string Polishouder { get; set; }
@@ -23,7 +24,7 @@ namespace CSharpPFOefeningen
 
         public string GetInfo()
         {
-            return $"polishouder: {Polishouder}\nnummerplaat: {Nummerplaat}\naantal pk: {Pk}pk\ngemiddeld verbruik: {GemiddeldVerbruik}/100km\nkostprijs van: {Kostprijs} euro";
+            return $"polishouder: {Polishouder}\nnummerplaat: {Nummerplaat}\naantal pk: {Pk}pk\ngemiddeld verbruik: {GemiddeldVerbruik}/100km\nkostprijs van: {Kostprijs} euro\n";
         }
     }
 }

@@ -4,6 +4,7 @@ namespace CSharpPFOefeningen
     {
         private readonly DateOnly EersteCreatie = new(1900, 1, 1);
         
+        // constructor
         public Rekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum)
         {
             Rekeningnummer = rekeningnummer;
