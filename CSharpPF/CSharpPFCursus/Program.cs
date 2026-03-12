@@ -512,7 +512,7 @@
 //Console.WriteLine((int)plukSeizoen);
 
 /* Classes en Objecten */
-using CSharpPFCursus;
+//using CSharpPFCursus;
 // Werknemer ik = new()
 // {
 //   Naam = "Asterix",
@@ -550,9 +550,20 @@ using CSharpPFCursus;
 // double inch = double.Parse(Console.ReadLine()!);
 // Console.WriteLine($"{lijnenTrekker.InchNaarCm(inch)} cm");
 // lijnenTrekker.TekenLijn();
-int eerste = 10, tweede = 20;
-Verwisselaar verwisselaar = new Verwisselaar();
+//int eerste = 10, tweede = 20;
+//Verwisselaar verwisselaar = new Verwisselaar();
 // ook hier ref gebruiken
-verwisselaar.Verwissel(ref eerste, ref tweede);
-Console.WriteLine(eerste);
-Console.WriteLine(tweede);
+//verwisselaar.Verwissel(ref eerste, ref tweede);
+//Console.WriteLine(eerste);
+//Console.WriteLine(tweede);
+
+/* Constructors */
+using CSharpPFCursus;
+//Werknemer ik = new();
+//Console.WriteLine(ik.GetInfo());
+//Console.WriteLine(ik.Naam.ToUpper());
+Werknemer ik = new("Asterix", new DateTime(2026,2,1), Geslacht.Man);
+Console.WriteLine(ik.GetInfo());
+//Werknemer jij = new();
+Werknemer jij = new("Obelix", new DateTime(2026,2,1));
+Console.WriteLine(jij.GetInfo());
