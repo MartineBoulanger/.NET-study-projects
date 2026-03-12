@@ -360,7 +360,7 @@
 // 7. Classes en Objects + 8. Methods + 9. Constructors
 // 7.1 + 8.1 + 9.1 De class Rekening - zie file Rekening.cs
 // 7.2 + 8.2 + 9.2 Het Hoofdprogramma
-using CSharpPFOefeningen;
+//using CSharpPFOefeningen;
 //Console.WriteLine("------------------------------------------------------------------");
 //Rekening mijnRekening = new Rekening("BE03001447946884", 235m, DateOnly.FromDateTime(DateTime.Today));
 //Console.WriteLine(mijnRekening.GetInfo());
@@ -369,15 +369,34 @@ using CSharpPFOefeningen;
 //Console.WriteLine("------------------------------------------------------------------");
 // 7.3 + 8.3 + 9.3 De class Voertuig - zie file Voertuig.cs
 // 7.4 + 8.4 + 9.4 Het hoofdprogramma
+//Console.WriteLine("------------------------------------------------------------------");
+//Voertuig auto1 = new Voertuig("Anna Dackus", 499.99m, 119, 4.5f, "2-HDC-811");
+//Voertuig auto2 = new Voertuig();
+//Voertuig auto3 = new Voertuig("Martine");
+//Voertuig auto4 = new Voertuig("Emile", 23m);
+//Voertuig auto5 = new Voertuig(nummerplaat: "1-sug-546");
+//Console.WriteLine(auto1.GetInfo());
+//Console.WriteLine(auto2.GetInfo());
+//Console.WriteLine(auto3.GetInfo());
+//Console.WriteLine(auto4.GetInfo());
+//Console.WriteLine(auto5.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 10. primary constructors
+// 10.1 Rekening2
+using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
-Voertuig auto1 = new Voertuig("Anna Dackus", 499.99m, 119, 4.5f, "2-HDC-811");
-Voertuig auto2 = new Voertuig();
-Voertuig auto3 = new Voertuig("Martine");
-Voertuig auto4 = new Voertuig("Emile", 23m);
-Voertuig auto5 = new Voertuig(nummerplaat: "1-sug-546");
-Console.WriteLine(auto1.GetInfo());
+Rekening2 rek = new("BE03001447946884",1025.65m,DateOnly.FromDateTime(new DateTime(2015,5,4)));
+Console.WriteLine(rek.GetInfo());
+Console.WriteLine("------------------------------------------------------------------");
+// 10.2 Voertuig2
+Console.WriteLine("------------------------------------------------------------------");
+Voertuig2 auto = new("Martine", 788.99m, 119, 5.6f, "2-HDC-811");
+Console.WriteLine(auto.GetInfo());
+Voertuig2 auto2 = new();
 Console.WriteLine(auto2.GetInfo());
+Voertuig2 auto3 = new();
 Console.WriteLine(auto3.GetInfo());
-Console.WriteLine(auto4.GetInfo());
-Console.WriteLine(auto5.GetInfo());
+auto3.Nummerplaat = "1-sug-456";
+Console.WriteLine(auto3.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");
