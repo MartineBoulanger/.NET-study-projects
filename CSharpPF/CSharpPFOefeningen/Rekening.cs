@@ -11,15 +11,42 @@ namespace CSharpPFOefeningen
             CreatieDatum = creatieDatum;
         }
 
-        public string Rekeningnummer { get; set; }
-
+        private string rekeningnummer;
+        public string Rekeningnummer
+        {
+            get => rekeningnummer; 
+            set
+            {
+                if (IsRekeningNummerGeldig(value))
+                {
+                    rekeningnummer = value;
+                }
+            }
+        }
         public decimal Saldo { get; set; }
 
-        public DateOnly CreatieDatum { get; set { field = value > EersteCreatie ? value : EersteCreatie; } }
+        public DateOnly CreatieDatum { get => field; set { field = value >= EersteCreatie ? value : EersteCreatie; } }
+
+        private bool IsRekeningNummerGeldig(string nummer)
+        {
+            if (string.IsNullOrWhiteSpace(nummer)) return false;
+            if (nummer.Length != 16) return false;
+            if (nummer[..2] != "BE") return false;
+            if (!int.TryParse(nummer.Substring(2, 2), out int derdeEnVierdeTeken)) return false;
+            if (!ulong.TryParse(nummer.Substring(4), out ulong belgischNummer)) return false;
+            ulong eerste10 = belgischNummer / 100ul;
+            int laatste2 = (int)(belgischNummer % 100ul);
+            return (int)(eerste10 % 97ul) == laatste2;
+        }
 
         public string GetInfo()
         {
             return $"Rekening: {Rekeningnummer} heeft een saldo van: {Saldo:0.00} op: {CreatieDatum}";
+        }
+        
+        public void Storten(decimal bedrag)
+        {
+            Saldo += bedrag;
         }
     }
 }
