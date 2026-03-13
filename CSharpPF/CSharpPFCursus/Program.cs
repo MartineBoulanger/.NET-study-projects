@@ -577,10 +577,13 @@ using CSharpPFCursus;
 //Console.WriteLine(mezelf.GetInfo());
 //mezelf.Naam = string.Empty;
 //Console.WriteLine(mezelf.GetInfo());
-Werknemer ik = new()
-{
-    Naam = "Asterix",
-    InDienst = new DateTime(2026, 2, 1),
-    Geslacht = Geslacht.Man
-};
+// Werknemer ik = new()
+// {
+//     Naam = "Asterix",
+//     InDienst = new DateTime(2026, 2, 1),
+//     Geslacht = Geslacht.Man
+// };
+Werknemer ik = new("Asterix", new DateTime(2026,3,1), Geslacht.Man);
+Console.WriteLine(ik.GetInfo());
+ik.Naam = "Obelix";
 Console.WriteLine(ik.GetInfo());

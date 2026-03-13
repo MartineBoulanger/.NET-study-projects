@@ -5,18 +5,20 @@
         // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
         //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
         // een constructor met parameters waarbij de developer via het programma waardes kan meegeven aan de parameters.
-        //public Werknemer(string naam, DateTime inDienst, Geslacht geslacht = Geslacht.X)
-        //{
-        //    this.Naam = naam;
-        //    this.InDienst = inDienst;
-        //    this.Geslacht = geslacht;
-        //}
+        public Werknemer(string naam, DateTime inDienst, Geslacht geslacht = Geslacht.X)
+        {
+           this.Naam = naam;
+           this.InDienst = inDienst;
+           this.Geslacht = geslacht;
+        }
 
         private string naam;
-        public required string Naam
+        public string Naam
         {
             get => naam;
-            set { if (value != string.Empty) naam = value; }
+            // set { if (value != string.Empty) naam = value; }
+            // init { if (value != string.Empty) naam = value; }
+            init => naam = !string.IsNullOrWhiteSpace(value) ? value : "onbekende naam";
         }
 
         public DateTime InDienst { get; set; }
