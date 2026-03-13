@@ -12,7 +12,7 @@ namespace CSharpPFOefeningen
             this.Nummerplaat = nummerplaat;
         }
 
-        public string Polishouder { get; set; }
+        public required string Polishouder { get; init; }
 
         public decimal? Kostprijs { get; set { field = value > 0m ? value : 0; } }
 
