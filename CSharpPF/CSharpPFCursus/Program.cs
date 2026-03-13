@@ -558,7 +558,7 @@
 //Console.WriteLine(tweede);
 
 /* Constructors */
-using CSharpPFCursus;
+// using CSharpPFCursus;
 //Werknemer ik = new();
 //Console.WriteLine(ik.GetInfo());
 //Console.WriteLine(ik.Naam.ToUpper());
@@ -583,7 +583,16 @@ using CSharpPFCursus;
 //     InDienst = new DateTime(2026, 2, 1),
 //     Geslacht = Geslacht.Man
 // };
-Werknemer ik = new("Asterix", new DateTime(2026,3,1), Geslacht.Man);
-Console.WriteLine(ik.GetInfo());
-ik.Naam = "Obelix";
-Console.WriteLine(ik.GetInfo());
+// Werknemer ik = new("Asterix", new DateTime(2026,3,1), Geslacht.Man);
+// Console.WriteLine(ik.GetInfo());
+// ik.Naam = "Obelix";
+// Console.WriteLine(ik.GetInfo());
+
+/* Static classes */
+using CSharpPFCursus;
+// Werknemer ik = new Werknemer("Martine", DateTime.Today, Geslacht.Vrouw);
+// Werknemer.Personeelsfeest = new DateOnly(2026, 12, 21);
+// Console.WriteLine(ik.GetInfo());
+// Console.WriteLine(Werknemer.Personeelsfeest);
+// ik.Personeelsfeest = new DateOnly.FromDateTime(DateTime.Today);
+Console.WriteLine(Rekenaar.Kwadraat(3));

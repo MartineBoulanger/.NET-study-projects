@@ -51,9 +51,23 @@
             }
         }
 
+        private static DateOnly personeelsfeest;
+        public static DateOnly Personeelsfeest
+        {
+            set => personeelsfeest = value;
+            get => personeelsfeest;
+        }
+
+        // static constructor die dus niet aangepast kan worden.
+        static Werknemer()
+        {
+            Personeelsfeest = new DateOnly(DateTime.Today.Year, 2, 1);
+            while (Personeelsfeest.DayOfWeek != DayOfWeek.Friday) Personeelsfeest = Personeelsfeest.AddDays(1);
+        }
+
         public string GetInfo()
         {
-            return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}";
+            return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}\nPersoneelsfeest: {Personeelsfeest}";
         }
     }
 }
