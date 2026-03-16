@@ -1,7 +1,7 @@
-﻿// deze class is een derived class van de derived class Bediende
-namespace CSharpPFCursus
+﻿namespace CSharpPFCursus
 {
-    internal class Manager : Bediende
+    /* deze class is een derived class van de derived class Bediende */
+    public sealed class Manager : Bediende
     {
         public Manager(string naam, DateTime inDienst, Geslacht geslacht, decimal wedde, decimal bonus) : base(naam,inDienst,geslacht,wedde)
         {
@@ -16,6 +16,12 @@ namespace CSharpPFCursus
             set { bonus = value; }
         }
 
+        // overschrijven van de abstract property Premie
+        public override decimal Premie
+        {
+            get { return Bonus * 3m; }
+        }
+
         public override string GetInfo()
         {
             return $"{base.GetInfo()}\nBonus: {Bonus}";
@@ -26,4 +32,6 @@ namespace CSharpPFCursus
             return $"{base.ToString()} - Bonus: {Bonus} euro";
         }
     }
+
+    //public class Directeur:Manager { } // dit gaat dus niet
 }

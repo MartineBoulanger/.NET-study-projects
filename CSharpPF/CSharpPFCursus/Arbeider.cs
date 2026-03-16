@@ -15,6 +15,12 @@
         private byte ploegenstelsel;
         public byte Ploegenstelsel  { get { return ploegenstelsel; } set { if (value >= 1 && value <= 3) ploegenstelsel = value; } }
 
+        // overschrijven van de abstract property Premie
+        public override decimal Premie
+        {
+            get { return Uurloon * 150m; }
+        }
+
         // overriding van de GetInfo method die in de base class zit
         public override string GetInfo()
         {

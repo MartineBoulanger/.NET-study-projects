@@ -598,21 +598,21 @@
 //Console.WriteLine(Rekenaar.Kwadraat(3));
 
 /* Inheritance */
-using CSharpPFCursus;
+//using CSharpPFCursus;
 //Arbeider ik = new Arbeider("Asterix", new DateTime(2026,3,1), Geslacht.Man, 24.79m, 3);
-Werknemer ik = new Arbeider("Asterix", new DateTime(2026,3,1), Geslacht.Man, 24.79m, 3);
+//Werknemer ik = new Arbeider("Asterix", new DateTime(2026,3,1), Geslacht.Man, 24.79m, 3);
 //Console.WriteLine(ik.GetInfo());
 //Bediende jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
-Werknemer jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
-Bediende? hij;
+//Werknemer jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
+//Bediende? hij;
 //hij = (Bediende) ik;
 //Console.WriteLine(hij.GetInfo());
-hij = (Bediende) jij;
-Console.WriteLine(hij.GetInfo());
-hij = ik as Bediende;
-if (hij != null) Console.WriteLine(hij.GetInfo());
-hij = jij as Bediende;
-if (hij != null) Console.WriteLine(hij.GetInfo());
+//hij = (Bediende) jij;
+//Console.WriteLine(hij.GetInfo());
+//hij = ik as Bediende;
+//if (hij != null) Console.WriteLine(hij.GetInfo());
+//hij = jij as Bediende;
+//if (hij != null) Console.WriteLine(hij.GetInfo());
 //Console.WriteLine(jij.GetInfo());
 //Manager hij = new Manager("Idefix", new DateTime(2026,3,1), Geslacht.X, 4000m, 10000m);
 //Manager zij = new Manager("Bellefleur", new DateTime(2026, 3, 1), Geslacht.Vrouw, 4000m, 10000m);
@@ -628,3 +628,14 @@ if (hij != null) Console.WriteLine(hij.GetInfo());
 //Console.WriteLine(hij.ToString());
 //Console.WriteLine(hij.Equals(zij));
 //Console.WriteLine(zij.Equals(zij));
+
+/* Abstract classes and sealed classes, abstract methods */
+using CSharpPFCursus;
+//Werknemer ik = new Werknemer(); // dit kan nu niet meer vanwege het sleutelwoord abstract
+//Manager jij = new Manager("Asterix", DateTime.Today, Geslacht.Man, 4000m, 8000m);
+Arbeider asterix = new("Asterix", DateTime.Today, Geslacht.Man, 23.55m, 3);
+Bediende obelix = new("Obelix", DateTime.Today, Geslacht.Man, 2386.99m);
+Manager idefix = new("Idefix", DateTime.Today, Geslacht.Man, 2800m, 9000m);
+Console.WriteLine(asterix.Premie);
+Console.WriteLine(obelix.Premie);
+Console.WriteLine(idefix.Premie);

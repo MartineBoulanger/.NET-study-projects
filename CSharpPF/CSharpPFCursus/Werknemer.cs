@@ -1,6 +1,6 @@
 ﻿namespace CSharpPFCursus
 {
-    public class Werknemer
+    public abstract class Werknemer
     {
         // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
         //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
@@ -11,6 +11,8 @@
            this.InDienst = inDienst ?? DateTime.Today;
            this.Geslacht = geslacht;
         }
+
+        public abstract decimal Premie { get; }
 
         private string naam;
         public string Naam

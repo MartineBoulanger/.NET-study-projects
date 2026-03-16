@@ -1,6 +1,6 @@
 ﻿namespace CSharpPFCursus
 {
-    internal class Bediende : Werknemer
+    public class Bediende : Werknemer
     {
         public Bediende(string naam, DateTime inDienst, Geslacht geslacht, decimal wedde) : base(naam, inDienst,geslacht)
         {
@@ -13,6 +13,12 @@
         {
             get { return wedde; }
             set { if (value >= 0m) wedde = value; }
+        }
+
+        // overschrijven van de abstract property Premie
+        public override decimal Premie
+        {
+            get { return Wedde * 2m; }
         }
 
         public override string GetInfo()
