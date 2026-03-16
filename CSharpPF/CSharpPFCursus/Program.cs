@@ -630,12 +630,20 @@
 //Console.WriteLine(zij.Equals(zij));
 
 /* Abstract classes and sealed classes, abstract methods */
-using CSharpPFCursus;
+//using CSharpPFCursus;
 //Werknemer ik = new Werknemer(); // dit kan nu niet meer vanwege het sleutelwoord abstract
 //Manager jij = new Manager("Asterix", DateTime.Today, Geslacht.Man, 4000m, 8000m);
-Arbeider asterix = new("Asterix", DateTime.Today, Geslacht.Man, 23.55m, 3);
-Bediende obelix = new("Obelix", DateTime.Today, Geslacht.Man, 2386.99m);
-Manager idefix = new("Idefix", DateTime.Today, Geslacht.Man, 2800m, 9000m);
-Console.WriteLine(asterix.Premie);
-Console.WriteLine(obelix.Premie);
-Console.WriteLine(idefix.Premie);
+//Arbeider asterix = new("Asterix", DateTime.Today, Geslacht.Man, 23.55m, 3);
+//Bediende obelix = new("Obelix", DateTime.Today, Geslacht.Man, 2386.99m);
+//Manager idefix = new("Idefix", DateTime.Today, Geslacht.Man, 2800m, 9000m);
+//Console.WriteLine(asterix.Premie);
+//Console.WriteLine(obelix.Premie);
+//Console.WriteLine(idefix.Premie);
+
+/* Inheritance polymorphism */
+using CSharpPFCursus;
+Werknemer[] wij = new Werknemer[3];
+wij[0] = new Arbeider("Asterix", DateTime.Today, Geslacht.Man, 22.45m, 2);
+wij[1] = new Bediende("Obelix", DateTime.Today, Geslacht.X, 2400m);
+wij[2] = new Manager("Bellefleur", DateTime.Today, Geslacht.Vrouw, 2700m, 8000m);
+foreach (Werknemer nemer in wij) Console.WriteLine(nemer.GetInfo());
