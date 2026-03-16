@@ -589,10 +589,42 @@
 // Console.WriteLine(ik.GetInfo());
 
 /* Static classes */
-using CSharpPFCursus;
+//using CSharpPFCursus;
 // Werknemer ik = new Werknemer("Martine", DateTime.Today, Geslacht.Vrouw);
 // Werknemer.Personeelsfeest = new DateOnly(2026, 12, 21);
 // Console.WriteLine(ik.GetInfo());
 // Console.WriteLine(Werknemer.Personeelsfeest);
 // ik.Personeelsfeest = new DateOnly.FromDateTime(DateTime.Today);
-Console.WriteLine(Rekenaar.Kwadraat(3));
+//Console.WriteLine(Rekenaar.Kwadraat(3));
+
+/* Inheritance */
+using CSharpPFCursus;
+//Arbeider ik = new Arbeider("Asterix", new DateTime(2026,3,1), Geslacht.Man, 24.79m, 3);
+Werknemer ik = new Arbeider("Asterix", new DateTime(2026,3,1), Geslacht.Man, 24.79m, 3);
+//Console.WriteLine(ik.GetInfo());
+//Bediende jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
+Werknemer jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
+Bediende? hij;
+hij = (Bediende) ik;
+Console.WriteLine(hij.GetInfo());
+hij = (Bediende) jij;
+Console.WriteLine(hij.GetInfo());
+hij = ik as Bediende;
+if (hij != null) Console.WriteLine(hij.GetInfo());
+hij = jij as Bediende;
+if (hij != null) Console.WriteLine(hij.GetInfo());
+//Console.WriteLine(jij.GetInfo());
+//Manager hij = new Manager("Idefix", new DateTime(2026,3,1), Geslacht.X, 4000m, 10000m);
+//Manager zij = new Manager("Bellefleur", new DateTime(2026, 3, 1), Geslacht.Vrouw, 4000m, 10000m);
+//Console.WriteLine(hij.GetInfo());
+// controlerebn van welke class het object komt, gebeurd met de het sleutelwoord is
+//Console.WriteLine(hij is Manager);
+//Console.WriteLine(hij is Bediende);
+//Console.WriteLine(hij is Werknemer);
+//Console.WriteLine(hij is Arbeider);
+//Console.WriteLine(hij is string);
+//hij = null!;
+//Console.WriteLine(hij is Manager);
+//Console.WriteLine(hij.ToString());
+//Console.WriteLine(hij.Equals(zij));
+//Console.WriteLine(zij.Equals(zij));

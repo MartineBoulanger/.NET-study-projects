@@ -5,10 +5,10 @@
         // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
         //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
         // een constructor met parameters waarbij de developer via het programma waardes kan meegeven aan de parameters.
-        public Werknemer(string naam, DateTime inDienst, Geslacht geslacht = Geslacht.X)
+        public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
         {
            this.Naam = naam;
-           this.InDienst = inDienst;
+           this.InDienst = inDienst ?? DateTime.Today;
            this.Geslacht = geslacht;
         }
 
@@ -65,9 +65,32 @@
             while (Personeelsfeest.DayOfWeek != DayOfWeek.Friday) Personeelsfeest = Personeelsfeest.AddDays(1);
         }
 
-        public string GetInfo()
+        public virtual string GetInfo()
         {
             return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}\nPersoneelsfeest: {Personeelsfeest}";
+        }
+
+        public override string ToString()
+        {
+            return $"{Naam} {Geslacht}";
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is Werknemer)
+            {
+                Werknemer andereWerknemer = (Werknemer)obj;
+                return this.Naam == andereWerknemer.Naam;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode() 
+        {
+            return Naam.GetHashCode();
         }
     }
 }
