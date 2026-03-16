@@ -464,22 +464,48 @@
 
 // 13. Abstract classes, abstract members, static members
 // 13.1 Oefening Bank
+//using CSharpPFOefeningen;
+//Console.WriteLine("------------------------------------------------------------------");
+//Spaarrekening mijn = new Spaarrekening("BE03001467893452", 100m, DateOnly.FromDateTime(DateTime.Today));
+//Spaarrekening jouw = new Spaarrekening("BE03001467893450", 100m, DateOnly.FromDateTime(DateTime.Today));
+//Spaarrekening.Intrest = 3m;
+//Console.WriteLine(mijn.GetInfo());
+//Console.WriteLine(jouw.GetInfo());
+//Spaarrekening.Intrest = 2m;
+//Console.WriteLine(mijn.GetInfo());
+//Console.WriteLine(jouw.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+//Vrachtwagen daf = new Vrachtwagen("Willem", 40000m, 500, 30, "2-ABC-987", 10000f);
+//Personenwagen bmw = new Personenwagen("Hendrik", 20000m, 249, 8.5f, "1-TRC-567", 5, 5);
+//Console.WriteLine(daf.GetInfo());
+//Console.WriteLine($"kyotoscore: {daf.GetKyotoScore():F2}");
+//Console.WriteLine();
+//Console.WriteLine(bmw.GetInfo());
+//Console.WriteLine($"kyotoscore: {bmw.GetKyotoScore():F2}");
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 14. Inheritance polymorphism
+// 14.1 Oefening Bank
 using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
-Spaarrekening mijn = new Spaarrekening("BE03001467893452", 100m, DateOnly.FromDateTime(DateTime.Today));
-Spaarrekening jouw = new Spaarrekening("BE03001467893450", 100m, DateOnly.FromDateTime(DateTime.Today));
-Spaarrekening.Intrest = 3m;
-Console.WriteLine(mijn.GetInfo());
-Console.WriteLine(jouw.GetInfo());
 Spaarrekening.Intrest = 2m;
-Console.WriteLine(mijn.GetInfo());
-Console.WriteLine(jouw.GetInfo());
+Rekening[] arrRekeningen = new Rekening[2];
+arrRekeningen[0] = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today));
+arrRekeningen[1] = new Zichtrekening("BE03001447946884", 235.45m, new DateOnly(2012, 4, 5), 0m);
+foreach (Rekening rek in arrRekeningen)
+{
+    Console.WriteLine(rek.GetInfo());
+    Console.WriteLine();
+}
 Console.WriteLine("------------------------------------------------------------------");
-Vrachtwagen daf = new Vrachtwagen("Willem", 40000m, 500, 30, "2-ABC-987", 10000f);
-Personenwagen bmw = new Personenwagen("Hendrik", 20000m, 249, 8.5f, "1-TRC-567", 5, 5);
-Console.WriteLine(daf.GetInfo());
-Console.WriteLine($"kyotoscore: {daf.GetKyotoScore():F2}");
-Console.WriteLine();
-Console.WriteLine(bmw.GetInfo());
-Console.WriteLine($"kyotoscore: {bmw.GetKyotoScore():F2}");
+//Voertuig[] vehicles = new Voertuig[2];
+Personenwagen auto = new Personenwagen("Anna", 15000m, 100, 5.6f, "2-DHC-811", 4, 4);
+Vrachtwagen camion = new Vrachtwagen("Martine", 123000m, 525, 15.6f, "2-ABC-456", 10000f);
+Voertuig[] vehicles = [auto, camion]; // kunt het ook zo doen
+foreach (Voertuig vehicle in vehicles)
+{
+    Console.WriteLine(vehicle.GetInfo());
+    Console.WriteLine($"kyotoscore: {vehicle.GetKyotoScore():F2}");
+    Console.WriteLine();
+}
 Console.WriteLine("------------------------------------------------------------------");

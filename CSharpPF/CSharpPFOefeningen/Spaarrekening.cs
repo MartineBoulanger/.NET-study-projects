@@ -4,7 +4,7 @@
     {
         public Spaarrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum) : base(rekeningnummer, saldo, creatieDatum)
         {
-            //Intrest = intrest; // verwijderd omdat Instrest property nu static is
+            //Intrest = intrest; // verwijderd omdat Intrest property nu static is
         }
 
         private static decimal intrest;
