@@ -443,21 +443,43 @@
 
 // 12. Inheritance
 // 12.1 Classes Zichtrekening & Spaarrekening
+//using CSharpPFOefeningen;
+//Console.WriteLine("------------------------------------------------------------------");
+//Zichtrekening mijn = new Zichtrekening("BE03001447946884", 0m, DateOnly.FromDateTime(DateTime.Today), -600m);
+//mijn.Storten(125m);
+//Console.WriteLine(mijn.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+//Spaarrekening mijne = new Spaarrekening("BE03001447946884", 0m, DateOnly.FromDateTime(DateTime.Today), 10m);
+//mijne.Storten(1000m);
+//Console.WriteLine(mijne.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+// 12.2 Classes Vrachtwagen & Personenwagen
+//Console.WriteLine("------------------------------------------------------------------");
+//Vrachtwagen daf = new Vrachtwagen("Geerstrans", 112500.56m, 525, 11.6f, "2-TGY-456", 10000f);
+//Console.WriteLine(daf.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+//Personenwagen citroen = new Personenwagen("Anna Dackus", 19990m, 119, 4.5f, "2-HDC-811", 4, 4);
+//Console.WriteLine(citroen.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 13. Abstract classes, abstract members, static members
+// 13.1 Oefening Bank
 using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
-Zichtrekening mijn = new Zichtrekening("BE03001447946884", 0m, DateOnly.FromDateTime(DateTime.Today), -600m);
-mijn.Storten(125m);
+Spaarrekening mijn = new Spaarrekening("BE03001467893452", 100m, DateOnly.FromDateTime(DateTime.Today));
+Spaarrekening jouw = new Spaarrekening("BE03001467893450", 100m, DateOnly.FromDateTime(DateTime.Today));
+Spaarrekening.Intrest = 3m;
 Console.WriteLine(mijn.GetInfo());
+Console.WriteLine(jouw.GetInfo());
+Spaarrekening.Intrest = 2m;
+Console.WriteLine(mijn.GetInfo());
+Console.WriteLine(jouw.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");
-Spaarrekening mijne = new Spaarrekening("BE03001447946884", 0m, DateOnly.FromDateTime(DateTime.Today), 10m);
-mijne.Storten(1000m);
-Console.WriteLine(mijne.GetInfo());
-Console.WriteLine("------------------------------------------------------------------");
-// 12.2 Classes Vrachtwagen & Personenwagen
-Console.WriteLine("------------------------------------------------------------------");
-Vrachtwagen daf = new Vrachtwagen("Geerstrans", 112500.56m, 525, 11.6f, "2-TGY-456", 10000f);
+Vrachtwagen daf = new Vrachtwagen("Willem", 40000m, 500, 30, "2-ABC-987", 10000f);
+Personenwagen bmw = new Personenwagen("Hendrik", 20000m, 249, 8.5f, "1-TRC-567", 5, 5);
 Console.WriteLine(daf.GetInfo());
-Console.WriteLine("------------------------------------------------------------------");
-Personenwagen citroen = new Personenwagen("Anna Dackus", 19990m, 119, 4.5f, "2-HDC-811", 4, 4);
-Console.WriteLine(citroen.GetInfo());
+Console.WriteLine($"kyotoscore: {daf.GetKyotoScore():F2}");
+Console.WriteLine();
+Console.WriteLine(bmw.GetInfo());
+Console.WriteLine($"kyotoscore: {bmw.GetKyotoScore():F2}");
 Console.WriteLine("------------------------------------------------------------------");

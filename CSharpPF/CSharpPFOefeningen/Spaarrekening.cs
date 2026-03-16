@@ -2,14 +2,14 @@
 {
     public class Spaarrekening : Rekening
     {
-        public Spaarrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum, decimal intrest) : base(rekeningnummer, saldo, creatieDatum)
+        public Spaarrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum) : base(rekeningnummer, saldo, creatieDatum)
         {
-            Intrest = intrest;
+            //Intrest = intrest; // verwijderd omdat Instrest property nu static is
         }
 
-        private decimal intrest;
+        private static decimal intrest;
 
-        public decimal Intrest
+        public static decimal Intrest
         {
             get { return intrest; }
             set { if (value >= 0) intrest = value; }

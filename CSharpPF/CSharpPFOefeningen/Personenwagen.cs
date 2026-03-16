@@ -16,7 +16,6 @@
         }
 
         private int aantalDeuren;
-
         public int AantalDeuren
         {
             get => aantalDeuren;
@@ -24,11 +23,15 @@
         }
 
         private int aantalPassagiers;
-
         public int AantalPassagiers
         {
             get => aantalPassagiers;
             set { if (value > 0) aantalPassagiers = value; }
+        }
+
+        public override double GetKyotoScore()
+        {
+            return AantalPassagiers != 0 ? (GemiddeldVerbruik * Pk) / AantalPassagiers : 0.0;
         }
 
         public override string GetInfo()

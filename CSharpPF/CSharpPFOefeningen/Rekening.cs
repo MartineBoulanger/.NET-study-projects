@@ -1,6 +1,6 @@
 namespace CSharpPFOefeningen
 {
-    public class Rekening
+    public abstract class Rekening
     {
         private readonly DateOnly EersteCreatie = new(1900, 1, 1);
         

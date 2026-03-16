@@ -1,7 +1,9 @@
 namespace CSharpPFOefeningen
 {
-    public class Voertuig
+    public abstract class Voertuig
     {
+        public abstract double GetKyotoScore();
+
         // constructor
         public Voertuig(string polishouder = "onbepaald", decimal kostprijs = 0m, int pk = 0, float gemiddeldVerbruik = 0f, string nummerplaat = "onbepaald")
         {
@@ -15,11 +17,11 @@ namespace CSharpPFOefeningen
         //public required string Polishouder { get; init; }
         public string Polishouder { get; init; }
 
-        public decimal? Kostprijs { get; set { field = value > 0m ? value : 0; } }
+        public decimal Kostprijs { get; set { field = value > 0m ? value : 0; } }
 
-        public int? Pk { get; set { field = value > 0 ? value : 0; } }
+        public int Pk { get; set { field = value > 0 ? value : 0; } }
 
-        public float? GemiddeldVerbruik { get; set { field = value > 0f ? value : 0; } }
+        public float GemiddeldVerbruik { get; set { field = value > 0f ? value : 0; } }
 
         public string Nummerplaat { get; set; }
 
