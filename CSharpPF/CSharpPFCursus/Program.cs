@@ -641,9 +641,18 @@
 //Console.WriteLine(idefix.Premie);
 
 /* Inheritance polymorphism */
+//using CSharpPFCursus;
+//Werknemer[] wij = new Werknemer[3];
+//wij[0] = new Arbeider("Asterix", DateTime.Today, Geslacht.Man, 22.45m, 2);
+//wij[1] = new Bediende("Obelix", DateTime.Today, Geslacht.X, 2400m);
+//wij[2] = new Manager("Bellefleur", DateTime.Today, Geslacht.Vrouw, 2700m, 8000m);
+//foreach (Werknemer nemer in wij) Console.WriteLine(nemer.GetInfo());
+
+/* Extension Members */
 using CSharpPFCursus;
-Werknemer[] wij = new Werknemer[3];
-wij[0] = new Arbeider("Asterix", DateTime.Today, Geslacht.Man, 22.45m, 2);
-wij[1] = new Bediende("Obelix", DateTime.Today, Geslacht.X, 2400m);
-wij[2] = new Manager("Bellefleur", DateTime.Today, Geslacht.Vrouw, 2700m, 8000m);
-foreach (Werknemer nemer in wij) Console.WriteLine(nemer.GetInfo());
+string land = "belgie";
+Console.WriteLine(land.ToUpperFirst());
+Console.WriteLine(land.Right(2));
+string tekst = "Groeten van Martine";
+Console.WriteLine(tekst.WordCount);
+Console.WriteLine(string.GenerateCode(8));
