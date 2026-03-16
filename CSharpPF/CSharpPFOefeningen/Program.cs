@@ -384,19 +384,59 @@
 
 // 10. primary constructors
 // 10.1 Rekening2
+// using CSharpPFOefeningen;
+// Console.WriteLine("------------------------------------------------------------------");
+// Rekening2 rek = new("BE03001447946884",1025.65m,DateOnly.FromDateTime(new DateTime(2015,5,4)));
+// Console.WriteLine(rek.GetInfo());
+// Console.WriteLine("------------------------------------------------------------------");
+// // 10.2 Voertuig2
+// Console.WriteLine("------------------------------------------------------------------");
+// Voertuig2 auto = new("Martine", 788.99m, 119, 5.6f, "2-HDC-811");
+// Console.WriteLine(auto.GetInfo());
+// Voertuig2 auto2 = new();
+// Console.WriteLine(auto2.GetInfo());
+// Voertuig2 auto3 = new();
+// Console.WriteLine(auto3.GetInfo());
+// auto3.Nummerplaat = "1-sug-456";
+// Console.WriteLine(auto3.GetInfo());
+// Console.WriteLine("------------------------------------------------------------------");
+
+// 11. Object initializers
+// 11.1 Rekening
 using CSharpPFOefeningen;
+// Console.WriteLine("------------------------------------------------------------------");
+// Rekening rek = new("BE03001447946884", 1025.65m, DateOnly.FromDateTime(new DateTime(2015, 5, 4)));
+// Console.WriteLine(rek.GetInfo());
+// rek.Rekeningnummer = "BE03001348746772";
+// Console.WriteLine(rek.GetInfo());
+// Console.WriteLine("------------------------------------------------------------------");
+// 11.2 Voertuig
 Console.WriteLine("------------------------------------------------------------------");
-Rekening2 rek = new("BE03001447946884",1025.65m,DateOnly.FromDateTime(new DateTime(2015,5,4)));
-Console.WriteLine(rek.GetInfo());
-Console.WriteLine("------------------------------------------------------------------");
-// 10.2 Voertuig2
-Console.WriteLine("------------------------------------------------------------------");
-Voertuig2 auto = new("Martine", 788.99m, 119, 5.6f, "2-HDC-811");
+// Voertuig auto = new("Martine", 788.99m, 119, 5.6f, "2-HDC-811");
+// Console.WriteLine(auto.GetInfo());
+Voertuig auto = new()
+{
+  Polishouder = "Boulanger",
+  Kostprijs = 500m,
+  Pk = 500,
+  GemiddeldVerbruik = 5f,
+  Nummerplaat = "2-HDG-432"
+};
+Voertuig auto2 = new()
+{
+  Polishouder = "Boulanger",
+  Nummerplaat = "2-HDG-432"
+};
+Voertuig auto3 = new()
+{
+  Polishouder = "Boulanger",
+};
+// Voertuig auto4 = new()
+// {
+//   Nummerplaat = "2-HDG-432"
+// };
 Console.WriteLine(auto.GetInfo());
-Voertuig2 auto2 = new();
 Console.WriteLine(auto2.GetInfo());
-Voertuig2 auto3 = new();
 Console.WriteLine(auto3.GetInfo());
-auto3.Nummerplaat = "1-sug-456";
-Console.WriteLine(auto3.GetInfo());
+// Console.WriteLine(auto4.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");

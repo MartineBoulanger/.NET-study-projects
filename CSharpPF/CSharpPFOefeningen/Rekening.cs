@@ -16,7 +16,7 @@ namespace CSharpPFOefeningen
         public string Rekeningnummer
         {
             get => rekeningnummer; 
-            set
+            init
             {
                 if (IsRekeningNummerGeldig(value))
                 {
