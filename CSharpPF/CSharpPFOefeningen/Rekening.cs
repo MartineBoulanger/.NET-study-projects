@@ -40,9 +40,9 @@ namespace CSharpPFOefeningen
             return (int)(eerste10 % 97ul) == laatste2;
         }
 
-        public string GetInfo()
+        public virtual string GetInfo()
         {
-            return $"Rekening: {Rekeningnummer}\nheeft een saldo van: {Saldo:0.00}\nop datum: {CreatieDatum}";
+            return $"Rekeningnummer: {Rekeningnummer}\nSaldo: {Saldo:0.00}\nCreatie datum: {CreatieDatum}";
         }
         
         public decimal Storten(decimal bedrag)

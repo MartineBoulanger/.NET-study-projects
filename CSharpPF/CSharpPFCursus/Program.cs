@@ -605,8 +605,8 @@ Werknemer ik = new Arbeider("Asterix", new DateTime(2026,3,1), Geslacht.Man, 24.
 //Bediende jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
 Werknemer jij = new Bediende("Obelix", new DateTime(2026, 3, 1), Geslacht.Man, 3500.56m);
 Bediende? hij;
-hij = (Bediende) ik;
-Console.WriteLine(hij.GetInfo());
+//hij = (Bediende) ik;
+//Console.WriteLine(hij.GetInfo());
 hij = (Bediende) jij;
 Console.WriteLine(hij.GetInfo());
 hij = ik as Bediende;

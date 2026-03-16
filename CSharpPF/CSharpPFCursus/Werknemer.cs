@@ -77,20 +77,31 @@
 
         public override bool Equals(object? obj)
         {
-            if (obj is Werknemer)
-            {
-                Werknemer andereWerknemer = (Werknemer)obj;
-                return this.Naam == andereWerknemer.Naam;
-            }
-            else
-            {
-                return false;
-            }
+            return obj is Werknemer werknemer &&
+                   Naam == werknemer.Naam;
         }
 
-        public override int GetHashCode() 
+        public override int GetHashCode()
         {
-            return Naam.GetHashCode();
+            return HashCode.Combine(Naam);
         }
+
+        //public override bool Equals(object? obj)
+        //{
+        //    if (obj is Werknemer)
+        //    {
+        //        Werknemer andereWerknemer = (Werknemer)obj;
+        //        return this.Naam == andereWerknemer.Naam;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //public override int GetHashCode() 
+        //{
+        //    return Naam.GetHashCode();
+        //}
     }
 }

@@ -403,7 +403,7 @@
 
 // 11. Object initializers
 // 11.1 Rekening
-using CSharpPFOefeningen;
+//using CSharpPFOefeningen;
 // Console.WriteLine("------------------------------------------------------------------");
 // Rekening rek = new("BE03001447946884", 1025.65m, DateOnly.FromDateTime(new DateTime(2015, 5, 4)));
 // Console.WriteLine(rek.GetInfo());
@@ -411,32 +411,53 @@ using CSharpPFOefeningen;
 // Console.WriteLine(rek.GetInfo());
 // Console.WriteLine("------------------------------------------------------------------");
 // 11.2 Voertuig
-Console.WriteLine("------------------------------------------------------------------");
+//Console.WriteLine("------------------------------------------------------------------");
 // Voertuig auto = new("Martine", 788.99m, 119, 5.6f, "2-HDC-811");
 // Console.WriteLine(auto.GetInfo());
-Voertuig auto = new()
-{
-  Polishouder = "Boulanger",
-  Kostprijs = 500m,
-  Pk = 500,
-  GemiddeldVerbruik = 5f,
-  Nummerplaat = "2-HDG-432"
-};
-Voertuig auto2 = new()
-{
-  Polishouder = "Boulanger",
-  Nummerplaat = "2-HDG-432"
-};
-Voertuig auto3 = new()
-{
-  Polishouder = "Boulanger",
-};
+//Voertuig auto = new()
+//{
+//  Polishouder = "Boulanger",
+//  Kostprijs = 500m,
+//  Pk = 500,
+//  GemiddeldVerbruik = 5f,
+//  Nummerplaat = "2-HDG-432"
+//};
+//Voertuig auto2 = new()
+//{
+//  Polishouder = "Boulanger",
+//  Nummerplaat = "2-HDG-432"
+//};
+//Voertuig auto3 = new()
+//{
+//  Polishouder = "Boulanger",
+//};
 // Voertuig auto4 = new()
 // {
 //   Nummerplaat = "2-HDG-432"
 // };
-Console.WriteLine(auto.GetInfo());
-Console.WriteLine(auto2.GetInfo());
-Console.WriteLine(auto3.GetInfo());
+//Console.WriteLine(auto.GetInfo());
+//Console.WriteLine(auto2.GetInfo());
+//Console.WriteLine(auto3.GetInfo());
 // Console.WriteLine(auto4.GetInfo());
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 12. Inheritance
+// 12.1 Classes Zichtrekening & Spaarrekening
+using CSharpPFOefeningen;
+Console.WriteLine("------------------------------------------------------------------");
+Zichtrekening mijn = new Zichtrekening("BE03001447946884", 0m, DateOnly.FromDateTime(DateTime.Today), -600m);
+mijn.Storten(125m);
+Console.WriteLine(mijn.GetInfo());
+Console.WriteLine("------------------------------------------------------------------");
+Spaarrekening mijne = new Spaarrekening("BE03001447946884", 0m, DateOnly.FromDateTime(DateTime.Today), 10m);
+mijne.Storten(1000m);
+Console.WriteLine(mijne.GetInfo());
+Console.WriteLine("------------------------------------------------------------------");
+// 12.2 Classes Vrachtwagen & Personenwagen
+Console.WriteLine("------------------------------------------------------------------");
+Vrachtwagen daf = new Vrachtwagen("Geerstrans", 112500.56m, 525, 11.6f, "2-TGY-456", 10000f);
+Console.WriteLine(daf.GetInfo());
+Console.WriteLine("------------------------------------------------------------------");
+Personenwagen citroen = new Personenwagen("Anna Dackus", 19990m, 119, 4.5f, "2-HDC-811", 4, 4);
+Console.WriteLine(citroen.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");
