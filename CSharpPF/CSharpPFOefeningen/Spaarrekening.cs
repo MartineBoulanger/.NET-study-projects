@@ -2,7 +2,7 @@
 {
     public class Spaarrekening : Rekening
     {
-        public Spaarrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum) : base(rekeningnummer, saldo, creatieDatum)
+        public Spaarrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum, Klant eigenaar) : base(rekeningnummer, saldo, creatieDatum, eigenaar)
         {
             //Intrest = intrest; // verwijderd omdat Intrest property nu static is
         }

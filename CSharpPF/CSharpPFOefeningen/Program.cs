@@ -486,26 +486,43 @@
 
 // 14. Inheritance polymorphism
 // 14.1 Oefening Bank
+// using CSharpPFOefeningen;
+// Console.WriteLine("------------------------------------------------------------------");
+// Spaarrekening.Intrest = 2m;
+// Rekening[] arrRekeningen = new Rekening[2];
+// arrRekeningen[0] = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today));
+// arrRekeningen[1] = new Zichtrekening("BE03001447946884", 235.45m, new DateOnly(2012, 4, 5), 0m);
+// foreach (Rekening rek in arrRekeningen)
+// {
+//     Console.WriteLine(rek.GetInfo());
+//     Console.WriteLine();
+// }
+// Console.WriteLine("------------------------------------------------------------------");
+// //Voertuig[] vehicles = new Voertuig[2];
+// Personenwagen auto = new Personenwagen("Anna", 15000m, 100, 5.6f, "2-DHC-811", 4, 4);
+// Vrachtwagen camion = new Vrachtwagen("Martine", 123000m, 525, 15.6f, "2-ABC-456", 10000f);
+// Voertuig[] vehicles = [auto, camion]; // kunt het ook zo doen
+// foreach (Voertuig vehicle in vehicles)
+// {
+//     Console.WriteLine(vehicle.GetInfo());
+//     Console.WriteLine($"kyotoscore: {vehicle.GetKyotoScore():F2}");
+//     Console.WriteLine();
+// }
+// Console.WriteLine("------------------------------------------------------------------");
+
+// 15. Aggregation
+// 15.1 Oefening Bank
 using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
-Spaarrekening.Intrest = 2m;
-Rekening[] arrRekeningen = new Rekening[2];
-arrRekeningen[0] = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today));
-arrRekeningen[1] = new Zichtrekening("BE03001447946884", 235.45m, new DateOnly(2012, 4, 5), 0m);
-foreach (Rekening rek in arrRekeningen)
+Spaarrekening.Intrest = 3m;
+Klant eigenaar = new Klant
 {
-    Console.WriteLine(rek.GetInfo());
-    Console.WriteLine();
-}
-Console.WriteLine("------------------------------------------------------------------");
-//Voertuig[] vehicles = new Voertuig[2];
-Personenwagen auto = new Personenwagen("Anna", 15000m, 100, 5.6f, "2-DHC-811", 4, 4);
-Vrachtwagen camion = new Vrachtwagen("Martine", 123000m, 525, 15.6f, "2-ABC-456", 10000f);
-Voertuig[] vehicles = [auto, camion]; // kunt het ook zo doen
-foreach (Voertuig vehicle in vehicles)
-{
-    Console.WriteLine(vehicle.GetInfo());
-    Console.WriteLine($"kyotoscore: {vehicle.GetKyotoScore():F2}");
-    Console.WriteLine();
-}
+    Voornaam = "Martine",
+    Familienaam = "Boulanger"
+};
+Spaarrekening spaar = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today), eigenaar);
+Zichtrekening zicht = new Zichtrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today), eigenaar, -500m);
+Console.WriteLine(spaar.GetInfo());
+Console.WriteLine();
+Console.WriteLine(zicht.GetInfo());
 Console.WriteLine("------------------------------------------------------------------");

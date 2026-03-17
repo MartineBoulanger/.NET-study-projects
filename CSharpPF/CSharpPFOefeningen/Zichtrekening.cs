@@ -2,7 +2,7 @@
 {
     public class Zichtrekening : Rekening
     {
-		public Zichtrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum, decimal maxKrediet) : base(rekeningnummer, saldo, creatieDatum)
+		public Zichtrekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum, Klant eigenaar, decimal maxKrediet) : base(rekeningnummer, saldo, creatieDatum, eigenaar)
 		{
 			MaxKrediet = maxKrediet;
 		}

@@ -5,11 +5,12 @@ namespace CSharpPFOefeningen
         private readonly DateOnly EersteCreatie = new(1900, 1, 1);
         
         // constructor
-        public Rekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum)
+        public Rekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum, Klant eigenaar)
         {
             Rekeningnummer = rekeningnummer;
             Saldo = saldo;
             CreatieDatum = creatieDatum;
+            Eigenaar = eigenaar;
         }
 
         private string rekeningnummer;
@@ -40,9 +41,11 @@ namespace CSharpPFOefeningen
             return (int)(eerste10 % 97ul) == laatste2;
         }
 
+        public Klant Eigenaar { get; set; }
+
         public virtual string GetInfo()
         {
-            return $"Rekeningnummer: {Rekeningnummer}\nSaldo: {Saldo:0.00}\nCreatie datum: {CreatieDatum}";
+            return $"Rekeningnummer: {Rekeningnummer}\nSaldo: {Saldo:0.00}\nCreatie datum: {CreatieDatum}\nKlant: {Eigenaar?.GetKlantInfo() ?? "Onbekende klant"}";
         }
         
         public decimal Storten(decimal bedrag)
