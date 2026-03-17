@@ -649,10 +649,39 @@
 //foreach (Werknemer nemer in wij) Console.WriteLine(nemer.GetInfo());
 
 /* Extension Members */
+// using CSharpPFCursus;
+// string land = "belgie";
+// Console.WriteLine(land.ToUpperFirst());
+// Console.WriteLine(land.Right(2));
+// string tekst = "Groeten van Martine";
+// Console.WriteLine(tekst.WordCount);
+// Console.WriteLine(string.GenerateCode(8));
+
+/* Aggregation */
 using CSharpPFCursus;
-string land = "belgie";
-Console.WriteLine(land.ToUpperFirst());
-Console.WriteLine(land.Right(2));
-string tekst = "Groeten van Martine";
-Console.WriteLine(tekst.WordCount);
-Console.WriteLine(string.GenerateCode(8));
+// Doe dit met een contructor met parameters in de class Afdeling
+// Afdeling afdelingStrijd = new("Strijd", 0);
+// Afdeling afdelingFeest = new("Feest", 1);
+// Doe dit als er geen contructor is, maar wel als de properties required zijn
+Afdeling afdelingStrijd = new Afdeling
+{
+  Naam = "Strijd",
+  Verdieping = 0
+};
+Afdeling afdelingFeest = new Afdeling
+{
+  Naam = "Feest",
+  Verdieping = 1,
+};
+Werknemer[] wij = new Werknemer[3];
+wij[0] = new Arbeider("Asterix", new DateTime(2026, 1, 1), Geslacht.Man, 23.67m, 3);
+wij[0].Afdeling = afdelingStrijd;
+wij[1] = new Bediende("Obelix", new DateTime(2025, 12, 1), Geslacht.Man, 2500m);
+wij[1].Afdeling = afdelingStrijd;
+wij[2] = new Manager("Bellefleur", DateTime.Today, Geslacht.Vrouw, 2600m, 9000m);
+wij[2].Afdeling = afdelingFeest;
+foreach (Werknemer nemer in wij)
+{
+  Console.WriteLine(nemer.GetInfo());
+  Console.WriteLine();
+}

@@ -67,9 +67,17 @@
             while (Personeelsfeest.DayOfWeek != DayOfWeek.Friday) Personeelsfeest = Personeelsfeest.AddDays(1);
         }
 
+        private Afdeling afdeling;
+        public Afdeling Afdeling
+        {
+            get => afdeling;
+            set => afdeling = value;
+        }
+
         public virtual string GetInfo()
         {
-            return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}\nPersoneelsfeest: {Personeelsfeest}";
+            return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}\nPersoneelsfeest: {Personeelsfeest}\n{(Afdeling is not null ? Afdeling.ToString() : "Onbekende afdeling")}";
+            // of Afdeling?.ToString() ?? "Onbekende afdeling"
         }
 
         public override string ToString()
