@@ -2,7 +2,12 @@
 {
     public class Bediende : Werknemer
     {
-        public Bediende(string naam, DateTime inDienst, Geslacht geslacht, decimal wedde) : base(naam, inDienst,geslacht)
+        // met de Afdeling als parameter
+        // public Bediende(string naam, DateTime inDienst, Geslacht geslacht, Afdeling afdeling, decimal wedde) : base(naam, inDienst, geslacht, afdeling)
+        // {
+        //     Wedde = wedde;
+        // }
+        public Bediende(string naam, DateTime inDienst, Geslacht geslacht, decimal wedde) : base(naam, inDienst, geslacht)
         {
             Wedde = wedde;
         }

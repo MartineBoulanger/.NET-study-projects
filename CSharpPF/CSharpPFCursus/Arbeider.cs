@@ -3,6 +3,12 @@
     public class Arbeider : Werknemer
     {
         // constructor met gebruik van de base class contructor
+        // hier zijn alle parameters optioneel
+        // public Arbeider(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X, Afdeling? afdeling = null, decimal uurloon = 10m, byte ploegenstelsel = 3) : base(naam, inDienst, geslacht, afdeling)
+        // {
+        //     Uurloon = uurloon;
+        //     Ploegenstelsel = ploegenstelsel;
+        // }
         public Arbeider(string naam, DateTime inDienst, Geslacht geslacht, decimal uurloon, byte ploegenstelsel) : base(naam, inDienst, geslacht)
         {
             Uurloon = uurloon;

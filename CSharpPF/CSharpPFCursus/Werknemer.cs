@@ -5,11 +5,22 @@
         // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
         //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
         // een constructor met parameters waarbij de developer via het programma waardes kan meegeven aan de parameters.
-        public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
+        // public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X, Afdeling? afdeling = null)
+        // {
+        //     this.Naam = naam;
+        //     this.InDienst = inDienst ?? DateTime.Today;
+        //     this.Geslacht = geslacht;
+        //     this.Afdeling = afdeling ?? new Afdeling
+        //     {
+        //         Naam = "Onbekend",
+        //         Verdieping = 10,
+        //     }; // omdat de andere parameters optioneel zijn, heb ik deze ook optioneel gemaakt
+        // }
+         public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
         {
-           this.Naam = naam;
-           this.InDienst = inDienst ?? DateTime.Today;
-           this.Geslacht = geslacht;
+            this.Naam = naam;
+            this.InDienst = inDienst ?? DateTime.Today;
+            this.Geslacht = geslacht;
         }
 
         public abstract decimal Premie { get; }

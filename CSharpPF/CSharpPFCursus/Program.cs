@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.Write("Asterix");
 //Console.Write(" en Obelix");
-Console.WriteLine("Hello World!");
+// Console.WriteLine("Hello World!");
 //Console.WriteLine("Asterix");
 //Console.WriteLine("Obelix");
 //Console.WriteLine("Hallo");
@@ -685,3 +685,6 @@ foreach (Werknemer nemer in wij)
   Console.WriteLine(nemer.GetInfo());
   Console.WriteLine();
 }
+// Ik heb de parameters in ed Arbeider contructor ook optioneel gemaakt, en kan ik dit nu dus zo uitvoeren
+// Werknemer ik = new Arbeider();
+// Console.WriteLine(ik.GetInfo());
