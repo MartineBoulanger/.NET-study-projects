@@ -658,33 +658,43 @@
 // Console.WriteLine(string.GenerateCode(8));
 
 /* Aggregation */
-using CSharpPFCursus;
+// using CSharpPFCursus;
 // Doe dit met een contructor met parameters in de class Afdeling
 // Afdeling afdelingStrijd = new("Strijd", 0);
 // Afdeling afdelingFeest = new("Feest", 1);
 // Doe dit als er geen contructor is, maar wel als de properties required zijn
-Afdeling afdelingStrijd = new Afdeling
-{
-  Naam = "Strijd",
-  Verdieping = 0
-};
-Afdeling afdelingFeest = new Afdeling
-{
-  Naam = "Feest",
-  Verdieping = 1,
-};
-Werknemer[] wij = new Werknemer[3];
-wij[0] = new Arbeider("Asterix", new DateTime(2026, 1, 1), Geslacht.Man, 23.67m, 3);
-wij[0].Afdeling = afdelingStrijd;
-wij[1] = new Bediende("Obelix", new DateTime(2025, 12, 1), Geslacht.Man, 2500m);
-wij[1].Afdeling = afdelingStrijd;
-wij[2] = new Manager("Bellefleur", DateTime.Today, Geslacht.Vrouw, 2600m, 9000m);
-wij[2].Afdeling = afdelingFeest;
-foreach (Werknemer nemer in wij)
-{
-  Console.WriteLine(nemer.GetInfo());
-  Console.WriteLine();
-}
+// Afdeling afdelingStrijd = new Afdeling
+// {
+//   Naam = "Strijd",
+//   Verdieping = 0
+// };
+// Afdeling afdelingFeest = new Afdeling
+// {
+//   Naam = "Feest",
+//   Verdieping = 1,
+// };
+// Werknemer[] wij = new Werknemer[3];
+// wij[0] = new Arbeider("Asterix", new DateTime(2026, 1, 1), Geslacht.Man, 23.67m, 3);
+// wij[0].Afdeling = afdelingStrijd;
+// wij[1] = new Bediende("Obelix", new DateTime(2025, 12, 1), Geslacht.Man, 2500m);
+// wij[1].Afdeling = afdelingStrijd;
+// wij[2] = new Manager("Bellefleur", DateTime.Today, Geslacht.Vrouw, 2600m, 9000m);
+// wij[2].Afdeling = afdelingFeest;
+// foreach (Werknemer nemer in wij)
+// {
+//   Console.WriteLine(nemer.GetInfo());
+//   Console.WriteLine();
+// }
 // Ik heb de parameters in ed Arbeider contructor ook optioneel gemaakt, en kan ik dit nu dus zo uitvoeren
 // Werknemer ik = new Arbeider();
 // Console.WriteLine(ik.GetInfo());
+
+/* Nested Classes */
+using CSharpPFCursus;
+Arbeider ik = new Arbeider("Martine", DateTime.Today, Geslacht.Vrouw, 33.56m, 3);
+ik.Regime = new Werknemer.WerkRegime
+{
+  Type = Werknemer.WerkRegime.RegimeType.Voltijds
+};
+Console.WriteLine(ik.Regime);
+Console.WriteLine(ik.Regime.AantalVakantiedagen);

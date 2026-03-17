@@ -35,6 +35,7 @@
         }
 
         public DateTime InDienst { get; set; }
+        public WerkRegime Regime { get; set; }
         
         //private Geslacht geslacht;
         public Geslacht Geslacht
@@ -124,5 +125,40 @@
         //{
         //    return Naam.GetHashCode();
         //}
+
+        public class WerkRegime
+        {
+            public enum RegimeType { Voltijds, Viervijfde, Halftijds }
+
+            public required RegimeType Type { get; set; }
+
+            public int AantalVakantiedagen
+            {
+                get
+                {
+                    return Type switch
+                    {
+                        RegimeType.Voltijds => 25,
+                        RegimeType.Viervijfde => 20,
+                        RegimeType.Halftijds => 12,
+                        _ => 0
+                    };
+                    // switch (Type)
+                    // {
+                    //     case RegimeType.Voltijds:
+                    //         return 25;
+                    //     case RegimeType.Viervijfde:
+                    //         return 20;
+                    //     case RegimeType.Halftijds:
+                    //         return 12;
+                    //     default:
+                    //         return 0;
+                    // }
+                }
+            }
+            
+            public override string ToString() => Type.ToString();
+        }
+
     }
 }
