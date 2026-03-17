@@ -698,3 +698,6 @@ ik.Regime = new Werknemer.WerkRegime
 };
 Console.WriteLine(ik.Regime);
 Console.WriteLine(ik.Regime.AantalVakantiedagen);
+
+/* Partial Classes */
+// using CSharpPFCursus;

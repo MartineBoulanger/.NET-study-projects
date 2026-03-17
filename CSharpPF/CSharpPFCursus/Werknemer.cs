@@ -1,28 +1,25 @@
 ﻿namespace CSharpPFCursus
 {
-    public abstract class Werknemer
+    public abstract partial class Werknemer
     {
-        // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
-        //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
-        // een constructor met parameters waarbij de developer via het programma waardes kan meegeven aan de parameters.
-        // public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X, Afdeling? afdeling = null)
-        // {
-        //     this.Naam = naam;
-        //     this.InDienst = inDienst ?? DateTime.Today;
-        //     this.Geslacht = geslacht;
-        //     this.Afdeling = afdeling ?? new Afdeling
-        //     {
-        //         Naam = "Onbekend",
-        //         Verdieping = 10,
-        //     }; // omdat de andere parameters optioneel zijn, heb ik deze ook optioneel gemaakt
-        // }
-         public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
+        // constructor met optionele parameters
+        public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
         {
             this.Naam = naam;
             this.InDienst = inDienst ?? DateTime.Today;
             this.Geslacht = geslacht;
         }
 
+        // static constructor die dus niet aangepast kan worden.
+        static Werknemer()
+        {
+            Personeelsfeest = new DateOnly(DateTime.Today.Year, 2, 1);
+            while (Personeelsfeest.DayOfWeek != DayOfWeek.Friday) Personeelsfeest = Personeelsfeest.AddDays(1);
+        }
+    }
+    
+    public abstract partial class Werknemer
+    {
         public abstract decimal Premie { get; }
 
         private string naam;
@@ -32,16 +29,6 @@
             // set { if (value != string.Empty) naam = value; }
             // init { if (value != string.Empty) naam = value; }
             init => naam = !string.IsNullOrWhiteSpace(value) ? value : "onbekende naam";
-        }
-
-        public DateTime InDienst { get; set; }
-        public WerkRegime Regime { get; set; }
-        
-        //private Geslacht geslacht;
-        public Geslacht Geslacht
-        {
-            get;
-            set;
         }
 
         private decimal salaris;
@@ -64,6 +51,19 @@
                 return InDienst.Month == DateTime.Today.Month && InDienst.Day == DateTime.Today.Day;
             }
         }
+    }
+
+    public abstract partial class Werknemer
+    {
+        public DateTime InDienst { get; set; }
+        public WerkRegime Regime { get; set; }
+
+        //private Geslacht geslacht;
+        public Geslacht Geslacht
+        {
+            get;
+            set;
+        }
 
         private static DateOnly personeelsfeest;
         public static DateOnly Personeelsfeest
@@ -72,20 +72,16 @@
             get => personeelsfeest;
         }
 
-        // static constructor die dus niet aangepast kan worden.
-        static Werknemer()
-        {
-            Personeelsfeest = new DateOnly(DateTime.Today.Year, 2, 1);
-            while (Personeelsfeest.DayOfWeek != DayOfWeek.Friday) Personeelsfeest = Personeelsfeest.AddDays(1);
-        }
-
         private Afdeling afdeling;
         public Afdeling Afdeling
         {
             get => afdeling;
             set => afdeling = value;
         }
+    }
 
+    public abstract partial class Werknemer
+    {
         public virtual string GetInfo()
         {
             return $"Naam: {Naam}\nGeslacht: {Geslacht}\nIn dienst: {InDienst}\nPersoneelsfeest: {Personeelsfeest}\n{(Afdeling is not null ? Afdeling.ToString() : "Onbekende afdeling")}";
@@ -107,25 +103,10 @@
         {
             return HashCode.Combine(Naam);
         }
+    }
 
-        //public override bool Equals(object? obj)
-        //{
-        //    if (obj is Werknemer)
-        //    {
-        //        Werknemer andereWerknemer = (Werknemer)obj;
-        //        return this.Naam == andereWerknemer.Naam;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-
-        //public override int GetHashCode() 
-        //{
-        //    return Naam.GetHashCode();
-        //}
-
+    public abstract partial class Werknemer
+    {
         public class WerkRegime
         {
             public enum RegimeType { Voltijds, Viervijfde, Halftijds }
@@ -143,22 +124,25 @@
                         RegimeType.Halftijds => 12,
                         _ => 0
                     };
-                    // switch (Type)
-                    // {
-                    //     case RegimeType.Voltijds:
-                    //         return 25;
-                    //     case RegimeType.Viervijfde:
-                    //         return 20;
-                    //     case RegimeType.Halftijds:
-                    //         return 12;
-                    //     default:
-                    //         return 0;
-                    // }
                 }
             }
-            
+
             public override string ToString() => Type.ToString();
         }
-
     }
+    
+    // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
+    //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
+    // een constructor met parameters waarbij de developer via het programma waardes kan meegeven aan de parameters.
+    // public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X, Afdeling? afdeling = null)
+    // {
+    //     this.Naam = naam;
+    //     this.InDienst = inDienst ?? DateTime.Today;
+    //     this.Geslacht = geslacht;
+    //     this.Afdeling = afdeling ?? new Afdeling
+    //     {
+    //         Naam = "Onbekend",
+    //         Verdieping = 10,
+    //     }; // omdat de andere parameters optioneel zijn, heb ik deze ook optioneel gemaakt
+    // }
 }
