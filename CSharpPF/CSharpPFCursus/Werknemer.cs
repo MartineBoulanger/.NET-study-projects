@@ -1,6 +1,7 @@
 ﻿namespace CSharpPFCursus
 {
-    public abstract partial class Werknemer
+    // Alle constructors en interface methods/properties hier
+    public abstract partial class Werknemer : IKost
     {
         // constructor met optionele parameters
         public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
@@ -16,8 +17,16 @@
             Personeelsfeest = new DateOnly(DateTime.Today.Year, 2, 1);
             while (Personeelsfeest.DayOfWeek != DayOfWeek.Friday) Personeelsfeest = Personeelsfeest.AddDays(1);
         }
+
+        // interface methods en properties declaraties hier
+        public bool Menselijk => true;
+        // public bool Menselijk { get => true; }
+        // public bool Menselijk { get { return true; } }
+
+        public abstract decimal BerekenKostprijs();
     }
     
+    // alle properties hier
     public abstract partial class Werknemer
     {
         public abstract decimal Premie { get; }
@@ -53,6 +62,7 @@
         }
     }
 
+    // alle properties met types van andere clases hier
     public abstract partial class Werknemer
     {
         public DateTime InDienst { get; set; }
@@ -80,6 +90,7 @@
         }
     }
 
+    // alle methods hier
     public abstract partial class Werknemer
     {
         public virtual string GetInfo()
@@ -105,6 +116,7 @@
         }
     }
 
+    // alle nested classes hier
     public abstract partial class Werknemer
     {
         public class WerkRegime

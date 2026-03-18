@@ -26,6 +26,13 @@
             get { return Wedde * 2m; }
         }
 
+        // overschrijf de method van de interface IKost
+        // public override decimal BerekenKostprijs()
+        // {
+        //     return Wedde * 12m;
+        // }
+        public override decimal BerekenKostprijs() => Wedde * 12m;
+
         public override string GetInfo()
         {
             return $"{base.GetInfo()}\nWedde: {Wedde}";

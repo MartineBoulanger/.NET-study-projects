@@ -27,6 +27,13 @@
             get { return Uurloon * 150m; }
         }
 
+        // overschrijf de method van de interface IKost
+        // public override decimal BerekenKostprijs()
+        // {
+        //     return Uurloon * 2000m;
+        // }
+        public override decimal BerekenKostprijs() => Uurloon * 2000m;
+
         // overriding van de GetInfo method die in de base class zit
         public override string GetInfo()
         {

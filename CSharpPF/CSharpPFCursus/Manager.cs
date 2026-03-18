@@ -26,6 +26,12 @@
         {
             get { return Bonus * 3m; }
         }
+        // overschrijf de method van de interface IKost
+        // public override decimal BerekenKostprijs()
+        // {
+        //     return base.BerekenKostprijs() + Bonus;
+        // }
+        public override decimal BerekenKostprijs() => base.BerekenKostprijs() + Bonus;
 
         public override string GetInfo()
         {
