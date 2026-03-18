@@ -700,19 +700,103 @@
 // Console.WriteLine(ik.Regime.AantalVakantiedagen);
 
 /* Interfaces */
+// using CSharpPFCursus;
+// IKost[] kosten = new IKost[4];
+// kosten[0] = new Arbeider("Asterix", new DateTime(2026, 3, 12), Geslacht.Man, 22.45m, 2);
+// kosten[1] = new Bediende("Obelix", new DateTime(2026, 2, 1), Geslacht.Man, 2500m);
+// kosten[2] = new Manager("Bellefleur", new DateTime(2026, 1, 1), Geslacht.Vrouw, 2800m, 8000m);
+// kosten[3] = new Fotokopiemachine("234", 300, 0.025m);
+// decimal totaleKost = 0m;
+// foreach (IKost kost in kosten)
+// {
+//   Console.WriteLine(kost.Menselijk);
+//   Console.WriteLine(kost.BerekenKostprijs());
+//   totaleKost += kost.BerekenKostprijs();
+// }
+// Console.WriteLine(totaleKost);
+// // controleren of een object een class is die een interface heeft geimplementeerd.
+// foreach (Object item in kosten) Console.WriteLine(item is IKost);
+
+/* Pattern Matching */
 using CSharpPFCursus;
-IKost[] kosten = new IKost[4];
-kosten[0] = new Arbeider("Asterix", new DateTime(2026, 3, 12), Geslacht.Man, 22.45m, 2);
-kosten[1] = new Bediende("Obelix", new DateTime(2026, 2, 1), Geslacht.Man, 2500m);
-kosten[2] = new Manager("Bellefleur", new DateTime(2026, 1, 1), Geslacht.Vrouw, 2800m, 8000m);
-kosten[3] = new Fotokopiemachine("234", 300, 0.025m);
-decimal totaleKost = 0m;
-foreach (IKost kost in kosten)
+// static void ToonGegevens(Object? obj)
+// {
+  // de klassieke schrijfwijze zonder pattern matching
+  // if (obj is Werknemer)
+  // {
+  //   Werknemer w = (Werknemer)obj;
+  //   Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
+  // }
+  // else if (obj is Fotokopiemachine)
+  // {
+  //   Fotokopiemachine f = (Fotokopiemachine)obj;
+  //   Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
+  // }
+  // else
+  // {
+  //   Console.WriteLine("Onbekend Type");
+  // }
+  // schrijfwijze met type pattern matching
+  // if (obj is Werknemer w)
+  // {
+  //   Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
+  // }
+  // else if (obj is Fotokopiemachine f)
+  // {
+  //   Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
+  // }
+  // else
+  // {
+  //   Console.WriteLine("Onbekend Type");
+  // }
+  // Switch pattern matching
+//   switch (obj)
+//   {
+//     case Werknemer w:
+//       Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
+//       break;
+//     case Fotokopiemachine f:
+//       Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
+//       break;
+//     case null:
+//       Console.WriteLine("Parameter = null");
+//       break;
+//     default:
+//       Console.WriteLine("Onbekend Type");
+//       break;
+//   }
+// }
+Object?[] lijst = new Object?[5];
+lijst[0] = new Arbeider("Asterix", new DateTime(2026, 3, 12), Geslacht.Man, 22.45m, 2);
+lijst[1] = new Bediende("Obelix", new DateTime(2026, 2, 1), Geslacht.Man, 2500m);
+lijst[2] = null;
+lijst[3] = "C# 10";
+lijst[4] = new Bediende("Bellefleur", new DateTime(2026, 2, 1), Geslacht.Vrouw, 2500m);
+foreach (var item in lijst)
 {
-  Console.WriteLine(kost.Menselijk);
-  Console.WriteLine(kost.BerekenKostprijs());
-  totaleKost += kost.BerekenKostprijs();
+  // ToonGegevens(item);
+  switch (item)
+  {
+    case Arbeider a when a.Geslacht == Geslacht.Vrouw:
+      Console.WriteLine($"{a.Naam} is een vrouwelijke arbeider met een uurloon van {a.Uurloon} euro");
+      break;
+    case Arbeider a when a.Geslacht == Geslacht.Man:
+      Console.WriteLine($"{a.Naam} is een mannelijke arbeider met een uurloon van {a.Uurloon} euro");
+      break;
+    case Bediende b when b.Geslacht == Geslacht.Vrouw:
+      Console.WriteLine($"{b.Naam} is een vrouwelijke bediende met een wedde van {b.Wedde} euro");
+      break;
+    case Bediende b when b.Geslacht == Geslacht.Man:
+      Console.WriteLine($"{b.Naam} is een mannelijke bediende met een wedde van {b.Wedde} euro");
+      break;
+    case Werknemer w when w.Geslacht == Geslacht.Man:
+      Console.WriteLine($"{w.Naam} is een mannelijke werknemer");
+      break;
+    case null:
+      Console.WriteLine("NULL");
+      break;
+    default:
+      Console.WriteLine($"{item} is geen werknemer");
+      break;
+  }
 }
-Console.WriteLine(totaleKost);
-// controleren of een object een class is die een interface heeft geimplementeerd.
-foreach (Object item in kosten) Console.WriteLine(item is IKost);
