@@ -1,8 +1,9 @@
 namespace CSharpPFOefeningen
 {
-    public abstract class Voertuig
+    public abstract class Voertuig:IVervuiler,IPrivaat,IMilieu
     {
         public abstract double GetKyotoScore();
+        public abstract double GeefVervuiling();
 
         // constructor
         public Voertuig(string polishouder = "onbepaald", decimal kostprijs = 0m, int pk = 0, float gemiddeldVerbruik = 0f, string nummerplaat = "onbepaald")
@@ -29,5 +30,9 @@ namespace CSharpPFOefeningen
         {
             return $"polishouder: {Polishouder}\nnummerplaat: {Nummerplaat}\naantal pk: {Pk}pk\ngemiddeld verbruik: {GemiddeldVerbruik}/100km\nkostprijs van: {Kostprijs} euro";
         }
+
+        public string GeefPrivaatData() => $"Houder: {Polishouder} - Plaat: {Nummerplaat}";
+        
+        public string GeefMilieuData() => $"Kost: {Kostprijs} - PK: {Pk} - Verbruik: {GemiddeldVerbruik}/100km";
     }
 }
