@@ -1,4 +1,6 @@
-﻿namespace CSharpPFCursus
+﻿using Firma.Personeel;
+
+namespace CSharpPFCursus
 {
     internal class Werknemer2(string naam, DateTime inDienst, Geslacht geslacht)
     {

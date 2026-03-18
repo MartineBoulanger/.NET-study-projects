@@ -718,7 +718,7 @@
 // foreach (Object item in kosten) Console.WriteLine(item is IKost);
 
 /* Pattern Matching */
-using CSharpPFCursus;
+using Firma.Personeel;
 // static void ToonGegevens(Object? obj)
 // {
   // de klassieke schrijfwijze zonder pattern matching

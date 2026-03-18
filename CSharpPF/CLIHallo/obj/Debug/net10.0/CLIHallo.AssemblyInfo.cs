@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CLIHallo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2cc4e2da0c2971a1e2ca9fc8c25cc066abc86b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54470715e30ad429d61c65d795b0f4e192bce4cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CLIHallo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CLIHallo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

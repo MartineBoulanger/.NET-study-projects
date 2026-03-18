@@ -1,4 +1,4 @@
-namespace CSharpPFCursus
+namespace Firma.Materiaal
 {
     public class Fotokopiemachine:IKost
     {

@@ -1,4 +1,4 @@
-namespace CSharpPFCursus
+namespace Firma
 {
     public interface IKost
     {

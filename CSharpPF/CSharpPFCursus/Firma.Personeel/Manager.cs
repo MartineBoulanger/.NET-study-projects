@@ -1,4 +1,4 @@
-﻿namespace CSharpPFCursus
+﻿namespace Firma.Personeel
 {
     /* deze class is een derived class van de derived class Bediende */
     public sealed class Manager : Bediende

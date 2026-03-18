@@ -1,7 +1,7 @@
-﻿namespace CSharpPFCursus
+﻿namespace Firma.Personeel
 {
     // Alle constructors en interface methods/properties hier
-    public abstract partial class Werknemer : IKost
+    public abstract partial class Werknemer:IKost
     {
         // constructor met optionele parameters
         public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
