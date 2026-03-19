@@ -34,6 +34,11 @@
             return AantalPassagiers != 0 ? (GemiddeldVerbruik * Pk) / AantalPassagiers : 0.0;
         }
 
+        public override double GeefVervuiling()
+        {
+            return GetKyotoScore() * 5;
+        }
+
         public override string GetInfo()
         {
             return $"{base.GetInfo()}\naantal deuren: {AantalDeuren}\naantal passagiers: {AantalPassagiers}";

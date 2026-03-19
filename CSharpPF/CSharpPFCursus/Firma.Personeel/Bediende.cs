@@ -1,8 +1,13 @@
-﻿namespace CSharpPFCursus
+﻿namespace Firma.Personeel
 {
     public class Bediende : Werknemer
     {
-        public Bediende(string naam, DateTime inDienst, Geslacht geslacht, decimal wedde) : base(naam, inDienst,geslacht)
+        // met de Afdeling als parameter
+        // public Bediende(string naam, DateTime inDienst, Geslacht geslacht, Afdeling afdeling, decimal wedde) : base(naam, inDienst, geslacht, afdeling)
+        // {
+        //     Wedde = wedde;
+        // }
+        public Bediende(string naam, DateTime inDienst, Geslacht geslacht, decimal wedde) : base(naam, inDienst, geslacht)
         {
             Wedde = wedde;
         }
@@ -20,6 +25,13 @@
         {
             get { return Wedde * 2m; }
         }
+
+        // overschrijf de method van de interface IKost
+        // public override decimal BerekenKostprijs()
+        // {
+        //     return Wedde * 12m;
+        // }
+        public override decimal BerekenKostprijs() => Wedde * 12m;
 
         public override string GetInfo()
         {

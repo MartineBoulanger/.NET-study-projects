@@ -486,26 +486,91 @@
 
 // 14. Inheritance polymorphism
 // 14.1 Oefening Bank
+// using CSharpPFOefeningen;
+// Console.WriteLine("------------------------------------------------------------------");
+// Spaarrekening.Intrest = 2m;
+// Rekening[] arrRekeningen = new Rekening[2];
+// arrRekeningen[0] = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today));
+// arrRekeningen[1] = new Zichtrekening("BE03001447946884", 235.45m, new DateOnly(2012, 4, 5), 0m);
+// foreach (Rekening rek in arrRekeningen)
+// {
+//     Console.WriteLine(rek.GetInfo());
+//     Console.WriteLine();
+// }
+// Console.WriteLine("------------------------------------------------------------------");
+// //Voertuig[] vehicles = new Voertuig[2];
+// Personenwagen auto = new Personenwagen("Anna", 15000m, 100, 5.6f, "2-DHC-811", 4, 4);
+// Vrachtwagen camion = new Vrachtwagen("Martine", 123000m, 525, 15.6f, "2-ABC-456", 10000f);
+// Voertuig[] vehicles = [auto, camion]; // kunt het ook zo doen
+// foreach (Voertuig vehicle in vehicles)
+// {
+//     Console.WriteLine(vehicle.GetInfo());
+//     Console.WriteLine($"kyotoscore: {vehicle.GetKyotoScore():F2}");
+//     Console.WriteLine();
+// }
+// Console.WriteLine("------------------------------------------------------------------");
+
+// 15. Aggregation
+// 15.1 Oefening Bank
+// using CSharpPFOefeningen;
+// Console.WriteLine("------------------------------------------------------------------");
+// Spaarrekening.Intrest = 3m;
+// Klant eigenaar = new Klant
+// {
+//     Voornaam = "Martine",
+//     Familienaam = "Boulanger"
+// };
+// Spaarrekening spaar = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today), eigenaar);
+// Zichtrekening zicht = new Zichtrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today), eigenaar, -500m);
+// Console.WriteLine(spaar.GetInfo());
+// Console.WriteLine();
+// Console.WriteLine(zicht.GetInfo());
+// Console.WriteLine("------------------------------------------------------------------");
+
+// 16. Interfaces
+// 16.1 Oefening Bank
 using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
 Spaarrekening.Intrest = 2m;
-Rekening[] arrRekeningen = new Rekening[2];
-arrRekeningen[0] = new Spaarrekening("BE03001447946884", 100m, DateOnly.FromDateTime(DateTime.Today));
-arrRekeningen[1] = new Zichtrekening("BE03001447946884", 235.45m, new DateOnly(2012, 4, 5), 0m);
-foreach (Rekening rek in arrRekeningen)
+Klant eigenaar = new Klant
 {
-    Console.WriteLine(rek.GetInfo());
+    Voornaam = "Anna",
+    Familienaam = "Dackus"
+};
+ISpaarmiddel[] spaarmiddels = new ISpaarmiddel[3];
+spaarmiddels[0] = new Zichtrekening("BE03001447946884", 335.56m, new DateOnly(2026, 2, 1), eigenaar, 0m);
+spaarmiddels[1] = new Spaarrekening("BE03001447946884", 200m, new DateOnly(2026, 3, 1), eigenaar);
+spaarmiddels[2] = new Kasbon(new DateOnly(2026, 4, 1), 2300.45m, 5, 4m, eigenaar);
+foreach (ISpaarmiddel middel in spaarmiddels)
+{
+    Console.WriteLine(middel.GetInfo());
     Console.WriteLine();
 }
 Console.WriteLine("------------------------------------------------------------------");
-//Voertuig[] vehicles = new Voertuig[2];
-Personenwagen auto = new Personenwagen("Anna", 15000m, 100, 5.6f, "2-DHC-811", 4, 4);
-Vrachtwagen camion = new Vrachtwagen("Martine", 123000m, 525, 15.6f, "2-ABC-456", 10000f);
-Voertuig[] vehicles = [auto, camion]; // kunt het ook zo doen
-foreach (Voertuig vehicle in vehicles)
+IVervuiler[] vervuilers = new IVervuiler[3];
+vervuilers[0] = new Personenwagen("Piet", 15000m, 150, 5.6f, "2-ABC-234", 3, 5);
+vervuilers[1] = new Vrachtwagen("Jan", 123000m, 500, 20.4f, "1-DVF-987", 5600f);
+vervuilers[2] = new Stookketel(12.3f);
+foreach (IVervuiler vervuiler in vervuilers)
 {
-    Console.WriteLine(vehicle.GetInfo());
-    Console.WriteLine($"kyotoscore: {vehicle.GetKyotoScore():F2}");
-    Console.WriteLine();
+    Console.WriteLine($"Vervuiling: {vervuiler.GeefVervuiling():F2}");
+}
+Console.WriteLine("------------------------------------------------------------------");
+Personenwagen bmw = new Personenwagen("Martine", 2400m, 89, 7.6f, "1-SUG-567", 3, 4);
+Vrachtwagen scania = new Vrachtwagen("Jan", 123000m, 500, 20.4f, "1-DVF-987", 5600f);
+Personenwagen citroen = new Personenwagen("Anna", 19900m, 119, 5.5f, "2-HDC-811", 4, 5);
+Vrachtwagen daf = new Vrachtwagen("Pieter", 140000m, 525, 14.3f, "2-ABC-987", 10000f);
+IPrivaat[] houders = [bmw, scania, citroen, daf];
+Console.WriteLine("Privaat gegevens voertuigen:");
+foreach (IPrivaat houder in houders)
+{
+    Console.WriteLine(houder.GeefPrivaatData());
+}
+Console.WriteLine("------------------------------------------------------------------");
+IMilieu[] milieus = [bmw, scania, citroen, daf];
+Console.WriteLine("Milieu gegevens voertuigen:");
+foreach (IMilieu milieu in milieus)
+{
+    Console.WriteLine(milieu.GeefMilieuData());
 }
 Console.WriteLine("------------------------------------------------------------------");
