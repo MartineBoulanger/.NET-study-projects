@@ -11,9 +11,9 @@
         public decimal Aankoopprijs { get; set; } = aankoopprijs > 0m ? aankoopprijs : 0m;
 
         // method Winst van de interface om de winst van het boekenrek te tonen
-        public decimal Winst() => Aankoopprijs * 2;
+        public decimal Winst => Aankoopprijs * 2;
 
         // method Gegevens van interface om alle gegevens van het boekenrek te tonen
-        public string Gegevens() => $"Breedte: {Breedte}\nHoogte: {Hoogte}\nAankoopprijs: {Aankoopprijs} euro\nWinst: {Winst():0.00} euro";
+        public string Gegevens() => $"Breedte: {Breedte}\nHoogte: {Hoogte}\nAankoopprijs: {Aankoopprijs} euro\nWinst: {Winst:0.00} euro";
     }
 }
