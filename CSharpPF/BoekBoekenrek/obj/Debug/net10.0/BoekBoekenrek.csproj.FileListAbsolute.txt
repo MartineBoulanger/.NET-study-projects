@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\bin\Debug\net10.0\BoekBoekenrek.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\bin\Debug\net10.0\BoekBoekenrek.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\bin\Debug\net10.0\BoekBoekenrek.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\bin\Debug\net10.0\BoekBoekenrek.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\bin\Debug\net10.0\BoekBoekenrek.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\refint\BoekBoekenrek.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\BoekBoekenrek.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\BoekBoekenrek\obj\Debug\net10.0\ref\BoekBoekenrek.dll
