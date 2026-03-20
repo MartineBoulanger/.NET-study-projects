@@ -913,3 +913,18 @@
 //Console.WriteLine("Einde programma");
 
 /* garbage collector */
+//StreamReader lezer = new StreamReader(@"C:\Users\marti\source\repos\DOTNET\provincies.txt");
+//string regel = lezer.ReadLine();
+//lezer.Close();
+using CSharpPFCursus;
+Console.Write("Provincie: ");
+string provincie = Console.ReadLine()!;
+try
+{
+  ProvincieInfo info = new ProvincieInfo();
+  Console.WriteLine(info.ProvincieGrootte(provincie));
+}
+catch (Exception ex)
+{
+  Console.WriteLine(ex.Message);
+}
