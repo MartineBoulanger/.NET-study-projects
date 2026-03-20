@@ -718,38 +718,38 @@
 // foreach (Object item in kosten) Console.WriteLine(item is IKost);
 
 /* Pattern Matching */
-using Firma.Personeel;
+//using Firma.Personeel;
 // static void ToonGegevens(Object? obj)
 // {
-  // de klassieke schrijfwijze zonder pattern matching
-  // if (obj is Werknemer)
-  // {
-  //   Werknemer w = (Werknemer)obj;
-  //   Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
-  // }
-  // else if (obj is Fotokopiemachine)
-  // {
-  //   Fotokopiemachine f = (Fotokopiemachine)obj;
-  //   Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
-  // }
-  // else
-  // {
-  //   Console.WriteLine("Onbekend Type");
-  // }
-  // schrijfwijze met type pattern matching
-  // if (obj is Werknemer w)
-  // {
-  //   Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
-  // }
-  // else if (obj is Fotokopiemachine f)
-  // {
-  //   Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
-  // }
-  // else
-  // {
-  //   Console.WriteLine("Onbekend Type");
-  // }
-  // Switch pattern matching
+// de klassieke schrijfwijze zonder pattern matching
+// if (obj is Werknemer)
+// {
+//   Werknemer w = (Werknemer)obj;
+//   Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
+// }
+// else if (obj is Fotokopiemachine)
+// {
+//   Fotokopiemachine f = (Fotokopiemachine)obj;
+//   Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
+// }
+// else
+// {
+//   Console.WriteLine("Onbekend Type");
+// }
+// schrijfwijze met type pattern matching
+// if (obj is Werknemer w)
+// {
+//   Console.WriteLine($"Werknemer {w.Naam} kost {w.BerekenKostprijs()} euro");
+// }
+// else if (obj is Fotokopiemachine f)
+// {
+//   Console.WriteLine($"Fotokopiemachine {f.SerieNr} kopieerde {f.AantalGekopieerdeBlz} en kost {f.BerekenKostprijs()} euro");
+// }
+// else
+// {
+//   Console.WriteLine("Onbekend Type");
+// }
+// Switch pattern matching
 //   switch (obj)
 //   {
 //     case Werknemer w:
@@ -766,37 +766,150 @@ using Firma.Personeel;
 //       break;
 //   }
 // }
-Object?[] lijst = new Object?[5];
-lijst[0] = new Arbeider("Asterix", new DateTime(2026, 3, 12), Geslacht.Man, 22.45m, 2);
-lijst[1] = new Bediende("Obelix", new DateTime(2026, 2, 1), Geslacht.Man, 2500m);
-lijst[2] = null;
-lijst[3] = "C# 10";
-lijst[4] = new Bediende("Bellefleur", new DateTime(2026, 2, 1), Geslacht.Vrouw, 2500m);
-foreach (var item in lijst)
-{
-  // ToonGegevens(item);
-  switch (item)
-  {
-    case Arbeider a when a.Geslacht == Geslacht.Vrouw:
-      Console.WriteLine($"{a.Naam} is een vrouwelijke arbeider met een uurloon van {a.Uurloon} euro");
-      break;
-    case Arbeider a when a.Geslacht == Geslacht.Man:
-      Console.WriteLine($"{a.Naam} is een mannelijke arbeider met een uurloon van {a.Uurloon} euro");
-      break;
-    case Bediende b when b.Geslacht == Geslacht.Vrouw:
-      Console.WriteLine($"{b.Naam} is een vrouwelijke bediende met een wedde van {b.Wedde} euro");
-      break;
-    case Bediende b when b.Geslacht == Geslacht.Man:
-      Console.WriteLine($"{b.Naam} is een mannelijke bediende met een wedde van {b.Wedde} euro");
-      break;
-    case Werknemer w when w.Geslacht == Geslacht.Man:
-      Console.WriteLine($"{w.Naam} is een mannelijke werknemer");
-      break;
-    case null:
-      Console.WriteLine("NULL");
-      break;
-    default:
-      Console.WriteLine($"{item} is geen werknemer");
-      break;
-  }
-}
+//Object?[] lijst = new Object?[5];
+//lijst[0] = new Arbeider("Asterix", new DateTime(2026, 3, 12), Geslacht.Man, 22.45m, 2);
+//lijst[1] = new Bediende("Obelix", new DateTime(2026, 2, 1), Geslacht.Man, 2500m);
+//lijst[2] = null;
+//lijst[3] = "C# 10";
+//lijst[4] = new Bediende("Bellefleur", new DateTime(2026, 2, 1), Geslacht.Vrouw, 2500m);
+//foreach (var item in lijst)
+//{
+//  // ToonGegevens(item);
+//  switch (item)
+//  {
+//    case Arbeider a when a.Geslacht == Geslacht.Vrouw:
+//      Console.WriteLine($"{a.Naam} is een vrouwelijke arbeider met een uurloon van {a.Uurloon} euro");
+//      break;
+//    case Arbeider a when a.Geslacht == Geslacht.Man:
+//      Console.WriteLine($"{a.Naam} is een mannelijke arbeider met een uurloon van {a.Uurloon} euro");
+//      break;
+//    case Bediende b when b.Geslacht == Geslacht.Vrouw:
+//      Console.WriteLine($"{b.Naam} is een vrouwelijke bediende met een wedde van {b.Wedde} euro");
+//      break;
+//    case Bediende b when b.Geslacht == Geslacht.Man:
+//      Console.WriteLine($"{b.Naam} is een mannelijke bediende met een wedde van {b.Wedde} euro");
+//      break;
+//    case Werknemer w when w.Geslacht == Geslacht.Man:
+//      Console.WriteLine($"{w.Naam} is een mannelijke werknemer");
+//      break;
+//    case null:
+//      Console.WriteLine("NULL");
+//      break;
+//    default:
+//      Console.WriteLine($"{item} is geen werknemer");
+//      break;
+//  }
+//}
+
+/* Exceptions */
+//decimal getal1, getal2;
+//Console.Write("eerste getal: ");
+//getal1 = decimal.Parse(Console.ReadLine()!);
+//Console.Write("tweede getal: ");
+//getal2 = decimal.Parse(Console.ReadLine()!);
+// met if controleren zodat exceptions vermeden kunnen worden
+//Console.WriteLine("deling: " + getal1 / getal2);
+//if (getal2 != 0m) Console.WriteLine("deling: " + getal1 / getal2);
+//else Console.WriteLine("delen door null niet toegelaten");
+// maar met een if kun je niet alle fouten voorkomen - hiervoor kun je dan best een trycatch gebruiken
+//try
+//{
+//  Console.Write("eerste getal: ");
+//  getal1 = decimal.Parse(Console.ReadLine()!);
+//  Console.Write("tweede getal: ");
+//  getal2 = decimal.Parse(Console.ReadLine()!);
+//  if (getal2 != 0m)
+//    Console.WriteLine("deling: " + getal1 / getal2);
+//  else
+//    Console.WriteLine("delen door null niet toegelaten");
+//}
+//catch
+//{
+//  Console.WriteLine("Je typt geen getal");
+//}
+// je kunt ook meerdere catch opdrachten gebruiken
+//try
+//{
+//  Console.Write("eerste getal: ");
+//  getal1 = decimal.Parse(Console.ReadLine()!);
+//  Console.Write("tweede getal: ");
+//  getal2 = decimal.Parse(Console.ReadLine()!);
+//  Console.WriteLine("deling: " + getal1 / getal2);
+//  // we gebruiken nu even geen if statement - in de praktijk moet je dit wel altijd doen
+//  //if (getal2 != 0m)
+//  //  Console.WriteLine("deling: " + getal1 / getal2);
+//  //else
+//  //  Console.WriteLine("delen door null niet toegelaten");
+//}
+// als je de technische informatie wilt weten - dan zet je achter de exception class in de catch een variabele
+//catch (FormatException ex)
+//{
+//  Console.WriteLine("Je type geen getal");
+//  Console.WriteLine(ex.Message);
+//  Console.WriteLine(ex.StackTrace);
+//}
+//catch (FormatException)
+//{
+//  Console.WriteLine("Je typt geen getal");
+//}
+//catch (DivideByZeroException)
+//{
+//  Console.WriteLine("Delen door nul is niet toegestaan");
+//}
+//catch (Exception)
+//{
+//  Console.WriteLine("Een fout heeft zich voorgedaan");
+//}
+// de volgorde van de catch is belangrijk
+// wil je weten bij welke variabele de fout is opgetreden dan kun je meerdere try gebruiken
+//try
+//{
+//  Console.Write("eerste getal: ");
+//  getal1 = decimal.Parse(Console.ReadLine()!);
+//  try
+//  {
+//    Console.Write("tweede getal: ");
+//    getal2 = decimal.Parse(Console.ReadLine()!);
+//    if (getal2 != 0m)
+//      Console.WriteLine("deling: " + getal1 / getal2);
+//    else
+//      Console.WriteLine("delen door null niet toegelaten");
+//  }
+//  catch (FormatException)
+//  {
+//    Console.WriteLine("Je typte geen getal bij getal2");
+//  }
+//}
+//catch (FormatException)
+//{
+//  Console.WriteLine("Je typte geen getal bij getal1");
+//}
+// een error gooien met throw - je kunt een throw new Exception() gooi bij de validatie in de properties van een class
+//using Firma.Materiaal;
+//try
+//{
+//  Fotokopiemachine machine = new("123678", 100, -5.4m);
+//  Console.WriteLine("Machine goed ingevuld");
+//}
+//catch (Exception ex)
+//{
+//  Console.WriteLine("Fout: " + ex.Message);
+//}
+//Console.WriteLine("Einde programma");
+// Je kunt ook een eigen Exception class maken - zie de Fotokopiemachien class hiervoor
+//try
+//{
+//  Fotokopiemachine machine = new("123678", 100, -5.4m);
+//  Console.WriteLine("Machine goed ingevuld");
+//}
+//catch (Fotokopiemachine.KostPerBlzException ex)
+//{
+//  Console.WriteLine($"Fout: {ex.Message}: {ex.VerkeerdeKost}");
+//}
+//catch (Fotokopiemachine.AantalGekopieerdeBlzException ex)
+//{
+//  Console.WriteLine($"Fout: {ex.Message}: {ex.VerkeerdAantalBlz}");
+//}
+//Console.WriteLine("Einde programma");
+
+/* garbage collector */
