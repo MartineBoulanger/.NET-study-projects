@@ -8,6 +8,13 @@
         // property om de class Doelgroep te gebruiken
         public Doelgroep Doelgroep { get; set; }
 
+        // best een constructor maken hier -- medium fout
+        public Genre(string naam, int leeftijd)
+        {
+            Naam = naam;
+            Doelgroep = new Doelgroep { Leeftijd = leeftijd };
+        }
+
         // method Gegevens van de interface om de genre gegevens te tonen
         public string Gegevens()
         {

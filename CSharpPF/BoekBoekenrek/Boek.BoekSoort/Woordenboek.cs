@@ -12,9 +12,14 @@
         }
 
         // method Winst van de interface om de winst van het woordenboek te tonen
-        public override decimal Winst() => Aankoopprijs * 1.75m;
+        // zie interface file voor uitleg
+        //public override decimal Winst() => Aankoopprijs * 1.75m;
+        public override decimal Winst => Aankoopprijs * 1.75m;
 
         // method Gegevens van de interface om alle gegevens van het woordenboek te tonen
-        public new string Gegevens() => $"{base.Gegevens()}\nTaal: {Taal}";
+        // geen new gebruiken maar override! - zie Boek file
+        // new maakt een kopie van de base string - override overschrijft -> minder geheugen - is dus beter
+        //public new string Gegevens() => $"{base.Gegevens()}\nTaal: {Taal}"; 
+        public override string Gegevens() => $"{base.Gegevens()}\nTaal: {Taal}";
     }
 }

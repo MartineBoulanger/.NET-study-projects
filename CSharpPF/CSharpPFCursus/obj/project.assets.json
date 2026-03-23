@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cursist\\.nuget\\packages\\": {},
+    "C:\\Users\\marti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\CSharpPFCursus.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\CSharpPFCursus.csproj",
       "projectName": "CSharpPFCursus",
-      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\CSharpPFCursus.csproj",
-      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\obj\\",
+      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\CSharpPFCursus.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -350,13 +350,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpPF\\CSharpPFCursus\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }
