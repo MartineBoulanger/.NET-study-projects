@@ -2,12 +2,12 @@
 
 namespace Firma.Personeel
 {
-    // all delegates hier
-    public delegate string WerknemersLijst(Werknemer[] werknemers);
-
     // Alle constructors en interface methods/properties hier
     public abstract partial class Werknemer:IKost
     {
+        // all delegates hier
+        public delegate string WerknemersLijst(Werknemer[] werknemers);
+
         // constructor met optionele parameters
         public Werknemer(string naam = "onbekend", DateTime? inDienst = null, Geslacht geslacht = Geslacht.X)
         {

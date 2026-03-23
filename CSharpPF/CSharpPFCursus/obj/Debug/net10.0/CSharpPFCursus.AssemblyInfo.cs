@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VDAB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a546080304a7c006a0fe2ac5addcfbdf447da92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c2297c49f776fc2117f45477aed178f278acadb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpPFCursus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpPFCursus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

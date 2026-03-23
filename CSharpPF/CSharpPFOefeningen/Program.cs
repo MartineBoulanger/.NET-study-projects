@@ -577,24 +577,66 @@
 
 // 17. Exceptions
 // 17.1 Oefening Bank
+//using CSharpPFOefeningen;
+//Console.WriteLine("------------------------------------------------------------------");
+//try
+//{
+//  Klant ik = new Klant { Familienaam = "Boulanger", Voornaam = "Martine" };
+//  Spaarrekening.Intrest = 2m;
+//  Zichtrekening zicht = new("BE03001447946884", 240.40m, DateOnly.FromDateTime(new DateTime(200, 1, 1)), ik, -100m);
+//  Spaarrekening spaar = new("BE03001447946889", 10m, DateOnly.FromDateTime(new DateTime(2026, 1, 1)), ik);
+//  Kasbon bon = new (new DateOnly(2000, 4, 1), -2300.45m, -5, -4m, ik);
+//  ISpaarmiddel[] lijst = [zicht, spaar, bon];
+//  foreach (ISpaarmiddel item in lijst)
+//  {
+//    Console.WriteLine(item.GetInfo());
+//    Console.WriteLine();
+//  }
+//}
+//catch (Exception ex)
+//{
+//  Console.WriteLine(ex.Message);
+//}
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 18. Delegates en Events
+// 18.1 Oefening Bank
 using CSharpPFOefeningen;
 Console.WriteLine("------------------------------------------------------------------");
-try
-{
-  Klant ik = new Klant { Familienaam = "Boulanger", Voornaam = "Martine" };
-  Spaarrekening.Intrest = 2m;
-  Zichtrekening zicht = new("BE03001447946884", 240.40m, DateOnly.FromDateTime(new DateTime(200, 1, 1)), ik, -100m);
-  Spaarrekening spaar = new("BE03001447946889", 10m, DateOnly.FromDateTime(new DateTime(2026, 1, 1)), ik);
-  Kasbon bon = new (new DateOnly(2000, 4, 1), -2300.45m, -5, -4m, ik);
-  ISpaarmiddel[] lijst = [zicht, spaar, bon];
-  foreach (ISpaarmiddel item in lijst)
-  {
-    Console.WriteLine(item.GetInfo());
-    Console.WriteLine();
-  }
-}
-catch (Exception ex)
-{
-  Console.WriteLine(ex.Message);
-}
+// objecten initialiseren
+Bank bnp = new() { BankId = 1, Naam = "VDAB" };
+Klant ik = new() { Familienaam = "Boulanger", Voornaam = "Martine" };
+Zichtrekening mijnRekening = new("BE03001447946884", 100m, new DateOnly(2020,1,1), ik, -10);
+Spaarrekening.Intrest = 0.01m;
+Spaarrekening mijnSpaar = new("BE40645100000163", 1000m, new DateOnly(2020, 1, 1), ik);
+// events initialiseren
+mijnRekening.RekeningUittreksel += bnp.RekeningUittrekselTonen;
+mijnRekening.RekeningUittreksel += bnp.RekeningInRoodMelding;
+mijnSpaar.RekeningUittreksel += bnp.RekeningUittrekselTonen;
+mijnSpaar.RekeningUittreksel += bnp.RekeningInRoodMelding;
+// zichtrekening
+Console.WriteLine("Zichtrekening: ");
+Console.WriteLine(mijnRekening.GetInfo());
+Console.WriteLine();
+Console.WriteLine("Storting");
+mijnRekening.Storten(50m);
+Console.WriteLine();
+Console.WriteLine("Afhalen");
+mijnRekening.Afhalen(100m);
+Console.WriteLine();
+Console.WriteLine("Afhalen"); // hier gaat de rekening in het rood staan
+mijnRekening.Afhalen(100m);
+Console.WriteLine();
+// spaarrekening
+Console.WriteLine("Spaarrekening: ");
+Console.WriteLine(mijnSpaar.GetInfo());
+Console.WriteLine();
+Console.WriteLine("Storting");
+mijnSpaar.Storten(2000m);
+Console.WriteLine();
+Console.WriteLine("Afhalen");
+mijnSpaar.Afhalen(1000m);
+Console.WriteLine();
+Console.WriteLine("Afhalen"); // hier gaat de rekening in het rood staan
+mijnSpaar.Afhalen(4000m);
 Console.WriteLine("------------------------------------------------------------------");

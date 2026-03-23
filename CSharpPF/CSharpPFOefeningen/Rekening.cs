@@ -3,7 +3,14 @@ namespace CSharpPFOefeningen
   public abstract class Rekening:ISpaarmiddel
   {
     private readonly DateOnly EersteCreatie = new(1900, 1, 1);
-        
+
+    // declaratie van delegates
+    public delegate void BankBericht(Rekening rekening);
+
+    // declaratie van events
+    public event BankBericht? RekeningUittreksel;
+    public event BankBericht? SaldoInHetRood;
+
     // constructor
     public Rekening(string rekeningnummer, decimal saldo, DateOnly creatieDatum, Klant eigenaar)
     {
@@ -53,10 +60,28 @@ namespace CSharpPFOefeningen
     {
       return $"Rekeningnummer: {Rekeningnummer}\nSaldo: {Saldo:0.00}\nCreatie datum: {CreatieDatum}\nKlant: {Eigenaar?.GetKlantInfo() ?? "Onbekende klant"}";
     }
-        
-    public decimal Storten(decimal bedrag)
+
+    // methods die de events triggeren
+    //public decimal Storten(decimal bedrag)
+    public void Storten(decimal bedrag)
     {
-      return Saldo += bedrag;
+        //return Saldo += bedrag;
+        Saldo += bedrag;
+        if (RekeningUittreksel != null) RekeningUittreksel(this);
+    }
+
+    public void Afhalen(decimal bedrag)
+    {
+        if (bedrag <= Saldo)
+        {
+            Saldo -= bedrag;
+            if (RekeningUittreksel != null) RekeningUittreksel(this);
+        }
+        else
+        {
+            //if (SaldoInHetRood != null) SaldoInHetRood(this);
+            SaldoInHetRood?.Invoke(this); // dit is de korte schrijfwaijze van de if statement hierboven
+        }
     }
   }
 }
