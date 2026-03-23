@@ -916,15 +916,96 @@
 //StreamReader lezer = new StreamReader(@"C:\Users\marti\source\repos\DOTNET\provincies.txt");
 //string regel = lezer.ReadLine();
 //lezer.Close();
-using CSharpPFCursus;
-Console.Write("Provincie: ");
-string provincie = Console.ReadLine()!;
-try
-{
-  ProvincieInfo info = new ProvincieInfo();
-  Console.WriteLine(info.ProvincieGrootte(provincie));
-}
-catch (Exception ex)
-{
-  Console.WriteLine(ex.Message);
-}
+//using CSharpPFCursus;
+//Console.Write("Provincie: ");
+//string provincie = Console.ReadLine()!;
+//try
+//{
+//  ProvincieInfo info = new ProvincieInfo();
+//  Console.WriteLine(info.ProvincieGrootte(provincie));
+//}
+//catch (Exception ex)
+//{
+//  Console.WriteLine(ex.Message);
+//}
+
+/* Collections & Generics */
+//using CSharpPFCursus;
+using Firma.Personeel;
+using System.Collections;
+//Arbeider asterix = new Arbeider("Asterix", new DateTime(2026,2,1), Geslacht.Man, 24.79m, 3);
+//Bediende obelix = new Bediende("Obelix", new DateTime(2026,1,1), Geslacht.Man, 2400.79m);
+//Manager bellefleur = new Manager("Bellefleur", new DateTime(2026,3,1), Geslacht.Vrouw, 2400.79m, 7000m);
+//ArrayList personeel = new ArrayList();
+//List<Werknemer> personeel = new List<Werknemer>();
+//personeel.Add(asterix);
+//personeel.Add(obelix);
+//personeel.Insert(1, bellefleur);
+//Console.WriteLine($"{(personeel[0] as Werknemer)?.Naam} is de 1ste van {personeel.Count} personeelsleden.");
+//Console.WriteLine($"{personeel[0].Naam} is de 1ste van {personeel.Count} personeelsleden.");
+//foreach (Werknemer personeelslid in personeel) Console.WriteLine(personeelslid.Naam);
+//Afdeling eenAfdeling = new Afdeling { Naam = "Verzending", Verdieping = 0 };
+//personeel.Add(eenAfdeling);
+//foreach (Werknemer personeelslid in personeel) Console.WriteLine(personeelslid.Naam);
+// beginwaarden meegeven met een collection initializer
+//var getallen = new ArrayList { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//var maanden = new List<string>{ "Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December" };
+//var personeel = new List<Werknemer>
+//{
+//    new Arbeider("Asterix", new DateTime(2026,2,1), Geslacht.Man, 24.79m, 3),
+//    new Bediende("Obelix", new DateTime(2026,1,1), Geslacht.Man, 2400.79m),
+//    new Manager("Bellefleur", new DateTime(2026,3,1), Geslacht.Vrouw, 2400.79m, 7000m)
+//};
+// beginwaarden meegeven met een collection expression
+//ArrayList getallen2 = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+//List<string> maanden2 = [ "Januari", "Februari", "Maart", "April", "Mei", "Juni", "Juli", "Augustus", "September", "Oktober", "November", "December" ];
+//List<Werknemer> personeel2 =
+//[
+//    new Arbeider("Asterix", new DateTime(2026,2,1), Geslacht.Man, 24.79m, 3),
+//    new Bediende("Obelix", new DateTime(2026,1,1), Geslacht.Man, 2400.79m),
+//    new Manager("Bellefleur", new DateTime(2026,3,1), Geslacht.Vrouw, 2400.79m, 7000m)
+//];
+// een dictionary gebruiken - dit gaat altijd met een key/value pair
+//Dictionary<int, string> opleidingen = new Dictionary<int, string>() { { 1, "Word" }, { 2, "Excel" }, { 3, "Access" } };
+//Dictionary<string, string> extensies = new() { { "txt", "Notepad" }, { "docx", "Word" }, { "xlsx", "Excel" } };
+// het kan ook geschreven worden zoals hieronder -- misschien voor mij wel wat duidelijker
+//Dictionary<int, string> opleidingen2 = new Dictionary<int, string>() { [1] = "Word", [2] = "Excel", [3] = "Access" };
+//Dictionary<string, string> extensies2 = new() { ["txt"] = "Notepad", ["docx"] = "Word", ["xlsx"] = "Excel" };
+// toevoegen van een element
+//opleidingen2.Add(4, "Powerpoint");
+//opleidingen.Add(4, "Outlook"); // zal een fout geven!
+//opleidingen2[5] = "Outlook"; // dit is voor mij leesbaarder
+// een element opvragen
+//Console.WriteLine(opleidingen2[2]);
+//Console.WriteLine(extensies2["docx"]);
+//Console.WriteLine(extensies2["xxx"]); // gaat een fout geven!
+// met de TryGetValue() method
+//if(opleidingen.TryGetValue(2, out string? opleiding))
+//{
+//    Console.WriteLine($"opleiding {opleiding} gevonden");
+//    // of in het kort!
+//    Console.WriteLine($"Opleiding {(opleidingen.TryGetValue(8, out string? opleiding) ? opleiding : "niet")} gevonden");
+//}
+//else
+//{
+//    Console .WriteLine( "opleiding niet gevonden" );
+//}
+//foreach (KeyValuePair<int, string> opleiding in opleidingen2)
+//{
+//    Console.WriteLine($"Key = {opleiding.Key}, Value = {opleiding.Value}");
+//}
+// of met var
+//foreach (var opleiding in opleidingen2)
+//{
+//    Console.WriteLine($"Key = {opleiding.Key}, Value = {opleiding.Value}");
+//}
+// of met enkel de keys
+//foreach (int key in opleidingen2.Keys)
+//{
+//    Console.WriteLine(key);
+//}
+// of met enkel de values
+//foreach (string value in opleidingen2.Values)
+//{
+//    Console.WriteLine(value);
+//}
