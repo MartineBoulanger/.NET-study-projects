@@ -1011,8 +1011,8 @@
 //}
 
 /* Delegates & events */
-using Firma.Personeel;
-using Firma.Materiaal;
+//using Firma.Personeel;
+//using Firma.Materiaal;
 //Werknemer[] wij = 
 //[
 //    new Arbeider("Asterix", new DateTime(2026, 1, 1), Geslacht.Man, 24.79m, 3),
@@ -1028,7 +1028,7 @@ using Firma.Materiaal;
 // een event triggeren
 //Bediende obelix = new Bediende("Obelix", new DateTime(1995, 2, 1), Geslacht.Man, 2400.79m);
 //Manager idefix = new Manager("Idefix", new DateTime(1996, 3, 1), Geslacht.Man, 2400.79m, 7000m);
-Fotokopiemachine machine1 = new Fotokopiemachine("12345", 0, 0.30m);
+//Fotokopiemachine machine1 = new Fotokopiemachine("12345", 0, 0.30m);
 //Fotokopiemachine machine2 = new Fotokopiemachine("67890", 0, 0.50m); // laten zien dat 1 object op meerdere events kan reageren
 //machine1.OnderhoudNodig += obelix.DoeOnderhoud;
 //machine1.OnderhoudNodig += idefix.OnderhoudNoteren;
@@ -1037,8 +1037,39 @@ Fotokopiemachine machine1 = new Fotokopiemachine("12345", 0, 0.30m);
 //machine1.Fotokopieer(45);
 //machine2.Fotokopieer(27);
 // met een anonymous method - dit kan ook, maar wordt niet altijd aangeraden to gebruiken
-machine1.OnderhoudNodig += delegate (Fotokopiemachine apparaat)
+//machine1.OnderhoudNodig += delegate (Fotokopiemachine apparaat)
+//{
+//    Console.WriteLine($"Onderhoud is aangevraagd voor machine {apparaat.SerieNr}");
+//};
+//machine1.Fotokopieer(50);
+
+/* lambda expressies */
+using CSharpPFCursus;
+//Kwadraat kwadraat = getal => getal * getal;
+//Console.WriteLine(kwadraat(5));
+//Console.WriteLine(kwadraat(10));
+//FunctieMet2Parameters som = (getal1, getal2) => getal1 + getal2;
+//FunctieMet1Parameter omgekeerdeString = (tekst) => new string(tekst.Reverse().ToArray());
+//FunctieZonderParameters willekeurigGetal = () => new Random().Next(10);
+//Console.WriteLine(som(3,7));
+//Console.WriteLine(som(10,6));
+//Console.WriteLine(omgekeerdeString("VDAB"));
+//Console.WriteLine(willekeurigGetal());
+//KwadraatOtp kwadraatOtp = getal => getal * getal;
+//Console.WriteLine(kwadraatOtp(5));
+//Console.WriteLine(kwadraatOtp());
+int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+Filter filterEvenGetallen = getal => getal % 2 == 0;
+Console.WriteLine("Even getallen:");
+ToonGetallen(getallen,filterEvenGetallen);
+Console.WriteLine("Oneven getallen:");
+ToonGetallen(getallen, getal => getal % 2 == 1);
+Console.WriteLine("Getallen deelbaar door 5:");
+ToonGetallen(getallen, getal => getal % 5 == 0);
+static void ToonGetallen(int[] getallen, Filter filter)
 {
-    Console.WriteLine($"Onderhoud is aangevraagd voor machine {apparaat.SerieNr}");
-};
-machine1.Fotokopieer(50);
+    foreach (var getal in getallen)
+    {
+        if (filter(getal)) Console.WriteLine(getal);
+    }
+}
