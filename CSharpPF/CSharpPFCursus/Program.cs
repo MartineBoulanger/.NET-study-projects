@@ -931,8 +931,8 @@
 
 /* Collections & Generics */
 //using CSharpPFCursus;
-using Firma.Personeel;
-using System.Collections;
+//using Firma.Personeel;
+//using System.Collections;
 //Arbeider asterix = new Arbeider("Asterix", new DateTime(2026,2,1), Geslacht.Man, 24.79m, 3);
 //Bediende obelix = new Bediende("Obelix", new DateTime(2026,1,1), Geslacht.Man, 2400.79m);
 //Manager bellefleur = new Manager("Bellefleur", new DateTime(2026,3,1), Geslacht.Vrouw, 2400.79m, 7000m);
@@ -1009,3 +1009,36 @@ using System.Collections;
 //{
 //    Console.WriteLine(value);
 //}
+
+/* Delegates & events */
+using Firma.Personeel;
+using Firma.Materiaal;
+//Werknemer[] wij = 
+//[
+//    new Arbeider("Asterix", new DateTime(2026, 1, 1), Geslacht.Man, 24.79m, 3),
+//    new Bediende("Obelix", new DateTime(1995, 2, 1), Geslacht.Man, 2400.79m),
+//    new Manager("Idefix", new DateTime(1996, 3, 1), Geslacht.Man, 2400.79m, 7000m)
+//];
+//WerknemersLijst lijst;
+//lijst = Werknemer.UitgebreideWerknemersLijst;
+//Console.WriteLine(lijst(wij));
+//Console.WriteLine();
+//lijst = Werknemer.KorteWerknemersLijst;
+//Console.WriteLine(lijst(wij));
+// een event triggeren
+//Bediende obelix = new Bediende("Obelix", new DateTime(1995, 2, 1), Geslacht.Man, 2400.79m);
+//Manager idefix = new Manager("Idefix", new DateTime(1996, 3, 1), Geslacht.Man, 2400.79m, 7000m);
+Fotokopiemachine machine1 = new Fotokopiemachine("12345", 0, 0.30m);
+//Fotokopiemachine machine2 = new Fotokopiemachine("67890", 0, 0.50m); // laten zien dat 1 object op meerdere events kan reageren
+//machine1.OnderhoudNodig += obelix.DoeOnderhoud;
+//machine1.OnderhoudNodig += idefix.OnderhoudNoteren;
+//machine2.OnderhoudNodig += obelix.DoeOnderhoud;
+//machine2.OnderhoudNodig += idefix.OnderhoudNoteren;
+//machine1.Fotokopieer(45);
+//machine2.Fotokopieer(27);
+// met een anonymous method - dit kan ook, maar wordt niet altijd aangeraden to gebruiken
+machine1.OnderhoudNodig += delegate (Fotokopiemachine apparaat)
+{
+    Console.WriteLine($"Onderhoud is aangevraagd voor machine {apparaat.SerieNr}");
+};
+machine1.Fotokopieer(50);

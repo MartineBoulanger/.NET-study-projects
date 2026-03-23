@@ -1,4 +1,6 @@
-﻿namespace Firma.Personeel
+﻿using Firma.Materiaal;
+
+namespace Firma.Personeel
 {
     /* deze class is een derived class van de derived class Bediende */
     public sealed class Manager : Bediende
@@ -41,6 +43,12 @@
         public override string ToString()
         {
             return $"{base.ToString()} - Bonus: {Bonus} euro";
+        }
+
+        // methods om de event te triggeren
+        public void OnderhoudNoteren(Fotokopiemachine machine)
+        {
+            Console.WriteLine($"{Naam} registreert het onderhoud van machine {machine.SerieNr} in het logboek.");
         }
     }
 

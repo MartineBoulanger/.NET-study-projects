@@ -1,7 +1,13 @@
 namespace Firma.Materiaal
 {
+  // delegate met void - delegates altijd binnen de namespace maar buiten de class (liefst bovenaan de file) zetten
+  public delegate void Onderhoudsbeurt(Fotokopiemachine machine);
+
   public class Fotokopiemachine:IKost
   {
+    // event om de delegate mee te gebruiken
+    public event Onderhoudsbeurt? OnderhoudNodig;
+
     // Error classes voor de specifieke properties
     // dit is nog beter dan een error gooien met throw
     public class KostPerBlzException:Exception
@@ -49,5 +55,17 @@ namespace Firma.Materiaal
     public bool Menselijk => false;
     public decimal BerekenKostprijs() => AantalGekopieerdeBlz * KostPerBlz;
     // methods van de class
+    private const int AantalBlzTussen2OnderhoudsBeurten = 10;
+    public void Fotokopieer(int aantalBlz)
+    {
+        for (int i = 0; i < aantalBlz; i++)
+        {
+            Console.WriteLine($"FotokopieMachine: {SerieNr} kopieert blz. {i} van {aantalBlz}");
+            if (++AantalGekopieerdeBlz % AantalBlzTussen2OnderhoudsBeurten == 0)
+            {
+                if (OnderhoudNodig != null) OnderhoudNodig?.Invoke(this);
+            }
+        }
+    }
   }
 }

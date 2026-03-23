@@ -1,4 +1,6 @@
-﻿namespace Firma.Personeel
+﻿using Firma.Materiaal;
+
+namespace Firma.Personeel
 {
     public class Bediende : Werknemer
     {
@@ -41,6 +43,12 @@
         public override string ToString()
         {
             return $"{base.ToString()} {Wedde} euro/maand";
+        }
+
+        // method om de event te triggeren
+        public void DoeOnderhoud(Fotokopiemachine machine)
+        {
+            Console.WriteLine($"{Naam} onderhoudt machine {machine.SerieNr}");
         }
     }
 }
