@@ -601,42 +601,105 @@
 
 // 18. Delegates en Events
 // 18.1 Oefening Bank
+//using CSharpPFOefeningen;
+//Console.WriteLine("------------------------------------------------------------------");
+//// objecten initialiseren
+//Bank bnp = new() { BankId = 1, Naam = "VDAB" };
+//Klant ik = new() { Familienaam = "Boulanger", Voornaam = "Martine" };
+//Zichtrekening mijnRekening = new("BE03001447946884", 100m, new DateOnly(2020,1,1), ik, -10);
+//Spaarrekening.Intrest = 0.01m;
+//Spaarrekening mijnSpaar = new("BE40645100000163", 1000m, new DateOnly(2020, 1, 1), ik);
+//// events initialiseren
+//mijnRekening.RekeningUittreksel += bnp.RekeningUittrekselTonen;
+//mijnRekening.RekeningUittreksel += bnp.RekeningInRoodMelding;
+//mijnSpaar.RekeningUittreksel += bnp.RekeningUittrekselTonen;
+//mijnSpaar.RekeningUittreksel += bnp.RekeningInRoodMelding;
+//// zichtrekening
+//Console.WriteLine("Zichtrekening: ");
+//Console.WriteLine(mijnRekening.GetInfo());
+//Console.WriteLine();
+//Console.WriteLine("Storting");
+//mijnRekening.Storten(50m);
+//Console.WriteLine();
+//Console.WriteLine("Afhalen");
+//mijnRekening.Afhalen(100m);
+//Console.WriteLine();
+//Console.WriteLine("Afhalen"); // hier gaat de rekening in het rood staan
+//mijnRekening.Afhalen(100m);
+//Console.WriteLine();
+//// spaarrekening
+//Console.WriteLine("Spaarrekening: ");
+//Console.WriteLine(mijnSpaar.GetInfo());
+//Console.WriteLine();
+//Console.WriteLine("Storting");
+//mijnSpaar.Storten(2000m);
+//Console.WriteLine();
+//Console.WriteLine("Afhalen");
+//mijnSpaar.Afhalen(1000m);
+//Console.WriteLine();
+//Console.WriteLine("Afhalen"); // hier gaat de rekening in het rood staan
+//mijnSpaar.Afhalen(4000m);
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 19. Lambda expressies
 using CSharpPFOefeningen;
+// array met getallen
+//Console.WriteLine("------------------------------------------------------------------");
+// lambda expression met de Func - kan ook met een delegate, maar vind dit gemakkelijker en logischer ook
+// dit is mijn eigen oplossing - met Func zonder delegate voor de tekstkleur
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//Func<int, bool> filterEvenGetallen = getal => getal % 2 == 0;
+//Func<int, bool> filterOnEvenGetallen = getal => getal % 2 == 1;
+// even getallen tonen
+//foreach (var getal in getallen)
+//{
+//  Console.ForegroundColor = ConsoleColor.Green;
+//  //if (filterEvenGetallen(getal)) Console.WriteLine($"{getal}: {filterEvenGetallen(getal)}");
+//  if (filterEvenGetallen(getal)) Console.WriteLine(getal);
+//  Console.ForegroundColor = ConsoleColor.White;
+//}
+//Console.WriteLine("------------------------------------------------------------------");
+// oneven getallen tonen
+//foreach (var getal in getallen)
+//{
+//  Console.ForegroundColor = ConsoleColor.Red;
+//  //if (filterEvenGetallen(getal)) Console.WriteLine($"{getal}: {filterEvenGetallen(getal)}");
+//  if (filterOnEvenGetallen(getal)) Console.WriteLine(getal);
+//  Console.ForegroundColor = ConsoleColor.White;
+//}
+//Console.WriteLine("------------------------------------------------------------------");
+// hier de voorbeeld oplossing van de leraar - eerst met Func
+//Func<int, ConsoleColor> kleurEvenOneven = getal => getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red;
+//Func<int, ConsoleColor> kleurPositiefNegatief = getal => getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue;
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
+//// method om de getallen in de juiste kleur te tonen
+//static void ToonGetallen(int[] getallen, Func<int, ConsoleColor> kleurGetal)
+//{
+//  foreach (var getal in getallen)
+//  {
+//    Console.ForegroundColor = kleurGetal(getal);
+//    Console.WriteLine(getal);
+//  }
+//  Console.ForegroundColor = ConsoleColor.White;
+//}
+//ToonGetallen(getallen, kleurEvenOneven);
+//ToonGetallen(getallen2, kleurPositiefNegatief);
 Console.WriteLine("------------------------------------------------------------------");
-// objecten initialiseren
-Bank bnp = new() { BankId = 1, Naam = "VDAB" };
-Klant ik = new() { Familienaam = "Boulanger", Voornaam = "Martine" };
-Zichtrekening mijnRekening = new("BE03001447946884", 100m, new DateOnly(2020,1,1), ik, -10);
-Spaarrekening.Intrest = 0.01m;
-Spaarrekening mijnSpaar = new("BE40645100000163", 1000m, new DateOnly(2020, 1, 1), ik);
-// events initialiseren
-mijnRekening.RekeningUittreksel += bnp.RekeningUittrekselTonen;
-mijnRekening.RekeningUittreksel += bnp.RekeningInRoodMelding;
-mijnSpaar.RekeningUittreksel += bnp.RekeningUittrekselTonen;
-mijnSpaar.RekeningUittreksel += bnp.RekeningInRoodMelding;
-// zichtrekening
-Console.WriteLine("Zichtrekening: ");
-Console.WriteLine(mijnRekening.GetInfo());
-Console.WriteLine();
-Console.WriteLine("Storting");
-mijnRekening.Storten(50m);
-Console.WriteLine();
-Console.WriteLine("Afhalen");
-mijnRekening.Afhalen(100m);
-Console.WriteLine();
-Console.WriteLine("Afhalen"); // hier gaat de rekening in het rood staan
-mijnRekening.Afhalen(100m);
-Console.WriteLine();
-// spaarrekening
-Console.WriteLine("Spaarrekening: ");
-Console.WriteLine(mijnSpaar.GetInfo());
-Console.WriteLine();
-Console.WriteLine("Storting");
-mijnSpaar.Storten(2000m);
-Console.WriteLine();
-Console.WriteLine("Afhalen");
-mijnSpaar.Afhalen(1000m);
-Console.WriteLine();
-Console.WriteLine("Afhalen"); // hier gaat de rekening in het rood staan
-mijnSpaar.Afhalen(4000m);
+// voorbeeld oplossing met delegate
+KleurGetal kleurEvenOneven = getal => getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red;
+KleurGetal kleurPositiefNegatief = getal => getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue;
+int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
+static void ToonGetallen(int[] getallen, KleurGetal kleurGetal)
+{
+  foreach (var getal in getallen)
+  {
+    Console.ForegroundColor = kleurGetal(getal);
+    Console.WriteLine(getal);
+  }
+  Console.ForegroundColor = ConsoleColor.White;
+}
+ToonGetallen(getallen, kleurEvenOneven);
+ToonGetallen(getallen2, kleurPositiefNegatief);
 Console.WriteLine("------------------------------------------------------------------");
