@@ -1044,7 +1044,7 @@
 //machine1.Fotokopieer(50);
 
 /* lambda expressies */
-using CSharpPFCursus;
+//using CSharpPFCursus;
 //Kwadraat kwadraat = getal => getal * getal;
 //Console.WriteLine(kwadraat(5));
 //Console.WriteLine(kwadraat(10));
@@ -1080,8 +1080,11 @@ using CSharpPFCursus;
 //Action<string, int> tekstDeel = (tekst, vanaf) => Console.WriteLine(tekst[vanaf..]); // met range operator
 //tekstDeel("VDAB", 2);
 // met Func
-Func<int, int, int> som = (getal1, getal2) => getal1 + getal2;
-Console.WriteLine(som(10,5));
+//Func<int, int, int> som = (getal1, getal2) => getal1 + getal2;
+//Console.WriteLine(som(10,5));
 //Func<string, int, string> tekstDeel = (tekst, vanaf) => tekst.Substring(vanaf);
-Func<string, int, string> tekstDeel = (tekst, vanaf) => tekst[vanaf..]; // met range operator
-Console.WriteLine(tekstDeel("VDAB", 1));
+//Func<string, int, string> tekstDeel = (tekst, vanaf) => tekst[vanaf..]; // met range operator
+//Console.WriteLine(tekstDeel("VDAB", 1));
+
+/* LINQ */
+using CSharpPFCursus;

@@ -685,19 +685,50 @@ using CSharpPFOefeningen;
 //}
 //ToonGetallen(getallen, kleurEvenOneven);
 //ToonGetallen(getallen2, kleurPositiefNegatief);
+//Console.WriteLine("------------------------------------------------------------------");
+//// voorbeeld oplossing met delegate
+//KleurGetal kleurEvenOneven = getal => getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red;
+//KleurGetal kleurPositiefNegatief = getal => getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue;
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
+//static void ToonGetallen(int[] getallen, KleurGetal kleurGetal)
+//{
+//  foreach (var getal in getallen)
+//  {
+//    Console.ForegroundColor = kleurGetal(getal);
+//    Console.WriteLine(getal);
+//  }
+//  Console.ForegroundColor = ConsoleColor.White;
+//}
+//ToonGetallen(getallen, kleurEvenOneven);
+//ToonGetallen(getallen2, kleurPositiefNegatief);
+//Console.WriteLine("------------------------------------------------------------------");
+//Console.WriteLine("------------------------------------------------------------------");
+//// voorbeeld oplossing met statement lambda
+//KleurenGetal kleurEvenOneven = getal => { Console.ForegroundColor = getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red; Console.WriteLine(getal); };
+//KleurenGetal kleurPositiefNegatief = getal => { Console.ForegroundColor = getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue; Console.WriteLine(getal); };
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
+//static void ToonGetallen(int[] getallen, KleurenGetal kleurGetal)
+//{
+//  foreach (var getal in getallen)
+//  {
+//    kleurGetal(getal);
+//  }
+//  Console.ForegroundColor = ConsoleColor.White;
+//}
+//ToonGetallen(getallen, kleurEvenOneven);
+//ToonGetallen(getallen2, kleurPositiefNegatief);
+//Console.WriteLine("------------------------------------------------------------------");
 Console.WriteLine("------------------------------------------------------------------");
-// voorbeeld oplossing met delegate
-KleurGetal kleurEvenOneven = getal => getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red;
-KleurGetal kleurPositiefNegatief = getal => getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue;
+// voorbeeld oplossing met Action
+Action<int> kleurEvenOneven = getal => { Console.ForegroundColor = getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red; Console.WriteLine(getal); };
+Action<int> kleurPositiefNegatief = getal => { Console.ForegroundColor = getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue; Console.WriteLine(getal); };
 int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
-static void ToonGetallen(int[] getallen, KleurGetal kleurGetal)
+static void ToonGetallen(int[] getallen, Action<int> kleurGetal)
 {
-  foreach (var getal in getallen)
-  {
-    Console.ForegroundColor = kleurGetal(getal);
-    Console.WriteLine(getal);
-  }
+  foreach (var getal in getallen) kleurGetal(getal);
   Console.ForegroundColor = ConsoleColor.White;
 }
 ToonGetallen(getallen, kleurEvenOneven);

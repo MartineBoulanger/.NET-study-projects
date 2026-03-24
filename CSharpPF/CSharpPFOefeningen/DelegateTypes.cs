@@ -1,4 +1,5 @@
 ﻿namespace CSharpPFOefeningen
 {
-  public delegate ConsoleColor KleurGetal(int getal); // om de tekst te kleuren
+  public delegate ConsoleColor KleurGetal(int getal);
+  public delegate void KleurenGetal(int getal);
 }
