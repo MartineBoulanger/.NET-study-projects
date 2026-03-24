@@ -1058,18 +1058,30 @@ using CSharpPFCursus;
 //KwadraatOtp kwadraatOtp = getal => getal * getal;
 //Console.WriteLine(kwadraatOtp(5));
 //Console.WriteLine(kwadraatOtp());
-int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-Filter filterEvenGetallen = getal => getal % 2 == 0;
-Console.WriteLine("Even getallen:");
-ToonGetallen(getallen,filterEvenGetallen);
-Console.WriteLine("Oneven getallen:");
-ToonGetallen(getallen, getal => getal % 2 == 1);
-Console.WriteLine("Getallen deelbaar door 5:");
-ToonGetallen(getallen, getal => getal % 5 == 0);
-static void ToonGetallen(int[] getallen, Filter filter)
-{
-    foreach (var getal in getallen)
-    {
-        if (filter(getal)) Console.WriteLine(getal);
-    }
-}
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//Filter filterEvenGetallen = getal => getal % 2 == 0;
+//Console.WriteLine("Even getallen:");
+//ToonGetallen(getallen,filterEvenGetallen);
+//Console.WriteLine("Oneven getallen:");
+//ToonGetallen(getallen, getal => getal % 2 == 1);
+//Console.WriteLine("Getallen deelbaar door 5:");
+//ToonGetallen(getallen, getal => getal % 5 == 0);
+//static void ToonGetallen(int[] getallen, Filter filter)
+//{
+//    foreach (var getal in getallen)
+//    {
+//        if (filter(getal)) Console.WriteLine(getal);
+//    }
+//}
+// met Action
+//Action<int> kwadraat = getal => Console.WriteLine(getal * getal);
+//kwadraat(10);
+//Action<string, int> tekstDeel = (tekst, vanaf) => Console.WriteLine(tekst.Substring(vanaf));
+//Action<string, int> tekstDeel = (tekst, vanaf) => Console.WriteLine(tekst[vanaf..]); // met range operator
+//tekstDeel("VDAB", 2);
+// met Func
+Func<int, int, int> som = (getal1, getal2) => getal1 + getal2;
+Console.WriteLine(som(10,5));
+//Func<string, int, string> tekstDeel = (tekst, vanaf) => tekst.Substring(vanaf);
+Func<string, int, string> tekstDeel = (tekst, vanaf) => tekst[vanaf..]; // met range operator
+Console.WriteLine(tekstDeel("VDAB", 1));
