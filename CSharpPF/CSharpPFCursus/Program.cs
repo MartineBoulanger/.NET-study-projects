@@ -1087,4 +1087,252 @@
 //Console.WriteLine(tekstDeel("VDAB", 1));
 
 /* LINQ */
+//using CSharpPFCursus;
+//List<string> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix"];
+//var namenDieMetABeginnen = namen.Where(naam => naam.StartsWith('A')).ToList();
+//namen.Remove("Ambiorix");
+//foreach (var naam in namenDieMetABeginnen)
+//{
+//  Console.WriteLine(naam);
+//}
+// Extension methocs
+// filteren met Where()
+//var getallen = new[] { 0, 2, 1, 4, 3, 5, 7, 6, 8, 9 };
+//Console.WriteLine("Getallen groter dan 3:");
+//var getallenGroterDan3 = getallen.Where(getal => getal > 3);
+//foreach (var getal in getallenGroterDan3) Console.WriteLine(getal);
+//List<string> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix"];
+//Console.WriteLine("Geef de beginletter(s) in: ");
+//var beginVanNaam = Console.ReadLine()!;
+//var gevondenNamen = namen.Where(naam => naam.StartsWith(beginVanNaam));
+//foreach (var naam in gevondenNamen) Console.WriteLine(naam);
+// sorteren met OrderBy()
+// op waarde van het element
+//var getallen = new[] { 0, 2, 1, 4, 3, 5, 7, 6, 8, 9 };
+//Console.WriteLine("Gesorteerde lijst:");
+//var gesorteerdeGetallen = getallen.OrderBy(getal => getal);
+//foreach (var getal in gesorteerdeGetallen) Console.WriteLine(getal);
+// op een property
+//var landen = new[] { new { Naam = "Frankrijk", Oppervlakte = 643427 }, new { Naam = "Belgie", Oppervlakte = 30688 }, new { Naam = "Nederland", Oppervlakte = 41528 } };
+//Console.WriteLine("Landen gesorteerd op oppervlakte:");
+//var landenGesorteerdOpOppervlakte = landen.OrderBy(land => land.Oppervlakte);
+//foreach (var land in landenGesorteerdOpOppervlakte) Console.WriteLine($"{land.Naam} {land.Oppervlakte}");
+//Console.WriteLine();
+//Console.WriteLine("Landen gesorteerd op naam (descending):");
+//var landenGesorteerdOpNaamDesc = landen.OrderByDescending(land => land.Naam);
+//foreach (var land in landenGesorteerdOpNaamDesc) Console.WriteLine($"{land.Naam} {land.Oppervlakte}");
+// sorteren op meerdere waarden
+//var namen = new List<String> {"Asterix", "Obelix", "Idefix", "Ambiorix"};
+//var gesorteerdeNamen = namen.OrderBy(naam => naam.Length).ThenBy(naam => naam);
+//foreach (var naam in gesorteerdeNamen) Console.WriteLine(naam);
+// extension method Select()
+//List<string> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix"];
+//var namenInHoofdletters = namen.Select(naam => naam.ToUpper());
+//foreach (var naam in namenInHoofdletters) Console.WriteLine(naam);
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//var kwadraten = getallen.Select(getal => getal * getal);
+//foreach (var k in kwadraten) Console.WriteLine(k);
+//var landen = new[]
+//{
+//  new {Naam = "Frankrijk", Oppervlakte = 643427},
+//  new {Naam = "Belgie", Oppervlakte = 30688},
+//  new {Naam = "Nederland", Oppervlakte = 41528}
+//};
+//var landOppervlaktes = landen.Select(land => land.Oppervlakte);
+//foreach (var opp in landOppervlaktes) Console.WriteLine(opp);
+//using Firma.Personeel;
+//List<Werknemer> werknemers = 
+//[
+//  new Arbeider("Asterix", new DateTime(2026, 1, 1), Geslacht.Man, 24.79m, 3),
+//  new Bediende("Obelix", new DateTime(2026, 2, 1), Geslacht.Man, 2400.79m),
+//  new Manager("Idefix", new DateTime(2026, 3, 1), Geslacht.Man, 2400.79m, 7000m)
+//];
+////var werknemersMetNaamEnDatumInDienst = werknemers.Select(w => new { Werknemernaam = w.Naam, DatumInDienst = w.InDienst });
+//var werknemersMetNaamEnDatumInDienst = werknemers.Select(w => new { w.Naam, w.InDienst }); // kan ook zonder een key te definieren
+//foreach (var werknemer in werknemersMetNaamEnDatumInDienst) Console.WriteLine($"{werknemer.Naam}\t(in dienst: {werknemer.InDienst.ToShortDateString()})");
+// Chain LINQ queries
+//var namen = new List<String> { "Asterix", "Obelix", "Idefix", "Ambiorix" };
+//var geselecteerdeNamen = namen.Where(n => n.Length > 6).OrderBy(n => n).Select(n => n.ToUpper());
+//foreach (var n in geselecteerdeNamen) Console.WriteLine(n);
+// Aggregatie functies
+//var getallen = new[] { 0, 2, 1, 4, 3, 5, 7, 6, 8, 9 };
+//Console.WriteLine("Aantal getallen: ");
+//Console.WriteLine(getallen.Count());
+//Console.WriteLine("Som van alle getallen: ");
+//Console.WriteLine(getallen.Sum());
+//Console.WriteLine("Gemiddelde van alle getallen: ");
+//Console.WriteLine(getallen.Average());
+//Console.WriteLine("Kleinste getal: ");
+//Console.WriteLine(getallen.Min());
+//Console.WriteLine("Grootste getal: ");
+//Console.WriteLine(getallen.Max());
+//Console.WriteLine("Aantal getallen > 3: ");
+//Console.WriteLine(getallen.Count(getal => getal > 3));
+//var landen = new[]
+//{
+//  new {Naam = "Frankrijk", Oppervlakte = 643427},
+//  new {Naam = "Belgie", Oppervlakte = 30688},
+//  new {Naam = "Nederland", Oppervlakte = 41528}
+//};
+//var alleOppervlaktes = landen.Select(l => l.Oppervlakte); // ipv lambda te schrijven tussen de () om de oppervlakte parameter te gerbuiken - map deze gewoon in een nieuwe verzameling
+//Console.WriteLine("Aantal landen: ");
+//Console.WriteLine(landen.Count());
+//Console.WriteLine("Totale oppervlakte: ");
+////Console.WriteLine(landen.Sum(l => l.Oppervlakte));
+//Console.WriteLine(alleOppervlaktes.Sum());
+//Console.WriteLine("Gemiddelde oppervlakte: ");
+////Console.WriteLine(landen.Average(l => l.Oppervlakte));
+//Console.WriteLine(alleOppervlaktes.Average());
+//Console.WriteLine("Kleinste oppervlakte: ");
+////Console.WriteLine(landen.Min(l => l.Oppervlakte));
+//Console.WriteLine(alleOppervlaktes.Min());
+//Console.WriteLine("Grootste oppervlakte: ");
+////Console.WriteLine(landen.Max(l => l.Oppervlakte));
+//Console.WriteLine(alleOppervlaktes.Max());
+// bewerkingen met verzamelingen
+//List<string> groep1 = ["An", "Johan", "Els", "Hans", "an", "Hans"];
+//List<string> groep2 = ["An", "Peter", "Wim", "Hans"];
+//Console.WriteLine($"Distinct() - unieke namen: \n{string.Join('-', groep1.Distinct())}");
+//Console.WriteLine($"Concat() - groepen samenvoegen - alle namen: \n{string.Join('-', groep1.Concat(groep2))}");
+//Console.WriteLine($"Union() - groepen samenvoegen - geen dubbele namen: \n{string.Join('-', groep1.Union(groep2))}");
+//Console.WriteLine($"Intersect():\n{string.Join('-', groep1.Intersect(groep2))}");
+//Console.WriteLine($"Except():\n{string.Join('-', groep1.Except(groep2))}");
+// extension method Any()
+//List<string> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix"];
+//Console.WriteLine("Geef de beginletter(s) in: ");
+//var beginVanNaam = Console.ReadLine()!;
+//// met extra parameter om aan te geven dat er geen onderscheidt gemaakt moet worden tussen hofod- en kleine letters
+//var gevondenNamen = namen.Where(n => n.StartsWith(beginVanNaam, StringComparison.CurrentCultureIgnoreCase));
+//if (gevondenNamen.Any())
+//{
+//  foreach (var naam in gevondenNamen)
+//  {
+//    Console.WriteLine(naam);
+//  }
+//}
+//else
+//{
+//  Console.WriteLine("Het resultaat bevat geen elementen");
+//}
+// extension method GroupBy()
+//List<string> namen = ["An", "Piet", "Els", "Peter", "Anne", "Axelle"];
+//var namenGegroepeerd = namen.GroupBy(n => n[0]);
+//Console.WriteLine("Aantal namen die beginnen met ");
+//foreach (var gr in namenGegroepeerd) Console.WriteLine($"{gr.Key}: {gr.Count()}");
+//Console.WriteLine();
+//Console.WriteLine("Namen per eerste letter:");
+//foreach (var gr in namenGegroepeerd)
+//{
+//  Console.WriteLine(gr.Key);
+//  foreach (var n in gr) Console.WriteLine($"  {n}");
+//}
+// query comprehension syntax
+//List<String> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix", "Bellefleur"];
+//var geselecteerdeNamen = namen.Where(n => n.Length > 6).OrderBy(n => n).Select(n => n.ToUpper());
+//foreach (var n in geselecteerdeNamen) Console.WriteLine(n);
+// dit hierboven kan dus ook als volgt geschreven worden:
+//List<String> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix", "Bellefleur"];
+//var geselecteerdeNamen = from naam in namen where naam.Length > 6 orderby naam select naam.ToUpper(); // query comprehensive syntax
+//foreach (var n in geselecteerdeNamen) Console.WriteLine(n);
+// deferred execution
+//List<string> namen = new List<String>() { "Asterix", "Obelix" };
+//var namenDieBeginnenMetA =
+//from naam in namen
+//where naam.StartsWith("A")
+//select naam;
+//namen.Add("Ambiorix ");
+//foreach (var naam in namenDieBeginnenMetA)
+//Console.WriteLine(naam);
+// onmiddelijk executeren met ToList()
+//List<string> namen = new List<String>() { "Asterix", "Obelix" };
+//var namenDieBeginnenMetA =
+//(from naam in namen
+// where naam.StartsWith("A")
+// select naam).ToList();
+//namen.Add("Ambiorix ");
+//foreach (var naam in namenDieBeginnenMetA)
+//  Console.WriteLine(naam);
+// meer extension methods
+// FirstOrDefault()
+//List<string> namen = new List<String>() { "Asterix", "Obelix", "Ambiorix" };
+//var eersteNaam = namen.FirstOrDefault();
+//Console.WriteLine(eersteNaam);
+//Console.WriteLine("Beginletter? ");
+//var beginLetter = Console.ReadLine()!;
+//var eersteNaamMetBeginLetter = (from naam in namen where naam.StartsWith(beginLetter) select naam).FirstOrDefault();
+//if (eersteNaamMetBeginLetter != null)
+//  Console.WriteLine(eersteNaamMetBeginLetter);
+//else
+//  Console.WriteLine($"Er zijn geen namen die beginnen met {beginLetter}");
+// LastOrDefault()
+//List<String> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix", "Bellefleur"];
+//var laatsteNaam = namen.LastOrDefault();
+//Console.WriteLine(laatsteNaam);
+//Console.WriteLine("Beginletter? ");
+//var beginLetter = Console.ReadLine()!;
+//var naamMetBeginLetter = (from naam in namen where naam.StartsWith(beginLetter) select naam).LastOrDefault();
+//if (naamMetBeginLetter != null)
+//  Console.WriteLine(naamMetBeginLetter);
+//else
+//  Console.WriteLine($"Er zijn geen namen die beginnen met {beginLetter}");
+// SingleOrDefault()
+//List<String> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix", "Bellefleur"];
+//Console.WriteLine("Beginletter? ");
+//var beginLetter = Console.ReadLine()!;
+//var naamMetBeginLetter = (from naam in namen where naam.StartsWith(beginLetter) select naam).SingleOrDefault();
+//if (naamMetBeginLetter != null)
+//  Console.WriteLine(naamMetBeginLetter);
+//else
+//  Console.WriteLine($"Er zijn geen namen die beginnen met {beginLetter}");
+// ElementAtOrDefault()
+//List<String> namen = ["Asterix", "Obelix", "Idefix", "Ambiorix", "Bellefleur"];
+//var naamOpPositie = namen.ElementAtOrDefault(7);
+//if (naamOpPositie != null) Console.WriteLine(naamOpPositie);
+//else Console.WriteLine("De opgegeven index is niet correct!");
+// Nog enkele andere voorbeelden
+//using CSharpPFCursus;
+// Selecties
+//var brouwers = Brouwers.GetBrouwers();
+//var belgischeBrouwers = brouwers.Where(b => b.Belgisch);
+//foreach (var b in belgischeBrouwers) Console.WriteLine(b.ToString());
+//Console.WriteLine(); // of
+//var belgischeBrouwers2 = from brouwer in brouwers where brouwer.Belgisch select brouwer;
+//foreach (var b in belgischeBrouwers2) Console.WriteLine(b.ToString());
+//Console.WriteLine();
+//// of
+//Console.WriteLine("Belgische brouwerijen met 3 bieren:");
+//var belgischeBrouwersMet3Bieren = brouwers.Where(b => b.Belgisch && b.Bieren.Count == 3);
+//foreach (var b in belgischeBrouwersMet3Bieren) Console.WriteLine(b.Brouwernaam);
+//Console.WriteLine();
+//// of
+//var belgischeBrouwersMet3Bieren2 = from brouwer in brouwers where brouwer.Belgisch && brouwer.Bieren.Count == 3 select brouwer;
+//foreach (var b in belgischeBrouwersMet3Bieren2) Console.WriteLine(b.Brouwernaam);
+//Console.WriteLine();
+//// of
+//Console.WriteLine("Brouwers met een ingegeven aantal bieren: ");
+//Console.Write("Geef een aantal: ");
+//var aantal = int.Parse(Console.ReadLine()!);
+//var brouwersMetXAantalBieren = from brouwer in brouwers where brouwer.Bieren.Count == aantal select brouwer;
+//foreach (var b in brouwersMetXAantalBieren) Console.WriteLine(b.Brouwernaam);
+//Console.WriteLine();
+// Sorteren
+//using CSharpPFCursus;
+//var brouwers = Brouwers.GetBrouwers();
+//var brouwersGesorteerdAsc = brouwers.OrderBy(b => b.Brouwernaam);
+//foreach (var b in brouwersGesorteerdAsc) Console.WriteLine(b.ToString());
+//Console.WriteLine();
+//var brouwersGesorteerdDesc = from b in brouwers orderby b.Brouwernaam descending select b;
+//foreach (var b in brouwersGesorteerdDesc) Console.WriteLine(b.ToString());
+// Anonymous type
 using CSharpPFCursus;
+var brouwers = Brouwers.GetBrouwers();
+var brouwerGegevens = from b in brouwers select new { b.Brouwernaam, b.Bieren.Count };
+foreach (var b in brouwerGegevens) Console.WriteLine($"{b.Brouwernaam}: {b.Count} bier(en)");
+Console.WriteLine();
+// of
+var brouwerGegevens2 = brouwers.Select(b => new {b.Brouwernaam, b.Bieren.Count});
+foreach (var b in brouwerGegevens2) Console.WriteLine($"{b.Brouwernaam}: {b.Count} bier(en)");
+Console.WriteLine();
+// of
+var brouwerGegevens3 = from b in brouwers select new { Naam = b.Brouwernaam, AantalBieren = b.Bieren.Count };
+foreach (var b in brouwerGegevens3) Console.WriteLine($"{b.Naam}: {b.AantalBieren} bier(en)");
