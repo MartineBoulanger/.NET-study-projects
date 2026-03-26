@@ -1324,15 +1324,114 @@
 //var brouwersGesorteerdDesc = from b in brouwers orderby b.Brouwernaam descending select b;
 //foreach (var b in brouwersGesorteerdDesc) Console.WriteLine(b.ToString());
 // Anonymous type
+//using CSharpPFCursus;
+//var brouwers = Brouwers.GetBrouwers();
+//var brouwerGegevens = from b in brouwers select new { b.Brouwernaam, b.Bieren.Count };
+//foreach (var b in brouwerGegevens) Console.WriteLine($"{b.Brouwernaam}: {b.Count} bier(en)");
+//Console.WriteLine();
+//// of
+//var brouwerGegevens2 = brouwers.Select(b => new {b.Brouwernaam, b.Bieren.Count});
+//foreach (var b in brouwerGegevens2) Console.WriteLine($"{b.Brouwernaam}: {b.Count} bier(en)");
+//Console.WriteLine();
+//// of
+//var brouwerGegevens3 = from b in brouwers select new { Naam = b.Brouwernaam, AantalBieren = b.Bieren.Count };
+//foreach (var b in brouwerGegevens3) Console.WriteLine($"{b.Naam}: {b.AantalBieren} bier(en)");
+// van een hierarchische structuur naar een platte structuur
+// om de verzamelingen in de verzameling aan te roepen, kun je zo doen
+//using CSharpPFCursus;
+//var brouwers = Brouwers.GetBrouwers();
+//var bieren = from brouwer in brouwers from bier in brouwer.Bieren select bier;
+//foreach (var b in bieren) Console.WriteLine(b.ToString());
+// je kunt het dus niet zo doen
+//var bieren = from brouwer in brouwers select brouwer.Bieren;
+//foreach (var b in bieren) Console.WriteLine(b.ToString());
+// je kunt ook gebruik maken van de extension method SelectMany()
+//var bieren = brouwers.SelectMany(b => b.Bieren);
+//foreach (var b in bieren) Console.WriteLine(b.ToString());
+// overzicht alcoholarme bieren
+//var bieren = from brouwer in brouwers from bier in brouwer.Bieren where bier.Alcohol < 0.2f select bier;
+// of
+//var bieren = brouwers.SelectMany(b => b.Bieren).Where(b => b.Alcohol < 0.2f);
+//foreach (var b in bieren) Console.WriteLine(b.ToString());
+// aggregatie functies
+//using CSharpPFCursus;
+//var brouwers = Brouwers.GetBrouwers();
+// aantal belgische brouwers
+//var aantalBeBrouwers = (from brouwer in brouwers where brouwer.Belgisch select brouwer).Count();
+// of gemakkelijker
+//var aantalBeBrouwers = brouwers.Count(b => b.Belgisch);
+//Console.WriteLine($"Aantal Belgische brouwers: {aantalBeBrouwers}");
+// totaal aantal bieren
+//var alleBieren = from br in brouwers from b in br.Bieren select b;
+//foreach (var b in alleBieren) Console.WriteLine($"Totaal aantal bieren: {alleBieren.Count()}");
+// of in 1 statement
+//Console.WriteLine($"Totaal aantal bieren: {(from br in brouwers from b in br.Bieren select b).Count()}");
+// of met SelectMany()
+//Console.WriteLine($"Totaal aantal bieren: {brouwers.SelectMany(b => b.Bieren).Count()}");
+// aantal belgische bieren
+//var aantalBeBieren = (from br in brouwers where br.Belgisch from b in br.Bieren select b).Count();
+//Console.WriteLine($"Aantal Belgische bieren: {aantalBeBieren}");
+// gemiddelde alcoholgehalte van alle bieren
+//var bieren = from br in brouwers from b in br.Bieren select b;
+//var gemiddeldeAlcohol = bieren.Any() ? bieren.Average(b => b.Alcohol) : 0.0; // met extra null check
+//Console.WriteLine($"Gemiddelde alcoholgehalte van de bieren: {gemiddeldeAlcohol}");
+// Groeperen
+//using CSharpPFCursus;
+//var brouwers = Brouwers.GetBrouwers();
+// met query syntax
+//var opBelgisch = from br in brouwers group br by br.Belgisch;
+//foreach (var gr in opBelgisch)
+//{
+//  Console.WriteLine(gr.Key ? "Belgisch" : "Niet Belgisch");
+//  foreach (var br in gr)
+//    Console.WriteLine($"  {br.Brouwernaam}");
+//}
+// met extension method
+//var opBelgisch2 = brouwers.GroupBy(b => b.Belgisch);
+//foreach (var gr in opBelgisch2)
+//{
+//  Console.WriteLine(gr.Key ? "Belgisch" : "Niet Belgisch");
+//  foreach (var br in gr)
+//    Console.WriteLine($"  {br.Brouwernaam}");
+//}
+// groeperen met sorteren
+//var opAantalBieren = from br in brouwers group br by br.Bieren.Count into mijnGroep orderby mijnGroep.Key select mijnGroep;
+//foreach (var gr in opAantalBieren)
+//{
+//  Console.WriteLine($"Brouwers met {gr.Key} bieren:");
+//  foreach (var br in gr)
+//    Console.WriteLine($"  {br.Brouwernaam}");
+//}
+// alternatieve oplossing
+//var opAantalBieren = brouwers.GroupBy(b => b.Bieren.Count).OrderBy(g => g.Key);
+//foreach (var gr in opAantalBieren)
+//{
+//  Console.WriteLine($"Brouwers met {gr.Key} bieren:");
+//  foreach (var br in gr)
+//    Console.WriteLine($"  {br.Brouwernaam}");
+//}
+// Join 
+//using CSharpPFCursus;
+//var personen = new[]
+//{
+//  new {Naam = "Jan", AantalKinderen = 1},
+//  new {Naam = "Mieke", AantalKinderen = 2},
+//  new {Naam = "Else", AantalKinderen = 1}
+//};
+//var toegangsprijzen = new[]
+//{
+//  new {AantalKinderen = 1, Bedrag = 10},
+//  new {AantalKinderen = 1, Bedrag = 25}
+//};
+////var toegangsPrijzenPerPersoon = from p in personen join prijs in toegangsprijzen on p.AantalKinderen equals prijs.AantalKinderen select new { p.Naam, prijs.Bedrag }; // -- query manier
+//var toegangsPrijzenPerPersoon = personen.Join(toegangsprijzen, p => p.AantalKinderen, prijs => prijs.AantalKinderen, (p, prijs) => new { p.Naam, prijs.Bedrag }); // -- method manier
+//foreach (var p in toegangsPrijzenPerPersoon) Console.WriteLine($"{p.Naam}: {p.Bedrag} euro");
+// LINQ query op basis van een string als data
 using CSharpPFCursus;
-var brouwers = Brouwers.GetBrouwers();
-var brouwerGegevens = from b in brouwers select new { b.Brouwernaam, b.Bieren.Count };
-foreach (var b in brouwerGegevens) Console.WriteLine($"{b.Brouwernaam}: {b.Count} bier(en)");
-Console.WriteLine();
-// of
-var brouwerGegevens2 = brouwers.Select(b => new {b.Brouwernaam, b.Bieren.Count});
-foreach (var b in brouwerGegevens2) Console.WriteLine($"{b.Brouwernaam}: {b.Count} bier(en)");
-Console.WriteLine();
-// of
-var brouwerGegevens3 = from b in brouwers select new { Naam = b.Brouwernaam, AantalBieren = b.Bieren.Count };
-foreach (var b in brouwerGegevens3) Console.WriteLine($"{b.Naam}: {b.AantalBieren} bier(en)");
+var tekst = "Vlaamse Dienst Voor Arbeidsbemiddeling en Beroepsopleiding";
+var lettersA = from l in tekst.ToUpper() where l == 'A' select l;
+Console.WriteLine($"De tekst {tekst} bevat {lettersA.Count()} A's");
+var zin = "The quick brown fox jumps over the lazy dog";
+var woorden = zin.Split(' ');
+var woordenVan3Tekens = from w in woorden where w.Length == 3 select w.ToLower();
+foreach (var w in woordenVan3Tekens.Distinct()) Console.WriteLine(w);
