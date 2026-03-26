@@ -642,7 +642,7 @@
 //Console.WriteLine("------------------------------------------------------------------");
 
 // 19. Lambda expressies
-using CSharpPFOefeningen;
+//using CSharpPFOefeningen;
 // array met getallen
 //Console.WriteLine("------------------------------------------------------------------");
 // lambda expression met de Func - kan ook met een delegate, maar vind dit gemakkelijker en logischer ook
@@ -720,17 +720,166 @@ using CSharpPFOefeningen;
 //ToonGetallen(getallen, kleurEvenOneven);
 //ToonGetallen(getallen2, kleurPositiefNegatief);
 //Console.WriteLine("------------------------------------------------------------------");
-Console.WriteLine("------------------------------------------------------------------");
+//Console.WriteLine("------------------------------------------------------------------");
 // voorbeeld oplossing met Action
-Action<int> kleurEvenOneven = getal => { Console.ForegroundColor = getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red; Console.WriteLine(getal); };
-Action<int> kleurPositiefNegatief = getal => { Console.ForegroundColor = getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue; Console.WriteLine(getal); };
-int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
-static void ToonGetallen(int[] getallen, Action<int> kleurGetal)
+//Action<int> kleurEvenOneven = getal => { Console.ForegroundColor = getal % 2 == 0 ? ConsoleColor.Green : ConsoleColor.Red; Console.WriteLine(getal); };
+//Action<int> kleurPositiefNegatief = getal => { Console.ForegroundColor = getal < 0 ? ConsoleColor.Yellow : ConsoleColor.Blue; Console.WriteLine(getal); };
+//int[] getallen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//int[] getallen2 = [0, -1, 2, -3, 4, -5, 6, -7, 8, -9];
+//static void ToonGetallen(int[] getallen, Action<int> kleurGetal)
+//{
+//  foreach (var getal in getallen) kleurGetal(getal);
+//  Console.ForegroundColor = ConsoleColor.White;
+//}
+//ToonGetallen(getallen, kleurEvenOneven);
+//ToonGetallen(getallen2, kleurPositiefNegatief);
+//Console.WriteLine("------------------------------------------------------------------");
+
+// 20. LINQ
+// 20.1 De class Plant
+using CSharpPFOefeningen;
+Console.WriteLine("------------------------------------------------------------------");
+var planten = new List<Plant>
 {
-  foreach (var getal in getallen) kleurGetal(getal);
-  Console.ForegroundColor = ConsoleColor.White;
+  new() {PlantId = 1, Plantennaam = "Tulp", Kleur = "rood", Prijs = 0.5m, Soort = "bol"},
+  new() {PlantId = 2, Plantennaam = "Krokus", Kleur = "wit", Prijs = 0.2m, Soort = "bol"},
+  new() {PlantId = 3, Plantennaam = "Narcis", Kleur = "geel", Prijs = 0.3m, Soort = "bol"},
+  new() {PlantId = 4, Plantennaam = "Blauw druifje", Kleur = "blauw", Prijs = 0.2m, Soort = "bol"},
+  new() {PlantId = 5, Plantennaam = "Azalea", Kleur = "rood", Prijs = 3m, Soort = "heester"},
+  new() {PlantId = 6, Plantennaam = "Forsythia", Kleur = "geel", Prijs = 2m, Soort = "heester"},
+  new() {PlantId = 7, Plantennaam = "Magnolia", Kleur = "wit", Prijs = 4m, Soort = "heester"},
+  new() {PlantId = 8, Plantennaam = "Waterlelie", Kleur = "wit", Prijs = 2m, Soort = "water"},
+  new() {PlantId = 9, Plantennaam = "Lisdodde", Kleur = "geel", Prijs = 3m, Soort = "water"},
+  new() {PlantId = 10, Plantennaam = "Kalmoes", Kleur = "geel", Prijs = 2.5m, Soort = "water"},
+  new() {PlantId = 11, Plantennaam = "Bieslook", Kleur = "paars", Prijs = 1.5m, Soort = "kruid"},
+  new() {PlantId = 12, Plantennaam = "Rozemarijn", Kleur = "blauw", Prijs = 1.25m, Soort = "kruid"},
+  new() {PlantId = 13, Plantennaam = "Munt", Kleur = "wit", Prijs = 1.1m, Soort = "kruid"},
+  new() {PlantId = 14, Plantennaam = "Dragon", Kleur = "wit", Prijs = 1.3m, Soort = "kruid"},
+  new() {PlantId = 15, Plantennaam = "Basilicum", Kleur = "wit", Prijs = 1.5m, Soort = "kruid"},
+};
+// eerste query
+//var wittePlanten = from p in planten where p.Kleur == "wit" orderby p.Prijs select p; // of -- hoe ik het gedaan heb
+var wittePlanten = from p in planten where p.Kleur == "wit" orderby p.Prijs select new { p.Plantennaam, p.Kleur, p.Prijs }; // of -- voorbeeld oplossing
+var wittePlanten2 = planten.Where(p => p.Kleur == "wit").OrderBy(p => p.Prijs); // -- deze is wel goed
+foreach (var p in wittePlanten) Console.WriteLine($"Plant naam: {p.Plantennaam}, kleur: {p.Kleur}, prijs: {p.Prijs} euro");
+Console.WriteLine();
+foreach (var p in wittePlanten2) Console.WriteLine($"Plant naam: {p.Plantennaam}, kleur: {p.Kleur}, prijs: {p.Prijs} euro");
+Console.WriteLine("------------------------------------------------------------------");
+// tweede query
+//var aantalWittePlanten = from p in planten where p.Kleur == "wit" select p; // of -- mijn oplossing
+var aantalWittePlanten = (from p in planten where p.Kleur == "wit" select p).Count(); // -- voorbeeld oplossing
+//var aantalWittePlanten2 = planten.Where(p => p.Kleur == "wit"); // -- mijn oplossing
+var aantalWittePlanten2 = planten.Count(p => p.Kleur == "wit"); // -- voorbeeld oplossing
+//Console.WriteLine($"Aantal witte planten: {aantalWittePlanten.Count()}"); // -- mijn weergave
+Console.WriteLine($"Aantal witte planten: {aantalWittePlanten}"); // -- voorbeeld oplossing
+Console.WriteLine();
+// nog een voorbeeld oplossing
+Console.WriteLine($"Aantal witte planten: {planten.Where(p => p.Kleur == "wit").Count()}");
+Console.WriteLine();
+//Console.WriteLine($"Aantal witte planten: {aantalWittePlanten2.Count()}"); // -- mijn oplossing
+Console.WriteLine($"Aantal witte planten: {aantalWittePlanten2}"); // -- voorbeeldoplossing
+Console.WriteLine("------------------------------------------------------------------");
+// derde query
+//var gemiddeldePrijsHeesters = from p in planten where p.Soort == "heester" select p.Prijs; // of -- mijn oplossing
+var gemiddeldePrijsHeesters = (from p in planten where p.Soort == "heester" select p.Prijs).Average(); // -- voorbeeld oplossing
+//var gemiddeldePrijsHeesters2 = planten.Where(p => p.Soort == "heester").Select(p => p.Prijs); // -- mijn oplossing
+var gemiddeldePrijsHeesters2 = planten.Where(p => p.Soort == "heester").Average(p => p.Prijs); // -- voorbeeld oplossing
+//Console.WriteLine($"Gemiddelde prijs van heesters: {gemiddeldePrijsHeesters.Average()} euro"); // -- mijn oplossing
+Console.WriteLine($"Gemiddelde prijs van heesters: {gemiddeldePrijsHeesters:F2} euro"); // -- mijn oplossing
+Console.WriteLine();
+//Console.WriteLine($"Gemiddelde prijs van heesters: {gemiddeldePrijsHeesters2.Average()} euro"); // -- mijn oplossing
+Console.WriteLine($"Gemiddelde prijs van heesters: {gemiddeldePrijsHeesters2:F2} euro"); // -- voorbeeld oplossing
+Console.WriteLine("------------------------------------------------------------------");
+// vierde query
+var kruidenPlanten = from p in planten where p.Soort == "kruid" select p.Prijs; // of
+var kruidenPlanten2 = planten.Where(p => p.Soort == "kruid").Select(p => p.Prijs);
+Console.WriteLine($"Gemiddelde prijs van kruiden: {kruidenPlanten.Average()} euro");
+Console.WriteLine($"Maximum prijs van kruiden: {kruidenPlanten.Max()} euro");
+Console.WriteLine();
+Console.WriteLine($"Gemiddelde prijs van kruiden: {kruidenPlanten2.Average()} euro");
+Console.WriteLine($"Maximum prijs van kruiden: {kruidenPlanten2.Max()} euro");
+Console.WriteLine("------------------------------------------------------------------");
+// vijfde query
+var plantenMetLetterB = from p in planten where p.Plantennaam.ToUpper().StartsWith('B') select p; // of
+var plantenMetLetterB2 = planten.Where(p => p.Plantennaam.ToUpper().StartsWith('B'));
+foreach (var p in plantenMetLetterB) Console.WriteLine(p.Plantennaam);
+Console.WriteLine();
+foreach (var p in plantenMetLetterB2) Console.WriteLine(p.Plantennaam);
+Console.WriteLine("------------------------------------------------------------------");
+// zesde query
+Console.WriteLine("De verschillende plantenkleuren:\n");
+var plantKleuren = (from p in planten select p.Kleur).Distinct(); // -- voorbeeld oplossing
+foreach (var p in plantKleuren) Console.WriteLine(p);
+Console.WriteLine("------------------------------------------------------------------");
+// zevende query
+Console.WriteLine("Plantennamen per kleur\n");
+var groepPlantenPerKleur = from p in planten group p by p.Kleur into plantenGroep orderby plantenGroep.Key select plantenGroep; // of
+var groepPlantenPerKleur2 = planten.GroupBy(p => p.Kleur).OrderBy(p => p.Key);
+foreach (var gr in groepPlantenPerKleur)
+{
+  Console.WriteLine($"Kleur {gr.Key}:");
+  foreach (var p in gr)
+    Console.WriteLine($"  {p.Plantennaam}");
+  Console.WriteLine();
 }
-ToonGetallen(getallen, kleurEvenOneven);
-ToonGetallen(getallen2, kleurPositiefNegatief);
+Console.WriteLine();
+foreach (var gr in groepPlantenPerKleur2)
+{
+  Console.WriteLine($"Kleur {gr.Key}:");
+  foreach (var p in gr)
+    Console.WriteLine($"  {p.Plantennaam}");
+  Console.WriteLine();
+}
+Console.WriteLine("------------------------------------------------------------------");
+// Achtste query
+Console.WriteLine("Maximum plantenprijs per soort\n");
+//var maxPrijsPerPlantSoort = from p in planten group p by p.Soort into soortGroep orderby soortGroep.Key select soortGroep; // of
+var maxPrijsPerPlantSoort = from p in planten group p by p.Soort into soortGroep orderby soortGroep.Key select new { Soort = soortGroep.Key, MaxPrijs = soortGroep.Max(p => p.Prijs) }; // of
+var maxPrijsPerPlatSoort2 = planten.GroupBy(p => p.Soort).OrderBy(p => p.Key).Select(p => new { Soort = p.Key, MaxPrijs = p.Max(p => p.Prijs) });
+foreach (var gr in maxPrijsPerPlantSoort) Console.WriteLine($"{gr.Soort}: max. prijs = {gr.MaxPrijs} euro");
+Console.WriteLine();
+foreach (var gr in maxPrijsPerPlatSoort2) Console.WriteLine($"{gr.Soort}: max. prijs = {gr.MaxPrijs} euro");
+Console.WriteLine("------------------------------------------------------------------");
+// Negende query
+Console.WriteLine("Aantal planten + plantennamen per soort (alfabetisch):\n");
+var soortenMetPlanten = from p in planten group p by p.Soort into soortGroep orderby soortGroep.Key select new { Soort = soortGroep.Key, AantalPlanten = soortGroep.Count(), Planten = soortGroep }; // of
+var soortenMetPlanten2 = planten.GroupBy(p => p.Soort).OrderBy(p => p.Key).Select(p => new { Soort = p.Key, AantalPlanten = p.Count(), Planten = p }); // of
+var soortenMetPlanten3 = planten.OrderBy(p => p.Soort).GroupBy(p => p.Soort);
+foreach (var p in soortenMetPlanten)
+{
+  Console.WriteLine($"Soort {p.Soort}: {p.AantalPlanten} planten");
+  foreach (var pl in p.Planten) Console.WriteLine($"  {pl.Plantennaam}");
+  Console.WriteLine();
+}
+Console.WriteLine();
+foreach (var p in soortenMetPlanten2)
+{
+  Console.WriteLine($"Soort {p.Soort}: {p.AantalPlanten} planten");
+  foreach (var pl in p.Planten) Console.WriteLine($"  {pl.Plantennaam}");
+  Console.WriteLine();
+}
+Console.WriteLine();
+foreach (var p in soortenMetPlanten3)
+{
+  Console.WriteLine($"Soort {p.Key}: {p.Count()} planten");
+  foreach (var pl in p) Console.WriteLine($"  {pl.Plantennaam}");
+  Console.WriteLine();
+}
+Console.WriteLine("------------------------------------------------------------------");
+// Tiende query
+Console.WriteLine("Plantennamen gegroepeerd per soort en binnen de soort per kleur:\n");
+var groepenPerSoortKleur = from p in planten group p by p.Soort into gr select new { Soort = gr.Key, Groepkleur = from p in gr group p by p.Kleur into klgr select new { Kleur = klgr.Key, Planten = klgr } }; // voorbeeld oplossing
+foreach (var s in groepenPerSoortKleur)
+{
+  Console.WriteLine($"{s.Soort}: ");
+  foreach (var k in s.Groepkleur)
+  {
+    Console.WriteLine($"  {k.Kleur}: ");
+    foreach (var p in k.Planten)
+    {
+      Console.WriteLine($"    {p.Plantennaam}");
+    }
+  }
+  Console.WriteLine();
+}
 Console.WriteLine("------------------------------------------------------------------");
