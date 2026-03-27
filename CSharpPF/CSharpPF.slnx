@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="AsyncAwait/AsyncAwait.csproj" Id="25ba033f-5d13-4e0e-a84a-c6b59bb01710" />
   <Project Path="BoekBoekenrek/BoekBoekenrek.csproj" Id="61f02284-7c2f-4cc4-9c2b-b1a8f53ca330" />
   <Project Path="CLIHallo/CLIHallo.csproj">
     <Build Solution="Debug|*" Project="false" />
