@@ -9,4 +9,5 @@
   <Project Path="HalloWereld/HalloWereld.csproj">
     <Build Solution="Debug|*" Project="false" />
   </Project>
+  <Project Path="PastaPizzaNet/PastaPizzaNet.csproj" Id="04e58a76-944f-4b3b-a00c-35d7e2941830" />
 </Solution>

@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\bin\Debug\net10.0\PastaPizzaNet.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\bin\Debug\net10.0\PastaPizzaNet.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\bin\Debug\net10.0\PastaPizzaNet.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\bin\Debug\net10.0\PastaPizzaNet.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\bin\Debug\net10.0\PastaPizzaNet.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\refint\PastaPizzaNet.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\PastaPizzaNet.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\PastaPizzaNet\obj\Debug\net10.0\ref\PastaPizzaNet.dll
