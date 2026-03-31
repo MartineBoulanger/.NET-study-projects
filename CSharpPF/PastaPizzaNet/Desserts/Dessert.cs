@@ -4,8 +4,10 @@ namespace Desserts
 {
     public class Dessert:IBedrag
     {
-        public DessertNaam Naam { get; init; }
+        public DessertNaam Naam { get; set; }
+
         public decimal Prijs { get; }
+
         public Dessert(DessertNaam naam) {
             Naam = naam;
             Prijs = naam switch
@@ -14,7 +16,9 @@ namespace Desserts
                 _ => 3m
             };
         }
+
         public virtual decimal BerekenBedrag() => Prijs;
+
         public override string ToString() => $"Dessert: {Naam} ({Prijs:0.00} euro)";
     }
 }
