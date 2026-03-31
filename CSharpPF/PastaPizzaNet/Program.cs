@@ -5,7 +5,7 @@ using PastaPizzaNet;
 using PastaPizzaNet.Bestellingen;
 
 // om 1 enkele bestelling te testen
-//Bestelling bestelling1 = new Bestelling
+//Bestelling bestelling1 = new()
 //{
 //  Klant = new Klant { KlantID = 2, Naam = "Jan Janssen" },
 //  BesteldGerecht = new BesteldGerecht { Gerecht = new Pizza("Pizza Hawaii", 14m, ["Tomatensaus", "ananas", "ham", "kaas", "champignons"]), Grootte = Grootte.Groot, Extras = [Extra.Look, Extra.Kaas] },
