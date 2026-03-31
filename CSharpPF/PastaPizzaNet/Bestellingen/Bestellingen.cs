@@ -9,17 +9,17 @@ namespace PastaPizzaNet.Bestellingen
     // Voor geprogrammeerde bestellingen, zodat we deze kunnen gebruiken in onze tests en in de console applicatie
     public static List<Bestelling> GetBestellingen()
     {
-      var klantJan = new Klant { KlantID = 2, Naam = "Jan Janssen"};
-      var klantPiet = new Klant { KlantID = 3, Naam = "Piet Pieters" };
+      Klant klantJan = new() { KlantID = 2, Naam = "Jan Janssen"}; // kun je zo schrijven
+      var klantPiet = new Klant { KlantID = 3, Naam = "Piet Pieters" }; // of zo
 
-      var pizzaMargherita = new Pizza("Pizza Margherita", 8m, ["Tomatensaus", "Mozzarella"]); // kun je zo schrijven
+      Pizza pizzaMargherita = new("Pizza Margherita", 8m, ["Tomatensaus", "Mozzarella"]); // kun je zo schrijven
       var pizzaNapoli = new Pizza("Pizza Napoli", 10m, new List<string> { "Tomatensaus", "Mozzarella", "Ansjovis", "Kappers", "Olijven" }); // of zo schrijven
       //var pizzaMargherita2 = new Pizza("Pizza Margherita", 8m, []); // wanneer er geen onderdelen zouden zijn
       //var pizzaNapoli2 = new Pizza("Pizza Napoli", 10m, new List<string>()); // of zo
 
-      var spaghettiBolognese = new Pasta("Spaghetti Bolognese", 12m, "met gehaktsaus");
+      Pasta spaghettiBolognese = new("Spaghetti Bolognese", 12m, "met gehaktsaus"); // zo schrijven
+      var spaghettiCarbonara = new Pasta("Spaghetti Carbonara", 13m, "spek, roomsaus en parmezaanse kaas"); // of zo
       var lasagne = new Pasta("Lasagne", 15m); // zonder omschrijving
-      var spaghettiCarbonara = new Pasta("Spaghetti Carbonara", 13m, "spek, roomsaus en parmezaanse kaas");
 
       var bestelling1 = new Bestelling
       {
@@ -46,7 +46,7 @@ namespace PastaPizzaNet.Bestellingen
         Dessert = new Dessert(DessertNaam.Ijs)
       };
 
-      var bestelling4 = new Bestelling { BesteldGerecht = new BesteldGerecht { Gerecht = lasagne, Extras = [Extra.Look] } }; // zonder klant in te vullen
+      Bestelling bestelling4 = new() { BesteldGerecht = new BesteldGerecht { Gerecht = lasagne, Extras = [Extra.Look] } }; // zonder klant in te vullen
 
       var bestelling5 = new Bestelling
       {
