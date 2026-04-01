@@ -1427,11 +1427,63 @@
 //var toegangsPrijzenPerPersoon = personen.Join(toegangsprijzen, p => p.AantalKinderen, prijs => prijs.AantalKinderen, (p, prijs) => new { p.Naam, prijs.Bedrag }); // -- method manier
 //foreach (var p in toegangsPrijzenPerPersoon) Console.WriteLine($"{p.Naam}: {p.Bedrag} euro");
 // LINQ query op basis van een string als data
-using CSharpPFCursus;
-var tekst = "Vlaamse Dienst Voor Arbeidsbemiddeling en Beroepsopleiding";
-var lettersA = from l in tekst.ToUpper() where l == 'A' select l;
-Console.WriteLine($"De tekst {tekst} bevat {lettersA.Count()} A's");
-var zin = "The quick brown fox jumps over the lazy dog";
-var woorden = zin.Split(' ');
-var woordenVan3Tekens = from w in woorden where w.Length == 3 select w.ToLower();
-foreach (var w in woordenVan3Tekens.Distinct()) Console.WriteLine(w);
+//using CSharpPFCursus;
+//var tekst = "Vlaamse Dienst Voor Arbeidsbemiddeling en Beroepsopleiding";
+//var lettersA = from l in tekst.ToUpper() where l == 'A' select l;
+//Console.WriteLine($"De tekst {tekst} bevat {lettersA.Count()} A's");
+//var zin = "The quick brown fox jumps over the lazy dog";
+//var woorden = zin.Split(' ');
+//var woordenVan3Tekens = from w in woorden where w.Length == 3 select w.ToLower();
+//foreach (var w in woordenVan3Tekens.Distinct()) Console.WriteLine(w);
+
+// Regex
+// - bij JS staat een regex tussen / /, bij C# is dit @" "
+// Voorbeeld
+using System.Text.RegularExpressions;
+//var regex = new Regex(@"^(\d{4})-(\d{4})$");
+//var match = regex.Match("2000-2026");
+//if (match.Success)
+//{
+//  Console.WriteLine(match.Groups[1]);
+//  Console.WriteLine(match.Groups[2]);
+//}
+//else
+//{
+//  Console.WriteLine("Verkeerd");
+//}
+// oefening emailadres
+//var regex = new Regex(@"^.+@.+\..+$"); // dit is wel makkelijker, maar ik weet dat dit niet vaak gebruikt wordt want is te generic
+//var regex = new Regex(@"^[0-9a-zA-Z\-\._]+@[a-zA-Z]+\.[a-z]{2,5}$"); // dit is meer specifiek, meer restricted, dus beter -- zo heb ik het bij JS geleerd
+//var email = regex.Match("martine.boulanger@gmail.com");
+//if (email.Success)
+//{
+//  Console.WriteLine(email);
+//}
+//else
+//{
+//  Console.WriteLine("Verkeerd");
+//}
+// oefening bankrekening
+//var regex = new Regex(@"^BE[.\s?\d]{17}$"); // met spacies tussen de cijfers in de iban nummer
+//var bank = regex.Match("BE03 0014 4794 6884");
+//var regex = new Regex(@"^BE\d{14}$"); // zonder spacies tussen de cijfers in de iban nummer
+//var bank = regex.Match("BE03001447946884");
+//if (bank.Success)
+//{
+//  Console.WriteLine(bank);
+//}
+//else
+//{
+//  Console.WriteLine("Verkeerd");
+//}
+// oefening nummerplaat
+var regex = new Regex(@"(\d{1})-(\D{3})-(\d{3})$");
+var nummerplaat = regex.Match("2-HDC-811");
+if (nummerplaat.Success)
+{
+  Console.WriteLine(nummerplaat);
+}
+else
+{
+  Console.WriteLine("Verkeerd");
+}
