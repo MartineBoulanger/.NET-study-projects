@@ -170,7 +170,7 @@ namespace Firma.Personeel
             public override string ToString() => Type.ToString();
         }
     }
-    
+
     // een constructor zonder parameters die zelf standaard default waardes meegeeft aan de properties.
     //public Werknemer(): this("Onbekend", DateTime.Today, Geslacht.Man) { }
     // een constructor met parameters waarbij de developer via het programma waardes kan meegeven aan de parameters.
@@ -185,4 +185,15 @@ namespace Firma.Personeel
     //         Verdieping = 10,
     //     }; // omdat de andere parameters optioneel zijn, heb ik deze ook optioneel gemaakt
     // }
+
+    // tuples
+    public abstract partial class Werknemer {
+        public DateTime[] Verlofdagen { get; set; }
+        public DateTime[] Ziektedagen { get; set; }
+        public (int aantalVerlofdagen, int aantalZiektedagen) Afwezigheden()
+        {
+            (int, int) aantalAfwezigheden = (Verlofdagen.Length, Ziektedagen.Length);
+            return aantalAfwezigheden;
+        }
+    }
 }

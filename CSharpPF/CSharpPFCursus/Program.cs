@@ -1439,7 +1439,7 @@
 // Regex
 // - bij JS staat een regex tussen / /, bij C# is dit @" "
 // Voorbeeld
-using System.Text.RegularExpressions;
+//using System.Text.RegularExpressions;
 //var regex = new Regex(@"^(\d{4})-(\d{4})$");
 //var match = regex.Match("2000-2026");
 //if (match.Success)
@@ -1477,13 +1477,128 @@ using System.Text.RegularExpressions;
 //  Console.WriteLine("Verkeerd");
 //}
 // oefening nummerplaat
-var regex = new Regex(@"(\d{1})-(\D{3})-(\d{3})$");
-var nummerplaat = regex.Match("2-HDC-811");
-if (nummerplaat.Success)
+//var regex = new Regex(@"(\d{1})-(\D{3})-(\d{3})$");
+//var nummerplaat = regex.Match("2-HDC-811");
+//if (nummerplaat.Success)
+//{
+//  Console.WriteLine(nummerplaat);
+//}
+//else
+//{
+//  Console.WriteLine("Verkeerd");
+//}
+
+// Tuples
+//using Firma.Personeel;
+//Werknemer asterix = new Arbeider("Asterix", new DateTime(2020,1,1), Geslacht.Man, 24.79m, 3);
+//asterix.Verlofdagen = [
+//    new DateTime(2026,1,2),
+//    new DateTime(2026,2,3),
+//    new DateTime(2026,2,4),
+//];
+//asterix.Ziektedagen = [
+//    new DateTime(2026,1,6),
+//    new DateTime(2026,1,7),
+//    new DateTime(2026,1,8),
+//    new DateTime(2026,1,9),
+//    new DateTime(2026,1,10),
+//];
+//(int aantalVerlofdagen, int aantalZiektedagen) afwezighedenasterix = asterix.Afwezigheden();
+//Console.WriteLine($"Asterix: {afwezighedenasterix.aantalVerlofdagen} verlofdagen + {afwezighedenasterix.aantalZiektedagen} ziektedagen");
+
+// partial methods
+//using Firma;
+//var klant = new Klant { Naam = "Jan" };
+//klant.Naam = "Piet";
+//Console.WriteLine(klant.Naam);
+
+// Files and Streams - I/O
+//using CSharpPFCursus;
+//using System.Text;
+//List<Pizza> pizzas = [
+//    new Pizza { Naam = "Pizza Margherita", Onderdelen = ["Tomatensaus", "Mozzarella"], Prijs = 8m },
+//    new Pizza { Naam = "Pizza Vegetariana", Onderdelen = ["Tomatensaus", "Mozzarella", "Groenten"], Prijs = 9.5m },
+//    new Pizza { Naam = "Pizza Napoli", Onderdelen = ["Tomatensaus", "Mozzarella", "Ansjovis", "Kappers", "Olijven"], Prijs = 10m },
+//];
+// de gegevens wegschrijven
+//string locatie = @"C:\Data\";
+//StringBuilder pizzaRegel;
+//try
+//{
+//    using var schrijver = new StreamWriter(locatie + "pizzas.txt");
+//    foreach (var pizza in pizzas)
+//    {
+//        pizzaRegel = new StringBuilder();
+//        pizzaRegel.Append($"{pizza.Naam}");
+//        pizzaRegel.Append($"{pizza.Onderdelen?.Count ?? 0}");
+//        pizzaRegel.Append($"{(pizza.Onderdelen != null ? string.Join(":", pizza.Onderdelen) : "")}:");
+//        pizzaRegel.Append(pizza.Prijs);
+//        schrijver.WriteLine(pizzaRegel);
+//    }
+//}
+//catch (IOException)
+//{
+//    Console.WriteLine("Fout bij het schrijven naar het bestand!");
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+// het lezen van het bestand
+//List<Pizza> pizzas = [];
+//String? pizzaRegel;
+//string pizzaNaam;
+//int aantalOnderdelen;
+//List<string> pizzaOnderdelen;
+//decimal prijs;
+//try
+//{
+//    using var lezer = new StreamReader(locatie + "pizzas.txt");
+//    while ((pizzaRegel = lezer.ReadLine()) is not null)
+//    {
+//        string[] gegevens = pizzaRegel.Split(':');
+//        pizzaNaam = gegevens[0];
+//        aantalOnderdelen = int.Parse(gegevens[1]);
+//        pizzaOnderdelen = [];
+//        for (var teller = 0; teller < aantalOnderdelen; teller++) pizzaOnderdelen.Add(gegevens[teller + 2]);
+//        prijs = decimal.Parse(gegevens[gegevens.Length - 1]);
+//        pizzas.Add(new Pizza { Naam = pizzaNaam, Onderdelen = pizzaOnderdelen, Prijs = prijs });    
+//    }
+//}
+//catch (IOException)
+//{
+//    Console.WriteLine("Fout bij het lezen van het bestand!");
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//// de gegevens tonen
+//foreach (Pizza pizza in pizzas) 
+//{
+//    Console.WriteLine(pizza.ToString());
+//    if (pizza.Onderdelen != null)
+//    {
+//        foreach (string onderdeel in pizza.Onderdelen)
+//        {
+//            Console.WriteLine($"  {onderdeel}");
+//        }
+//    }
+//    Console.WriteLine();
+//}
+
+// Indexers
+using Firma.Personeel;
+Overuren mijnOveruren = new Overuren();
+try
 {
-  Console.WriteLine(nummerplaat);
+    mijnOveruren[0] = 4;
+    mijnOveruren["apr"] = 2;
+    Console.WriteLine(mijnOveruren["jan"]);
+    Console.WriteLine(mijnOveruren[3]);
+    Console.WriteLine(mijnOveruren.Totaal);
 }
-else
+catch (IndexOutOfRangeException ex)
 {
-  Console.WriteLine("Verkeerd");
+    Console.WriteLine(ex.Message);
 }
