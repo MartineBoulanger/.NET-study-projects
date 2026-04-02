@@ -1,25 +1,23 @@
-﻿using PastaPizzaNet;
+﻿using Gerechten;
 
-namespace Gerechten
+namespace PastaPizzaNet.Bestellingen
 {
     public class BesteldGerecht:IBedrag
     {
-        public required Gerecht Gerecht { get; init; }
-        public Grootte Grootte { get; set; } = Grootte.Klein;
-        public List<Extra> Extras { get; set; } = new();
-        public BesteldGerecht(Gerecht gerecht, Grootte grootte, List<Extra> extras)
-        {
-            Gerecht = gerecht;
-            Grootte = grootte;
-            Extras = extras ?? [];
-        }
+        public required Gerecht Gerecht { get; set; } // Het gerecht moet er altijd zijn
+
+        public Grootte Grootte { get; set; } = Grootte.Klein; // Standaard grootte is klein
+
+        public List<Extra> Extras { get; set; } = []; // Standaard geen extra's -- kan ook new() of new List<Extra>() zijn -- maar een lege array is korter
+
         public decimal BerekenBedrag()
         {
             decimal totaal = Gerecht.Prijs;
             if (Grootte == Grootte.Groot) totaal += 3m; // Grote gerechten kosten 3 euro meer
-            totaal += Extras.Count * 1m; // Elke extra kost 1 euro
+            if (Extras.Count > 0) totaal += Extras.Count * 1m; // Elke extra kost 1 euro -- mits er extras zijn
             return totaal;
         }
+
         public override string ToString()
         {
             string extrasString = Extras.Count > 0 ? $" extra: {string.Join(" ", Extras)}" : "";

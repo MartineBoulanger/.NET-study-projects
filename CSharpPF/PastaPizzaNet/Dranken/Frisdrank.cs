@@ -4,12 +4,13 @@ namespace Dranken
 {
     public class Frisdrank:Drank
     {
-        const decimal prijsFrisdrank = 2m;
-        public Frisdrank(DrankNaam naam) : base(naam, prijsFrisdrank) 
+        public Frisdrank(DrankNaam naam):base(naam, 2m) // geef hier de vast prijs van de frisdrank mee aan de base class
         {
             if (naam is DrankNaam.Thee or DrankNaam.Koffie) throw new Exception("Onbekende frisdrank!");
         }
-        public override decimal BerekenBedrag() => Prijs = prijsFrisdrank;
+
+        public override decimal BerekenBedrag() => Prijs;
+
         public override string ToString() => base.ToString();
-    }
+  }
 }
