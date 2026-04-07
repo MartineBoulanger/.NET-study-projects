@@ -6,6 +6,7 @@
   </Project>
   <Project Path="CSharpPFCursus/CSharpPFCursus.csproj" />
   <Project Path="CSharpPFOefeningen/CSharpPFOefeningen.csproj" Id="ce7b5865-03e8-4cdc-8855-398a717f5823" />
+  <Project Path="FLYNET/FLYNET.csproj" Id="925c4351-f1c6-4a40-9724-2be88446aeee" />
   <Project Path="HalloWereld/HalloWereld.csproj">
     <Build Solution="Debug|*" Project="false" />
   </Project>

@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\bin\Debug\net10.0\FLYNET.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\bin\Debug\net10.0\FLYNET.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\bin\Debug\net10.0\FLYNET.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\bin\Debug\net10.0\FLYNET.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\bin\Debug\net10.0\FLYNET.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\refint\FLYNET.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\FLYNET.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpPF\FLYNET\obj\Debug\net10.0\ref\FLYNET.dll
