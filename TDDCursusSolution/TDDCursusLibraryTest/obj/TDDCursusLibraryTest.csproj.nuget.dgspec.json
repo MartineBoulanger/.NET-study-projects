@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj": {}
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj": {
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj",
+        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj",
         "projectName": "TDDCursusLibraryTest",
-        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\obj\\",
+        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\TDDCursusLibraryTest.csproj",
+        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibraryTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj": {
-                "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj"
+              "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj": {
+                "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj"
               }
             }
           }
@@ -49,7 +49,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -354,20 +354,20 @@
         }
       }
     },
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj": {
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj",
         "projectName": "TDDCursusLibrary",
-        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\obj\\",
+        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\TDDCursusLibrary.csproj",
+        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\TDDCursusSolution\\TDDCursusLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -395,7 +395,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -416,7 +416,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
