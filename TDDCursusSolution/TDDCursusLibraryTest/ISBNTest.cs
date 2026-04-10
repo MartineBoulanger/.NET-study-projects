@@ -32,7 +32,7 @@ namespace TDDCursusLibraryTest
         [TestMethod]
         public void EenNummerMet13CijfersMetVerkeerdControleGetal2()
         {
-            Assert.Throws<ArgumentException>(() => new ISBN(8789027439642L));
+            Assert.Throws<ArgumentException>(() => new ISBN(9789227439642L));
         }
 
         [TestMethod]
@@ -44,13 +44,13 @@ namespace TDDCursusLibraryTest
         [TestMethod]
         public void EenNummerMet13CijfersMetVerkeerdControleGetal0()
         {
-            Assert.Throws<ArgumentException>(() => new ISBN(7789227439640L));
+            Assert.Throws<ArgumentException>(() => new ISBN(9789227439640L));
         }
 
         [TestMethod]
         public void EenNummerMet13CijfersMetCorrectControleGetal0()
         {
-            new ISBN(9789227439640L);
+            new ISBN(9789027439640L);
         }
 
         [TestMethod]

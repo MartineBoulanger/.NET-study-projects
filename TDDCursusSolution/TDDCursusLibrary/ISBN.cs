@@ -26,7 +26,7 @@ namespace TDDCursusLibrary
             var verschil = naastGelegenHoger10Tal - controleGetal;
             var laatsteCijfer = nummer % 10;
             if (verschil == 10) if (laatsteCijfer != 0) throw new ArgumentException();
-            else if (verschil != laatsteCijfer) throw new ArgumentException();
+            else if (laatsteCijfer != verschil) throw new ArgumentException();
             this.nummer = nummer;
         }
 
