@@ -50,5 +50,37 @@ namespace TDDCursusLibraryTest
         {
             Assert.Throws<ArgumentException>(() => rekening.Storten(-1m));
         }
+
+        // deze testmethods zijn er om de public property te testen
+        [TestMethod]
+        public void HetSaldoMagNietNegatiefZijn()
+        {
+            Assert.Throws<ArgumentException>(() => rekening.Saldo = -1m);
+        }
+
+        [TestMethod]
+        public void HetSaldoMagNulZijn()
+        {
+           rekening.Saldo = 0m;
+        }
+
+        [TestMethod]
+        public void HetSaldoMagPositiefZijn()
+        {
+            rekening.Saldo = 1m;
+        }
+
+        // testen met de constructor die een saldo als parameter heeft
+        [TestMethod]
+        public void NieuweRekeningMetJuisteSaldoIsOk()
+        {
+            rekening = new Rekening(10m);
+        }
+
+        [TestMethod]
+        public void NieuweRekeningMetNegatiefSaldoIsFout()
+        {
+            Assert.Throws<ArgumentException>(() => new Rekening(-10m));
+        }
     }
 }

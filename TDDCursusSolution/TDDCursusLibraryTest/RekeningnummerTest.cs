@@ -72,5 +72,27 @@ namespace TDDCursusLibraryTest
         {
             Assert.Throws<ArgumentNullException>(() => new Rekeningnummer(null!));
         }
+
+        [DataRow("BE72091012240116")] // correct nummer
+        [DataRow("BE02063588295840")] // correct nummer met controlegetal < 10
+        [TestMethod]
+        public void CorrecteNummers(string rekeningnummer)
+        {
+            new Rekeningnummer(rekeningnummer);
+        }
+
+        [DataRow("BE720910122401160")]  // Te lang
+        [DataRow("BE7209101224011")]    // Te kort
+        [DataRow("NL72091012240116")]   // Niet Belgisch
+        [DataRow("BEX209101224011Y")]   // Ongeldige tekens
+        [DataRow("BE01091012240116")]   // Te klein controlegetal
+        [DataRow("BE99091012240116")]   // Te groot controlegetal
+        [DataRow("BE72091012240115")]   // Verkeerde controleberekening
+        [DataRow("")]                    // Leeg
+        [TestMethod] 
+        public void VerkeerdeNummers(string rekeningnummer) 
+        {     
+            Assert.Throws<ArgumentException>(() => new Rekeningnummer(rekeningnummer)); 
+        } 
     }
 }
