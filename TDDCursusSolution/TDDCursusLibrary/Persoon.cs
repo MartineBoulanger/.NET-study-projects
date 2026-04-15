@@ -7,15 +7,19 @@
         //public Persoon(List<string> voornamen) => throw new NotImplementedException();
         public Persoon(List<string> voornamen)
         {
-            if (voornamen == null || voornamen.Count == 0)
+            if (voornamen == null)
                 throw new ArgumentNullException("Een persoon moet minstens één voornaam hebben.");
-            if (voornamen.Count != voornamen.Distinct().Count())
-                throw new ArgumentException("Een persoon kan geen twee keer dezelfde voornaam hebben.");
+            if (voornamen.Count == 0) throw new ArgumentException("Een persoon moet minstens één voornaam hebben.");
+            if (voornamen.Count != voornamen.Distinct(StringComparer.OrdinalIgnoreCase).Count())
+                throw new ArgumentException("Een persoon kan geen twee dezelfde voornamen hebben.");
             foreach (var naam in voornamen)
             {
-                if (string.IsNullOrWhiteSpace(naam)) throw new ArgumentException("Iedere voornaam moet minstens één teken bevatten.");
+                if (naam == string.Empty) throw new ArgumentException("Naam mag geen lege string zijn.");
+                if (naam == " ") throw new ArgumentException("Naam mag geen spatie(s) zijn.");
+                if (naam == "\t") throw new ArgumentException("Naam mag geen tab zijn.");
+                if (naam == "\n") throw new ArgumentException("Naam mag geen newline zijn.");
             }
-            this.voornamen = new List<string>(voornamen); // een kopie maken om immutability te waarborgen
+            this.voornamen = voornamen;
         }
 
 
