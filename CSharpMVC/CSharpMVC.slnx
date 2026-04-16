@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MeerOverControllers/MeerOverControllers.csproj" />
+  <Project Path="Voorbeeld1/Voorbeeld1.csproj" />
+</Solution>
