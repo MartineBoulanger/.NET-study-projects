@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "AlleWerknemers";
+}
+
+@* @model List<Razor.Models.Werknemer> *@
+@using Razor.Models
+@model List<Werknemer>
+
+@* laten zien van de List gegevens *@
+<h1>Alle Werknemers</h1>
+
+@if (Model is not null)
+{
+    <ul>
+        @foreach (var werknemer in Model)
+        {
+            <li>@werknemer.Voornaam verdient @werknemer.Wedde</li>
+        }
+    </ul>
+}
+
+@* uit testen van sections voor de layout *@
+@section Scripts {
+    <p>Hier komen nog allerlei scripts...</p>
+}

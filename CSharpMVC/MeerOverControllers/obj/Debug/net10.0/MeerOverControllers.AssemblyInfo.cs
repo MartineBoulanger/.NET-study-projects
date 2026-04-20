@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeerOverControllers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a436bfa7a54289dedd5c1fb8acfe216650450b5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83020c5b3c1e845edc1b127e175a5044894d0200")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeerOverControllers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeerOverControllers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

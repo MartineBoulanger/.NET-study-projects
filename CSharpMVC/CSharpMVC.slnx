@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="BierenApplication/BierenApplication.csproj" Id="2dc1f8e0-22fe-486c-9375-e2d675439822" />
   <Project Path="MeerOverControllers/MeerOverControllers.csproj" />
+  <Project Path="Razor/Razor.csproj" Id="df681522-623d-4852-b123-9fd1afe5af34" />
   <Project Path="Voorbeeld1/Voorbeeld1.csproj" />
 </Solution>

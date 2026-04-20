@@ -1,0 +1,15 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h2>Filialen</h2>
+@if (Model is not null)
+{
+    <ul>
+        @foreach (var filiaal in Model)
+        {
+            <li>@filiaal.ID @filiaal.Naam @filiaal.Gebouwd @filiaal.Waarde</li>
+        }
+    </ul>
+}
