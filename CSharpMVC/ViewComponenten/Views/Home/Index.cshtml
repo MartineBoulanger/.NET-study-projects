@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @* <div>@await Component.InvokeAsync("Reclame")</div> *@
+    @* je kunt dit ook doen met een taghelper *@
+    @* <div><vc:reclame></vc:reclame></div> *@
+    @* met parameters *@
+    <div>@await Component.InvokeAsync("Reclame", new { tekst = "Dit is <b>html</b>", Html = true })</div>
+    <div>@await Component.InvokeAsync("Reclame", new { tekst = "Dit is <geen> html!", Html = false })</div>
+    @* met taghelper*@
+    @* <div><vc:reclame tekst="Dit is <b>html</b>" html="true"></vc:reclame></div> *@
+</div>

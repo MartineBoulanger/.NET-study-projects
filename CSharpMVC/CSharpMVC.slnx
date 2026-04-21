@@ -6,5 +6,6 @@
   <Project Path="Razor/Razor.csproj" Id="df681522-623d-4852-b123-9fd1afe5af34">
     <Build Solution="Debug|*" Project="false" />
   </Project>
+  <Project Path="ViewComponenten/ViewComponenten.csproj" Id="184923cd-fc68-42ad-8367-fbc5fee3cfc7" />
   <Project Path="Voorbeeld1/Voorbeeld1.csproj" />
 </Solution>
