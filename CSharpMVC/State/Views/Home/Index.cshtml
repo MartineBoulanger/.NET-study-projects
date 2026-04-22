@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">State</h1>
+    <p class="lead">Cookie : @ViewBag.Tijdstip</p>
+    <p class="lead">@ViewBag.aantalBezoeken</p>
+    <p class="lead">Vorig bezoek : @ViewBag.lastvisit</p>
+    <p class="lead">Uw bezoeken : </p>
+    @foreach (var t in ViewBag.visits) {<p>@t</p>}
+    <a href="~/home" class="btn btn-primary btn-lg">Refresh page &raquo;</a>
+    <a href="~/home/wissen" class="btn btn-primary btn-lg">Reset &raquo;</a>
+</div>
