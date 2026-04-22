@@ -11,8 +11,7 @@
 {
     @foreach (var bier in Model)
     {
-        @bier.Id@:. @bier.Naam
-        @: (@bier.Alcohol
-        @:%) <br/>
+        @Html.DisplayFor(m => bier.Id) @:- @bier.Naam
+        @:(@Html.DisplayFor(m => bier.Alcohol)) <br/>
     }
 }
