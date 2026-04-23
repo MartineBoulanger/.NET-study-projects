@@ -1,0 +1,10 @@
+﻿@model float
+
+@{
+    var alcohol = Model;
+}
+
+@if (alcohol < 2) {<span class="groen">@Model %</span>}
+else if (alcohol <= 5) {<span class="geel">@Model %</span>}
+else if (alcohol <= 8) {<span class="oranje">@Model %</span>}
+else {<span class="rood">@Model %</span>}

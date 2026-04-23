@@ -48,11 +48,11 @@ namespace Razor.Controllers
             Hoofdzetel deHoofdzetel = new Hoofdzetel { Straat = "Keizerslaan", HuisNr = "11", PostCode = "1000", Gemeente = "Brussel" };
             ViewBag.deHoofdzetel = deHoofdzetel;
             List<Filiaal> deFilialen = new List<Filiaal>() { 
-                new Filiaal { ID = 1, Naam = "Antwerpen", Gebouwd = new DateTime(2003,1,1), Waarde = 2000000m },
-                new Filiaal { ID = 2, Naam = "Wondelgem", Gebouwd = new DateTime(1979,1,1), Waarde = 2500000m },
-                new Filiaal { ID = 3, Naam = "Haasrode", Gebouwd = new DateTime(1976,1,1), Waarde = 1000000m },
-                new Filiaal { ID = 4, Naam = "Wevelgem", Gebouwd = new DateTime(1981,1,1), Waarde = 1600000m },
-                new Filiaal { ID = 5, Naam = "Genk", Gebouwd = new DateTime(1990,1,1), Waarde = 4000000m },
+                new Filiaal { ID = 1, Naam = "Antwerpen", Gebouwd = new DateTime(2003,1,1), Waarde = 2000000m, Eigenaar = Eigenaar.Gehuurd },
+                new Filiaal { ID = 2, Naam = "Wondelgem", Gebouwd = new DateTime(1979,1,1), Waarde = 2500000m, Eigenaar = Eigenaar.Gehuurd },
+                new Filiaal { ID = 3, Naam = "Haasrode", Gebouwd = new DateTime(1976,1,1), Waarde = 1000000m, Eigenaar = Eigenaar.Eigendom },
+                new Filiaal { ID = 4, Naam = "Wevelgem", Gebouwd = new DateTime(1981,1,1), Waarde = 1600000m, Eigenaar = Eigenaar.Eigendom },
+                new Filiaal { ID = 5, Naam = "Genk", Gebouwd = new DateTime(1990,1,1), Waarde = 4000000m, Eigenaar = Eigenaar.Gehuurd },
             };
             return View(deFilialen);
         }

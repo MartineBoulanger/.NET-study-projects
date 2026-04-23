@@ -1,0 +1,5 @@
+﻿@model string
+@{
+    var afbeelding = $"/images/{Model}.jpg";
+}
+<img src="@afbeelding" alt="@Model" width="200" />

@@ -19,65 +19,77 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = Razor
 build_property.RootNamespace = Razor
-build_property.ProjectDir = C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\
+build_property.ProjectDir = C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor
+build_property.MSBuildProjectDirectory = C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/AlleWerknemers.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/AlleWerknemers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxlV2Vya25lbWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Filialen.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Filialen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaWxpYWxlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Index.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Palindroom.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Palindroom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYWxpbmRyb29tLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Privacy.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Vestigingen.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Vestigingen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXN0aWdpbmdlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/Error.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/DisplayTemplates/Decimal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcRGVjaW1hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/DisplayTemplates/Eigenaar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcRWlnZW5hYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/DisplayTemplates/sterretjes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcc3RlcnJldGplcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/_ViewImports.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/_ViewStart.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Hoofdzetel.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Home/Hoofdzetel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb29mZHpldGVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-zpwe5bvco8
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/_AndereLayout.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/_AndereLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbmRlcmVMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-pf58x0f3zy
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/_Layout.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-htizc4julw
