@@ -7,8 +7,12 @@
     <ul>
         @foreach (var filiaal in Model)
         {
-            var url = "verwijderen/" + filiaal.ID;
-            <li>@filiaal.ID @filiaal.Naam @Html.DisplayFor(m => filiaal.Gebouwd) @Html.DisplayFor(m => filiaal.Waarde) @Html.DisplayFor(m => filiaal.Eigenaar) - <a href="@url">Verwijderen</a></li>
+            @* var url = "verwijderen/" + filiaal.ID; *@
+            @* var url = Url.Action("Verwijderen", "Home", new { ID = filiaal.ID }); *@
+            @* <li>@filiaal.ID @filiaal.Naam @Html.DisplayFor(m => filiaal.Gebouwd) @Html.DisplayFor(m => filiaal.Waarde) @Html.DisplayFor(m => filiaal.Eigenaar) - <a href="@url">Verwijderen</a></li> *@
+            @* <li>@filiaal.ID @filiaal.Naam @Html.DisplayFor(m => filiaal.Gebouwd) @Html.DisplayFor(m => filiaal.Waarde) @Html.DisplayFor(m => filiaal.Eigenaar) - @Html.ActionLink("Verwijderen", "Verwijderen", "Home", new { ID = filiaal.ID }, new { title = "Filiaal " + filiaal.ID + " verwijderen" })</li> *@
+            @* <li>@filiaal.ID @filiaal.Naam @Html.DisplayFor(m => filiaal.Gebouwd) @Html.DisplayFor(m => filiaal.Waarde) @Html.DisplayFor(m => filiaal.Eigenaar) - <a href="@url"><img src="~/images/delete.png" alt="delete" height="16" /></a></li> *@
+            <li>@filiaal.ID @filiaal.Naam @Html.DisplayFor(m => filiaal.Gebouwd) @Html.DisplayFor(m => filiaal.Waarde) @Html.DisplayFor(m => filiaal.Eigenaar) - <a asp-action="Verwijderen" asp-route-id="@filiaal.ID"><img src="~/images/delete.png" alt="delete" height="16" /></a></li>
         }
     </ul>
 }

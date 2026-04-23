@@ -77,7 +77,7 @@ namespace Razor.Controllers
             var filiaal = _filiaalService.Read(id);
             this.TempData["filiaal"] = JsonSerializer.Serialize(filiaal);
             _filiaalService.Delete(id);
-            return Redirect("~/home/verwijderd");
+            return RedirectToAction(nameof(Verwijderd));
         }
 
         // redirect action
@@ -93,7 +93,7 @@ namespace Razor.Controllers
                 return View(filiaal);
 
             }
-            else return Redirect("~/home/vestigingen");
+            else return RedirectToAction("Vestigingen");
         }
     }
 }

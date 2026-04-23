@@ -7,7 +7,7 @@
 @if (Model is null)
 {
     <h2>Er bestaat geen filiaal met nummer @ViewBag.filiaalnummer</h2>
-    <h3>Terug naar de <a href="~/home/vestigingen">lijst</a></h3>
+    <h3>Terug naar de <a asp-action="Vestigingen">lijst</a></h3>
 }
 else
 {
