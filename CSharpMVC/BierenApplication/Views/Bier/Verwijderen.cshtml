@@ -1,0 +1,17 @@
+﻿@model Bier?
+
+@{
+    ViewData["Title"] = "Verwijderen";
+}
+
+@if (Model is null)
+{
+    <h1>Helaas! Geen bier gevonden!</h1>
+    <p>Het bier met biernummer @ViewBag.biernummer is niet gevonden!</p>
+    <p>Terug naar de <a href="~/bier">lijst</a></p>
+}
+else
+{
+    <h1>Wil je @Model.Naam echt verwijderen?</h1>
+    <form method="post" action="~/bier/delete/@Model.Id"><input type="submit" value="Verwijder @Model.Naam" /></form>
+}

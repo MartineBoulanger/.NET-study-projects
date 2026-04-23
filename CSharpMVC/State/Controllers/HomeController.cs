@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using State.Models;
+using State.Services;
 using System.Diagnostics;
 using System.Text.Json;
 
@@ -7,6 +8,13 @@ namespace State.Controllers
 {
     public class HomeController:Controller
     {
+        // Dependency Injection voor de service Counter
+        private readonly Counter _counter;
+        public HomeController(Counter counter)
+        {
+            _counter = counter;
+        }
+
         public IActionResult Index()
         {
             // gebruik van cookie
@@ -52,26 +60,34 @@ namespace State.Controllers
             HttpContext.Session.SetString("visits", geserializeerdeLijst);
             ViewBag.visits = lijstBezoeken;
 
+            // aan bezoeken tellen dmv de DI
+            _counter.TotaalAantalBezoeken += 1;
+            ViewBag.totaalAantalBezoeken = _counter.TotaalAantalBezoeken;
+
             return View();
         }
 
         public IActionResult Wissen()
         {
-            // cookie verwijderen
-            if (Request.Cookies["lastvisit"] != null)
-                Response.Cookies.Delete("lastvisit");
+            //// cookie verwijderen
+            //if (Request.Cookies["lastvisit"] != null)
+            //    Response.Cookies.Delete("lastvisit");
 
-            // session resetten
-            if (HttpContext.Session.GetInt32("aantalBezoeken") != null)
-                HttpContext.Session.Remove("aantalBezoeken");
+            //// session resetten
+            //if (HttpContext.Session.GetInt32("aantalBezoeken") != null)
+            //    HttpContext.Session.Remove("aantalBezoeken");
 
-            // object resetten
-            if (HttpContext.Session.GetString("lastvisit") != null)
-                HttpContext.Session.Remove("lastvisit");
+            //// object resetten
+            //if (HttpContext.Session.GetString("lastvisit") != null)
+            //    HttpContext.Session.Remove("lastvisit");
 
-            // list resetten
-            if (HttpContext.Session.GetString("visits") != null)
-                HttpContext.Session.Remove("visits");
+            //// list resetten
+            //if (HttpContext.Session.GetString("visits") != null)
+            //    HttpContext.Session.Remove("visits");
+
+            // alles resetten in een kortere lijn van code
+            HttpContext.Session.Clear();
+            _counter.TotaalAantalBezoeken = 0;
 
             return View();
         }

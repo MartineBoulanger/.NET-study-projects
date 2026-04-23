@@ -1,12 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.CodeModifier.CodeChange;
 using Razor.Models;
+using Razor.Services;
 using System.Diagnostics;
+using System.Text.Json;
 
 namespace Razor.Controllers
-{
+{ 
     public class HomeController : Controller
     {
+        // DI voor de filiaal service
+        private readonly FiliaalService _filiaalService;
+        public HomeController(FiliaalService filiaalService)
+        {
+            _filiaalService = filiaalService;
+        }
+
         public IActionResult Index()
         {
             Persoon eddy = new Persoon { Voornaam = "Eddy", Familienaam = "Wally" };
@@ -47,14 +55,45 @@ namespace Razor.Controllers
         {
             Hoofdzetel deHoofdzetel = new Hoofdzetel { Straat = "Keizerslaan", HuisNr = "11", PostCode = "1000", Gemeente = "Brussel" };
             ViewBag.deHoofdzetel = deHoofdzetel;
-            List<Filiaal> deFilialen = new List<Filiaal>() { 
-                new Filiaal { ID = 1, Naam = "Antwerpen", Gebouwd = new DateTime(2003,1,1), Waarde = 2000000m, Eigenaar = Eigenaar.Gehuurd },
-                new Filiaal { ID = 2, Naam = "Wondelgem", Gebouwd = new DateTime(1979,1,1), Waarde = 2500000m, Eigenaar = Eigenaar.Gehuurd },
-                new Filiaal { ID = 3, Naam = "Haasrode", Gebouwd = new DateTime(1976,1,1), Waarde = 1000000m, Eigenaar = Eigenaar.Eigendom },
-                new Filiaal { ID = 4, Naam = "Wevelgem", Gebouwd = new DateTime(1981,1,1), Waarde = 1600000m, Eigenaar = Eigenaar.Eigendom },
-                new Filiaal { ID = 5, Naam = "Genk", Gebouwd = new DateTime(1990,1,1), Waarde = 4000000m, Eigenaar = Eigenaar.Gehuurd },
-            };
-            return View(deFilialen);
+
+            // het tempdta gebruiken van de verwijderde vestiging
+            var recentVerwijderdFiliaal = (string?)this.TempData["filiaal"];
+            if (recentVerwijderdFiliaal != null) ViewBag.recenteVerwijdering = JsonSerializer.Deserialize<Filiaal?>(recentVerwijderdFiliaal)?.Naam;
+            
+            return View(_filiaalService.FindAll());
+        }
+
+        public IActionResult Verwijderen(int id)
+        {
+            var filiaal = _filiaalService.Read(id);
+            if (filiaal == null) ViewBag.filiaalnummer = id;
+            return View(filiaal);
+        }
+
+        // action dat de verwijdering van de vestiging doet
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var filiaal = _filiaalService.Read(id);
+            this.TempData["filiaal"] = JsonSerializer.Serialize(filiaal);
+            _filiaalService.Delete(id);
+            return Redirect("~/home/verwijderd");
+        }
+
+        // redirect action
+        public IActionResult Verwijderd()
+        {
+            //var tempdata = (string?)this.TempData["filiaal"];
+            var tempdata = (string?)this.TempData.Peek("filiaal"); // met de Peek method
+
+            if (tempdata != null)
+            {
+                //this.TempData.Keep("filiaal");
+                Filiaal? filiaal = JsonSerializer.Deserialize<Filiaal?>(tempdata);
+                return View(filiaal);
+
+            }
+            else return Redirect("~/home/vestigingen");
         }
     }
 }

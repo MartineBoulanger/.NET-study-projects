@@ -1,7 +1,12 @@
+using BierenApplication.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider();
+builder.Services.AddSession();
+builder.Services.AddSingleton<BierService>();
 
 var app = builder.Build();
 
@@ -16,6 +21,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseSession();
 app.UseAuthorization();
 
 app.MapStaticAssets();
