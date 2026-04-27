@@ -1,7 +1,14 @@
+using Razor.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews(); // dit is de standaard
+builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider(); // om temdata te gebruiken via sessions
+// zorgen dan session variabele kunnen worden gebruikt
+builder.Services.AddSession();
+// filiaal service toevoegen voor DI
+builder.Services.AddSingleton<FiliaalService>();
 
 var app = builder.Build();
 
@@ -16,6 +23,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseSession(); // zodat sessions gebruikt kunnen worden
 app.UseAuthorization();
 
 app.MapStaticAssets();

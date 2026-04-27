@@ -3,9 +3,10 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">State</h1>
+    <h1 class="display-4">Session and Application state</h1>
     <p class="lead">Cookie : @ViewBag.Tijdstip</p>
-    <p class="lead">@ViewBag.aantalBezoeken</p>
+    <p class="lead">@(ViewBag.aantalBezoeken)e bezoek aan deze pagina binnen deze sessie</p>
+    <p class="lead">Totaal aantal bezoeken aan deze pagina : @ViewBag.totaalAantalBezoeken</p>
     <p class="lead">Vorig bezoek : @ViewBag.lastvisit</p>
     <p class="lead">Uw bezoeken : </p>
     @foreach (var t in ViewBag.visits) {<p>@t</p>}

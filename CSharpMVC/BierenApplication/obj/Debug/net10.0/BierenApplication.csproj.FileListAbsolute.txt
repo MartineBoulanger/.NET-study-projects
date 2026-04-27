@@ -226,7 +226,6 @@ C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\scopedcss\bundle\BierenApplication.styles.css
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\scopedcss\projectbundle\BierenApplication.bundle.scp.css
-C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\compressed\wtbbgq8ulb-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\compressed\afnmonmfdo-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\compressed\8x825gqar5-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\compressed\9gbi1snunv-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -606,3 +605,4 @@ C:\Users\marti\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\BierenApplication.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\ref\BierenApplication.dll
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\compressed\wtbbgq8ulb-{0}-lxohqhhjbq-lxohqhhjbq.gz
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\BierenApplication\obj\Debug\net10.0\compressed\wtbbgq8ulb-{0}-lxohqhhjbq-lxohqhhjbq.gz

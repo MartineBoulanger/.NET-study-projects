@@ -11,7 +11,14 @@
 {
     @foreach (var bier in Model)
     {
+        @* var url = "bier/verwijderen/" + bier.Id; *@
+        var url = Url.Action("Verwijderen", "Bier", new {ID = bier.Id});
         @Html.DisplayFor(m => bier.Id) @:- @bier.Naam
-        @:(@Html.DisplayFor(m => bier.Alcohol)) <br/>
+        @:(@Html.DisplayFor(m => bier.Alcohol)) <a href="@url"><img src="images/delete.png" alt="Verwijder bier @bier.Naam" height="16" /></a> <br/>
     }
+}
+
+@if (ViewBag.recentVerwijderdBier != null)
+{
+    <p>Recent verwijderd bier : @ViewBag.recentVerwijderdBier</p>
 }
