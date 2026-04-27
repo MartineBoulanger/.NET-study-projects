@@ -7,8 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider(); // om temdata te gebruiken via sessions
 // zorgen dan session variabele kunnen worden gebruikt
 builder.Services.AddSession();
-// filiaal service toevoegen voor DI
+// services toevoegen voor DI
 builder.Services.AddSingleton<FiliaalService>();
+builder.Services.AddSingleton<PersoonService>();
 
 var app = builder.Build();
 
