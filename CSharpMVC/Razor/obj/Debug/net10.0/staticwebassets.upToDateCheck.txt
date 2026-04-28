@@ -1,6 +1,7 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\delete.png
+wwwroot\images\edit.png
 wwwroot\images\eigendom.png
 wwwroot\images\gehuurd.png
 wwwroot\images\star.png

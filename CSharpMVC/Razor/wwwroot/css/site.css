@@ -30,9 +30,13 @@ body {
   text-align: start;
 }
 
-input {
+input, textarea, select {
     display: block;
     margin-bottom: 10px;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    display: inline;
 }
 
 /* Form validation */

@@ -15,12 +15,14 @@
                 <th>Familienaam</th>
                 <th>Score</th>
                 <th>Wedde</th>
+                <th>Rekeningnummer</th>
                 <th>Paswoord</th>
                 <th>Geboren</th>
                 <th>Gehuwd</th>
                 <th>Opmerkingen</th>
                 <th>Geslacht</th>
                 <th>Verwijderen</th>
+                <th>Wijzigen</th>
             </tr>
         </thead>
         <tbody>
@@ -32,12 +34,14 @@
                     <td>@persoon.Familienaam</td>
                     <td>@persoon.Score</td>
                     <td>@Html.DisplayFor(m => persoon.Wedde)</td>
+                    <td>@persoon.RekeningNummer</td>
                     <td>@persoon.Paswoord</td>
                     <td>@Html.DisplayFor(m => persoon.Geboren)</td>
                     <td>@Html.DisplayFor(m => persoon.Gehuwd)</td>
                     <td>@persoon.Opmerkingen</td>
                     <td>@persoon.Geslacht</td>
                     <td><a asp-action="VerwijderForm" asp-route-id="@persoon.ID"><img src="~/images/delete.png" alt="Verwijder @persoon.ID" /></a></td>
+                    <td><a asp-action="EditForm" asp-route-id="@persoon.ID"><img src="~/images/edit.png" alt="Edit @persoon.ID" /></a></td>
                 </tr>
             }
         </tbody>
@@ -48,3 +52,5 @@ else
 {
     <h2>De peronenlijst is leeg</h2>
 }
+
+<a asp-action="Toevoegen" class="btn btn-primary">Persoon toevoegen</a>

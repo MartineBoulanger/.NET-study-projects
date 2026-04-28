@@ -609,4 +609,4 @@ C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\Razor.pdb
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\Razor.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\ref\Razor.dll
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\or52c2sfg8-{0}-puu10stlc4-puu10stlc4.gz
-C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\or52c2sfg8-{0}-puu10stlc4-puu10stlc4.gz
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\or52c2sfg8-{0}-g0eqn7f2bm-g0eqn7f2bm.gz

@@ -62,12 +62,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXN0aWdpbmdlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Persoon/EditForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29vblxFZGl0Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Persoon/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29vblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Persoon/Opslag.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29vblxPcHNsYWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Persoon/Toevoegen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29vblxUb2V2b2VnZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Persoon/VanTotWedde.cshtml]
@@ -88,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/DisplayTemplates/sterretjes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERpc3BsYXlUZW1wbGF0ZXNcc3RlcnJldGplcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/EditorTemplates/Geslacht.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVkaXRvclRlbXBsYXRlc1xHZXNsYWNodC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Razor/Views/Shared/Error.cshtml]

@@ -1,0 +1,53 @@
+﻿@model Persoon
+
+@{
+    ViewData["Title"] = "Toevoegen";
+}
+
+<h1>Persoon toevoegen</h1>
+
+<form asp-action="Toevoegen" method="post">
+    <label asp-for="Voornaam"></label>
+    <input asp-for="Voornaam" />
+
+    <label asp-for="Familienaam"></label>
+    <input asp-for="Familienaam" />
+
+    <label asp-for="Score"></label>
+    <input asp-for="Score" />
+
+    <label asp-for="Wedde"></label>
+    <input asp-for="Wedde" />
+
+    <label asp-for="RekeningNummer"></label>
+    <input asp-for="RekeningNummer" />
+
+    <label asp-for="Paswoord"></label>
+    @* <input asp-for="Paswoord" type="password" /> *@
+    @* Als je de annotatie [DataType] gebruikt in de Persoon class dan hoef je hier het type niet mee te geven *@
+    <input asp-for="Paswoord" />
+
+    <label asp-for="HerhaalPaswoord"></label>
+    <input asp-for="HerhaalPaswoord" />
+
+    <label asp-for="Geboren"></label>
+    <input asp-for="Geboren" />
+
+    @* dit is een checkbox, dus label komt achter checkbox altijd *@
+    <div>
+        <input asp-for="Gehuwd" />
+        <label asp-for="Gehuwd"></label>
+    </div>
+
+    <label asp-for="Opmerkingen"></label>
+    <textarea asp-for="Opmerkingen"></textarea>
+
+    <label asp-for="Geslacht"></label>
+    <select asp-for="Geslacht" asp-items="@new SelectList(Enum.GetNames(typeof(Geslacht)))"></select>
+    @* @Html.LabelFor(m => m.Geslacht)
+    @Html.EditorFor(m => m.Geslacht) *@
+
+    <input type="submit" value="Toevoegen" />
+
+    <div asp-validation-summary="All"></div>
+</form>
