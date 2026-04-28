@@ -22,7 +22,6 @@ C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\rjsmcshtm
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\scopedcss\bundle\Razor.styles.css
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\scopedcss\projectbundle\Razor.bundle.scp.css
-C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\or52c2sfg8-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\is5z4bhsks-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\9xb6yd2hj6-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\bgf6cgsxbb-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -610,3 +609,4 @@ C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\Razor.pdb
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\Razor.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\ref\Razor.dll
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\or52c2sfg8-{0}-puu10stlc4-puu10stlc4.gz
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Razor\obj\Debug\net10.0\compressed\or52c2sfg8-{0}-puu10stlc4-puu10stlc4.gz

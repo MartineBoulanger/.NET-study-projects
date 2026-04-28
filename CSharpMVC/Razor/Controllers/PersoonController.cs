@@ -55,5 +55,25 @@ namespace Razor.Controllers
                 return View(opslagViewModel);
             }
         }
+
+        [HttpGet]
+        public IActionResult VanTotWedde()
+        {
+            var vanTotWeddeViewModel = new VanTotWeddeViewModel();
+            return View(vanTotWeddeViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult VanTotWeddeResultaat(VanTotWeddeViewModel vanTotWeddeViewModel)
+        {
+            if (this.ModelState.IsValid)
+            {
+                var lijst = _persoonService.VanTotWedde(vanTotWeddeViewModel.VanWedde, vanTotWeddeViewModel.TotWedde);
+                if (lijst.Count <= 3) vanTotWeddeViewModel.Personen = lijst;
+                else this.ModelState.AddModelError("", "Te veel resultaten");
+                //vanTotWeddeViewModel.Personen = _persoonService.VanTotWedde(vanTotWeddeViewModel.VanWedde, vanTotWeddeViewModel.TotWedde);
+            }
+            return View(nameof(VanTotWedde), vanTotWeddeViewModel);
+        }
     }
 }

@@ -2,6 +2,7 @@
 using BierenApplication.Services;
 using System.Text.Json;
 using BierenApplication.Models;
+using Microsoft.Extensions.Options;
 
 namespace BierenApplication.Controllers
 {
@@ -54,6 +55,26 @@ namespace BierenApplication.Controllers
         {
             _bierService.PrijsStijging(5m);
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult VanTotAlcohol()
+        {
+            var vanTotAlcoholViewModel = new VanTotAlcoholViewModel();
+            return View(vanTotAlcoholViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult VanTotAlcoholResultaat(VanTotAlcoholViewModel vanTotAlcoholViewModel)
+        {
+            if (this.ModelState.IsValid)
+            {
+                var lijst = _bierService.VanTotAlcohol(vanTotAlcoholViewModel.VanAlcohol, vanTotAlcoholViewModel.TotAlcohol);
+                if (lijst.Count <= 10) vanTotAlcoholViewModel.Bieren = lijst;
+                else this.ModelState.AddModelError("", "Te veel resultaten");
+                //vanTotAlcoholViewModel.Bieren = _bierService.VanTotAlcohol(vanTotAlcoholViewModel.VanAlcohol, vanTotAlcoholViewModel.TotAlcohol);
+            }
+            return View(nameof(VanTotAlcohol), vanTotAlcoholViewModel);
         }
     }
 }

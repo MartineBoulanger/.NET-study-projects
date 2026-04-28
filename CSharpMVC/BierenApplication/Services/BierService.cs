@@ -69,5 +69,10 @@ namespace BierenApplication.Services
                 b.Value.Prijs *= (1m + percentage/100);
             }
         }
+
+        public List<Bier> VanTotAlcohol(float? van, float? tot)
+        {
+            return (from bier in bieren.Values where bier.Alcohol >= van && bier.Alcohol <= tot orderby bier.Alcohol select bier).ToList();
+        }
     }
 }
