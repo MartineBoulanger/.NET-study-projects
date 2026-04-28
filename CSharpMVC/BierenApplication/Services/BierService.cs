@@ -7,9 +7,41 @@ namespace BierenApplication.Services
         private Dictionary<int, Bier> bieren = new();
         public BierService()
         {
-            bieren[1] = new Bier { Id = 1, Naam = "Romy Pils", Alcohol = 5f };
-            bieren[2] = new Bier { Id = 2, Naam = "Kasteelbier", Alcohol = 12f };
-            bieren[3] = new Bier { Id = 3, Naam = "Maes Radler", Alcohol = 0f };
+            bieren[1] = new Bier
+            {
+                Id = 1,
+                Naam = "Romy pils",
+                Alcohol = 4.5F,
+                Prijs = 0.70m
+            };
+            bieren[2] = new Bier
+            {
+                Id = 2,
+                Naam = "Leffe blond",
+                Alcohol = 2.5F,
+                Prijs = 1.15m
+            };
+            bieren[3] = new Bier
+            {
+                Id = 3,
+                Naam = "Rodenbach",
+                Alcohol = 3.5F,
+                Prijs = 0.85m
+            };
+            bieren[4] = new Bier
+            {
+                Id = 4,
+                Naam = "Liefmans goudenband",
+                Alcohol = 6F,
+                Prijs = 0.90m
+            };
+            bieren[5] = new Bier
+            {
+                Id = 5,
+                Naam = "Duvel",
+                Alcohol = 7F,
+                Prijs = 1.20m
+            };
         }
 
         public List<Bier> FindAll()
@@ -28,6 +60,14 @@ namespace BierenApplication.Services
         public void Delete(int id)
         {
             bieren.Remove(id);
+        }
+
+        public void PrijsStijging(decimal percentage)
+        {
+            foreach (var b in bieren)
+            {
+                b.Value.Prijs *= (1m + percentage/100);
+            }
         }
     }
 }

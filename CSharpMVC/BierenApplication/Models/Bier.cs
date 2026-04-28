@@ -9,5 +9,7 @@ namespace BierenApplication.Models
         public required string Naam { get; set; }
         [UIHint("percentage")]
         public required float Alcohol { get; set; }
+        [DisplayFormat(DataFormatString = "€{0:#,##0.00}")]
+        public decimal Prijs { get; set; }
     }
 }

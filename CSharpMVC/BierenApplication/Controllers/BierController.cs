@@ -47,5 +47,13 @@ namespace BierenApplication.Controllers
             }
             else return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult PrijsStijging()
+        {
+            _bierService.PrijsStijging(5m);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

@@ -14,8 +14,13 @@
         @* var url = "bier/verwijderen/" + bier.Id; *@
         var url = Url.Action("Verwijderen", "Bier", new {ID = bier.Id});
         @Html.DisplayFor(m => bier.Id) @:- @bier.Naam
-        @:(@Html.DisplayFor(m => bier.Alcohol)) <a href="@url"><img src="images/delete.png" alt="Verwijder bier @bier.Naam" height="16" /></a> <br/>
+        @:(@Html.DisplayFor(m => bier.Alcohol))
+        @:@Html.DisplayFor(m => bier.Prijs) - <a href="@url"><img src="images/delete.png" alt="Verwijder bier @bier.Naam" height="16" /></a> <br/>
     }
+
+    <form asp-action="PrijsStijging" method="post">
+        <input type="submit" value="Prijs Stijging" class="btn btn-primary" />
+    </form>
 }
 
 @if (ViewBag.recentVerwijderdBier != null)
