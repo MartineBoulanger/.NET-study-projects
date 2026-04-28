@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BierenApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fecffc7df7d5ad14c8729e3b5b50beeb697415a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1e00e7d07ce3079995f000da653ed57c54225fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("BierenApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BierenApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
