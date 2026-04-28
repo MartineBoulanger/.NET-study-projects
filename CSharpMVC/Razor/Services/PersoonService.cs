@@ -45,5 +45,11 @@ namespace Razor.Services
         {
             personen[p.ID] = p;
         }
+
+        public bool Bestaat(string naam)
+        {
+            if ((from p in personen.Values where p.Gebruikersnaam == naam select p).Count() != 0) return true;
+            else return false;
+        }
     }
 }

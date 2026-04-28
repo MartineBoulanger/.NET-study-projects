@@ -113,5 +113,10 @@ namespace Razor.Controllers
             }
             else return View(nameof(EditForm), p);
         }
+
+        public IActionResult ValideerGebruikersnaam(string Gebruikersnaam)
+        {
+            return Json(!_persoonService.Bestaat(Gebruikersnaam));
+        }
     }
 }

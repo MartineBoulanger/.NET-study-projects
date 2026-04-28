@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Razor.Models
 {
@@ -39,5 +40,8 @@ namespace Razor.Models
 
         [RegularExpression(@"[A-Z]{2}\d{2}-\d{4}-\d{4}-\d{4}", ErrorMessage = "Rekeningnummer is verkeerd")]
         public string? RekeningNummer { get; set; }
+
+        [Remote("ValideerGebruikersnaam", "Persoon", ErrorMessage = "Deze gebruikersnaam is reeds in gebruik")]
+        public string? Gebruikersnaam { get; set; }
     }
 }

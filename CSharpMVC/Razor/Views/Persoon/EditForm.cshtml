@@ -25,6 +25,12 @@
     <label asp-for="RekeningNummer"></label>
     <input asp-for="RekeningNummer" />
 
+    <div>
+        @* <label asp-for="Gebruikersnaam"></label> *@
+        <input asp-for="Gebruikersnaam" type="hidden" />
+        @* <span asp-validation-for="Gebruikersnaam"></span> *@
+    </div>
+
     @* <label asp-for="Paswoord"></label> *@
     <input asp-for="Paswoord" type="hidden" />
     @* @Html.HiddenFor(m => m.Paswoord) *@

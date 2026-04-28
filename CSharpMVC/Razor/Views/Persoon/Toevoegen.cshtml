@@ -22,6 +22,12 @@
     <label asp-for="RekeningNummer"></label>
     <input asp-for="RekeningNummer" />
 
+    <div>
+        <label asp-for="Gebruikersnaam"></label>
+        <input asp-for="Gebruikersnaam" />
+        <span asp-validation-for="Gebruikersnaam"></span>
+    </div>
+
     <label asp-for="Paswoord"></label>
     @* <input asp-for="Paswoord" type="password" /> *@
     @* Als je de annotatie [DataType] gebruikt in de Persoon class dan hoef je hier het type niet mee te geven *@
