@@ -6,17 +6,42 @@
     @foreach (var bier in Model) { <p>@bier.Id . @bier.Naam (@bier.Alcohol %)</p> }
 } *@
 
-<h1>Alle Bieren</h1>
 @if (Model is not null)
 {
-    @foreach (var bier in Model)
+    @* @foreach (var bier in Model)
     {
-        @* var url = "bier/verwijderen/" + bier.Id; *@
+        var url = "bier/verwijderen/" + bier.Id;
         var url = Url.Action("Verwijderen", "Bier", new {ID = bier.Id});
         @Html.DisplayFor(m => bier.Id) @:- @bier.Naam
         @:(@Html.DisplayFor(m => bier.Alcohol))
         @:@Html.DisplayFor(m => bier.Prijs) - <a href="@url"><img src="images/delete.png" alt="Verwijder bier @bier.Naam" height="16" /></a> <br/>
-    }
+    } *@
+    <h1>Bieren</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Naam Bier</th>
+                <th>Alcohol %</th>
+                <th>Prijs</th>
+                <th>Verwijderen</th>
+                <th>Wijzigen</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bier in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => bier.Id)</td>
+                    <td>@bier.Naam</td>
+                    <td>@bier.Alcohol %</td>
+                    <td>@Html.DisplayFor(m => bier.Prijs)</td>
+                    <td><a asp-action="Verwijderen" asp-route-id="@bier.Id"><img src="~/images/delete.png" alt="Verwijder @bier.Id" /></a></td>
+                    <td><a asp-action="EditForm" asp-route-id="@bier.Id"><img src="~/images/edit.png" alt="Edit @bier.Id" /></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
     <form asp-action="PrijsStijging" method="post">
         <input type="submit" value="Prijs Stijging" class="btn btn-primary" />
@@ -27,3 +52,5 @@
 {
     <p>Recent verwijderd bier : @ViewBag.recentVerwijderdBier</p>
 }
+
+<a asp-action="Toevoegen" class="btn btn-primary">Bier toevoegen</a>

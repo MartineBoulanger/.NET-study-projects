@@ -34,6 +34,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmllclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/BierenApplication/Views/Bier/Toevoegen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmllclxUb2V2b2VnZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/BierenApplication/Views/Bier/VanTotAlcohol.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmllclxWYW5Ub3RBbGNvaG9sLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

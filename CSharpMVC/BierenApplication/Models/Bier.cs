@@ -5,10 +5,16 @@ namespace BierenApplication.Models
     public class Bier
     {
         [DisplayFormat(DataFormatString = "{0:D3}")]
-        public required int Id { get; init; }
-        public required string Naam { get; set; }
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Naam is een verpicht veld")]
+        [StringLength(20, ErrorMessage = "Max. {1} tekens voor {0}")]
+        public string Naam { get; set; }
+
         [UIHint("percentage")]
-        public required float Alcohol { get; set; }
+        [Range(0, 15, ErrorMessage = "{0} minimum {1}, maximum {2}")]
+        public float Alcohol { get; set; }
+
         [DisplayFormat(DataFormatString = "€{0:#,##0.00}")]
         public decimal Prijs { get; set; }
     }

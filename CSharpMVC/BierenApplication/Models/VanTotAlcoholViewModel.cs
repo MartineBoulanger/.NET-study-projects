@@ -12,7 +12,7 @@ namespace BierenApplication.Models
         [Required(ErrorMessage = "Tot alcohol is verplicht")]
         public float? TotAlcohol { get; set; }
 
-        public List<Bier> Bieren { get; set; } = [];
+        public List<Bier>? Bieren { get; set; } = [];
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

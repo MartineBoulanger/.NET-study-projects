@@ -74,5 +74,11 @@ namespace BierenApplication.Services
         {
             return (from bier in bieren.Values where bier.Alcohol >= van && bier.Alcohol <= tot orderby bier.Alcohol select bier).ToList();
         }
+
+        public void Add(Bier b)
+        {
+            b.Id = bieren.Keys.Max() + 1;
+            bieren.Add(b.Id, b);
+        }
     }
 }

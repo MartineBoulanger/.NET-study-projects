@@ -1,0 +1,25 @@
+﻿@model Bier
+
+@{
+    ViewData["Title"] = "Toevoegen";
+}
+
+<h1>Bier Toevoegen</h1>
+
+<form asp-action="Toevoegen" method="post">
+    @* <label asp-for="Id"></label>
+    <input asp-for="Id" readonly /> *@
+
+    <label asp-for="Naam"></label>
+    <input asp-for="Naam" />
+
+    <label asp-for="Alcohol"></label>
+    <input asp-for="Alcohol" />
+
+    <label asp-for="Prijs"></label>
+    <input asp-for="Prijs" />
+
+    <input type="submit" value="Toevoegen" />
+
+    <div asp-validation-summary="All"></div>
+</form>
