@@ -1,0 +1,148 @@
+html {
+  font-size: 16px;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+input {
+    display: block;
+    width: 100%;
+}
+
+/* Form validation */
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    border-radius: 2px;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* custom form classes */
+.form-create {
+    width: 100%;
+    max-width: 450px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 15px 15px 5px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.form-bestemmingen {
+    width: 100%;
+    max-width: 250px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.form-delete-all {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* form sections */
+.form-create-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 576px) {
+    .form-create-flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.lijst-element {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* form fields */
+.form-create input {
+    margin-bottom: 10px;
+}
+
+.form-bestemmingen input {
+    margin-bottom: 20px;
+}
+
+.form-create input[type="submit"]{
+    margin-top: 20px;
+}
+
+.form-create input[type="submit"],
+.form-bestemmingen input[type="submit"],
+.form-delete-all input[type="submit"] {
+    width: auto;
+}
+
+.input-bestemming {
+    border: none;
+    text-align: center;
+    padding: 0;
+    outline: none;
+    max-width: 150px;
+    height: auto;
+}
+
+.remove-button {
+    border: none;
+    background-color: transparent;
+    height: auto;
+}
+
+/* header custom classes */
+.toggle-button {
+    order: 2;
+}
+
+.klant-info {
+    order: 1;
+    margin-top: 18px;
+}
+
+@media screen and (min-width: 576px) {
+    .klant-info {
+        order: 2;
+        margin-top: 12px;
+    }
+}

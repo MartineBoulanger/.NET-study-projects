@@ -2,6 +2,7 @@
   <Project Path="BierenApplication/BierenApplication.csproj" Id="2dc1f8e0-22fe-486c-9375-e2d675439822">
     <Build Solution="Debug|*" Project="false" />
   </Project>
+  <Project Path="Eindoefening/Eindoefening.csproj" Id="3392bb31-2d85-489d-8d60-84627bad52ea" />
   <Project Path="MeerOverControllers/MeerOverControllers.csproj" />
   <Project Path="Razor/Razor.csproj" Id="df681522-623d-4852-b123-9fd1afe5af34">
     <Build Solution="Debug|*" Project="false" />
