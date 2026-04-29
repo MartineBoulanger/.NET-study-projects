@@ -25,7 +25,6 @@
                 <th>Alcohol %</th>
                 <th>Prijs</th>
                 <th>Verwijderen</th>
-                <th>Wijzigen</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +36,6 @@
                     <td>@bier.Alcohol %</td>
                     <td>@Html.DisplayFor(m => bier.Prijs)</td>
                     <td><a asp-action="Verwijderen" asp-route-id="@bier.Id"><img src="~/images/delete.png" alt="Verwijder @bier.Id" /></a></td>
-                    <td><a asp-action="EditForm" asp-route-id="@bier.Id"><img src="~/images/edit.png" alt="Edit @bier.Id" /></a></td>
                 </tr>
             }
         </tbody>
