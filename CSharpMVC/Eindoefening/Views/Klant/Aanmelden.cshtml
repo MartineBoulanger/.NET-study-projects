@@ -1,0 +1,71 @@
+﻿@model KlantViewModel
+
+@{
+    ViewData["Title"] = "Aanmelden";
+}
+
+<h1 class="create-title">Welkom op onze website !</h1>
+<p class="create-description">Om de reisbrochures te kunnen opsturen vragen we de volgende gegevens :</p>
+
+<form asp-action="Aanmelden" method="post" class="form-create">
+    <div class="form-create-flex">
+        <div class="form-create-input">
+            <label asp-for="Achternaam"></label>
+            <span asp-validation-for="Achternaam">*</span>
+            <input asp-for="Achternaam" />
+            <span asp-validation-for="Achternaam" class="validatie-tekst"></span>
+        </div>
+
+        <div class="form-create-input">
+            <label asp-for="Voornaam"></label>
+            <span asp-validation-for="Voornaam">*</span>
+            <input asp-for="Voornaam" />
+            <span asp-validation-for="Voornaam" class="validatie-tekst"></span>
+        </div>
+    </div>
+
+    <div class="form-create-input">
+        <label asp-for="Adres"></label>
+        <span asp-validation-for="Adres">*</span>
+        <input asp-for="Adres" />
+        <span asp-validation-for="Adres" class="validatie-tekst"></span>
+    </div>
+
+    <div class="form-create-flex">
+        <div class="form-create-input">
+            <label asp-for="Postcode"></label>
+            <span asp-validation-for="Postcode">*</span>
+            <input asp-for="Postcode" />
+            <span asp-validation-for="Postcode" class="validatie-tekst"></span>
+        </div>
+
+        <div class="form-create-input">
+            <label asp-for="Gemeente"></label>
+            <span asp-validation-for="Gemeente">*</span>
+            <input asp-for="Gemeente" />
+            <span asp-validation-for="Gemeente" class="validatie-tekst"></span>
+        </div>
+    </div>
+
+    <div class="form-create-flex">
+        <div class="form-create-input">
+            <label asp-for="Email"></label>
+            <span asp-validation-for="Email">*</span>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email" class="validatie-tekst"></span>
+        </div>
+
+        <div class="form-create-input">
+            <label asp-for="Telefoon"></label>
+            <span asp-validation-for="Telefoon">*</span>
+            <input asp-for="Telefoon" />
+            <span asp-validation-for="Telefoon" class="validatie-tekst"></span>
+        </div>
+    </div>
+
+    <div class="form-create-button">
+        <input type="submit" value="Doorsturen" class="btn btn-primary" />
+    </div>
+
+    @* <div asp-validation-summary="All">Validatie fouten :</div> *@
+</form>
