@@ -1,0 +1,60 @@
+﻿@model KlantViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="mb-4">Welkom op onze website !</h1>
+<h2>Om de reisbrochures te kunnen opsturen vragen we de volgende gegevens :</h2>
+
+<form asp-action="Create" method="post" class="form-create">
+    <div class="form-create-flex">
+        <div>
+            <label asp-for="Achternaam"></label>
+            <span asp-validation-for="Achternaam">*</span>
+            <input asp-for="Achternaam" />
+        </div>
+
+        <div>
+            <label asp-for="Voornaam"></label>
+            <span asp-validation-for="Voornaam">*</span>
+            <input asp-for="Voornaam" />
+        </div>
+    </div>
+
+    <label asp-for="Adres"></label>
+    <span asp-validation-for="Adres">*</span>
+    <input asp-for="Adres" />
+
+    <div class="form-create-flex">
+        <div>
+            <label asp-for="Postcode"></label>
+            <span asp-validation-for="Postcode">*</span>
+            <input asp-for="Postcode" />
+        </div>
+
+        <div>
+            <label asp-for="Gemeente"></label>
+            <span asp-validation-for="Gemeente">*</span>
+            <input asp-for="Gemeente" />
+        </div>
+    </div>
+
+    <div class="form-create-flex">
+        <div>
+            <label asp-for="Email"></label>
+            <span asp-validation-for="Email">*</span>
+            <input asp-for="Email" />
+        </div>
+
+        <div>
+            <label asp-for="Telefoon"></label>
+            <span asp-validation-for="Telefoon">*</span>
+            <input asp-for="Telefoon" />
+        </div>
+    </div>
+
+    <input type="submit" value="Doorsturen" class="btn btn-success" />
+
+    <div asp-validation-summary="All">Validatie fouten :</div>
+</form>
