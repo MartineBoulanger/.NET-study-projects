@@ -8,27 +8,28 @@
     <h1 class="display-4 mb-5">Brochures</h1>
     <h2>Tik jouw reisbestemming</h2>
     <form asp-action="AddBestemming" method="post" class="form-bestemmingen">
-        <span asp-validation-for="Bestemming"></span>
         <input asp-for="Bestemming" />
-
-        <input type="submit" value="Toevoegen" class="btn btn-success" />
+        <span asp-validation-for="Bestemming" class="validatie-tekst"></span>
+        <input type="submit" value="Toevoegen" class="btn btn-primary" />
     </form>
     @if (Model is not null && Model.Bestemmingen != null && Model.Bestemmingen.Any())
     {
-        <h2>Aangevraagde brochures</h2>
-        @foreach (var bestemming in Model.Bestemmingen)
-        {
-            <form asp-action="RemoveBestemming" method="post">
-                <div class="lijst-element">
-                    <input readonly asp-for="Bestemming" value="@bestemming" class="input-bestemming" />
-                    <button type="submit" class="remove-button">
-                        <img src="~/images/delete.png" alt="Delete @bestemming" height="20" />
-                    </button>
-                </div>
+        <div class="lijst-card">
+            <h2>Aangevraagde brochures</h2>
+            @foreach (var bestemming in Model.Bestemmingen)
+            {
+                <form asp-action="RemoveBestemming" method="post">
+                    <div class="lijst-element">
+                        <input readonly asp-for="Bestemming" value="@bestemming" class="input-bestemming" />
+                        <button type="submit" class="remove-button">
+                            <img src="~/images/delete.png" alt="Delete @bestemming" height="20" />
+                        </button>
+                    </div>
+                </form>
+            }
+            <form asp-action="ClearBestemmingen" method="post" class="form-delete-all">
+                <input type="submit" value="Brochures aanvragen" class="btn btn-dark" />
             </form>
-        }
-        <form asp-action="ClearBestemmingen" method="post" class="form-delete-all">
-            <input type="submit" value="Brochures aanvragen" class="btn btn-primary" />
-        </form>
+        </div>
     }
 </div>

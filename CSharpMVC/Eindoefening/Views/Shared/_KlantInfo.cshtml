@@ -1,6 +1,8 @@
-﻿@model KlantInfo
+﻿@{
+    var voornaam = ViewData["voornaam"]?.ToString();
+}
 
-@if (!string.IsNullOrEmpty(Model.Voornaam))
+@if (!string.IsNullOrEmpty(voornaam))
 {
-    <p class="klant-info">Welkom terug @Model.Voornaam!</p>
+    <span class="klant-info">Welkom terug @voornaam!</span>
 }

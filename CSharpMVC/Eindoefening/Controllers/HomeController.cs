@@ -17,47 +17,40 @@ namespace Eindoefening.Controllers
         {
             var klantCookie = Request.Cookies["KlantVoornaam"];
             if (string.IsNullOrEmpty(klantCookie))
-                return RedirectToAction("Create", "Klant");
+                return RedirectToAction("Aanmelden", "Klant");
 
+            // bestemmingen uit de session ophalen
             var bestemmingen = new BestemmingViewModel
             {
                 Bestemmingen = _bestemmingService.GetAll()
             };
 
+            // cookie meegeven aan ViewBag voor de partial view in de header
+            ViewBag.voornaam = klantCookie;
+
             return View(bestemmingen);
         }
 
-        // kijk of je hier een model aan kunt koppelen en dan kijken of je die partiel view async kunt maken indien nodig
-        public IActionResult KlantInfo()
-        {
-            KlantInfo klantInfo = new();
-            var voornaam = Request.Cookies["KlantVoornaam"];
-            if (string.IsNullOrEmpty(voornaam))
-                return RedirectToAction("Create", "Klant");
-            klantInfo.Voornaam = voornaam.ToString();
-            return PartialView("_KlantInfo", klantInfo);
-        }
-
         [HttpPost]
-        public IActionResult AddBestemming(BestemmingViewModel vm)
+        public IActionResult AddBestemming(BestemmingViewModel bvm)
         {
             var bestemmingen = _bestemmingService.GetAll();
 
             if (!this.ModelState.IsValid)
             {
-                vm.Bestemmingen = bestemmingen;
-                return View("Index", vm);
+                bvm.Bestemmingen = bestemmingen;
+                return View("Index", bvm);
             }
 
-            // er mogen geen dubbele bestemmingen zijn
-            var trimmed = vm.Bestemming.Trim();
+            // er mogen geen dubbele bestemmingen zijn - validatie
+            var trimmed = bvm.Bestemming.Trim();
             bool bestemmingBestaat = bestemmingen.Any(b => b.Equals(trimmed, StringComparison.OrdinalIgnoreCase));
 
             if (bestemmingBestaat)
             {
-                vm.Bestemmingen = bestemmingen;
+                bvm.Bestemmingen = bestemmingen;
                 this.ModelState.AddModelError("Bestemming", "De bestemming staat al in de lijst");
-                return View("Index", vm);
+                return View("Index", bvm);
             }
 
             _bestemmingService.Add(trimmed);
@@ -68,13 +61,13 @@ namespace Eindoefening.Controllers
         public IActionResult RemoveBestemming(string bestemming)
         {
             _bestemmingService.Remove(bestemming);
-            return Redirect("/home");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
         public IActionResult ClearBestemmingen()
         {
-            _bestemmingService.Opslaan(null!);
+            _bestemmingService.Opslaan(null!); // null doorgeven om hele lijst leeg te maken
             return RedirectToAction("Index");
         }
 

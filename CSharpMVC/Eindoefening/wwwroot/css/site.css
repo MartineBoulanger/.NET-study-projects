@@ -52,31 +52,42 @@ input {
     display: none;
 }
 
-/* custom form classes */
+/* create form page */
+.create-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.create-description {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.2em;
+}
+/* formulier */
 .form-create {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
     max-width: 450px;
     margin-inline: auto;
     margin-top: 20px;
     margin-bottom: 40px;
-    padding: 15px 15px 5px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-
-.form-bestemmingen {
-    width: 100%;
-    max-width: 250px;
-    margin-inline: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
+/* om button aan de rechter kant te hebben */
+.form-create-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
 }
-
-.form-delete-all {
-    margin-top: 20px;
-    margin-bottom: 40px;
+/* form input field */
+.form-create-input {
+    row-gap: 5px;
 }
-
 /* form sections */
 .form-create-flex {
     display: flex;
@@ -90,29 +101,51 @@ input {
     }
 }
 
-.lijst-element {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+/* bestemming invul form */
+.form-bestemmingen {
+    width: 100%;
+    max-width: 250px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
-
-/* form fields */
-.form-create input {
-    margin-bottom: 10px;
-}
-
-.form-bestemmingen input {
-    margin-bottom: 20px;
-}
-
-.form-create input[type="submit"]{
+/* form button */
+.form-bestemmingen input[type="submit"] {
     margin-top: 20px;
 }
 
+/* de brochures aanvragen button form */
+.form-delete-all {
+    margin-top: 20px;
+}
+
+/* alle buttons van de forms */
 .form-create input[type="submit"],
 .form-bestemmingen input[type="submit"],
 .form-delete-all input[type="submit"] {
     width: auto;
+}
+
+/* validatie span on de input fields */
+.validatie-tekst {
+    font-size: 0.9em;
+}
+
+/* styling van het hele lijst gedeelte */
+.lijst-card {
+    width: 100%;
+    max-width: max-content;
+    margin-inline: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.lijst-element {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .input-bestemming {
@@ -120,7 +153,7 @@ input {
     text-align: center;
     padding: 0;
     outline: none;
-    max-width: 150px;
+    max-width: 125px;
     height: auto;
 }
 
@@ -130,19 +163,17 @@ input {
     height: auto;
 }
 
-/* header custom classes */
+/* header custom classes - volgorde verschild voor mobiele schermen en desktop schermen */
 .toggle-button {
     order: 2;
 }
 
 .klant-info {
     order: 1;
-    margin-top: 18px;
 }
 
 @media screen and (min-width: 576px) {
     .klant-info {
         order: 2;
-        margin-top: 12px;
     }
 }

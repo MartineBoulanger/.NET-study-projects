@@ -5,8 +5,9 @@ namespace Eindoefening.Services
     public class BestemmingService
     {
         private const string SessionKey = "Bestemmingen";
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
+        // DI voor session gebruik
+        private readonly IHttpContextAccessor _httpContextAccessor;
         public BestemmingService(IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
@@ -14,9 +15,11 @@ namespace Eindoefening.Services
 
         public List<string> GetAll()
         {
+            // Check of er session data is
             var sessionData = _httpContextAccessor?.HttpContext?.Session.GetString(SessionKey);
             if (sessionData == null) return new List<string>();
 
+            // omzetten naar een lijst voor de view
             var bestemmingen = JsonSerializer.Deserialize<List<string>>(sessionData);
             if (bestemmingen == null) return new List<string>();
 
@@ -25,24 +28,30 @@ namespace Eindoefening.Services
 
         public void Remove(string bestemming)
         {
-            var bestemmingen = GetAll();
-            bestemmingen.Remove(bestemming);
-            Opslaan(bestemmingen);
+            if (!string.IsNullOrEmpty(bestemming))
+            {
+                var bestemmingen = GetAll();
+                bestemmingen.Remove(bestemming);
+                Opslaan(bestemmingen);
+            }
         }
 
         public void Add(string bestemming)
         {
-            var bestemmingen = GetAll();
-            bestemmingen.Add(bestemming);
-            Opslaan(bestemmingen);
+            if (!string.IsNullOrEmpty(bestemming))
+            {             
+                var bestemmingen = GetAll();
+                bestemmingen.Add(bestemming);
+                Opslaan(bestemmingen);
+            }
         }
 
-        public void Opslaan(List<string> lijst)
+        public void Opslaan(List<string> bestemmingen)
         {
-            // als lijst null is wordt hele session gecleared -- zie HomController action ClearBestemmingen
-            if (lijst == null)
+            // als lijst bestemmingen null is wordt hele session gecleared -- zie HomeController action ClearBestemmingen
+            if (bestemmingen == null)
                 _httpContextAccessor?.HttpContext?.Session.Clear();
-            var sessionData = JsonSerializer.Serialize(lijst);
+            var sessionData = JsonSerializer.Serialize(bestemmingen);
             _httpContextAccessor?.HttpContext?.Session.SetString(SessionKey, sessionData);
         }
     }
