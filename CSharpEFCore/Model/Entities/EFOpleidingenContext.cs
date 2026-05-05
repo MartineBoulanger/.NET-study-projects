@@ -10,6 +10,7 @@ namespace Model.Entities
         // entity collections
         public DbSet<Campus> Campussen { get; set; }
         public DbSet<Docent> Docenten { get; set; }
+        public DbSet<Land> Landen { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
