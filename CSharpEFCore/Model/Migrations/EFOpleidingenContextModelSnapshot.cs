@@ -54,7 +54,63 @@ namespace Model.Migrations
 
                     b.HasKey("CampusId");
 
-                    b.ToTable("Campussen");
+                    b.ToTable("Campussen", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CampusId = 1,
+                            Gemeente = "Antwerpen",
+                            Huisnummer = "22",
+                            Naam = "Andros",
+                            Postcode = "2018",
+                            Straat = "Somersstraat"
+                        },
+                        new
+                        {
+                            CampusId = 2,
+                            Gemeente = "Wondelgem",
+                            Huisnummer = "50",
+                            Naam = "Delos",
+                            Postcode = "9032",
+                            Straat = "Industrieweg"
+                        },
+                        new
+                        {
+                            CampusId = 3,
+                            Gemeente = "Genk",
+                            Huisnummer = "37",
+                            Naam = "Gavdos",
+                            Postcode = "3600",
+                            Straat = "Europalaan"
+                        },
+                        new
+                        {
+                            CampusId = 4,
+                            Gemeente = "Heverlee",
+                            Huisnummer = "2",
+                            Naam = "Hydra",
+                            Postcode = "3001",
+                            Straat = "Interleuvenlaan"
+                        },
+                        new
+                        {
+                            CampusId = 5,
+                            Gemeente = "Wevelgem",
+                            Huisnummer = "10",
+                            Naam = "Ikaria",
+                            Postcode = "8560",
+                            Straat = "Vlamingstraat"
+                        },
+                        new
+                        {
+                            CampusId = 6,
+                            Gemeente = "Oostende",
+                            Huisnummer = "4",
+                            Naam = "Oinouses",
+                            Postcode = "8400",
+                            Straat = "Akkerstraat"
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Docent", b =>
@@ -105,7 +161,59 @@ namespace Model.Migrations
 
                     b.HasIndex("LandCode");
 
-                    b.ToTable("Docenten");
+                    b.ToTable("Docenten", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            DocentId = 1,
+                            CampusId = 4,
+                            Familienaam = "Abbeloos",
+                            Geboortedatum = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Geslacht = 0,
+                            InDienst = new DateTime(2019, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LandCode = "BE",
+                            Voornaam = "Willy",
+                            Wedde = 1400m
+                        },
+                        new
+                        {
+                            DocentId = 2,
+                            CampusId = 2,
+                            Familienaam = "Abelshausen",
+                            Geboortedatum = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Geslacht = 0,
+                            HeeftRijbewijs = true,
+                            InDienst = new DateTime(2019, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LandCode = "BE",
+                            Voornaam = "Joseph",
+                            Wedde = 1800m
+                        },
+                        new
+                        {
+                            DocentId = 3,
+                            CampusId = 3,
+                            Familienaam = "Achten",
+                            Geboortedatum = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Geslacht = 0,
+                            HeeftRijbewijs = false,
+                            InDienst = new DateTime(2019, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LandCode = "BE",
+                            Voornaam = "Joseph",
+                            Wedde = 1300m
+                        },
+                        new
+                        {
+                            DocentId = 4,
+                            CampusId = 1,
+                            Familienaam = "Adam",
+                            Geboortedatum = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Geslacht = 0,
+                            InDienst = new DateTime(2019, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LandCode = "BE",
+                            Voornaam = "Francois",
+                            Wedde = 1700m
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Land", b =>
@@ -119,7 +227,44 @@ namespace Model.Migrations
 
                     b.HasKey("LandCode");
 
-                    b.ToTable("Landen");
+                    b.ToTable("Landen", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            LandCode = "BE",
+                            Naam = "België"
+                        },
+                        new
+                        {
+                            LandCode = "NL",
+                            Naam = "Nederland"
+                        },
+                        new
+                        {
+                            LandCode = "DE",
+                            Naam = "Duitsland"
+                        },
+                        new
+                        {
+                            LandCode = "FR",
+                            Naam = "Frankrijk"
+                        },
+                        new
+                        {
+                            LandCode = "IT",
+                            Naam = "Italië"
+                        },
+                        new
+                        {
+                            LandCode = "LU",
+                            Naam = "Luxemburg"
+                        },
+                        new
+                        {
+                            LandCode = "GB",
+                            Naam = "Groot-Brittannië"
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Docent", b =>
