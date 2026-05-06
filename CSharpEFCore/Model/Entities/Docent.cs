@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Entities
 {
-    public class Docent
+    public partial class Docent
     {
         public int DocentId { get; set; }
 
@@ -24,6 +24,8 @@ namespace Model.Entities
         public DateTime InDienst { get; set; }
 
         public bool? HeeftRijbewijs { get; set; }
+
+        public Geslacht Geslacht { get; set; }
 
         // Associatie met Land class
         [ForeignKey("Land")]

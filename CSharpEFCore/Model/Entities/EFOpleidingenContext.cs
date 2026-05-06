@@ -17,9 +17,15 @@ namespace Model.Entities
             // connectionstring hardcoded
             //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFOpleidingen;Trusted_Connection=true;encrypt=false", options => options.MaxBatchSize(150));
             // connection string ophalen uit the configuratie bestand
-            configuration = new ConfigurationBuilder().SetBasePath(Directory.GetParent(AppContext.BaseDirectory)?.FullName).AddJsonFile("appsettings.json", false).Build();
+            var parent = Directory.GetParent(AppContext.BaseDirectory)?.FullName;
+            configuration = new ConfigurationBuilder().SetBasePath(parent ?? null!).AddJsonFile("appsettings.json", false).Build();
             var connectionString = configuration.GetConnectionString("EFOpleidingen");
             if (connectionString != null) optionsBuilder.UseSqlServer(connectionString, options => options.MaxBatchSize(150));
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Campus>().HasKey(c => c.CampusId);
         }
     }
 }

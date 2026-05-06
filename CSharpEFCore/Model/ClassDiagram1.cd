@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Model.Entities.Campus">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAABAAAAAAAIhAAAAACAAAAAAAEAAAAACAA=</HashCode>
+      <FileName>Entities\Campus.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Docenten" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Model.Entities.Docent">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAoAAgAAAAAAIAABAAAAAAAAAgAAokCAAAAAAE=</HashCode>
+      <FileName>Entities\Docent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Campus" />
+      <Property Name="Land" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Model.Entities.EFOpleidingenContext">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAQAAAAAAAAAAAABAkACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\EFOpleidingenContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Entities.Land">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAABAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Land.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Docenten" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Model.Migrations.first_migration">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20260505103533_first_migration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Migrations.met_annotations">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20260505155721_met_annotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Migrations.EFOpleidingenContextModelSnapshot">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\EFOpleidingenContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

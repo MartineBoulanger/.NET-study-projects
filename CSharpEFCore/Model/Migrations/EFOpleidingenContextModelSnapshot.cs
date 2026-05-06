@@ -73,6 +73,12 @@ namespace Model.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
+                    b.Property<DateTime>("Geboortedatum")
+                        .HasColumnType("date");
+
+                    b.Property<int>("Geslacht")
+                        .HasColumnType("int");
+
                     b.Property<bool?>("HeeftRijbewijs")
                         .HasColumnType("bit");
 
