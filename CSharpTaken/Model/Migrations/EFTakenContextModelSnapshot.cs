@@ -41,6 +41,33 @@ namespace Model.Migrations
                     b.HasIndex("KlantNr1");
 
                     b.ToTable("Klanten");
+
+                    b.HasData(
+                        new
+                        {
+                            KlantNr = 1,
+                            Voornaam = "Marge"
+                        },
+                        new
+                        {
+                            KlantNr = 2,
+                            Voornaam = "Homer"
+                        },
+                        new
+                        {
+                            KlantNr = 3,
+                            Voornaam = "Lisa"
+                        },
+                        new
+                        {
+                            KlantNr = 4,
+                            Voornaam = "Maggie"
+                        },
+                        new
+                        {
+                            KlantNr = 5,
+                            Voornaam = "Bart"
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Rekening", b =>
@@ -64,6 +91,29 @@ namespace Model.Migrations
                     b.HasIndex("KlantNr");
 
                     b.ToTable("Rekeningen");
+
+                    b.HasData(
+                        new
+                        {
+                            RekeningNr = "BE12-4567-8900-0212",
+                            KlantNr = 1,
+                            Saldo = 1000m,
+                            Soort = "Z"
+                        },
+                        new
+                        {
+                            RekeningNr = "BE23-4567-8901-6954",
+                            KlantNr = 1,
+                            Saldo = 1000m,
+                            Soort = "S"
+                        },
+                        new
+                        {
+                            RekeningNr = "BE34-5678-9012-1214",
+                            KlantNr = 2,
+                            Saldo = 1000m,
+                            Soort = "S"
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Klant", b =>
