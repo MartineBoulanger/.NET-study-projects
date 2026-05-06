@@ -21,6 +21,9 @@ namespace Model.Entities
             //configuration = new ConfigurationBuilder().SetBasePath(parent ?? null!).AddJsonFile("appsettings.json", false).Build();
             //var connectionString = configuration.GetConnectionString("EFOpleidingen");
             //if (connectionString != null) optionsBuilder.UseSqlServer(connectionString, options => options.MaxBatchSize(150));
+
+            // logging van de SQL statements
+            //optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
