@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TDDCursusLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f8e8c5931c07deefebd2c7578960d20a109865f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7aa3e6f0d5d92cba66d4df99f311b73c6507dfa0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TDDCursusLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TDDCursusLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
