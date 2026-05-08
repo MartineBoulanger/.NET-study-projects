@@ -16,6 +16,11 @@ namespace Model.Entities
         {
             // connectionstring hardcoded
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFOpleidingen;Trusted_Connection=true;encrypt=false", options => options.MaxBatchSize(150));
+            //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFOpleidingen;Trusted_Connection=true;encrypt=false;MultipleActiveResultSets=True", options => options.MaxBatchSize(150));
+
+            // met lazy loading geactiveerd
+            //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFOpleidingen;Trusted_Connection=true;encrypt=false;MultipleActiveResultSets=True", options => options.MaxBatchSize(150)).UseLazyLoadingProxies();
+
             // connection string ophalen uit the configuratie bestand
             //var parent = Directory.GetParent(AppContext.BaseDirectory)?.FullName;
             //configuration = new ConfigurationBuilder().SetBasePath(parent ?? null!).AddJsonFile("appsettings.json", false).Build();

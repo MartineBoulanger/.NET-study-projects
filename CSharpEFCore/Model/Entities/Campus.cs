@@ -5,6 +5,16 @@ namespace Model.Entities
 {
     public class Campus
     {
+        //private readonly ILazyLoader lazyloader;
+        //public Campus(ILazyLoader lazyloader)
+        //{
+        //    this.lazyloader = lazyloader;
+        //}
+        //public Campus()
+        //{
+        //    Docenten = new List<Docent>();
+        //}
+
         public int CampusId { get; set; }
 
         [Required]
@@ -24,6 +34,17 @@ namespace Model.Entities
         public string Commentaar { get; set; }
 
         // Associatie met Docent class
-        public ICollection<Docent> Docenten { get; set; }
+        // gebruik virtual om lazy loading te kunnen gebruiken
+        //public virtual ICollection<Docent> Docenten { get; set; } = new List<Docent>();
+        public ICollection<Docent> Docenten { get; set; } = new List<Docent>();
+        // lazy loading met DI
+        //private ICollection<Docent> docenten;
+
+        //public ICollection<Docent> Docenten
+        //{
+        //    get => lazyloader.Load(this, ref docenten);
+        //    set => docenten = value;
+        //}
+
     }
 }
