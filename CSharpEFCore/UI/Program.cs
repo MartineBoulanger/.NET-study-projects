@@ -1,5 +1,6 @@
 ﻿using Model.Entities;
-//using var context = new EFOpleidingenContext();
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
 //{
 //    Console.WriteLine(docent.Naam);
@@ -8,7 +9,6 @@
 //Console.WriteLine("Minimum wedde:");
 //if (decimal.TryParse(Console.ReadLine(), out decimal minWedde))
 //{
-//    using var context = new EFOpleidingenContext();
 //    //var query = from docent in context.Docenten where docent.Wedde >= minWedde orderby docent.Voornaam, docent.Familienaam select docent;
 //    var query = context.Docenten.Where(d => d.Wedde >= minWedde).OrderBy(d => d.Voornaam).ThenBy(d => d.Familienaam); // met de query-methods
 //    foreach (var d in query)
@@ -25,7 +25,6 @@
 //{
 //    Console.Write("Sorteren: 1 = op wedde, 2 = op familienaam, 3 = op voornaam :");
 //    var sorterenOp = Console.ReadLine();
-//    using var context = new EFOpleidingenContext();
 //    IQueryable<Docent> query;
 //    switch (sorterenOp)
 //    {
@@ -88,7 +87,6 @@
 //Console.WriteLine(context.Docenten.ToQueryString());
 
 // Zoeken met Find op PK
-//using var context = new EFOpleidingenContext();
 //Console.Write("DocentNr.:");
 //if (int.TryParse(Console.ReadLine(), out int docentNr))
 //{
@@ -105,7 +103,6 @@
 //Console.WriteLine("{0}: {1}", campusDeel.CampusId, campusDeel.Naam);
 
 // Groeperen en aggregeren
-//using var context = new EFOpleidingenContext();
 //var query = from docent in context.Docenten group docent by docent.Voornaam into voornaamGroep select new { Voornaam = voornaamGroep.Key, Aantal = voornaamGroep.Count() };
 //foreach (var voornaamStatistiek in query)
 //{
@@ -114,7 +111,6 @@
 //}
 
 // eager loading
-//using var context = new EFOpleidingenContext();
 //Console.Write("Voornaam:");
 //var voornaam = Console.ReadLine();
 //var query = from docent in context.Docenten.Include("Campus") where docent.Voornaam == voornaam select docent;
@@ -135,7 +131,6 @@
 //}
 
 // lazy loading
-//using var context = new EFOpleidingenContext();
 //Console.WriteLine("Voornaam:");
 //var voornaam = Console.ReadLine();
 //var query = from docent in context.Docenten where docent.Voornaam == voornaam select docent;
@@ -145,7 +140,6 @@
 
 // met de method ToList()
 //List<Campus> campussen;
-//using var context = new EFOpleidingenContext();
 //var query = from campus in context.Campussen orderby campus.Naam select campus;
 //campussen = query.ToList();
 //foreach (var campus in campussen) Console.WriteLine(campus.Naam);
@@ -153,12 +147,72 @@
 //foreach (var campus in campussen) Console.WriteLine(campus.Naam);
 //Console.WriteLine(query.ToQueryString());
 // list doorgeven aan method
-foreach (var campus in FindAllCampussen())
-    Console.WriteLine(campus.Naam);
-List<Campus> FindAllCampussen()
+//foreach (var campus in FindAllCampussen())
+//    Console.WriteLine(campus.Naam);
+//List<Campus> FindAllCampussen()
+//{
+//    return (from campus in context.Campussen
+//            orderby campus.Naam
+//            select campus).ToList();
+//}
+
+// Entity toevoegen aan database
+//var campus = new Campus { Naam = "Campus01", Straat = "Straat01", Huisnummer = "1", Postcode = "1111", Gemeente = "Gemeente01" };
+//context.Campussen.Add(campus);
+//context.SaveChanges(); // hier pas worden de wijzigingen in de database doorgevoerd
+//Console.WriteLine(campus.CampusId);
+
+// meerdere entiteiten toevoegen
+//var campus2 = new Campus { Naam = "Campus02", Straat = "Straat02", Huisnummer = "2", Postcode = "2222", Gemeente = "Gemeente02" };
+//var campus3 = new Campus { Naam = "Campus03", Straat = "Straat03", Huisnummer = "3", Postcode = "3333", Gemeente = "Gemeente03" };
+//var campus4 = new Campus { Naam = "Campus04", Straat = "Straat04", Huisnummer = "4", Postcode = "4444", Gemeente = "Gemeente04" };
+//var campus5 = new Campus { Naam = "Campus05", Straat = "Straat05", Huisnummer = "5", Postcode = "5555", Gemeente = "Gemeente05" };
+//context.Campussen.AddRange(campus2, campus3);
+//context.AddRange(new List<Campus> { campus4, campus5 });
+//context.SaveChanges();
+
+// meerdrere entiteiten toevoegen van verschillende types
+//var campus6 = new Campus { Naam = "Campus06", Straat = "Straat06", Huisnummer = "6", Postcode = "6666", Gemeente = "Gemeente06" };
+//var docent1 = new Docent { Familienaam = "Docent01", Voornaam = "Voornaam01", Wedde = 1111m, CampusId = 1, LandCode = "FR" };
+//context.AddRange(campus6, docent1);
+//context.SaveChanges();
+
+// entiteiten met bijbehorende associaties toevoegen
+//var campus7 = new Campus { Naam = "Campus07", Straat = "Straat07", Huisnummer = "7", Postcode = "7777", Gemeente = "Gemeente07" };
+//var docent2 = new Docent { Familienaam = "Docent02", Voornaam = "Voornaam02", Wedde = 2222m, LandCode = "NL" };
+//campus7.Docenten.Add(docent2);
+//context.Campussen.AddRange(campus7);
+//context.SaveChanges();
+
+// tweede voorbeeld van entiteiten met bijbehorende associaties toevoegen
+//var campus8 = new Campus { Naam = "Campus08", Straat = "Straat08", Huisnummer = "8", Postcode = "8888", Gemeente = "Gemeente08" };
+//var docent3 = new Docent { Familienaam = "Docent03", Voornaam = "Voornaam03", Wedde = 3333m, LandCode = "IT" };
+//docent3.Campus = campus8;
+//context.Add(docent3);
+//context.SaveChanges();
+
+// nieuwe entiteit koppelen aan een bestaande entiteit
+//var docent4 = new Docent { Voornaam = "Voornaam04", Familienaam = "Docent04", Wedde = 4444m, LandCode = "GB" };
+// methode 1
+//var campus1 = context.Campussen.Find(1);
+//if (campus1 != null)
+//{
+//    context.Docenten.Add(docent4);
+//    docent4.Campus = campus1;
+//    context.SaveChanges();
+//}
+//else Console.WriteLine("Campus 1 niet gevonden");
+// methode 2
+//var docent5 = new Docent { Voornaam = "Voornaam05", Familienaam = "Docent05", Wedde = 5555m, LandCode = "LU", CampusId = 1 };
+//context.Docenten.Add(docent5);
+//context.SaveChanges();
+
+// vanuit de een-kant van de relatie -- de andere werken vanuit de veel-kant van de relatie
+var docent6 = new Docent { Voornaam = "Voornaam06", Familienaam = "Docent06", Wedde = 6666m, LandCode = "DE" };
+var campus1 = context.Campussen.Find(1);
+if (campus1 != null)
 {
-    using var context = new EFOpleidingenContext();
-    return (from campus in context.Campussen
-            orderby campus.Naam
-            select campus).ToList();
+    campus1.Docenten.Add(docent6);
+    context.SaveChanges();
 }
+else Console.WriteLine("Campus 1 niet gevonden");
