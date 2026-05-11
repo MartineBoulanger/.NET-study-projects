@@ -1,4 +1,5 @@
-﻿using Model.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Model.Entities;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
@@ -208,11 +209,93 @@ using var context = new EFOpleidingenContext();
 //context.SaveChanges();
 
 // vanuit de een-kant van de relatie -- de andere werken vanuit de veel-kant van de relatie
-var docent6 = new Docent { Voornaam = "Voornaam06", Familienaam = "Docent06", Wedde = 6666m, LandCode = "DE" };
-var campus1 = context.Campussen.Find(1);
-if (campus1 != null)
+//var docent6 = new Docent { Voornaam = "Voornaam06", Familienaam = "Docent06", Wedde = 6666m, LandCode = "DE" };
+//var campus1 = context.Campussen.Find(1);
+//if (campus1 != null)
+//{
+//    campus1.Docenten.Add(docent6);
+//    context.SaveChanges();
+//}
+//else Console.WriteLine("Campus 1 niet gevonden");
+
+// wijzigen van gegevens
+// wijziging van 1 property waarde
+//Console.Write("DocentNr: ");
+//if (int.TryParse(Console.ReadLine(), out int docentNr))
+//{
+//    var docent = context.Docenten.Find(docentNr);
+//    if (docent is not null)
+//    {
+//        Console.WriteLine("Wedde:{0}", docent.Wedde);
+//        Console.Write(" Bedrag: ");
+//        if (decimal.TryParse(Console.ReadLine(), out decimal bedrag))
+//        {
+//            docent.Opslag(bedrag);
+//            context.SaveChanges();
+//        }
+//        else Console.WriteLine("Tik een getal");
+//    }
+//    else Console.WriteLine("Docent niet gevonden");
+//}
+//else Console.WriteLine("Tik een getal");
+// wijzigen van enkele gegevens terwijl alle gegevens worden opgeroepen
+//Console.Write("Bovengrens: ");
+//if (int.TryParse(Console.ReadLine(), out int grens))
+//{
+//    foreach (var docent in context.Docenten) if (docent.Wedde <= grens) docent.Opslag(100m);
+//    context.SaveChanges();
+//}
+//else Console.WriteLine("Tik een getal");
+
+// wijzigen van enititeiten rechtstreeks in de database
+//Console.Write("DocentNr: ");
+//if (int.TryParse(Console.ReadLine(), out int docentNr))
+//{
+//    Console.Write("Bedrag: ");
+//    if (decimal.TryParse(Console.ReadLine(), out decimal bedrag))
+//    {
+//        context.Docenten.Where(d => d.DocentId == docentNr).ExecuteUpdate(d => d.SetProperty(p => p.Wedde, p => p.Wedde + bedrag));
+//    }
+//    else Console.WriteLine("Tik een getal");
+//}
+//else Console.WriteLine("Tik een getal");
+
+// entiteit wijzigen die inderect geassocieerd is met de entiteit die we opvragen
+//var campus1 = context.Campussen.Include(c => c.Docenten).FirstOrDefault(c => c.CampusId == 1);
+//if (campus1 != null) { foreach (var docent in campus1.Docenten) docent.Opslag(10m); context.SaveChanges(); }
+
+// associaties wijzigen
+// manier 1
+//var docent1 = context.Docenten.Find(1);
+//if (docent1 is not null)
+//{
+//    var campus6 = context.Campussen.Find(6);
+//    if (campus6 is not null)
+//    {
+//        docent1.Campus = campus6;
+//        context.SaveChanges();
+//    }
+//    else Console.WriteLine("Campus 6 niet gevonden");
+//}
+//else Console.WriteLine("Docent 1 is niet gevonden");
+// manier 2 dmv de FK
+//var docent1 = context.Docenten.Find(1);
+//if (docent1 is not null)
+//{
+//    docent1.CampusId = 2;
+//    context.SaveChanges();
+//}
+//else Console.WriteLine("Docent 1 is niet gevonden");
+// het verhuizen van docent naar een andere campus - de een-kant relatie wijziging
+var docent1 = context.Docenten.Find(1);
+if (docent1 is not null)
 {
-    campus1.Docenten.Add(docent6);
-    context.SaveChanges();
+    var campus3 = context.Campussen.Find(3);
+    if (campus3 is not null)
+    {
+        campus3.Docenten.Add(docent1);
+        context.SaveChanges();
+    }
+    else Console.WriteLine("Campus 3 niet gevonden");
 }
-else Console.WriteLine("Campus 1 niet gevonden");
+else Console.WriteLine("Docent 1 is niet gevonden");
