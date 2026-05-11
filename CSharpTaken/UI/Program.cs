@@ -12,16 +12,36 @@ using var context = new EFTakenContext();
 
 
 // Oefening hoofdstuk 6 - blz. 64
-var query = from klant in context.Klanten.Include(k => k.Rekeningen) orderby klant.Voornaam select klant;
-foreach (var klant in query)
+//var query = from klant in context.Klanten.Include(k => k.Rekeningen) orderby klant.Voornaam select klant;
+//foreach (var klant in query)
+//{
+//    Console.WriteLine(klant.Voornaam);
+//    var totaleSaldo = Decimal.Zero;
+//    foreach (var rekening in klant.Rekeningen)
+//    {
+//        Console.WriteLine("{0}: {1}", rekening.RekeningNr, rekening.Saldo);
+//        totaleSaldo += rekening.Saldo;
+//    }
+//    Console.WriteLine("Totaal: {0}", totaleSaldo);
+//    Console.WriteLine();
+//}
+
+// Oefening hoofdstuk 7 - blz. 70
+Console.WriteLine("Klantenlijst");
+foreach (var klant in context.Klanten.OrderBy(k => k.Voornaam)) Console.WriteLine("{0}: {1}", klant.KlantNr, klant.Voornaam);
+Console.WriteLine();
+Console.Write("KlantNr: ");
+if (int.TryParse(Console.ReadLine(), out int klantNr))
 {
-    Console.WriteLine(klant.Voornaam);
-    var totaleSaldo = Decimal.Zero;
-    foreach (var rekening in klant.Rekeningen)
+    var klant = context.Klanten.Find(klantNr);
+    if (klant is null) Console.WriteLine(" Klant niet gevonden");
+    else
     {
-        Console.WriteLine("{0}: {1}", rekening.RekeningNr, rekening.Saldo);
-        totaleSaldo += rekening.Saldo;
+        Console.WriteLine("Geef het nieuwe rekeningnummer: ");
+        var nieuwRekeningNr = Console.ReadLine();
+        var rekening = new Rekening { RekeningNr = nieuwRekeningNr, Saldo = 0m, Soort = 'Z', Klant = klant };
+        context.Rekeningen.Add(rekening);
+        context.SaveChanges();
     }
-    Console.WriteLine("Totaal: {0}", totaleSaldo);
-    Console.WriteLine();
 }
+else Console.WriteLine("Dit is geen getal");
