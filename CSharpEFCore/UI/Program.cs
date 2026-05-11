@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Model.Entities;
+﻿using Model.Entities;
 //using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
 //{
@@ -115,22 +114,51 @@ using Model.Entities;
 //}
 
 // eager loading
-using var context = new EFOpleidingenContext();
+//using var context = new EFOpleidingenContext();
 //Console.Write("Voornaam:");
 //var voornaam = Console.ReadLine();
 //var query = from docent in context.Docenten.Include("Campus") where docent.Voornaam == voornaam select docent;
 //foreach (var docent in query)
 //    Console.WriteLine("{0} : {1}", docent.Naam, docent.Campus.Naam);
-Console.Write("Geef (een deel van) de naam van de campus:");
-var deelNaam = Console.ReadLine();
+//Console.Write("Geef (een deel van) de naam van de campus:");
+//var deelNaam = Console.ReadLine();
 //var query2 = from campus in context.Campussen.Include(c => c.Docenten) where campus.Naam.Contains(deelNaam) orderby campus.Naam select campus;
-var query2 = context.Campussen.Include(c => c.Docenten).Where(campus => campus.Naam.Contains(deelNaam)).OrderBy(campus => campus.Naam);
-foreach (var campus in query2)
+//var query2 = context.Campussen.Include(c => c.Docenten).Where(campus => campus.Naam.Contains(deelNaam)).OrderBy(campus => campus.Naam);
+//foreach (var campus in query2)
+//{
+//    var campusNaam = campus.Naam;
+//    Console.WriteLine(campusNaam);
+//    Console.WriteLine(new string('-', campusNaam.Length));
+//    foreach (var docent in campus.Docenten)
+//        Console.WriteLine(docent.Naam);
+//    Console.WriteLine();
+//}
+
+// lazy loading
+//using var context = new EFOpleidingenContext();
+//Console.WriteLine("Voornaam:");
+//var voornaam = Console.ReadLine();
+//var query = from docent in context.Docenten where docent.Voornaam == voornaam select docent;
+//foreach (var docent in query)
+//    Console.WriteLine("{0} : {1}", docent.Naam, docent.Campus.Naam);
+
+
+// met de method ToList()
+//List<Campus> campussen;
+//using var context = new EFOpleidingenContext();
+//var query = from campus in context.Campussen orderby campus.Naam select campus;
+//campussen = query.ToList();
+//foreach (var campus in campussen) Console.WriteLine(campus.Naam);
+//Console.WriteLine();
+//foreach (var campus in campussen) Console.WriteLine(campus.Naam);
+//Console.WriteLine(query.ToQueryString());
+// list doorgeven aan method
+foreach (var campus in FindAllCampussen())
+    Console.WriteLine(campus.Naam);
+List<Campus> FindAllCampussen()
 {
-    var campusNaam = campus.Naam;
-    Console.WriteLine(campusNaam);
-    Console.WriteLine(new string('-', campusNaam.Length));
-    foreach (var docent in campus.Docenten)
-        Console.WriteLine(docent.Naam);
-    Console.WriteLine();
+    using var context = new EFOpleidingenContext();
+    return (from campus in context.Campussen
+            orderby campus.Naam
+            select campus).ToList();
 }

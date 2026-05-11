@@ -38,6 +38,22 @@
           }
         }
       },
+      "Castle.Core/5.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "compile": {
@@ -197,6 +213,25 @@
       },
       "Microsoft.EntityFrameworkCore.Analyzers/10.0.7": {
         "type": "package"
+      },
+      "Microsoft.EntityFrameworkCore.Proxies/10.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "5.2.1",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.Extensions.Caching.Memory": "10.0.7",
+          "Microsoft.Extensions.Logging": "10.0.7"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Proxies.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Proxies.dll": {
+            "related": ".xml"
+          }
+        }
       },
       "Microsoft.EntityFrameworkCore.Relational/10.0.7": {
         "type": "package",
@@ -710,7 +745,7 @@
       "System.Diagnostics.EventLog/9.0.4": {
         "type": "package",
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/System.Diagnostics.EventLog.dll": {
             "related": ".xml"
           }
         },
@@ -809,6 +844,8 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Proxies": "10.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.7",
           "Microsoft.Extensions.Configuration.Json": "10.0.7"
         },
@@ -860,6 +897,30 @@
         "lib/net8.0/Azure.Identity.xml",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Castle.Core/5.2.1": {
+      "sha512": "wHARzQA695jwwKreOzNsq54KiGqKP38tv8hi8e2FXDEC/sA6BtrX90tVPDkOfVu13PbEzr00TCV8coikl+D1Iw==",
+      "type": "package",
+      "path": "castle.core/5.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle-logo.png",
+        "castle.core.5.2.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net462/Castle.Core.dll",
+        "lib/net462/Castle.Core.xml",
+        "lib/net6.0/Castle.Core.dll",
+        "lib/net6.0/Castle.Core.xml",
+        "lib/netstandard2.0/Castle.Core.dll",
+        "lib/netstandard2.0/Castle.Core.xml",
+        "lib/netstandard2.1/Castle.Core.dll",
+        "lib/netstandard2.1/Castle.Core.xml",
+        "readme.txt"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -1046,6 +1107,21 @@
         "docs/PACKAGE.md",
         "microsoft.entityframeworkcore.analyzers.10.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Proxies/10.0.7": {
+      "sha512": "/eLOqgoka0Yezz9MbFHDXiRhIPR+ksczx0kJ7wm5xxpOs9K/1dZ71OYng6EYoT5sOxb/1Jxge2+8/Z6K8oX0RA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.proxies/10.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Proxies.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Proxies.xml",
+        "microsoft.entityframeworkcore.proxies.10.0.7.nupkg.sha512",
+        "microsoft.entityframeworkcore.proxies.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/10.0.7": {
@@ -1991,23 +2067,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cursist\\.nuget\\packages\\": {},
+    "C:\\Users\\marti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\UI\\UI.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpEFCore\\UI\\UI.csproj",
       "projectName": "UI",
-      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\UI\\UI.csproj",
-      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\UI\\obj\\",
+      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpEFCore\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpEFCore\\UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2024,8 +2100,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\Model\\Model.csproj"
+            "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpEFCore\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpEFCore\\Model\\Model.csproj"
             }
           }
         }

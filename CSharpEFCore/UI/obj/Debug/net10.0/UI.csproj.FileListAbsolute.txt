@@ -160,3 +160,5 @@ C:\Users\cursist\source\repos\DOTNET\CSharpEFCore\UI\obj\Debug\net10.0\refint\UI
 C:\Users\cursist\source\repos\DOTNET\CSharpEFCore\UI\obj\Debug\net10.0\UI.pdb
 C:\Users\cursist\source\repos\DOTNET\CSharpEFCore\UI\obj\Debug\net10.0\UI.genruntimeconfig.cache
 C:\Users\cursist\source\repos\DOTNET\CSharpEFCore\UI\obj\Debug\net10.0\ref\UI.dll
+C:\Users\marti\source\repos\DOTNET\CSharpEFCore\UI\bin\Debug\net10.0\Castle.Core.dll
+C:\Users\marti\source\repos\DOTNET\CSharpEFCore\UI\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Proxies.dll
