@@ -27,21 +27,41 @@ using var context = new EFTakenContext();
 //}
 
 // Oefening hoofdstuk 7 - blz. 70
-Console.WriteLine("Klantenlijst");
-foreach (var klant in context.Klanten.OrderBy(k => k.Voornaam)) Console.WriteLine("{0}: {1}", klant.KlantNr, klant.Voornaam);
-Console.WriteLine();
-Console.Write("KlantNr: ");
-if (int.TryParse(Console.ReadLine(), out int klantNr))
+//Console.WriteLine("Klantenlijst");
+//foreach (var klant in context.Klanten.OrderBy(k => k.Voornaam)) Console.WriteLine("{0}: {1}", klant.KlantNr, klant.Voornaam);
+//Console.WriteLine();
+//Console.Write("KlantNr: ");
+//if (int.TryParse(Console.ReadLine(), out int klantNr))
+//{
+//    var klant = context.Klanten.Find(klantNr);
+//    if (klant is null) Console.WriteLine(" Klant niet gevonden");
+//    else
+//    {
+//        Console.WriteLine("Geef het nieuwe rekeningnummer: ");
+//        var nieuwRekeningNr = Console.ReadLine();
+//        var rekening = new Rekening { RekeningNr = nieuwRekeningNr, Saldo = 0m, Soort = 'Z', Klant = klant };
+//        context.Rekeningen.Add(rekening);
+//        context.SaveChanges();
+//    }
+//}
+//else Console.WriteLine("Dit is geen getal");
+
+// Oefening hoofdstuk 8 - blz. 75
+Console.Write("RekeningNr.: ");
+var rekeningNr = Console.ReadLine();
+var rekening = context.Rekeningen.Find(rekeningNr);
+if (rekening is null) Console.WriteLine("Rekening niet gevonden");
+else
 {
-    var klant = context.Klanten.Find(klantNr);
-    if (klant is null) Console.WriteLine(" Klant niet gevonden");
-    else
+    Console.Write("Bedrag: ");
+    if (decimal.TryParse(Console.ReadLine(), out var bedrag))
     {
-        Console.WriteLine("Geef het nieuwe rekeningnummer: ");
-        var nieuwRekeningNr = Console.ReadLine();
-        var rekening = new Rekening { RekeningNr = nieuwRekeningNr, Saldo = 0m, Soort = 'Z', Klant = klant };
-        context.Rekeningen.Add(rekening);
-        context.SaveChanges();
+        if (bedrag <= Decimal.Zero) Console.WriteLine("Tik een positief bedrag");
+        else
+        {
+            rekening.Storten(bedrag);
+            context.SaveChanges();
+        }
     }
+    else Console.WriteLine("Tik een bedrag");
 }
-else Console.WriteLine("Dit is geen getal");
