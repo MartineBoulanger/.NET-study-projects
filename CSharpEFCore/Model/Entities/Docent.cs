@@ -34,6 +34,9 @@ namespace Model.Entities
 
         public Geslacht Geslacht { get; set; }
 
+        public Adres ThuisAdres { get; set; }
+        public Adres VerblijfAdres { get; set; }
+
         // Associatie met Land class
         // gebruik virtual om lazy loading te kunnen gebruiken
         [ForeignKey("Land")]

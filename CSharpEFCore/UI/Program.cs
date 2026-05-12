@@ -339,9 +339,18 @@ using var context = new EFOpleidingenContext();
 //    Console.WriteLine("Tik een getal");
 
 // een land verwijderen om te kijken of de geassocieerde docenten ook worden aangepast
-var duitsland = context.Landen.Find("DE");
-if (duitsland != null)
+//var duitsland = context.Landen.Find("DE");
+//if (duitsland != null)
+//{
+//    context.Landen.Remove(duitsland);
+//    context.SaveChanges();
+//}
+
+// Owned types
+var genk = context.Campussen.Find(3);
+if (genk != null)
 {
-    context.Landen.Remove(duitsland);
+    genk.Adres.Straat = "Thor Park";
+    genk.Adres.Huisnummer = "8040";
     context.SaveChanges();
 }

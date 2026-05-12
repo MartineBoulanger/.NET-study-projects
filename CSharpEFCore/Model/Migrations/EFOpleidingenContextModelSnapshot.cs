@@ -30,27 +30,10 @@ namespace Model.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CampusId"));
 
-                    b.Property<string>("Gemeente")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Huisnummer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Naam")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("CampusNaam");
-
-                    b.Property<string>("Postcode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Straat")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CampusId");
 
@@ -60,56 +43,32 @@ namespace Model.Migrations
                         new
                         {
                             CampusId = 1,
-                            Gemeente = "Antwerpen",
-                            Huisnummer = "22",
-                            Naam = "Andros",
-                            Postcode = "2018",
-                            Straat = "Somersstraat"
+                            Naam = "Andros"
                         },
                         new
                         {
                             CampusId = 2,
-                            Gemeente = "Wondelgem",
-                            Huisnummer = "50",
-                            Naam = "Delos",
-                            Postcode = "9032",
-                            Straat = "Industrieweg"
+                            Naam = "Delos"
                         },
                         new
                         {
                             CampusId = 3,
-                            Gemeente = "Genk",
-                            Huisnummer = "37",
-                            Naam = "Gavdos",
-                            Postcode = "3600",
-                            Straat = "Europalaan"
+                            Naam = "Gavdos"
                         },
                         new
                         {
                             CampusId = 4,
-                            Gemeente = "Heverlee",
-                            Huisnummer = "2",
-                            Naam = "Hydra",
-                            Postcode = "3001",
-                            Straat = "Interleuvenlaan"
+                            Naam = "Hydra"
                         },
                         new
                         {
                             CampusId = 5,
-                            Gemeente = "Wevelgem",
-                            Huisnummer = "10",
-                            Naam = "Ikaria",
-                            Postcode = "8560",
-                            Straat = "Vlamingstraat"
+                            Naam = "Ikaria"
                         },
                         new
                         {
                             CampusId = 6,
-                            Gemeente = "Oostende",
-                            Huisnummer = "4",
-                            Naam = "Oinouses",
-                            Postcode = "8400",
-                            Straat = "Akkerstraat"
+                            Naam = "Oinouses"
                         });
                 });
 
@@ -4130,6 +4089,41 @@ namespace Model.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Model.Entities.Campus", b =>
+                {
+                    b.OwnsOne("Model.Entities.Adres", "Adres", b1 =>
+                        {
+                            b1.Property<int>("CampusId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Gemeente")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("Gemeente");
+
+                            b1.Property<string>("Huisnummer")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("Huisnummer");
+
+                            b1.Property<string>("Postcode")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("Postcode");
+
+                            b1.Property<string>("Straat")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("Straat");
+
+                            b1.HasKey("CampusId");
+
+                            b1.ToTable("Campussen");
+
+                            b1.WithOwner()
+                                .HasForeignKey("CampusId");
+                        });
+
+                    b.Navigation("Adres")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Model.Entities.Docent", b =>
                 {
                     b.HasOne("Model.Entities.Campus", "Campus")
@@ -4143,9 +4137,73 @@ namespace Model.Migrations
                         .HasForeignKey("LandCode")
                         .OnDelete(DeleteBehavior.SetNull);
 
+                    b.OwnsOne("Model.Entities.Adres", "ThuisAdres", b1 =>
+                        {
+                            b1.Property<int>("DocentId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Gemeente")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("GemeenteThuis");
+
+                            b1.Property<string>("Huisnummer")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("HuisnummerThuis");
+
+                            b1.Property<string>("Postcode")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("PostcodeThuis");
+
+                            b1.Property<string>("Straat")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("StraatThuis");
+
+                            b1.HasKey("DocentId");
+
+                            b1.ToTable("Docenten");
+
+                            b1.WithOwner()
+                                .HasForeignKey("DocentId");
+                        });
+
+                    b.OwnsOne("Model.Entities.Adres", "VerblijfAdres", b1 =>
+                        {
+                            b1.Property<int>("DocentId")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Gemeente")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("GemeenteVerblijf");
+
+                            b1.Property<string>("Huisnummer")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("HuisnummerVerblijf");
+
+                            b1.Property<string>("Postcode")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("PostcodeVerblijf");
+
+                            b1.Property<string>("Straat")
+                                .HasColumnType("nvarchar(max)")
+                                .HasColumnName("StraatVerblijf");
+
+                            b1.HasKey("DocentId");
+
+                            b1.ToTable("Docenten");
+
+                            b1.WithOwner()
+                                .HasForeignKey("DocentId");
+                        });
+
                     b.Navigation("Campus");
 
                     b.Navigation("Land");
+
+                    b.Navigation("ThuisAdres")
+                        .IsRequired();
+
+                    b.Navigation("VerblijfAdres")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Model.Entities.Campus", b =>

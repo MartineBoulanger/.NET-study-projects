@@ -21,14 +21,7 @@ namespace Model.Entities
         [Column("CampusNaam")]
         public string Naam { get; set; }
 
-        public string Straat { get; set; }
-
-        public string Huisnummer { get; set; }
-
-        public string Postcode { get; set; }
-
-        [StringLength(50)]
-        public string Gemeente { get; set; }
+        public Adres Adres { get; set; }
 
         [NotMapped]
         public string Commentaar { get; set; }

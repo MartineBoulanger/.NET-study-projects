@@ -35,18 +35,37 @@ namespace Model.Entities
         {
             modelBuilder.Entity<Campus>().HasKey(c => c.CampusId);
 
+            // owned types configureren
+            modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres);
+            modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres).Property(a => a.Straat).HasColumnName("Straat");
+            modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres).Property(a => a.Huisnummer).HasColumnName("Huisnummer");
+            modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres).Property(a => a.Postcode).HasColumnName("Postcode");
+            modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres).Property(a => a.Gemeente).HasColumnName("Gemeente");
+
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.ThuisAdres);
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.ThuisAdres).Property(a => a.Straat).HasColumnName("StraatThuis");
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.ThuisAdres).Property(a => a.Huisnummer).HasColumnName("HuisnummerThuis");
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.ThuisAdres).Property(a => a.Postcode).HasColumnName("PostcodeThuis");
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.ThuisAdres).Property(a => a.Gemeente).HasColumnName("GemeenteThuis");
+
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.VerblijfAdres);
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.VerblijfAdres).Property(a => a.Straat).HasColumnName("StraatVerblijf");
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.VerblijfAdres).Property(a => a.Huisnummer).HasColumnName("HuisnummerVerblijf");
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.VerblijfAdres).Property(a => a.Postcode).HasColumnName("PostcodeVerblijf");
+            modelBuilder.Entity<Docent>().OwnsOne(c => c.VerblijfAdres).Property(a => a.Gemeente).HasColumnName("GemeenteVerblijf");
+
             // zorgen dat een Land op null wordt gezet als het land object zelf wordt verwijderd
             modelBuilder.Entity<Docent>().HasOne(d => d.Land).WithMany(l => l.Docenten).OnDelete(DeleteBehavior.SetNull);
 
             // seeding
             #region campusdata
             modelBuilder.Entity<Campus>().HasData(
-                new Campus { CampusId = 1, Naam = "Andros", Straat = "Somersstraat", Huisnummer = "22", Postcode = "2018", Gemeente = "Antwerpen" },
-                new Campus { CampusId = 2, Naam = "Delos", Straat = "Industrieweg", Huisnummer = "50", Postcode = "9032", Gemeente = "Wondelgem" },
-                new Campus { CampusId = 3, Naam = "Gavdos", Straat = "Europalaan", Huisnummer = "37", Postcode = "3600", Gemeente = "Genk" },
-                new Campus { CampusId = 4, Naam = "Hydra", Straat = "Interleuvenlaan", Huisnummer = "2", Postcode = "3001", Gemeente = "Heverlee" },
-                new Campus { CampusId = 5, Naam = "Ikaria", Straat = "Vlamingstraat", Huisnummer = "10", Postcode = "8560", Gemeente = "Wevelgem" },
-                new Campus { CampusId = 6, Naam = "Oinouses", Straat = "Akkerstraat", Huisnummer = "4", Postcode = "8400", Gemeente = "Oostende" }
+                new Campus { CampusId = 1, Naam = "Andros" },
+                new Campus { CampusId = 2, Naam = "Delos" },
+                new Campus { CampusId = 3, Naam = "Gavdos" },
+                new Campus { CampusId = 4, Naam = "Hydra" },
+                new Campus { CampusId = 5, Naam = "Ikaria" },
+                new Campus { CampusId = 6, Naam = "Oinouses" }
             );
             #endregion
             #region landdata
