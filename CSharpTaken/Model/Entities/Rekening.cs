@@ -11,7 +11,7 @@ namespace Model.Entities
 
         public int KlantNr { get; set; }
 
-        [Precision(18,2)]
+        [Precision(18, 2)]
         public decimal Saldo { get; set; }
 
         public char Soort { get; set; }
