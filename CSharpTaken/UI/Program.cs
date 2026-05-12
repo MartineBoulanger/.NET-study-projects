@@ -1,4 +1,5 @@
-﻿using Model.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Model.Entities;
 using var context = new EFTakenContext();
 
 //foreach (var klant in context.Klanten)
@@ -69,3 +70,24 @@ using var context = new EFTakenContext();
 //    else
 //        Console.WriteLine("Tik een bedrag");
 //}
+
+// Oefening Hoofdstuk 9 - blz. 80
+Console.Write("KlantNr: ");
+if (int.TryParse(Console.ReadLine(), out var klantNr))
+{
+    var klant = context.Klanten.Include(r => r.Rekeningen).FirstOrDefault(k => k.KlantNr == klantNr);
+    if (klant is null)
+        Console.WriteLine("Klant niet gevonden");
+    else
+    {
+        if (klant.Rekeningen.Count > 0)
+            Console.WriteLine("Klant heeft nog rekeningen staan");
+        else
+        {
+            context.Klanten.Remove(klant);
+            context.SaveChanges();
+        }
+    }
+}
+else
+    Console.WriteLine("Geen getal ingebracht");
