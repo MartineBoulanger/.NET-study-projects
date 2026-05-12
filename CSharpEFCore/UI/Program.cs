@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Model.Entities;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+﻿using Model.Entities;
 using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
 //{
@@ -202,7 +200,8 @@ using var context = new EFOpleidingenContext();
 //    docent4.Campus = campus1;
 //    context.SaveChanges();
 //}
-//else Console.WriteLine("Campus 1 niet gevonden");
+//else
+//    Console.WriteLine("Campus 1 niet gevonden");
 // methode 2
 //var docent5 = new Docent { Voornaam = "Voornaam05", Familienaam = "Docent05", Wedde = 5555m, LandCode = "LU", CampusId = 1 };
 //context.Docenten.Add(docent5);
@@ -216,7 +215,8 @@ using var context = new EFOpleidingenContext();
 //    campus1.Docenten.Add(docent6);
 //    context.SaveChanges();
 //}
-//else Console.WriteLine("Campus 1 niet gevonden");
+//else
+//    Console.WriteLine("Campus 1 niet gevonden");
 
 // wijzigen van gegevens
 // wijziging van 1 property waarde
@@ -233,19 +233,25 @@ using var context = new EFOpleidingenContext();
 //            docent.Opslag(bedrag);
 //            context.SaveChanges();
 //        }
-//        else Console.WriteLine("Tik een getal");
+//        else
+//            Console.WriteLine("Tik een getal");
 //    }
-//    else Console.WriteLine("Docent niet gevonden");
+//    else
+//        Console.WriteLine("Docent niet gevonden");
 //}
-//else Console.WriteLine("Tik een getal");
+//else
+//    Console.WriteLine("Tik een getal");
 // wijzigen van enkele gegevens terwijl alle gegevens worden opgeroepen
 //Console.Write("Bovengrens: ");
 //if (int.TryParse(Console.ReadLine(), out int grens))
 //{
-//    foreach (var docent in context.Docenten) if (docent.Wedde <= grens) docent.Opslag(100m);
+//    foreach (var docent in context.Docenten)
+//        if (docent.Wedde <= grens)
+//            docent.Opslag(100m);
 //    context.SaveChanges();
 //}
-//else Console.WriteLine("Tik een getal");
+//else
+//    Console.WriteLine("Tik een getal");
 
 // wijzigen van enititeiten rechtstreeks in de database
 //Console.Write("DocentNr: ");
@@ -256,9 +262,11 @@ using var context = new EFOpleidingenContext();
 //    {
 //        context.Docenten.Where(d => d.DocentId == docentNr).ExecuteUpdate(d => d.SetProperty(p => p.Wedde, p => p.Wedde + bedrag));
 //    }
-//    else Console.WriteLine("Tik een getal");
+//    else
+//        Console.WriteLine("Tik een getal");
 //}
-//else Console.WriteLine("Tik een getal");
+//else
+//    Console.WriteLine("Tik een getal");
 
 // entiteit wijzigen die inderect geassocieerd is met de entiteit die we opvragen
 //var campus1 = context.Campussen.Include(c => c.Docenten).FirstOrDefault(c => c.CampusId == 1);
@@ -275,9 +283,11 @@ using var context = new EFOpleidingenContext();
 //        docent1.Campus = campus6;
 //        context.SaveChanges();
 //    }
-//    else Console.WriteLine("Campus 6 niet gevonden");
+//    else
+//        Console.WriteLine("Campus 6 niet gevonden");
 //}
-//else Console.WriteLine("Docent 1 is niet gevonden");
+//else
+//    Console.WriteLine("Docent 1 is niet gevonden");
 // manier 2 dmv de FK
 //var docent1 = context.Docenten.Find(1);
 //if (docent1 is not null)
@@ -285,17 +295,53 @@ using var context = new EFOpleidingenContext();
 //    docent1.CampusId = 2;
 //    context.SaveChanges();
 //}
-//else Console.WriteLine("Docent 1 is niet gevonden");
+//else
+//    Console.WriteLine("Docent 1 is niet gevonden");
 // het verhuizen van docent naar een andere campus - de een-kant relatie wijziging
-var docent1 = context.Docenten.Find(1);
-if (docent1 is not null)
+//var docent1 = context.Docenten.Find(1);
+//if (docent1 is not null)
+//{
+//    var campus3 = context.Campussen.Find(3);
+//    if (campus3 is not null)
+//    {
+//        campus3.Docenten.Add(docent1);
+//        context.SaveChanges();
+//    }
+//    else
+//        Console.WriteLine("Campus 3 niet gevonden");
+//}
+//else
+//    Console.WriteLine("Docent 1 is niet gevonden");
+
+// een entiteit verwijderen
+//Console.Write("DocentNr: ");
+//if (int.TryParse(Console.ReadLine(), out int docentNr))
+//{
+//    var docent = context.Docenten.Find(docentNr);
+//    if (docent != null)
+//    {
+//        context.Docenten.Remove(docent);
+//        context.SaveChanges();
+//    }
+//    else
+//        Console.WriteLine("Docent niet gevonden");
+//}
+//else
+//    Console.WriteLine("Tik een getal");
+
+// een entiteit verwijderen rechtstreeks in de database
+//Console.Write("DocentNr: ");
+//if (int.TryParse(Console.ReadLine(), out int docentNr))
+//{
+//    context.Docenten.Where(d => d.DocentId == docentNr).ExecuteDelete();
+//}
+//else
+//    Console.WriteLine("Tik een getal");
+
+// een land verwijderen om te kijken of de geassocieerde docenten ook worden aangepast
+var duitsland = context.Landen.Find("DE");
+if (duitsland != null)
 {
-    var campus3 = context.Campussen.Find(3);
-    if (campus3 is not null)
-    {
-        campus3.Docenten.Add(docent1);
-        context.SaveChanges();
-    }
-    else Console.WriteLine("Campus 3 niet gevonden");
+    context.Landen.Remove(duitsland);
+    context.SaveChanges();
 }
-else Console.WriteLine("Docent 1 is niet gevonden");

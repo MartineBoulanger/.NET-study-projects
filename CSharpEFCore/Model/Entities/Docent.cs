@@ -37,9 +37,9 @@ namespace Model.Entities
         // Associatie met Land class
         // gebruik virtual om lazy loading te kunnen gebruiken
         [ForeignKey("Land")]
-        public string LandCode { get; set; }
+        public string? LandCode { get; set; }
         //public virtual Land Land { get; set; } = null!;
-        public Land Land { get; set; } = null!;
+        public Land? Land { get; set; }
         //private Land land;
         //public Land Land
         //{

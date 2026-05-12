@@ -35,6 +35,9 @@ namespace Model.Entities
         {
             modelBuilder.Entity<Campus>().HasKey(c => c.CampusId);
 
+            // zorgen dat een Land op null wordt gezet als het land object zelf wordt verwijderd
+            modelBuilder.Entity<Docent>().HasOne(d => d.Land).WithMany(l => l.Docenten).OnDelete(DeleteBehavior.SetNull);
+
             // seeding
             #region campusdata
             modelBuilder.Entity<Campus>().HasData(

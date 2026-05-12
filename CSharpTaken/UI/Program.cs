@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Model.Entities;
+﻿using Model.Entities;
 using var context = new EFTakenContext();
 
 //foreach (var klant in context.Klanten)
@@ -34,7 +33,8 @@ using var context = new EFTakenContext();
 //if (int.TryParse(Console.ReadLine(), out int klantNr))
 //{
 //    var klant = context.Klanten.Find(klantNr);
-//    if (klant is null) Console.WriteLine(" Klant niet gevonden");
+//    if (klant is null)
+//        Console.WriteLine(" Klant niet gevonden");
 //    else
 //    {
 //        Console.WriteLine("Geef het nieuwe rekeningnummer: ");
@@ -44,24 +44,28 @@ using var context = new EFTakenContext();
 //        context.SaveChanges();
 //    }
 //}
-//else Console.WriteLine("Dit is geen getal");
+//else
+//    Console.WriteLine("Dit is geen getal");
 
 // Oefening hoofdstuk 8 - blz. 75
-Console.Write("RekeningNr.: ");
-var rekeningNr = Console.ReadLine();
-var rekening = context.Rekeningen.Find(rekeningNr);
-if (rekening is null) Console.WriteLine("Rekening niet gevonden");
-else
-{
-    Console.Write("Bedrag: ");
-    if (decimal.TryParse(Console.ReadLine(), out var bedrag))
-    {
-        if (bedrag <= Decimal.Zero) Console.WriteLine("Tik een positief bedrag");
-        else
-        {
-            rekening.Storten(bedrag);
-            context.SaveChanges();
-        }
-    }
-    else Console.WriteLine("Tik een bedrag");
-}
+//Console.Write("RekeningNr.: ");
+//var rekeningNr = Console.ReadLine();
+//var rekening = context.Rekeningen.Find(rekeningNr);
+//if (rekening is null)
+//    Console.WriteLine("Rekening niet gevonden");
+//else
+//{
+//    Console.Write("Bedrag: ");
+//    if (decimal.TryParse(Console.ReadLine(), out var bedrag))
+//    {
+//        if (bedrag <= Decimal.Zero)
+//            Console.WriteLine("Tik een positief bedrag");
+//        else
+//        {
+//            rekening.Storten(bedrag);
+//            context.SaveChanges();
+//        }
+//    }
+//    else
+//        Console.WriteLine("Tik een bedrag");
+//}

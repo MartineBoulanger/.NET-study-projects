@@ -142,7 +142,6 @@ namespace Model.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("LandCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Voornaam")
@@ -4142,8 +4141,7 @@ namespace Model.Migrations
                     b.HasOne("Model.Entities.Land", "Land")
                         .WithMany("Docenten")
                         .HasForeignKey("LandCode")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Campus");
 
