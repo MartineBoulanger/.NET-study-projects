@@ -29,16 +29,11 @@ namespace Model.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KlantNr"));
 
-                    b.Property<int?>("KlantNr1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Voornaam")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KlantNr");
-
-                    b.HasIndex("KlantNr1");
 
                     b.ToTable("Klanten");
 
@@ -116,17 +111,10 @@ namespace Model.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Model.Entities.Klant", b =>
-                {
-                    b.HasOne("Model.Entities.Klant", null)
-                        .WithMany("Rekeningen")
-                        .HasForeignKey("KlantNr1");
-                });
-
             modelBuilder.Entity("Model.Entities.Rekening", b =>
                 {
                     b.HasOne("Model.Entities.Klant", "Klant")
-                        .WithMany()
+                        .WithMany("Rekeningen")
                         .HasForeignKey("KlantNr")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

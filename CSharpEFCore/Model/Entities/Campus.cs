@@ -36,7 +36,7 @@ namespace Model.Entities
         // Associatie met Docent class
         // gebruik virtual om lazy loading te kunnen gebruiken
         //public virtual ICollection<Docent> Docenten { get; set; } = new List<Docent>();
-        public ICollection<Docent> Docenten { get; set; } = new List<Docent>();
+        public ICollection<Docent> Docenten { get; } = new List<Docent>();
         // lazy loading met DI
         //private ICollection<Docent> docenten;
 

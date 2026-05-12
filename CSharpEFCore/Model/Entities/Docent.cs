@@ -59,5 +59,7 @@ namespace Model.Entities
         //    get => lazyloader.Load(this, ref campus);
         //    set => campus = value;
         //}
+
+        public void Opslag(decimal bedrag) => Wedde += bedrag;
     }
 }
