@@ -11,6 +11,19 @@ namespace Model.Entities
         public DbSet<Campus> Campussen { get; set; }
         public DbSet<Docent> Docenten { get; set; }
         public DbSet<Land> Landen { get; set; }
+        // TPH collections
+        public DbSet<TPHCursus> TPHCursussen { get; set; }
+        public DbSet<TPHZelfstudieCursus> TPHZelfstudieCursussen { get; set; }
+        public DbSet<TPHKlassikaleCursus> TPHKlassikaleCursussen { get; set; }
+        // TPT collections
+        public DbSet<TPTCursus> TPTCursussen { get; set; }
+        public DbSet<TPTZelfstudieCursus> TPTZelfstudieCursussen { get; set; }
+        public DbSet<TPTKlassikaleCursus> TPTKlassikaleCursussen { get; set; }
+        // TPC collections
+        public DbSet<TPCCursus> TPCCursussen { get; set; }
+        public DbSet<TPCZelfstudieCursus> TPCZelfstudieCursussen { get; set; }
+        public DbSet<TPCKlassikaleCursus> TPCKlassikaleCursussen { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -56,6 +69,23 @@ namespace Model.Entities
 
             // zorgen dat een Land op null wordt gezet als het land object zelf wordt verwijderd
             modelBuilder.Entity<Docent>().HasOne(d => d.Land).WithMany(l => l.Docenten).OnDelete(DeleteBehavior.SetNull);
+
+            // de Discriminator kolom configureren voor de TPH mapping
+            modelBuilder.Entity<TPHCursus>().ToTable("TPHCursussen")
+                .HasDiscriminator<string>("CursusType")
+                .HasValue<TPHZelfstudieCursus>("Z")
+                .HasValue<TPHKlassikaleCursus>("K");
+
+            // expliciet aangeven dat TPT gebruikt moet worden
+            modelBuilder.Entity<TPTCursus>().UseTptMappingStrategy();
+            modelBuilder.Entity<TPTCursus>().ToTable("TPT");
+            modelBuilder.Entity<TPTZelfstudieCursus>().ToTable("TPTZelfstudie");
+            modelBuilder.Entity<TPTKlassikaleCursus>().ToTable("TPTKlassikaal");
+
+            // expliciet aangeven dat TPC gebruikt moet worden
+            modelBuilder.Entity<TPCCursus>().UseTpcMappingStrategy();
+            modelBuilder.Entity<TPCZelfstudieCursus>().ToTable("TPCZelfstudie");
+            modelBuilder.Entity<TPCKlassikaleCursus>().ToTable("TPCKlassikaal");
 
             // seeding
             #region campusdata

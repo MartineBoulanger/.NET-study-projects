@@ -22,6 +22,8 @@ namespace Model.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.HasSequence("TPCCursusSequence");
+
             modelBuilder.Entity("Model.Entities.Campus", b =>
                 {
                     b.Property<int>("CampusId")
@@ -4089,6 +4091,140 @@ namespace Model.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Model.Entities.TPCCursus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValueSql("NEXT VALUE FOR [TPCCursusSequence]");
+
+                    SqlServerPropertyBuilderExtensions.UseSequence(b.Property<int>("Id"));
+
+                    b.Property<string>("Naam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable((string)null);
+
+                    b.UseTpcMappingStrategy();
+                });
+
+            modelBuilder.Entity("Model.Entities.TPHCursus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CursusType")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
+
+                    b.Property<string>("Naam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TPHCursussen", (string)null);
+
+                    b.HasDiscriminator<string>("CursusType").HasValue("TPHCursus");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Model.Entities.TPTCursus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Naam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TPT", (string)null);
+
+                    b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("Model.Entities.TPCKlassikaleCursus", b =>
+                {
+                    b.HasBaseType("Model.Entities.TPCCursus");
+
+                    b.Property<DateTime>("Tot")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Van")
+                        .HasColumnType("datetime2");
+
+                    b.ToTable("TPCKlassikaal", (string)null);
+                });
+
+            modelBuilder.Entity("Model.Entities.TPCZelfstudieCursus", b =>
+                {
+                    b.HasBaseType("Model.Entities.TPCCursus");
+
+                    b.Property<int>("AantalDagen")
+                        .HasColumnType("int");
+
+                    b.ToTable("TPCZelfstudie", (string)null);
+                });
+
+            modelBuilder.Entity("Model.Entities.TPHKlassikaleCursus", b =>
+                {
+                    b.HasBaseType("Model.Entities.TPHCursus");
+
+                    b.Property<DateTime>("Tot")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Van")
+                        .HasColumnType("datetime2");
+
+                    b.HasDiscriminator().HasValue("K");
+                });
+
+            modelBuilder.Entity("Model.Entities.TPHZelfstudieCursus", b =>
+                {
+                    b.HasBaseType("Model.Entities.TPHCursus");
+
+                    b.Property<int>("AantalDagen")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("Z");
+                });
+
+            modelBuilder.Entity("Model.Entities.TPTKlassikaleCursus", b =>
+                {
+                    b.HasBaseType("Model.Entities.TPTCursus");
+
+                    b.Property<DateTime>("Tot")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Van")
+                        .HasColumnType("datetime2");
+
+                    b.ToTable("TPTKlassikaal", (string)null);
+                });
+
+            modelBuilder.Entity("Model.Entities.TPTZelfstudieCursus", b =>
+                {
+                    b.HasBaseType("Model.Entities.TPTCursus");
+
+                    b.Property<int>("AantalDagen")
+                        .HasColumnType("int");
+
+                    b.ToTable("TPTZelfstudie", (string)null);
+                });
+
             modelBuilder.Entity("Model.Entities.Campus", b =>
                 {
                     b.OwnsOne("Model.Entities.Adres", "Adres", b1 =>
@@ -4203,6 +4339,24 @@ namespace Model.Migrations
                         .IsRequired();
 
                     b.Navigation("VerblijfAdres")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Model.Entities.TPTKlassikaleCursus", b =>
+                {
+                    b.HasOne("Model.Entities.TPTCursus", null)
+                        .WithOne()
+                        .HasForeignKey("Model.Entities.TPTKlassikaleCursus", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Model.Entities.TPTZelfstudieCursus", b =>
+                {
+                    b.HasOne("Model.Entities.TPTCursus", null)
+                        .WithOne()
+                        .HasForeignKey("Model.Entities.TPTZelfstudieCursus", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 

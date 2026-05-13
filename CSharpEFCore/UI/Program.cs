@@ -347,10 +347,25 @@ using var context = new EFOpleidingenContext();
 //}
 
 // Owned types
-var genk = context.Campussen.Find(3);
-if (genk != null)
-{
-    genk.Adres.Straat = "Thor Park";
-    genk.Adres.Huisnummer = "8040";
-    context.SaveChanges();
-}
+//var genk = context.Campussen.Find(3);
+//if (genk != null)
+//{
+//    genk.Adres.Straat = "Thor Park";
+//    genk.Adres.Huisnummer = "8040";
+//    context.SaveChanges();
+//}
+
+// TPH - Table Per Hierarchy
+//context.TPHCursussen.Add(new TPHKlassikaleCursus { Naam = "Frans in 24 uur", Van = DateTime.Today, Tot = DateTime.Today });
+//context.TPHCursussen.Add(new TPHZelfstudieCursus { Naam = "Engels in 24 uur", AantalDagen = 1 });
+//context.SaveChanges();
+
+// TPT - Table Per Type
+//context.TPTCursussen.Add(new TPTKlassikaleCursus { Naam = "Frans in 24 uur", Van = DateTime.Today, Tot = DateTime.Today });
+//context.TPTCursussen.Add(new TPTZelfstudieCursus { Naam = "Engels in 24 uur", AantalDagen = 1 });
+//context.SaveChanges();
+
+// TPC - Table Per Concrete Type
+context.TPCCursussen.Add(new TPCKlassikaleCursus { Naam = "Frans in 24 uur", Van = DateTime.Today, Tot = DateTime.Today });
+context.TPCCursussen.Add(new TPCZelfstudieCursus { Naam = "Engels in 24 uur", AantalDagen = 1 });
+context.SaveChanges();
