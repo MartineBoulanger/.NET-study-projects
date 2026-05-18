@@ -10,6 +10,6 @@ namespace Model.Entities
         public string Voornaam { get; set; } = null!;
 
         // associatie
-        public ICollection<Rekening> Rekeningen { get; set; } = [];
+        public virtual ICollection<Rekening> Rekeningen { get; set; } = [];
     }
 }

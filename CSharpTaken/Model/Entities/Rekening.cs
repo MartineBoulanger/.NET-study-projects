@@ -18,7 +18,7 @@ namespace Model.Entities
 
         // associatie -- foreign key altijd hier zetten bij de associatie -- maar wel een property aanmaken voor de FK
         [ForeignKey("KlantNr")]
-        public Klant Klant { get; set; } = null!;
+        public virtual Klant Klant { get; set; } = null!;
 
         public void Storten(decimal bedrag) => Saldo += bedrag;
     }

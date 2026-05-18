@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Model.Entities;
 using var context = new EFTakenContext();
 
@@ -72,22 +73,52 @@ using var context = new EFTakenContext();
 //}
 
 // Oefening Hoofdstuk 9 - blz. 80
-Console.Write("KlantNr: ");
-if (int.TryParse(Console.ReadLine(), out var klantNr))
-{
-    var klant = context.Klanten.Include(r => r.Rekeningen).FirstOrDefault(k => k.KlantNr == klantNr);
-    if (klant is null)
-        Console.WriteLine("Klant niet gevonden");
-    else
-    {
-        if (klant.Rekeningen.Count > 0)
-            Console.WriteLine("Klant heeft nog rekeningen staan");
-        else
-        {
-            context.Klanten.Remove(klant);
-            context.SaveChanges();
-        }
-    }
-}
-else
-    Console.WriteLine("Geen getal ingebracht");
+//Console.Write("KlantNr: ");
+//if (int.TryParse(Console.ReadLine(), out var klantNr))
+//{
+//    var klant = context.Klanten.Include(r => r.Rekeningen).FirstOrDefault(k => k.KlantNr == klantNr);
+//    if (klant is null)
+//        Console.WriteLine("Klant niet gevonden");
+//    else
+//    {
+//        if (klant.Rekeningen.Count > 0)
+//            Console.WriteLine("Klant heeft nog rekeningen staan");
+//        else
+//        {
+//            context.Klanten.Remove(klant);
+//            context.SaveChanges();
+//        }
+//    }
+//}
+//else
+//    Console.WriteLine("Geen getal ingebracht");
+
+// Oefening 1 Hoofdstuk 12 - blz. 104
+//var hoogstenInHierarchie =
+//    (from personeelslid in context.PersoneelsLeden
+//     where personeelslid.Manager == null
+//     select personeelslid).ToList();
+//Afbeelden(hoogstenInHierarchie, 0);
+//void Afbeelden(List<Personeelslid> personeel, int insprong)
+//{
+//    foreach (var personeelslid in personeel)
+//    {
+//        Console.Write(new String('\t', insprong));
+//        Console.WriteLine(personeelslid.Voornaam);
+//        if (personeelslid.Ondergeschikten.Count != 0)
+//            Afbeelden(personeelslid.Ondergeschikten.ToList(), insprong + 1);
+//    }
+//}
+
+// Oefening 2 Hoofstuk 12 - blz. 105
+var soepterrine = new NonFoodArtikel { Naam = "Villeroy & Boch", Garantie = 24 };
+var grasmachine = new NonFoodArtikel { Naam = "SABO 40-spirit", Garantie = 60 };
+var frietpatatjes = new FoodArtikel { Naam = "Frietaardappelen 5kg", Houdbaarheid = 1 };
+var tuin = new ArtikelGroep { Naam = "Tuinartikelen" };
+var keuken = new ArtikelGroep { Naam = "Keukenartikelen" };
+tuin.Artikels.Add(grasmachine);
+keuken.Artikels.Add(soepterrine);
+keuken.Artikels.Add(frietpatatjes);
+context.ArtikelGroepen.Add(tuin);
+context.ArtikelGroepen.Add(keuken);
+context.SaveChanges();
