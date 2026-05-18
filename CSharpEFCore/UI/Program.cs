@@ -372,6 +372,8 @@ using var context = new EFOpleidingenContext();
 //context.TPCCursussen.Add(new TPCZelfstudieCursus { Naam = "Engels in 24 uur", AantalDagen = 1 });
 //context.SaveChanges();
 
+// ------------------------------------
+
 // speciale associaties - veel-op-veel zonder tussen klasse
 //var query = from cursus in context.Cursussen.Include(c => c.Boeken) orderby cursus.Naam select cursus;
 //foreach (var cursus in query)
@@ -398,113 +400,148 @@ using var context = new EFOpleidingenContext();
 //}
 
 // veel-op-vel relatie met tussen klasse
-var campus = new Campus
+//var campus = new Campus
+//{
+//    Naam = "CC Roeselare ",
+//    Adres = new Adres
+//    {
+//        Straat = " Pilders weg",
+//        Huisnummer = " 7",
+//        Postcode = " 88 00",
+//        Gemeente = " Roeselare "
+//    }
+//};
+//var jean = new Docent
+//{
+//    Voornaam = "Jean",
+//    Familienaam = "Smits",
+//    Wedde = 1000,
+//    InDienst = new DateTime(1966, 8, 1),
+//    HeeftRijbewijs = true,
+//    ThuisAdres = new Adres
+//    {
+//        Straat = "Keizerslaan",
+//        Huisnummer = "11",
+//        Postcode = "1000",
+//        Gemeente = "Brussel"
+//    },
+//    LandCode = "BE",
+//    Campus = campus
+//};
+//var kiekeboe = new Docent
+//{
+//    Voornaam = "Marcel",
+//    Familienaam = "Kiekeboe",
+//    Wedde = 500,
+//    InDienst = new DateTime(1948, 10, 24),
+//    HeeftRijbewijs = true,
+//    ThuisAdres = new Adres
+//    {
+//        Straat = "Merholaan",
+//        Huisnummer = "1B",
+//        Postcode = "3000",
+//        Gemeente = "Zoersel"
+//    },
+//    LandCode = "BE",
+//    Campus = campus
+//};
+//var activiteit1 = new Activiteit { Naam = "EHBO" };
+//var activiteit2 = new Activiteit { Naam = "Vergaderen" };
+//var activiteit3 = new Activiteit { Naam = "Overleggen" };
+//var activiteit4 = new Activiteit { Naam = "Studie" };
+
+//context.Campussen.Add(campus);
+//context.SaveChanges();
+//context.Docenten.Add(jean);
+//context.Docenten.Add(kiekeboe);
+//context.SaveChanges();
+//context.Activiteiten.Add(activiteit1);
+//context.Activiteiten.Add(activiteit2);
+//context.Activiteiten.Add(activiteit3);
+//context.Activiteiten.Add(activiteit4);
+//context.SaveChanges();
+
+//var da1 = new DocentActiviteit
+//{
+//    DocentId = jean.DocentId,
+//    ActiviteitId = activiteit2.ActiviteitId,
+//    AantalUren = 4
+//};
+//var da2 = new DocentActiviteit
+//{
+//    DocentId = jean.DocentId,
+//    ActiviteitId = activiteit3.ActiviteitId,
+//    AantalUren = 1
+//};
+//var da3 = new DocentActiviteit
+//{
+//    DocentId = kiekeboe.DocentId,
+//    ActiviteitId = activiteit4.ActiviteitId,
+//    AantalUren = 4
+//};
+//var da4 = new DocentActiviteit
+//{
+//    DocentId = kiekeboe.DocentId,
+//    ActiviteitId = activiteit1.ActiviteitId,
+//    AantalUren = 1
+//};
+//var da5 = new DocentActiviteit
+//{
+//    DocentId = kiekeboe.DocentId,
+//    ActiviteitId = activiteit2.ActiviteitId,
+//    AantalUren = 2
+//};
+
+//context.AddRange(da1, da2, da3, da4, da5);
+//context.SaveChanges();
+
+//var docent = context.Docenten.Include("DocentenActiviteiten.Activiteit").Where(d => d.DocentId == 4).FirstOrDefault();
+//docent.DocentenActiviteiten.Add(new DocentActiviteit { ActiviteitId = 3, AantalUren = 6 });
+//context.SaveChanges();
+
+//foreach (var d in context.Docenten.Include("DocentenActiviteiten.Activiteit"))
+//{
+//    Console.WriteLine(d.Naam);
+//    if (d.DocentenActiviteiten.Count == 0)
+//        Console.WriteLine("\tGeen activiteiten");
+//    else
+//        foreach (var da in d.DocentenActiviteiten)
+//            Console.WriteLine("\t{0} {1} uur",
+//            da.Activiteit.Naam, da.AantalUren);
+//    Console.WriteLine();
+//}
+
+// associatie naar dezelfde tabel
+//Werknemer joe = new Werknemer { Voornaam = "Joe", Familienaam = "Dalton" };
+//Werknemer averell = new Werknemer { Voornaam = "Averell", Familienaam = "Dalton", Overste = joe };
+//context.Werknemers.Add(joe);
+//context.Werknemers.Add(averell);
+//context.SaveChanges();
+
+// tonen van werknemers zonder overste
+//var query = from w in context.Werknemers where w.Overste == null orderby w.Voornaam, w.Familienaam select w;
+//foreach (var w in query) Console.WriteLine($"{w.Voornaam} {w.Familienaam}");
+// tonen van werknemers die wel een overste hebben met de vermelding van die overste
+//var query = from w in context.Werknemers.Include(w => w.Overste) where w.Overste != null orderby w.Voornaam, w.Familienaam select w;
+//foreach (var w in query) Console.WriteLine($"Werknemer: {w.Voornaam} {w.Familienaam}, Overste: {w.Overste?.Voornaam} {w.Overste?.Familienaam}");
+// tonen van overste met hun ondergeschikten
+//var query = from w in context.Werknemers.Include(w => w.Ondergeschikten) where w.Ondergeschikten.Count != 0 orderby w.Voornaam, w.Familienaam select w;
+//foreach (var w in query)
+//{
+//    Console.WriteLine($"Overste: {w.Voornaam} {w.Familienaam}");
+//    foreach (var o in w.Ondergeschikten)
+//        Console.WriteLine($"\tWerknemer: {o.Voornaam} {o.Familienaam}");
+//}
+// veranderen van werknemer overste
+var werknemer5 = context.Werknemers.Find(5);
+if (werknemer5 != null)
 {
-    Naam = "CC Roeselare ",
-    Adres = new Adres
+    var werknemer6 = context.Werknemers.Find(6);
+    if (werknemer6 != null)
     {
-        Straat = " Pilders weg",
-        Huisnummer = " 7",
-        Postcode = " 88 00",
-        Gemeente = " Roeselare "
+        werknemer5.Ondergeschikten.Add(werknemer6);
+        context.SaveChanges();
     }
-};
-var jean = new Docent
-{
-    Voornaam = "Jean",
-    Familienaam = "Smits",
-    Wedde = 1000,
-    InDienst = new DateTime(1966, 8, 1),
-    HeeftRijbewijs = true,
-    ThuisAdres = new Adres
-    {
-        Straat = "Keizerslaan",
-        Huisnummer = "11",
-        Postcode = "1000",
-        Gemeente = "Brussel"
-    },
-    LandCode = "BE",
-    Campus = campus
-};
-var kiekeboe = new Docent
-{
-    Voornaam = "Marcel",
-    Familienaam = "Kiekeboe",
-    Wedde = 500,
-    InDienst = new DateTime(1948, 10, 24),
-    HeeftRijbewijs = true,
-    ThuisAdres = new Adres
-    {
-        Straat = "Merholaan",
-        Huisnummer = "1B",
-        Postcode = "3000",
-        Gemeente = "Zoersel"
-    },
-    LandCode = "BE",
-    Campus = campus
-};
-var activiteit1 = new Activiteit { Naam = "EHBO" };
-var activiteit2 = new Activiteit { Naam = "Vergaderen" };
-var activiteit3 = new Activiteit { Naam = "Overleggen" };
-var activiteit4 = new Activiteit { Naam = "Studie" };
-
-context.Campussen.Add(campus);
-context.SaveChanges();
-context.Docenten.Add(jean);
-context.Docenten.Add(kiekeboe);
-context.SaveChanges();
-context.Activiteiten.Add(activiteit1);
-context.Activiteiten.Add(activiteit2);
-context.Activiteiten.Add(activiteit3);
-context.Activiteiten.Add(activiteit4);
-context.SaveChanges();
-
-var da1 = new DocentActiviteit
-{
-    DocentId = jean.DocentId,
-    ActiviteitId = activiteit2.ActiviteitId,
-    AantalUren = 4
-};
-var da2 = new DocentActiviteit
-{
-    DocentId = jean.DocentId,
-    ActiviteitId = activiteit3.ActiviteitId,
-    AantalUren = 1
-};
-var da3 = new DocentActiviteit
-{
-    DocentId = kiekeboe.DocentId,
-    ActiviteitId = activiteit4.ActiviteitId,
-    AantalUren = 4
-};
-var da4 = new DocentActiviteit
-{
-    DocentId = kiekeboe.DocentId,
-    ActiviteitId = activiteit1.ActiviteitId,
-    AantalUren = 1
-};
-var da5 = new DocentActiviteit
-{
-    DocentId = kiekeboe.DocentId,
-    ActiviteitId = activiteit2.ActiviteitId,
-    AantalUren = 2
-};
-
-context.AddRange(da1, da2, da3, da4, da5);
-context.SaveChanges();
-
-var docent = context.Docenten.Include("DocentenActiviteiten.Activiteit").Where(d => d.DocentId == 4).FirstOrDefault();
-docent.DocentenActiviteiten.Add(new DocentActiviteit { ActiviteitId = 3, AantalUren = 6 });
-context.SaveChanges();
-
-foreach (var d in context.Docenten.Include("DocentenActiviteiten.Activiteit"))
-{
-    Console.WriteLine(d.Naam);
-    if (d.DocentenActiviteiten.Count == 0)
-        Console.WriteLine("\tGeen activiteiten");
-    else
-        foreach (var da in d.DocentenActiviteiten)
-            Console.WriteLine("\t{0} {1} uur",
-            da.Activiteit.Naam, da.AantalUren);
-    Console.WriteLine();
+    else Console.WriteLine("Werknemer 6 niet gevonden");
 }
+else Console.WriteLine("Werknemer 5 niet gevonden");
