@@ -13,6 +13,12 @@ namespace Model.Entities
         //    this.lazyloader = lazyloader;
         //}
 
+        // tussen klasse
+        public Docent()
+        {
+            DocentenActiviteiten = new List<DocentActiviteit>();
+        }
+
         public int DocentId { get; set; }
 
         [Required]
@@ -64,5 +70,8 @@ namespace Model.Entities
         //}
 
         public void Opslag(decimal bedrag) => Wedde += bedrag;
+
+        // Associatie met Activiteit class via de tussenklasse DocentActiviteit
+        public ICollection<DocentActiviteit> DocentenActiviteiten { get; set; }
     }
 }

@@ -11,6 +11,11 @@ namespace Model.Entities
         public DbSet<Campus> Campussen { get; set; }
         public DbSet<Docent> Docenten { get; set; }
         public DbSet<Land> Landen { get; set; }
+        public DbSet<Boek> Boeken { get; set; }
+        public DbSet<Cursus> Cursussen { get; set; }
+        public DbSet<Activiteit> Activiteiten { get; set; }
+        public DbSet<DocentActiviteit> DocentenActiviteiten { get; set; }
+
         // TPH collections
         public DbSet<TPHCursus> TPHCursussen { get; set; }
         public DbSet<TPHZelfstudieCursus> TPHZelfstudieCursussen { get; set; }
@@ -47,6 +52,13 @@ namespace Model.Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Campus>().HasKey(c => c.CampusId);
+            modelBuilder.Entity<Cursus>().Property(p => p.Naam).IsRequired().HasMaxLength(50);
+            modelBuilder.Entity<Boek>().Property(p => p.Titel).HasMaxLength(150);
+            modelBuilder.Entity<Boek>().Property(p => p.IsbnNr).IsRequired().HasMaxLength(13);
+            modelBuilder.Entity<Boek>(b => { b.HasIndex(i => i.IsbnNr).IsUnique(); });
+            modelBuilder.Entity<DocentActiviteit>().HasKey(a => new { a.DocentId, a.ActiviteitId });
+            modelBuilder.Entity<DocentActiviteit>().HasOne(a => a.Docent).WithMany(d => d.DocentenActiviteiten).HasForeignKey(k => k.DocentId);
+            modelBuilder.Entity<DocentActiviteit>().HasOne(a => a.Activiteit).WithMany(a => a.DocentenActiviteiten).HasForeignKey(k => k.ActiviteitId);
 
             // owned types configureren
             modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres);
@@ -4001,6 +4013,74 @@ namespace Model.Entities
                 }
             );
             #endregion
-        }
-    }
+            #region boekdata
+            modelBuilder.Entity<Boek>().HasData(
+                new Boek
+                {
+                    BoekNr = 1,
+                    IsbnNr = "0-0705918-0-6",
+                    Titel = "C++ : For Scientists and Engineers"
+                },
+                new Boek
+                {
+                    BoekNr = 2,
+                    IsbnNr = "0-0788212-3-1",
+                    Titel = "C++ : The Complete Reference"
+                },
+                new Boek
+                {
+                    BoekNr = 3,
+                    IsbnNr = "1-5659211-6-X",
+                    Titel = "C++ : The Core Language"
+                },
+                new Boek
+                {
+                    BoekNr = 4,
+                    IsbnNr = "0-4448771-8-5",
+                    Titel = "Relational Database Systems"
+                },
+                new Boek
+                {
+                    BoekNr = 5,
+                    IsbnNr = "1-5595851-1-0",
+                    Titel = "Access from the Ground Up"
+                },
+                new Boek
+                {
+                    BoekNr = 6,
+                    IsbnNr = "0-0788212-2-3",
+                    Titel = "Oracle : A Beginner's Guide"
+                },
+                new Boek
+                {
+                    BoekNr = 7,
+                    IsbnNr = "0-0788209-7-9",
+                    Titel = "Oracle : The Complete Reference"
+                }
+            );
+            #endregion
+            #region cursusdata
+            modelBuilder.Entity<Cursus>().HasData(
+                new Cursus { CursusNr = 1, Naam = "C++" },
+                new Cursus { CursusNr = 2, Naam = "Access" },
+                new Cursus { CursusNr = 3, Naam = "Oracle" }
+            );
+            #endregion
+
+            // tussen tabel data voor boeken en cursussen
+            modelBuilder
+                .Entity<Boek>()
+                .HasMany(p => p.Cursussen)
+                .WithMany(p => p.Boeken)
+                .UsingEntity(j => j.HasData(
+                    new { CursussenCursusNr = 1, BoekenBoekNr = 1 },
+                    new { CursussenCursusNr = 1, BoekenBoekNr = 2 },
+                    new { CursussenCursusNr = 1, BoekenBoekNr = 3 },
+                    new { CursussenCursusNr = 2, BoekenBoekNr = 4 },
+                    new { CursussenCursusNr = 2, BoekenBoekNr = 5 },
+                    new { CursussenCursusNr = 3, BoekenBoekNr = 4 },
+                    new { CursussenCursusNr = 3, BoekenBoekNr = 6 },
+                    new { CursussenCursusNr = 3, BoekenBoekNr = 7 }));
+                }
+            }
 }

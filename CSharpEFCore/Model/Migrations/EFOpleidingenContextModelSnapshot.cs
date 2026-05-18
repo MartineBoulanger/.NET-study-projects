@@ -24,6 +24,151 @@ namespace Model.Migrations
 
             modelBuilder.HasSequence("TPCCursusSequence");
 
+            modelBuilder.Entity("BoekCursus", b =>
+                {
+                    b.Property<int>("BoekenBoekNr")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CursussenCursusNr")
+                        .HasColumnType("int");
+
+                    b.HasKey("BoekenBoekNr", "CursussenCursusNr");
+
+                    b.HasIndex("CursussenCursusNr");
+
+                    b.ToTable("BoekCursus");
+
+                    b.HasData(
+                        new
+                        {
+                            BoekenBoekNr = 1,
+                            CursussenCursusNr = 1
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 2,
+                            CursussenCursusNr = 1
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 3,
+                            CursussenCursusNr = 1
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 4,
+                            CursussenCursusNr = 2
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 5,
+                            CursussenCursusNr = 2
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 4,
+                            CursussenCursusNr = 3
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 6,
+                            CursussenCursusNr = 3
+                        },
+                        new
+                        {
+                            BoekenBoekNr = 7,
+                            CursussenCursusNr = 3
+                        });
+                });
+
+            modelBuilder.Entity("Model.Entities.Activiteit", b =>
+                {
+                    b.Property<int>("ActiviteitId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ActiviteitId"));
+
+                    b.Property<string>("Naam")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("ActiviteitId");
+
+                    b.ToTable("Activiteiten");
+                });
+
+            modelBuilder.Entity("Model.Entities.Boek", b =>
+                {
+                    b.Property<int>("BoekNr")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BoekNr"));
+
+                    b.Property<string>("IsbnNr")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
+
+                    b.Property<string>("Titel")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("BoekNr");
+
+                    b.HasIndex("IsbnNr")
+                        .IsUnique();
+
+                    b.ToTable("Boeken");
+
+                    b.HasData(
+                        new
+                        {
+                            BoekNr = 1,
+                            IsbnNr = "0-0705918-0-6",
+                            Titel = "C++ : For Scientists and Engineers"
+                        },
+                        new
+                        {
+                            BoekNr = 2,
+                            IsbnNr = "0-0788212-3-1",
+                            Titel = "C++ : The Complete Reference"
+                        },
+                        new
+                        {
+                            BoekNr = 3,
+                            IsbnNr = "1-5659211-6-X",
+                            Titel = "C++ : The Core Language"
+                        },
+                        new
+                        {
+                            BoekNr = 4,
+                            IsbnNr = "0-4448771-8-5",
+                            Titel = "Relational Database Systems"
+                        },
+                        new
+                        {
+                            BoekNr = 5,
+                            IsbnNr = "1-5595851-1-0",
+                            Titel = "Access from the Ground Up"
+                        },
+                        new
+                        {
+                            BoekNr = 6,
+                            IsbnNr = "0-0788212-2-3",
+                            Titel = "Oracle : A Beginner's Guide"
+                        },
+                        new
+                        {
+                            BoekNr = 7,
+                            IsbnNr = "0-0788209-7-9",
+                            Titel = "Oracle : The Complete Reference"
+                        });
+                });
+
             modelBuilder.Entity("Model.Entities.Campus", b =>
                 {
                     b.Property<int>("CampusId")
@@ -71,6 +216,41 @@ namespace Model.Migrations
                         {
                             CampusId = 6,
                             Naam = "Oinouses"
+                        });
+                });
+
+            modelBuilder.Entity("Model.Entities.Cursus", b =>
+                {
+                    b.Property<int>("CursusNr")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CursusNr"));
+
+                    b.Property<string>("Naam")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("CursusNr");
+
+                    b.ToTable("Cursussen");
+
+                    b.HasData(
+                        new
+                        {
+                            CursusNr = 1,
+                            Naam = "C++"
+                        },
+                        new
+                        {
+                            CursusNr = 2,
+                            Naam = "Access"
+                        },
+                        new
+                        {
+                            CursusNr = 3,
+                            Naam = "Oracle"
                         });
                 });
 
@@ -4040,6 +4220,24 @@ namespace Model.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Model.Entities.DocentActiviteit", b =>
+                {
+                    b.Property<int>("DocentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ActiviteitId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AantalUren")
+                        .HasColumnType("int");
+
+                    b.HasKey("DocentId", "ActiviteitId");
+
+                    b.HasIndex("ActiviteitId");
+
+                    b.ToTable("DocentenActiviteiten");
+                });
+
             modelBuilder.Entity("Model.Entities.Land", b =>
                 {
                     b.Property<string>("LandCode")
@@ -4225,6 +4423,21 @@ namespace Model.Migrations
                     b.ToTable("TPTZelfstudie", (string)null);
                 });
 
+            modelBuilder.Entity("BoekCursus", b =>
+                {
+                    b.HasOne("Model.Entities.Boek", null)
+                        .WithMany()
+                        .HasForeignKey("BoekenBoekNr")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Model.Entities.Cursus", null)
+                        .WithMany()
+                        .HasForeignKey("CursussenCursusNr")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Model.Entities.Campus", b =>
                 {
                     b.OwnsOne("Model.Entities.Adres", "Adres", b1 =>
@@ -4342,6 +4555,25 @@ namespace Model.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Model.Entities.DocentActiviteit", b =>
+                {
+                    b.HasOne("Model.Entities.Activiteit", "Activiteit")
+                        .WithMany("DocentenActiviteiten")
+                        .HasForeignKey("ActiviteitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Model.Entities.Docent", "Docent")
+                        .WithMany("DocentenActiviteiten")
+                        .HasForeignKey("DocentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Activiteit");
+
+                    b.Navigation("Docent");
+                });
+
             modelBuilder.Entity("Model.Entities.TPTKlassikaleCursus", b =>
                 {
                     b.HasOne("Model.Entities.TPTCursus", null)
@@ -4360,9 +4592,19 @@ namespace Model.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Model.Entities.Activiteit", b =>
+                {
+                    b.Navigation("DocentenActiviteiten");
+                });
+
             modelBuilder.Entity("Model.Entities.Campus", b =>
                 {
                     b.Navigation("Docenten");
+                });
+
+            modelBuilder.Entity("Model.Entities.Docent", b =>
+                {
+                    b.Navigation("DocentenActiviteiten");
                 });
 
             modelBuilder.Entity("Model.Entities.Land", b =>

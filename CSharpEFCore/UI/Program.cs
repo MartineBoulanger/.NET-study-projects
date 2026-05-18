@@ -1,4 +1,6 @@
-﻿using Model.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Model.Entities;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
 //{
@@ -366,6 +368,143 @@ using var context = new EFOpleidingenContext();
 //context.SaveChanges();
 
 // TPC - Table Per Concrete Type
-context.TPCCursussen.Add(new TPCKlassikaleCursus { Naam = "Frans in 24 uur", Van = DateTime.Today, Tot = DateTime.Today });
-context.TPCCursussen.Add(new TPCZelfstudieCursus { Naam = "Engels in 24 uur", AantalDagen = 1 });
+//context.TPCCursussen.Add(new TPCKlassikaleCursus { Naam = "Frans in 24 uur", Van = DateTime.Today, Tot = DateTime.Today });
+//context.TPCCursussen.Add(new TPCZelfstudieCursus { Naam = "Engels in 24 uur", AantalDagen = 1 });
+//context.SaveChanges();
+
+// speciale associaties - veel-op-veel zonder tussen klasse
+//var query = from cursus in context.Cursussen.Include(c => c.Boeken) orderby cursus.Naam select cursus;
+//foreach (var cursus in query)
+//{
+//    Console.WriteLine(cursus.Naam);
+//    foreach (var boek in cursus.Boeken)
+//    {
+//        Console.WriteLine("\t{0} ({1})", boek.Titel, boek.IsbnNr);
+//    }
+//}
+// data toevoegen
+//var nieuwBoek = new Boek { IsbnNr = "0-201-70431-5", Titel = "Modern C++ Design" };
+//context.Boeken.Add(nieuwBoek);
+//context.Cursussen.Include(c => c.Boeken).Where(c => c.Naam == "C++").FirstOrDefault()?.Boeken.Add(nieuwBoek);
+//context.SaveChanges();
+//var query = from cursus in context.Cursussen.Include(c => c.Boeken) orderby cursus.Naam select cursus;
+//foreach (var cursus in query)
+//{
+//    Console.WriteLine(cursus.Naam);
+//    foreach (var boek in cursus.Boeken)
+//    {
+//        Console.WriteLine("\t{0} ({1})", boek.Titel, boek.IsbnNr);
+//    }
+//}
+
+// veel-op-vel relatie met tussen klasse
+var campus = new Campus
+{
+    Naam = "CC Roeselare ",
+    Adres = new Adres
+    {
+        Straat = " Pilders weg",
+        Huisnummer = " 7",
+        Postcode = " 88 00",
+        Gemeente = " Roeselare "
+    }
+};
+var jean = new Docent
+{
+    Voornaam = "Jean",
+    Familienaam = "Smits",
+    Wedde = 1000,
+    InDienst = new DateTime(1966, 8, 1),
+    HeeftRijbewijs = true,
+    ThuisAdres = new Adres
+    {
+        Straat = "Keizerslaan",
+        Huisnummer = "11",
+        Postcode = "1000",
+        Gemeente = "Brussel"
+    },
+    LandCode = "BE",
+    Campus = campus
+};
+var kiekeboe = new Docent
+{
+    Voornaam = "Marcel",
+    Familienaam = "Kiekeboe",
+    Wedde = 500,
+    InDienst = new DateTime(1948, 10, 24),
+    HeeftRijbewijs = true,
+    ThuisAdres = new Adres
+    {
+        Straat = "Merholaan",
+        Huisnummer = "1B",
+        Postcode = "3000",
+        Gemeente = "Zoersel"
+    },
+    LandCode = "BE",
+    Campus = campus
+};
+var activiteit1 = new Activiteit { Naam = "EHBO" };
+var activiteit2 = new Activiteit { Naam = "Vergaderen" };
+var activiteit3 = new Activiteit { Naam = "Overleggen" };
+var activiteit4 = new Activiteit { Naam = "Studie" };
+
+context.Campussen.Add(campus);
 context.SaveChanges();
+context.Docenten.Add(jean);
+context.Docenten.Add(kiekeboe);
+context.SaveChanges();
+context.Activiteiten.Add(activiteit1);
+context.Activiteiten.Add(activiteit2);
+context.Activiteiten.Add(activiteit3);
+context.Activiteiten.Add(activiteit4);
+context.SaveChanges();
+
+var da1 = new DocentActiviteit
+{
+    DocentId = jean.DocentId,
+    ActiviteitId = activiteit2.ActiviteitId,
+    AantalUren = 4
+};
+var da2 = new DocentActiviteit
+{
+    DocentId = jean.DocentId,
+    ActiviteitId = activiteit3.ActiviteitId,
+    AantalUren = 1
+};
+var da3 = new DocentActiviteit
+{
+    DocentId = kiekeboe.DocentId,
+    ActiviteitId = activiteit4.ActiviteitId,
+    AantalUren = 4
+};
+var da4 = new DocentActiviteit
+{
+    DocentId = kiekeboe.DocentId,
+    ActiviteitId = activiteit1.ActiviteitId,
+    AantalUren = 1
+};
+var da5 = new DocentActiviteit
+{
+    DocentId = kiekeboe.DocentId,
+    ActiviteitId = activiteit2.ActiviteitId,
+    AantalUren = 2
+};
+
+context.AddRange(da1, da2, da3, da4, da5);
+context.SaveChanges();
+
+var docent = context.Docenten.Include("DocentenActiviteiten.Activiteit").Where(d => d.DocentId == 4).FirstOrDefault();
+docent.DocentenActiviteiten.Add(new DocentActiviteit { ActiviteitId = 3, AantalUren = 6 });
+context.SaveChanges();
+
+foreach (var d in context.Docenten.Include("DocentenActiviteiten.Activiteit"))
+{
+    Console.WriteLine(d.Naam);
+    if (d.DocentenActiviteiten.Count == 0)
+        Console.WriteLine("\tGeen activiteiten");
+    else
+        foreach (var da in d.DocentenActiviteiten)
+            Console.WriteLine("\t{0} {1} uur",
+            da.Activiteit.Naam, da.AantalUren);
+    Console.WriteLine();
+}
