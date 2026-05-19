@@ -125,38 +125,55 @@ using var context = new EFTakenContext();
 //context.SaveChanges();
 
 // Oefening hoofdstuk 14 - blz. 124
-Console.Write("RekeningNr. van rekening: ");
-var vanRekeningNr = Console.ReadLine();
-Console.Write("RekeningNr. naar rekening: ");
-var naarRekeningNr = Console.ReadLine();
+//Console.Write("RekeningNr. van rekening: ");
+//var vanRekeningNr = Console.ReadLine();
+//Console.Write("RekeningNr. naar rekening: ");
+//var naarRekeningNr = Console.ReadLine();
+//try
+//{
+//    Console.Write("Bedrag: ");
+//    var bedrag = decimal.Parse(Console.ReadLine());
+//    if (bedrag <= decimal.Zero) Console.WriteLine("Tik een positief bedrag");
+//    else
+//    {
+//        var transactionOptions = new TransactionOptions { IsolationLevel = IsolationLevel.RepeatableRead };
+//        using var transactionScope = new TransactionScope(TransactionScopeOption.Required, transactionOptions);
+
+//        var vanRekening = context.Rekeningen.Find(vanRekeningNr);
+
+//        if (vanRekening is null) Console.WriteLine("Van rekening niet gevonden");
+//        else
+//        {
+//            var naarRekening = context.Rekeningen.Find(naarRekeningNr);
+//            if (naarRekening is null) Console.WriteLine("Naar rekening niet gevonden");
+//            else
+//            {
+//                try
+//                {
+//                    vanRekening.Overschrijven(naarRekening, bedrag);
+//                    context.SaveChanges();
+//                    transactionScope.Complete();
+//                }
+//                catch (Exception ex) { Console.WriteLine(ex.Message); }
+//            }
+//        }
+//    }
+//}
+//catch (FormatException) { Console.WriteLine("Ongeldig bedrag"); }
+
+// Oefening hoofdstuk 16 - blaz. 129
+Console.Write("KlantNr: ");
 try
 {
-    Console.Write("Bedrag: ");
-    var bedrag = decimal.Parse(Console.ReadLine());
-    if (bedrag <= decimal.Zero) Console.WriteLine("Tik een positief bedrag");
+    var klantNr = int.Parse(Console.ReadLine());
+    var klant = context.Klanten.Find(klantNr);
+    if (klant == null) Console.WriteLine("Klant niet gevonden");
     else
     {
-        var transactionOptions = new TransactionOptions { IsolationLevel = IsolationLevel.RepeatableRead };
-        using var transactionScope = new TransactionScope(TransactionScopeOption.Required, transactionOptions);
-
-        var vanRekening = context.Rekeningen.Find(vanRekeningNr);
-
-        if (vanRekening is null) Console.WriteLine("Van rekening niet gevonden");
-        else
-        {
-            var naarRekening = context.Rekeningen.Find(naarRekeningNr);
-            if (naarRekening is null) Console.WriteLine("Naar rekening niet gevonden");
-            else
-            {
-                try
-                {
-                    vanRekening.Overschrijven(naarRekening, bedrag);
-                    context.SaveChanges();
-                    transactionScope.Complete();
-                }
-                catch (Exception ex) { Console.WriteLine(ex.Message); }
-            }
-        }
+        Console.Write("Voornaam: ");
+        klant.Voornaam = Console.ReadLine();
+        context.SaveChanges();
     }
 }
-catch (FormatException) { Console.WriteLine("Ongeldig bedrag"); }
+catch (DbUpdateConcurrencyException) { Console.WriteLine("Een andere gebruiker wijzigde deze klant"); }
+catch (FormatException) { Console.WriteLine("Ongeldig klantnummer"); }

@@ -24,6 +24,8 @@ namespace Model.Entities
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Artikel>().ToTable("Artikels").HasDiscriminator<string>("ArtikelType").HasValue<FoodArtikel>("F").HasValue<NonFoodArtikel>("N");
+            modelBuilder.Entity<Klant>().Property(a => a.KlantNr).IsConcurrencyToken();
+            modelBuilder.Entity<Klant>().Property(a => a.Voornaam).IsConcurrencyToken();
 
             //seeding
             #region klantdata
