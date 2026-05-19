@@ -21,5 +21,15 @@ namespace Model.Entities
         public virtual Klant Klant { get; set; } = null!;
 
         public void Storten(decimal bedrag) => Saldo += bedrag;
+
+        public void Overschrijven(Rekening naarRekening, decimal bedrag)
+        {
+            if (this.Saldo < bedrag) throw new Exception("Saldo ontoereikend");
+            else
+            {
+                this.Saldo -= bedrag;
+                naarRekening.Saldo += bedrag;
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Model.Entities;
+using System.Transactions;
 using var context = new EFTakenContext();
 
 //foreach (var klant in context.Klanten)
@@ -111,14 +112,51 @@ using var context = new EFTakenContext();
 //}
 
 // Oefening 2 Hoofstuk 12 - blz. 105
-var soepterrine = new NonFoodArtikel { Naam = "Villeroy & Boch", Garantie = 24 };
-var grasmachine = new NonFoodArtikel { Naam = "SABO 40-spirit", Garantie = 60 };
-var frietpatatjes = new FoodArtikel { Naam = "Frietaardappelen 5kg", Houdbaarheid = 1 };
-var tuin = new ArtikelGroep { Naam = "Tuinartikelen" };
-var keuken = new ArtikelGroep { Naam = "Keukenartikelen" };
-tuin.Artikels.Add(grasmachine);
-keuken.Artikels.Add(soepterrine);
-keuken.Artikels.Add(frietpatatjes);
-context.ArtikelGroepen.Add(tuin);
-context.ArtikelGroepen.Add(keuken);
-context.SaveChanges();
+//var soepterrine = new NonFoodArtikel { Naam = "Villeroy & Boch", Garantie = 24 };
+//var grasmachine = new NonFoodArtikel { Naam = "SABO 40-spirit", Garantie = 60 };
+//var frietpatatjes = new FoodArtikel { Naam = "Frietaardappelen 5kg", Houdbaarheid = 1 };
+//var tuin = new ArtikelGroep { Naam = "Tuinartikelen" };
+//var keuken = new ArtikelGroep { Naam = "Keukenartikelen" };
+//tuin.Artikels.Add(grasmachine);
+//keuken.Artikels.Add(soepterrine);
+//keuken.Artikels.Add(frietpatatjes);
+//context.ArtikelGroepen.Add(tuin);
+//context.ArtikelGroepen.Add(keuken);
+//context.SaveChanges();
+
+// Oefening hoofdstuk 14 - blz. 124
+Console.Write("RekeningNr. van rekening: ");
+var vanRekeningNr = Console.ReadLine();
+Console.Write("RekeningNr. naar rekening: ");
+var naarRekeningNr = Console.ReadLine();
+try
+{
+    Console.Write("Bedrag: ");
+    var bedrag = decimal.Parse(Console.ReadLine());
+    if (bedrag <= decimal.Zero) Console.WriteLine("Tik een positief bedrag");
+    else
+    {
+        var transactionOptions = new TransactionOptions { IsolationLevel = IsolationLevel.RepeatableRead };
+        using var transactionScope = new TransactionScope(TransactionScopeOption.Required, transactionOptions);
+
+        var vanRekening = context.Rekeningen.Find(vanRekeningNr);
+
+        if (vanRekening is null) Console.WriteLine("Van rekening niet gevonden");
+        else
+        {
+            var naarRekening = context.Rekeningen.Find(naarRekeningNr);
+            if (naarRekening is null) Console.WriteLine("Naar rekening niet gevonden");
+            else
+            {
+                try
+                {
+                    vanRekening.Overschrijven(naarRekening, bedrag);
+                    context.SaveChanges();
+                    transactionScope.Complete();
+                }
+                catch (Exception ex) { Console.WriteLine(ex.Message); }
+            }
+        }
+    }
+}
+catch (FormatException) { Console.WriteLine("Ongeldig bedrag"); }
