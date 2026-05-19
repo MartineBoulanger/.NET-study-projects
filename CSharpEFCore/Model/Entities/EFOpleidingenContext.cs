@@ -21,6 +21,7 @@ namespace Model.Entities
         public DbSet<Activiteit> Activiteiten { get; set; }
         public DbSet<DocentActiviteit> DocentenActiviteiten { get; set; }
         public DbSet<Werknemer> Werknemers { get; set; }
+        public DbSet<Voorraad> CursusVoorraden { get; set; }
 
         // TPH collections
         public DbSet<TPHCursus> TPHCursussen { get; set; }
@@ -64,6 +65,7 @@ namespace Model.Entities
             modelBuilder.Entity<DocentActiviteit>().HasKey(a => new { a.DocentId, a.ActiviteitId });
             modelBuilder.Entity<DocentActiviteit>().HasOne(a => a.Docent).WithMany(d => d.DocentenActiviteiten).HasForeignKey(k => k.DocentId);
             modelBuilder.Entity<DocentActiviteit>().HasOne(a => a.Activiteit).WithMany(a => a.DocentenActiviteiten).HasForeignKey(k => k.ActiviteitId);
+            modelBuilder.Entity<Voorraad>().HasKey(t => new { t.MagazijnNr, t.CursusNr });
 
             // owned types configureren
             modelBuilder.Entity<Campus>().OwnsOne(c => c.Adres);
@@ -4307,6 +4309,16 @@ namespace Model.Entities
                     }
                 }
                 modelBuilder.Entity<Werknemer>().HasData(werknemers);
+                #endregion
+                #region voorraaddata
+                modelBuilder.Entity<Voorraad>().HasData(
+                    new Voorraad { MagazijnNr = 1, CursusNr = 10, AantalStuks = 100, RekNr = 3 },
+                    new Voorraad { MagazijnNr = 2, CursusNr = 10, AantalStuks = 1000, RekNr = 17 },
+                    new Voorraad { MagazijnNr = 1, CursusNr = 20, AantalStuks = 200, RekNr = 12 },
+                    new Voorraad { MagazijnNr = 2, CursusNr = 20, AantalStuks = 2000, RekNr = 23 },
+                    new Voorraad { MagazijnNr = 1, CursusNr = 30, AantalStuks = 300, RekNr = 4 },
+                    new Voorraad { MagazijnNr = 2, CursusNr = 30, AantalStuks = 3000, RekNr = 9 }
+                );
                 #endregion
             }
         }
