@@ -5,6 +5,7 @@ namespace Model.Entities
     public class Voorraad
     {
         public int MagazijnNr { get; set; }
+
         public int CursusNr { get; set; }
 
         [Required]
@@ -12,5 +13,8 @@ namespace Model.Entities
 
         [Required]
         public int RekNr { get; set; }
+
+        [Timestamp]
+        public byte[]? Aangepast { get; set; }
     }
 }

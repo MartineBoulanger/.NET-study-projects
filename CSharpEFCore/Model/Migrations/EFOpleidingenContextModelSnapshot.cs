@@ -4362,6 +4362,11 @@ namespace Model.Migrations
                     b.Property<int>("CursusNr")
                         .HasColumnType("int");
 
+                    b.Property<byte[]>("Aangepast")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
                     b.Property<int>("AantalStuks")
                         .HasColumnType("int");
 
