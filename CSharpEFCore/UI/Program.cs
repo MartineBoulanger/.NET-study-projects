@@ -510,11 +510,11 @@ using var context = new EFOpleidingenContext();
 //}
 
 // associatie naar dezelfde tabel
-Werknemer joe = new Werknemer { Voornaam = "Joe", Familienaam = "Dalton" };
-Werknemer averell = new Werknemer { Voornaam = "Averell", Familienaam = "Dalton", Overste = joe };
-context.Werknemers.Add(joe);
-context.Werknemers.Add(averell);
-context.SaveChanges();
+//Werknemer joe = new Werknemer { Voornaam = "Joe", Familienaam = "Dalton" };
+//Werknemer averell = new Werknemer { Voornaam = "Averell", Familienaam = "Dalton", Overste = joe };
+//context.Werknemers.Add(joe);
+//context.Werknemers.Add(averell);
+//context.SaveChanges();
 
 // tonen van werknemers zonder overste
 //var query = from w in context.Werknemers where w.Overste == null orderby w.Voornaam, w.Familienaam select w;
