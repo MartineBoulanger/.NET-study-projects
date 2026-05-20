@@ -631,17 +631,17 @@ using var context = new EFOpleidingenContext();
 //}
 
 // optimistic record locking
-try
-{
-    Console.Write("Cursusnr.:");
-    var cursusnr = int.Parse(Console.ReadLine());
-    Console.Write("Magazijn nr.:");
-    var magazijnNr = int.Parse(Console.ReadLine());
-    Console.Write("Aantal stuks toevoegen:");
-    var aantalStuks = int.Parse(Console.ReadLine());
-    VoorraadBijvulling(cursusnr, magazijnNr, aantalStuks);
-}
-catch (FormatException) { Console.WriteLine("Tik een getal"); }
+//try
+//{
+//    Console.Write("Cursusnr.:");
+//    var cursusnr = int.Parse(Console.ReadLine());
+//    Console.Write("Magazijn nr.:");
+//    var magazijnNr = int.Parse(Console.ReadLine());
+//    Console.Write("Aantal stuks toevoegen:");
+//    var aantalStuks = int.Parse(Console.ReadLine());
+//    VoorraadBijvulling(cursusnr, magazijnNr, aantalStuks);
+//}
+//catch (FormatException) { Console.WriteLine("Tik een getal"); }
 
 // normale versie
 //void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
@@ -659,25 +659,78 @@ catch (FormatException) { Console.WriteLine("Tik een getal"); }
 //}
 
 // zonder timestamp kolom
-void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
-{
-    var voorraad = context.CursusVoorraden.Find(magazijnNr, cursusNr);
-    if (voorraad != null)
-    {
-        voorraad.AantalStuks += aantalStuks;
-        Console.WriteLine("Pas nu de voorraad aan in SSMS ,"
-        + " druk daarna op Enter");
-        Console.ReadLine();
-        try 
-        { 
-            context.SaveChanges();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            Console.WriteLine("Voorraad werd intussen door een andere"
-                + " applicatie aangepast.");
-        }
-    }
-    else
-        Console.WriteLine("Voorraad niet gevonden");
-}
+//void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
+//{
+//    var voorraad = context.CursusVoorraden.Find(magazijnNr, cursusNr);
+//    if (voorraad != null)
+//    {
+//        voorraad.AantalStuks += aantalStuks;
+//        Console.WriteLine("Pas nu de voorraad aan in SSMS ,"
+//        + " druk daarna op Enter");
+//        Console.ReadLine();
+//        try 
+//        { 
+//            context.SaveChanges();
+//        }
+//        catch (DbUpdateConcurrencyException)
+//        {
+//            Console.WriteLine("Voorraad werd intussen door een andere"
+//                + " applicatie aangepast.");
+//        }
+//    }
+//    else
+//        Console.WriteLine("Voorraad niet gevonden");
+//}
+
+// ChangeTracker
+//Console.WriteLine("-----------\nWijzigingen\n-----------");
+//// unchanged
+//var land0 = context.Landen.First();
+//Console.WriteLine("\n" + land0.LandCode + " - " + land0.Naam + " - " + context.Entry(land0).State + "\n");
+//// added
+//var land1 = new Land { LandCode = "AB", Naam = "abcdef" };
+//context.Landen.Add(land1);
+//Console.WriteLine("\n" + land1.LandCode + " - " + land1.Naam + " - " + context.Entry(land1).State + "\n");
+//// modified
+//var land2 = context.Landen.Where(l => l.LandCode == "FR").FirstOrDefault();
+//land2.Naam = "France";
+//Console.WriteLine("\n" + land2.LandCode + " - " + land2.Naam + " - " + context.Entry(land2).State + "\n");
+//// deleted
+//var land3 = context.Landen.Where(l => l.LandCode == "LU").FirstOrDefault();
+//context.Landen.Remove(land3);
+//Console.WriteLine("\n" + land3.LandCode + " - " + land3.Naam + " - " + context.Entry(land3).State + "\n");
+//// detached
+//var land4 = new Land { LandCode = "XY", Naam = "xyz" };
+//Console.WriteLine("\n" + land4.LandCode + " - " + land4.Naam + " - " + context.Entry(land4).State + "\n");
+//Console.WriteLine("--------------\nNa wijzigingen\n--------------");
+//context.ChangeTracker.DetectChanges();
+//Console.WriteLine("\nHasChanges: {0}\n", context.ChangeTracker.HasChanges());
+//foreach (var entry in context.ChangeTracker.Entries())
+//{
+//    Console.WriteLine("Entity: {0}, Status: {1}", entry.Entity.GetType().Name, entry.State);
+//    foreach (var x in entry.Properties)
+//    {
+//        Console.WriteLine($"Property '{x.Metadata.Name}'" + 
+//            $" is {(x.IsModified ? "modified" : "not modified")} " +
+//            $" - Current value: '{x.CurrentValue}' " +
+//            $" - Original value: '{x.OriginalValue}'");
+//    }
+//    Console.WriteLine("\n");
+//}
+
+// AsNoTracking
+//Console.WriteLine("Landen met meer dan 2 docenten: ");
+//var alleLanden = context.Landen.AsNoTracking().Where(l => l.Docenten.Count > 2);
+//foreach (var land in alleLanden)
+//{
+//    Console.WriteLine(land.Naam);
+//}
+// zonder de NoTracking instelling
+//context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking; // nu worden er geen wijzigingen doorgevoerd in de database
+context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.TrackAll; // nu worden er well wijzigingen doorgevoerd in de database
+var landenLijst = context.Landen.ToList();
+var debugView = context.ChangeTracker.DebugView;
+var ned = landenLijst.FirstOrDefault(x => x.LandCode == "NL");
+ned.Naam = "Holland";
+Console.WriteLine(context.Entry(ned).State);
+context.SaveChanges();
