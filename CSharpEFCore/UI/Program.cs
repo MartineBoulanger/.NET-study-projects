@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Model.Entities;
-using System.Transactions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using Model.Entities;
 using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
 //{
@@ -385,7 +382,7 @@ using var context = new EFOpleidingenContext();
 //        Console.WriteLine("\t{0} ({1})", boek.Titel, boek.IsbnNr);
 //    }
 //}
-// data toevoegen
+//data toevoegen
 //var nieuwBoek = new Boek { IsbnNr = "0-201-70431-5", Titel = "Modern C++ Design" };
 //context.Boeken.Add(nieuwBoek);
 //context.Cursussen.Include(c => c.Boeken).Where(c => c.Naam == "C++").FirstOrDefault()?.Boeken.Add(nieuwBoek);
@@ -513,19 +510,19 @@ using var context = new EFOpleidingenContext();
 //}
 
 // associatie naar dezelfde tabel
-//Werknemer joe = new Werknemer { Voornaam = "Joe", Familienaam = "Dalton" };
-//Werknemer averell = new Werknemer { Voornaam = "Averell", Familienaam = "Dalton", Overste = joe };
-//context.Werknemers.Add(joe);
-//context.Werknemers.Add(averell);
-//context.SaveChanges();
+Werknemer joe = new Werknemer { Voornaam = "Joe", Familienaam = "Dalton" };
+Werknemer averell = new Werknemer { Voornaam = "Averell", Familienaam = "Dalton", Overste = joe };
+context.Werknemers.Add(joe);
+context.Werknemers.Add(averell);
+context.SaveChanges();
 
 // tonen van werknemers zonder overste
 //var query = from w in context.Werknemers where w.Overste == null orderby w.Voornaam, w.Familienaam select w;
 //foreach (var w in query) Console.WriteLine($"{w.Voornaam} {w.Familienaam}");
-// tonen van werknemers die wel een overste hebben met de vermelding van die overste
+//tonen van werknemers die wel een overste hebben met de vermelding van die overste
 //var query = from w in context.Werknemers.Include(w => w.Overste) where w.Overste != null orderby w.Voornaam, w.Familienaam select w;
 //foreach (var w in query) Console.WriteLine($"Werknemer: {w.Voornaam} {w.Familienaam}, Overste: {w.Overste?.Voornaam} {w.Overste?.Familienaam}");
-// tonen van overste met hun ondergeschikten
+//tonen van overste met hun ondergeschikten
 //var query = from w in context.Werknemers.Include(w => w.Ondergeschikten) where w.Ondergeschikten.Count != 0 orderby w.Voornaam, w.Familienaam select w;
 //foreach (var w in query)
 //{
@@ -543,9 +540,11 @@ using var context = new EFOpleidingenContext();
 //        werknemer5.Ondergeschikten.Add(werknemer6);
 //        context.SaveChanges();
 //    }
-//    else Console.WriteLine("Werknemer 6 niet gevonden");
+//    else
+//        Console.WriteLine("Werknemer 6 niet gevonden");
 //}
-//else Console.WriteLine("Werknemer 5 niet gevonden");
+//else
+//    Console.WriteLine("Werknemer 5 niet gevonden");
 
 // ingebouwde transactiebeheer
 //void VoorraadTransfer(int cursusNr, int vanMagazijnNr, int naarMagazijnNr, int aantalStuks)
@@ -631,17 +630,17 @@ using var context = new EFOpleidingenContext();
 //}
 
 // optimistic record locking
-try
-{
-    Console.Write("Cursusnr.:");
-    var cursusnr = int.Parse(Console.ReadLine());
-    Console.Write("Magazijn nr.:");
-    var magazijnNr = int.Parse(Console.ReadLine());
-    Console.Write("Aantal stuks toevoegen:");
-    var aantalStuks = int.Parse(Console.ReadLine());
-    VoorraadBijvulling(cursusnr, magazijnNr, aantalStuks);
-}
-catch (FormatException) { Console.WriteLine("Tik een getal"); }
+//try
+//{
+//    Console.Write("Cursusnr.:");
+//    var cursusnr = int.Parse(Console.ReadLine());
+//    Console.Write("Magazijn nr.:");
+//    var magazijnNr = int.Parse(Console.ReadLine());
+//    Console.Write("Aantal stuks toevoegen:");
+//    var aantalStuks = int.Parse(Console.ReadLine());
+//    VoorraadBijvulling(cursusnr, magazijnNr, aantalStuks);
+//}
+//catch (FormatException) { Console.WriteLine("Tik een getal"); }
 
 // normale versie
 //void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
@@ -659,25 +658,25 @@ catch (FormatException) { Console.WriteLine("Tik een getal"); }
 //}
 
 // zonder timestamp kolom
-void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
-{
-    var voorraad = context.CursusVoorraden.Find(magazijnNr, cursusNr);
-    if (voorraad != null)
-    {
-        voorraad.AantalStuks += aantalStuks;
-        Console.WriteLine("Pas nu de voorraad aan in SSMS ,"
-        + " druk daarna op Enter");
-        Console.ReadLine();
-        try 
-        { 
-            context.SaveChanges();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            Console.WriteLine("Voorraad werd intussen door een andere"
-                + " applicatie aangepast.");
-        }
-    }
-    else
-        Console.WriteLine("Voorraad niet gevonden");
-}
+//void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
+//{
+//    var voorraad = context.CursusVoorraden.Find(magazijnNr, cursusNr);
+//    if (voorraad != null)
+//    {
+//        voorraad.AantalStuks += aantalStuks;
+//        Console.WriteLine("Pas nu de voorraad aan in SSMS ,"
+//        + " druk daarna op Enter");
+//        Console.ReadLine();
+//        try 
+//        { 
+//            context.SaveChanges();
+//        }
+//        catch (DbUpdateConcurrencyException)
+//        {
+//            Console.WriteLine("Voorraad werd intussen door een andere"
+//                + " applicatie aangepast.");
+//        }
+//    }
+//    else
+//        Console.WriteLine("Voorraad niet gevonden");
+//}
