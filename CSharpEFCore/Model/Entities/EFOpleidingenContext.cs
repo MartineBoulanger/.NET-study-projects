@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 
 namespace Model.Entities
@@ -10,7 +11,21 @@ namespace Model.Entities
 
         // contructor toeveoegen ivm met de InMemory voor de tests
         public EFOpleidingenContext(DbContextOptions<EFOpleidingenContext> options) : base(options) { }
-        public EFOpleidingenContext() { }
+        public EFOpleidingenContext()
+        {
+            ChangeTracker.StateChanged += StateChanged;
+            ChangeTracker.Tracked += Tracked;
+        }
+
+        public void StateChanged(object sender, EntityStateChangedEventArgs e)
+        {
+            Console.WriteLine($"Status is gewijzigd van {e.OldState} naar {e.NewState}");
+        }
+
+        public void Tracked (object sender, EntityTrackedEventArgs e)
+        {
+            Console.WriteLine("Nieuw te volgen entity");
+        }
 
         // entity collections
         public DbSet<Campus> Campussen { get; set; }
