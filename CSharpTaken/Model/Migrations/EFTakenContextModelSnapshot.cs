@@ -72,12 +72,14 @@ namespace Model.Migrations
             modelBuilder.Entity("Model.Entities.Klant", b =>
                 {
                     b.Property<int>("KlantNr")
+                        .IsConcurrencyToken()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("KlantNr"));
 
                     b.Property<string>("Voornaam")
+                        .IsConcurrencyToken()
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

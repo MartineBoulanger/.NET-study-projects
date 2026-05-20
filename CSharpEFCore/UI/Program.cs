@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Model.Entities;
+using System.Transactions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using var context = new EFOpleidingenContext();
 //foreach (var docent in context.Docenten)
@@ -533,15 +534,150 @@ using var context = new EFOpleidingenContext();
 //        Console.WriteLine($"\tWerknemer: {o.Voornaam} {o.Familienaam}");
 //}
 // veranderen van werknemer overste
-var werknemer5 = context.Werknemers.Find(5);
-if (werknemer5 != null)
+//var werknemer5 = context.Werknemers.Find(5);
+//if (werknemer5 != null)
+//{
+//    var werknemer6 = context.Werknemers.Find(6);
+//    if (werknemer6 != null)
+//    {
+//        werknemer5.Ondergeschikten.Add(werknemer6);
+//        context.SaveChanges();
+//    }
+//    else Console.WriteLine("Werknemer 6 niet gevonden");
+//}
+//else Console.WriteLine("Werknemer 5 niet gevonden");
+
+// ingebouwde transactiebeheer
+//void VoorraadTransfer(int cursusNr, int vanMagazijnNr, int naarMagazijnNr, int aantalStuks)
+//{
+//    var vanVoorraad = context.CursusVoorraden.Find(vanMagazijnNr, cursusNr);
+//    if (vanVoorraad != null)
+//    {
+//        if (vanVoorraad.AantalStuks >= aantalStuks)
+//        {
+//            vanVoorraad.AantalStuks -= aantalStuks;
+//            var naarVoorraad = context.CursusVoorraden.Find(naarMagazijnNr, cursusNr);
+//            if (naarVoorraad != null)
+//            {
+//                naarVoorraad.AantalStuks += aantalStuks;
+//                Console.ReadLine(); // om te testen wat er gebeurd als iemand anders de data probeerd te wijzigen die wij hebben ingelezen
+//                context.SaveChanges();
+//            }
+//            else Console.WriteLine("Cursus {0} niet gevonden in magazijn {1}", cursusNr, naarMagazijnNr);
+//        }
+//        else Console.WriteLine("Te weinig voorraad voor transfer");
+//    }
+//    else Console.WriteLine("Artikel niet gevonden in magazijn {0}", vanMagazijnNr);
+//}
+
+//try
+//{
+//    Console.Write("Cursusnr: ");
+//    var cursusNr = int.Parse(Console.ReadLine());
+//    Console.Write("Van magazijn nr: ");
+//    var vanMagazijnNr = int.Parse(Console.ReadLine());
+//    Console.Write("Naar magazijn nr: ");
+//    var naarMagazijnNr = int.Parse(Console.ReadLine());
+//    Console.Write("Aantal stuks: ");
+//    var aantalStuks = int.Parse(Console.ReadLine());
+//    VoorraadTransfer(cursusNr, vanMagazijnNr, naarMagazijnNr, aantalStuks);
+//}
+//catch (FormatException)
+//{
+//    Console.WriteLine("Tik een getal");
+//}
+
+// Eigen transactiebeheer
+//void VoorraadTransfer(int cursusNr, int vanMagazijnNr, int naarMagazijnNr, int aantalStuks)
+//{
+//    var transactionOptions = new TransactionOptions { IsolationLevel = IsolationLevel.RepeatableRead };
+//    using var transactionScope = new TransactionScope(TransactionScopeOption.Required, transactionOptions);
+
+//    var vanVoorraad = context.CursusVoorraden.Find(vanMagazijnNr, cursusNr);
+//    if (vanVoorraad != null)
+//    {
+//        if (vanVoorraad.AantalStuks >= aantalStuks)
+//        {
+//            vanVoorraad.AantalStuks -= aantalStuks;
+//            var naarVoorraad = context.CursusVoorraden.Find(naarMagazijnNr, cursusNr);
+//            if (naarVoorraad != null)
+//            {
+//                naarVoorraad.AantalStuks += aantalStuks;
+//                Console.ReadLine(); // om te testen wat er gebeurd als iemand anders de data probeerd te wijzigen die wij hebben ingelezen
+//                context.SaveChanges();
+//                transactionScope.Complete();
+//            }
+//            else Console.WriteLine("Cursus {0} niet gevonden in magazijn {1}", cursusNr, naarMagazijnNr);
+//        }
+//        else Console.WriteLine("Te weinig voorraad voor transfer");
+//    }
+//    else Console.WriteLine("Artikel niet gevonden in magazijn {0}", vanMagazijnNr);
+//}
+//try
+//{
+//    Console.Write("Cursusnr: ");
+//    var cursusNr = int.Parse(Console.ReadLine());
+//    Console.Write("Van magazijn nr: ");
+//    var vanMagazijnNr = int.Parse(Console.ReadLine());
+//    Console.Write("Naar magazijn nr: ");
+//    var naarMagazijnNr = int.Parse(Console.ReadLine());
+//    Console.Write("Aantal stuks: ");
+//    var aantalStuks = int.Parse(Console.ReadLine());
+//    VoorraadTransfer(cursusNr, vanMagazijnNr, naarMagazijnNr, aantalStuks);
+//}
+//catch (FormatException)
+//{
+//    Console.WriteLine("Tik een getal");
+//}
+
+// optimistic record locking
+try
 {
-    var werknemer6 = context.Werknemers.Find(6);
-    if (werknemer6 != null)
-    {
-        werknemer5.Ondergeschikten.Add(werknemer6);
-        context.SaveChanges();
-    }
-    else Console.WriteLine("Werknemer 6 niet gevonden");
+    Console.Write("Cursusnr.:");
+    var cursusnr = int.Parse(Console.ReadLine());
+    Console.Write("Magazijn nr.:");
+    var magazijnNr = int.Parse(Console.ReadLine());
+    Console.Write("Aantal stuks toevoegen:");
+    var aantalStuks = int.Parse(Console.ReadLine());
+    VoorraadBijvulling(cursusnr, magazijnNr, aantalStuks);
 }
-else Console.WriteLine("Werknemer 5 niet gevonden");
+catch (FormatException) { Console.WriteLine("Tik een getal"); }
+
+// normale versie
+//void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
+//{ 
+//    var voorraad = context.CursusVoorraden.Find(magazijnNr, cursusNr);
+//    if (voorraad != null)
+//    {
+//        voorraad.AantalStuks += aantalStuks;
+//        Console.WriteLine("Pas nu de voorraad aan in SSMS ,"
+//        + " druk daarna op Enter");
+//        Console.ReadLine(); context.SaveChanges();
+//    }
+//    else
+//        Console.WriteLine("Voorraad niet gevonden");
+//}
+
+// zonder timestamp kolom
+void VoorraadBijvulling(int cursusNr, int magazijnNr, int aantalStuks)
+{
+    var voorraad = context.CursusVoorraden.Find(magazijnNr, cursusNr);
+    if (voorraad != null)
+    {
+        voorraad.AantalStuks += aantalStuks;
+        Console.WriteLine("Pas nu de voorraad aan in SSMS ,"
+        + " druk daarna op Enter");
+        Console.ReadLine();
+        try 
+        { 
+            context.SaveChanges();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            Console.WriteLine("Voorraad werd intussen door een andere"
+                + " applicatie aangepast.");
+        }
+    }
+    else
+        Console.WriteLine("Voorraad niet gevonden");
+}

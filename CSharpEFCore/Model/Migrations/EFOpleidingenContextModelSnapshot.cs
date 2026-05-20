@@ -17,7 +17,7 @@ namespace Model.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.7")
+                .HasAnnotation("ProductVersion", "10.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -4352,6 +4352,74 @@ namespace Model.Migrations
                     b.ToTable("TPT", (string)null);
 
                     b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("Model.Entities.Voorraad", b =>
+                {
+                    b.Property<int>("MagazijnNr")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CursusNr")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("Aangepast")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
+                    b.Property<int>("AantalStuks")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RekNr")
+                        .HasColumnType("int");
+
+                    b.HasKey("MagazijnNr", "CursusNr");
+
+                    b.ToTable("CursusVoorraden");
+
+                    b.HasData(
+                        new
+                        {
+                            MagazijnNr = 1,
+                            CursusNr = 10,
+                            AantalStuks = 100,
+                            RekNr = 3
+                        },
+                        new
+                        {
+                            MagazijnNr = 2,
+                            CursusNr = 10,
+                            AantalStuks = 1000,
+                            RekNr = 17
+                        },
+                        new
+                        {
+                            MagazijnNr = 1,
+                            CursusNr = 20,
+                            AantalStuks = 200,
+                            RekNr = 12
+                        },
+                        new
+                        {
+                            MagazijnNr = 2,
+                            CursusNr = 20,
+                            AantalStuks = 2000,
+                            RekNr = 23
+                        },
+                        new
+                        {
+                            MagazijnNr = 1,
+                            CursusNr = 30,
+                            AantalStuks = 300,
+                            RekNr = 4
+                        },
+                        new
+                        {
+                            MagazijnNr = 2,
+                            CursusNr = 30,
+                            AantalStuks = 3000,
+                            RekNr = 9
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Werknemer", b =>
