@@ -13,7 +13,8 @@ bool running = true;
 while (running)
 {
     ToonHoofdMenu();
-    string keuze = LeesInput("Geef uw keuze (KX)*").ToUpper();
+    string prompt = gekozenLand == null ? "\tGeef uw keuze (KX)*" : "    Geef uw keuze (KWSATVX)*";
+    string keuze = LeesInput(prompt).ToUpper();
     switch (keuze)
     {
         case "K":
@@ -42,51 +43,74 @@ while (running)
             break;
     }
 }
-Console.WriteLine("\nTot ziens!");
+ToonBerichtMetKleur("\n    Tot ziens!", ConsoleColor.Blue);
 
-// ═══════════════════════════════════════
-// help functies
-// ═══════════════════════════════════════
 void ToonHoofdMenu()
 {
     Console.Clear();
     string landInfo = gekozenLand != null ? gekozenLand.Naam : "Geen land gekozen";
-    Console.WriteLine($"Info:  Land: {landInfo}");
+    Console.WriteLine($"    Info:  Land: {landInfo}");
     Console.WriteLine();
-    Console.WriteLine("+---------------------+");
-    Console.WriteLine("|  H O O F D M E N U  |");
-    Console.WriteLine("+---------------------+");
-    Console.WriteLine("|  <K>ies een land    |");
-    Console.WriteLine("+---------------------+");
-    Console.WriteLine("|  <W>ijzig land      |");
-    Console.WriteLine("|  Lijst <S>teden     |");
-    Console.WriteLine("|  Lijst T<a>len      |");
-    Console.WriteLine("|  Stad <T>oevoegen   |");
-    Console.WriteLine("|  Stad <V>erwijderen |");
-    Console.WriteLine("+---------------------+");
-    Console.WriteLine("|  E<x>it toepassing  |");
-    Console.WriteLine("+---------------------+");
+    Console.WriteLine("\t+---------------------+");
+    Console.WriteLine("\t|  H O O F D M E N U  |");
+    Console.WriteLine("\t+---------------------+");
+    Console.WriteLine("\t|  <K>ies een land    |");
+    Console.WriteLine("\t+---------------------+");
+    Console.WriteLine(gekozenLand == null ? "\t|  Wijzig land        |" : "\t|  <W>ijzig land      |");
+    Console.WriteLine(gekozenLand == null ? "\t|  Lijst Steden       |" : "\t|  Lijst <S>teden     |");
+    Console.WriteLine(gekozenLand == null ? "\t|  Lijst Talen        |" : "\t|  Lijst T<a>len      |");
+    Console.WriteLine(gekozenLand == null ? "\t|  Stad Toevoegen     |" : "\t|  Stad <T>oevoegen   |");
+    Console.WriteLine(gekozenLand == null ? "\t|  Stad Verwijderen   |" : "\t|  Stad <V>erwijderen |");
+    Console.WriteLine("\t+---------------------+");
+    Console.WriteLine("\t|  E<x>it toepassing  |");
+    Console.WriteLine("\t+---------------------+");
     Console.WriteLine();
 }
 
+// ═══════════════════════════════════════
+// help functies
+// ═══════════════════════════════════════
 string LeesInput(string prompt)
 {
     Console.Write($"{prompt} : ");
     return Console.ReadLine() ?? "";
 }
 
+void ToonBerichtMetKleur(string bericht, ConsoleColor kleur)
+{
+    Console.ForegroundColor = kleur;
+    Console.WriteLine(bericht);
+    Console.ResetColor();
+}
+
 void ToonFout(string bericht)
 {
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine($"\n{bericht}");
-    Console.ResetColor();
+    ToonBerichtMetKleur($"\n{bericht}", ConsoleColor.Red);
     Pauze();
 }
 
 void Pauze()
 {
-    Console.WriteLine("\nDruk een toets om verder te gaan");
+    ToonBerichtMetKleur("\nDruk een toets om verder te gaan", ConsoleColor.Blue);
     Console.ReadKey();
+}
+
+void ToonStedenLijst()
+{
+    var steden = context.Steden.Where(s => s.ISOLandCode == gekozenLand!.ISOLandCode).OrderBy(s => s.Naam).ToList();
+    Console.WriteLine("\n----------------\nLijst van Steden\n----------------");
+    if (!steden.Any())
+        ToonFout("Geen steden gevonden");
+    else
+        foreach (var s in steden)
+            Console.WriteLine(s.Naam);
+}
+
+void ToonLandGegevens()
+{
+    Console.WriteLine($"\nGegevens land {gekozenLand!.Naam} :");
+    Console.WriteLine($"\tAantal inwoners:  {gekozenLand.AantalInwoners,15:N0}");
+    Console.WriteLine($"\t    Oppervlakte:      {gekozenLand.Oppervlakte,11:F2}");
 }
 
 bool LandGekozen()
@@ -99,26 +123,24 @@ bool LandGekozen()
     return true;
 }
 
+// ═══════════════════════════════════════
+// functies voor de menu-opties
+// ═══════════════════════════════════════
 void KiesLand()
 {
-    Console.WriteLine();
-    Console.WriteLine("+-----------------------------+");
-    Console.WriteLine("|  K I E S   E E N   L A N D  |");
-    Console.WriteLine("+-----------------------------+");
+    ToonBerichtMetKleur("\n\t+-----------------------------+\n\t|  K I E S   E E N   L A N D  |\n\t+-----------------------------+", ConsoleColor.Blue);
     var landen = context.Landen.OrderBy(l => l.Naam).ToList();
-    Console.WriteLine();
-    Console.WriteLine("----------------\nLijst van Landen\n----------------");
+    Console.WriteLine("\n----------------\nLijst van Landen\n----------------");
     foreach (var land in landen)
     {
         Console.WriteLine(
             $"{land.ISOLandCode,-4} {land.Naam,-25} {land.AantalInwoners,15:N0} {land.Oppervlakte,15:F2}"
         );
     }
-    Console.WriteLine();
-    string code = LeesInput("Geef een landcode in").ToUpper();
+    string code = LeesInput("\nGeef een landcode in").ToUpper();
     if (string.IsNullOrEmpty(code))
     {
-        ToonFout($"Geef een landcode in");
+        ToonFout("Geef een landcode in");
         return;
     }
     var gekozen = context.Landen.FirstOrDefault(l => l.ISOLandCode == code);
@@ -128,7 +150,7 @@ void KiesLand()
         return;
     }
     gekozenLand = gekozen;
-    Console.WriteLine($"\nLand '{gekozenLand.Naam}' gekozen");
+    ToonBerichtMetKleur($"\nLand '{gekozenLand.Naam}' gekozen", ConsoleColor.Green);
     Pauze();
 }
 
@@ -136,19 +158,13 @@ void WijzigLand()
 {
     if (!LandGekozen())
         return;
-    Console.WriteLine();
-    Console.WriteLine("+-----------------------------------------------------------------+");
-    Console.WriteLine("|  W I J Z I G   D E   G E G E V E N S   V A N   E E N   L A N D  |");
-    Console.WriteLine("+-----------------------------------------------------------------+");
-    Console.WriteLine($"\nGegevens land {gekozenLand!.Naam} :");
-    Console.WriteLine($"      Aantal inwoners:  {gekozenLand.AantalInwoners,15:N0}");
-    Console.WriteLine($"      Oppervlakte:      {gekozenLand.Oppervlakte,15:F2}");
-    Console.WriteLine();
-    string inputInwoners = LeesInput("Wijzig aantal inwoners (<Enter> = niet wijzigen)");
+    ToonBerichtMetKleur("\n\t+-----------------------------------------------------------------+\n\t|  W I J Z I G   D E   G E G E V E N S   V A N   E E N   L A N D  |\n\t+-----------------------------------------------------------------+", ConsoleColor.Blue);
+    ToonLandGegevens();
+    string inputInwoners = LeesInput("\nWijzig aantal inwoners (<Enter> = niet wijzigen)");
     if (!string.IsNullOrEmpty(inputInwoners))
     {
         if (int.TryParse(inputInwoners, out int nieuweInwoners) && nieuweInwoners > 0)
-            gekozenLand.AantalInwoners = nieuweInwoners;
+            gekozenLand!.AantalInwoners = nieuweInwoners;
         else
             ToonFout("Ongeldig getal voor aantal inwoners");
     }
@@ -156,14 +172,12 @@ void WijzigLand()
     if (!string.IsNullOrEmpty(inputOppervlakte))
     {
         if (float.TryParse(inputOppervlakte, out float nieuweOppervlakte) && nieuweOppervlakte > 0)
-            gekozenLand.Oppervlakte = nieuweOppervlakte;
+            gekozenLand!.Oppervlakte = nieuweOppervlakte;
         else
             ToonFout("Ongeldige waarde voor oppervlakte");
     }
     context.SaveChanges();
-    Console.WriteLine($"\nGegevens land {gekozenLand.Naam} :");
-    Console.WriteLine($"      Aantal inwoners:  {gekozenLand.AantalInwoners,15:N0}");
-    Console.WriteLine($"      Oppervlakte:      {gekozenLand.Oppervlakte,15:F2}");
+    ToonLandGegevens();
     Pauze();
 }
 
@@ -171,18 +185,8 @@ void LijstSteden()
 {
     if (!LandGekozen())
         return;
-    Console.WriteLine();
-    Console.WriteLine("+-----------------------------------+");
-    Console.WriteLine("|  L I J S T   V A N   S T E D E N  |");
-    Console.WriteLine("+-----------------------------------+");
-    var steden = context.Steden.Where(s => s.ISOLandCode == gekozenLand!.ISOLandCode).OrderBy(s => s.Naam).ToList();
-    Console.WriteLine();
-    Console.WriteLine("----------------\nLijst van Steden\n----------------");
-    if (!steden.Any())
-        Console.WriteLine("(geen steden gevonden)");
-    else
-        foreach (var stad in steden)
-            Console.WriteLine(stad.Naam);
+    ToonBerichtMetKleur("\n\t+-----------------------------------+\n\t|  L I J S T   V A N   S T E D E N  |\n\t+-----------------------------------+", ConsoleColor.Blue);
+    ToonStedenLijst();
     Pauze();
 }
 
@@ -190,18 +194,14 @@ void LijstTalen()
 {
     if (!LandGekozen())
         return;
-    Console.WriteLine();
-    Console.WriteLine("+---------------------------------+");
-    Console.WriteLine("|  L I J S T   V A N   T A L E N  |");
-    Console.WriteLine("+---------------------------------+");
-    var talen = context.LandenTalen.Where(lt => lt.LandCode == gekozenLand!.ISOLandCode).Include(lt => lt.Taal).OrderBy(lt => lt.Taal.NaamNL).ToList();
-    Console.WriteLine();
-    Console.WriteLine("---------------\nLijst van Talen\n---------------");
+    ToonBerichtMetKleur("\n\t+---------------------------------+\n\t|  L I J S T   V A N   T A L E N  |\n\t+---------------------------------+", ConsoleColor.Blue);
+    var talen = context.LandenTalen.Where(l => l.LandCode == gekozenLand!.ISOLandCode).Include(l => l.Taal).OrderBy(l => l.Taal!.NaamNL).ToList();
+    Console.WriteLine("\n---------------\nLijst van Talen\n---------------");
     if (!talen.Any())
-        Console.WriteLine("(geen talen gevonden)");
+        ToonFout("Geen talen gevonden");
     else
-        foreach (var lt in talen)
-            Console.WriteLine($"{lt.TaalCode}  {lt.Taal.NaamNL}");
+        foreach (var t in talen)
+            Console.WriteLine($"{t.TaalCode}  {t.Taal!.NaamNL}");
     Pauze();
 }
 
@@ -209,20 +209,16 @@ void StadToevoegen()
 {
     if (!LandGekozen())
         return;
-    Console.WriteLine();
-    Console.WriteLine("+-------------------------------------+");
-    Console.WriteLine("|  V O E G   E E N   S T A D   T O E  |");
-    Console.WriteLine("+-------------------------------------+");
+    ToonBerichtMetKleur("\n\t+-------------------------------------+\n\t|  V O E G   E E N   S T A D   T O E  |\n\t+-------------------------------------+", ConsoleColor.Blue);
     bool doorgaan = true;
     while (doorgaan)
     {
         ToonStedenLijst();
-        string naam = LeesInput("Geef de naam van een nieuwe stad");
+        string naam = LeesInput("\nGeef de naam van een nieuwe stad (<Enter> = stoppen)");
         if (string.IsNullOrEmpty(naam))
         {
-            ToonFout("Geef een naam in");
             doorgaan = false;
-            continue;
+            return;
         }
         bool bestaatAl = context.Steden.Any(s => s.ISOLandCode == gekozenLand!.ISOLandCode && s.Naam.ToLower() == naam.ToLower());
         if (bestaatAl)
@@ -243,10 +239,7 @@ void StadVerwijderen()
 {
     if (!LandGekozen())
         return;
-    Console.WriteLine();
-    Console.WriteLine("+---------------------------------------+");
-    Console.WriteLine("|  V E R W I J D E R   E E N   S T A D  |");
-    Console.WriteLine("+---------------------------------------+");
+    ToonBerichtMetKleur("\n\t+---------------------------------------+\n\t|  V E R W I J D E R   E E N   S T A D  |\n\t+---------------------------------------+", ConsoleColor.Blue);
     bool doorgaan = true;
     while (doorgaan)
     {
@@ -264,35 +257,20 @@ void StadVerwijderen()
         if (string.IsNullOrEmpty(input))
         {
             doorgaan = false;
+            return;
         }
         if (!int.TryParse(input, out int stadId))
         {
             ToonFout("Geef een geldig nummer in");
+            continue;
         }
         var teVerwijderen = steden.FirstOrDefault(s => s.StadId == stadId);
-        if (teVerwijderen == null)
-        {
-            ToonFout($"Geen stad gevonden met nummer {stadId}");
-        }
-        else
+        if (teVerwijderen != null)
         {
             context.Steden.Remove(teVerwijderen);
             context.SaveChanges();
-            Console.WriteLine($"\nVerwijderen van stad {teVerwijderen.Naam}");
+            ToonBerichtMetKleur($"\nVerwijderen van stad {teVerwijderen.Naam}", ConsoleColor.Green);
         }
     }
     Pauze();
-}
-
-void ToonStedenLijst()
-{
-    var steden = context.Steden.Where(s => s.ISOLandCode == gekozenLand!.ISOLandCode).OrderBy(s => s.Naam).ToList();
-    Console.WriteLine();
-    Console.WriteLine("----------------\nLijst van Steden\n----------------");
-    if (!steden.Any())
-        Console.WriteLine("(nog geen steden)");
-    else
-        foreach (var s in steden)
-            Console.WriteLine(s.Naam);
-    Console.WriteLine();
 }
