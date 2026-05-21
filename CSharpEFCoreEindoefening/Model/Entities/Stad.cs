@@ -18,7 +18,6 @@ namespace Model
         [Timestamp]
         public byte[]? Aangepast { get; set; }
 
-        // navigation properties
         public Land? Land { get; set; }
     }
 }

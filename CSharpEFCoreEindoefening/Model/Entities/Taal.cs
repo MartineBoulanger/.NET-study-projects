@@ -14,7 +14,6 @@ namespace Model
         [StringLength(50)]
         public string? NaamTaal { get; set; }
 
-        // navigation properties
         public ICollection<LandTaal> LandTalen { get; set; } = new List<LandTaal>();
     }
 }

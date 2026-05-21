@@ -10,8 +10,8 @@ namespace Model
         [StringLength(2)]
         public string TaalCode { get; set; } = null!;
 
-        // navigation properties
         public Land? Land { get; set; }
+
         public Taal? Taal { get; set; }
     }
 }

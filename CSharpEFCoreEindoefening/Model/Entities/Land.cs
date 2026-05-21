@@ -21,8 +21,8 @@ namespace Model
         [Timestamp]
         public byte[]? Aangepast { get; set; }
 
-        // navigation properties
         public ICollection<Stad> Steden { get; set; } = new List<Stad>();
+
         public ICollection<LandTaal> LandTalen { get; set; } = new List<LandTaal>();
     }
 }
