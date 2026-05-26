@@ -4,6 +4,7 @@
   </Project>
   <Project Path="Eindoefening/Eindoefening.csproj" Id="3392bb31-2d85-489d-8d60-84627bad52ea" />
   <Project Path="MeerOverControllers/MeerOverControllers.csproj" />
+  <Project Path="Pipeline/Pipeline.csproj" Id="2b354c6e-8db3-4832-b486-0161fbdfd91a" />
   <Project Path="Razor/Razor.csproj" Id="df681522-623d-4852-b123-9fd1afe5af34">
     <Build Solution="Debug|*" Project="false" />
   </Project>
