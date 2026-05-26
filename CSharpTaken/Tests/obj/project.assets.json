@@ -2169,23 +2169,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cursist\\.nuget\\packages\\": {},
+    "C:\\Users\\marti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpTaken\\Tests\\Tests.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpTaken\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpTaken\\Tests\\Tests.csproj",
-      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpTaken\\Tests\\obj\\",
+      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpTaken\\Tests\\Tests.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpTaken\\Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
