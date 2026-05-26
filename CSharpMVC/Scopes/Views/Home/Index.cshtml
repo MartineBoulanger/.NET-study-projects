@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@inject IService service;
+@{
+    service.Pad += "indexview/";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <p>Service ID: @service.Id</p>
+    <p>Service Pad: @service.Pad</p>
+</div>

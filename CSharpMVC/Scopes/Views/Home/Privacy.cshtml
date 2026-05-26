@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@inject IService service;
+@{
+    service.Pad += "privacyview/";
+}
+
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>Service ID: @service.Id</p>
+    <p>Service Pad: @service.Pad</p>
+</div>
