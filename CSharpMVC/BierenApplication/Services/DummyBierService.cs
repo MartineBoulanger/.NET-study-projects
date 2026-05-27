@@ -2,10 +2,10 @@
 
 namespace BierenApplication.Services
 {
-    public class BierService
+    public class DummyBierService:IBierenService
     {
         private Dictionary<int, Bier> bieren = new();
-        public BierService()
+        public DummyBierService()
         {
             bieren[1] = new Bier
             {
@@ -62,15 +62,15 @@ namespace BierenApplication.Services
             bieren.Remove(id);
         }
 
-        public void PrijsStijging(decimal percentage)
+        public void VerhoogPrijzen(decimal percentage)
         {
             foreach (var b in bieren)
             {
-                b.Value.Prijs *= (1m + percentage/100);
+                b.Value.Prijs *= (1m + percentage / 100);
             }
         }
 
-        public List<Bier> VanTotAlcohol(float? van, float? tot)
+        public List<Bier> BierenTussen2AlcoholPercentages(float van, float tot)
         {
             return (from bier in bieren.Values where bier.Alcohol >= van && bier.Alcohol <= tot orderby bier.Alcohol select bier).ToList();
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tuincentrum")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83c6323324c9ec143ba1413ee7f910504181cf6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33a204324634b71a7fae8e211f86fa1b67931bda")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tuincentrum")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tuincentrum")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
