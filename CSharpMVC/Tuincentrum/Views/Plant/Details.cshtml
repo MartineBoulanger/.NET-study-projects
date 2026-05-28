@@ -40,6 +40,10 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SoortNrNavigation.Naam)
         </dd>
+        <dt class="col-sm-2">Afbeelding</dt>
+        <dd class="col-sm-10">
+            @await Component.InvokeAsync("Afbeelding", Model.PlantNr)
+        </dd>
     </dl>
 </div>
 <div>
