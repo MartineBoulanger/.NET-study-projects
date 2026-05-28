@@ -1,0 +1,37 @@
+﻿@model ZoekSoortViewModel
+@{
+    ViewData["Title"] = "ZoekFormulier";
+}
+
+<h1>Soort zoeken op (begin van de) naam</h1>
+
+<form asp-action="BeginNaam" method="get">
+    <div>
+        <label asp-for="BeginNaam"></label>
+        <input asp-for="BeginNaam" />
+        <span asp-validation-for="BeginNaam" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Zoeken" class="btn btn-primary ms-3 mt-2" />
+</form>
+
+@if (Model?.Soorten.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Soort</th>
+                <th>Magazijnnr</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model.Soorten)
+            {
+                <tr>
+                    <td>@s.Naam</td>
+                    <td>@s.MagazijnNr</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@ViewBag.ErrorMessage

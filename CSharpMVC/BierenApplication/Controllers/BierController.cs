@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using BierenApplication.Services;
+﻿using BierenApplication.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-using BierenApplication.Models;
 
 namespace BierenApplication.Controllers
 {
-    public class BierController : Controller
+    public class BierController:Controller
     {
-        private readonly BierService _bierService;
-        public BierController(BierService bierService)
+        private readonly IBierenService _bierService;
+        public BierController(IBierenService bierService)
         {
             _bierService = bierService;
         }
@@ -16,14 +15,16 @@ namespace BierenApplication.Controllers
         public IActionResult Index()
         {
             var recentVerwijderdBier = (string?)this.TempData["bier"];
-            if (recentVerwijderdBier != null) ViewBag.recentVerwijderdBier = JsonSerializer.Deserialize<Bier?>(recentVerwijderdBier)?.Naam;
+            if (recentVerwijderdBier != null)
+                ViewBag.recentVerwijderdBier = JsonSerializer.Deserialize<Bier?>(recentVerwijderdBier)?.Soort;
             return View(_bierService.FindAll());
         }
 
         public IActionResult Verwijderen(int id)
         {
             var bier = _bierService.Read(id);
-            if (bier == null) ViewBag.biernummer = id;
+            if (bier == null)
+                ViewBag.biernummer = id;
             return View(bier);
         }
 
@@ -45,15 +46,16 @@ namespace BierenApplication.Controllers
                 Bier? bier = JsonSerializer.Deserialize<Bier?>(tempdata);
                 return View(bier);
             }
-            else return RedirectToAction("Index");
+            else
+                return RedirectToAction("Index");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult PrijsStijging()
         {
-            _bierService.PrijsStijging(5m);
-            return RedirectToAction(nameof(Index));
+            _bierService.VerhoogPrijzen(5m);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -68,9 +70,11 @@ namespace BierenApplication.Controllers
         {
             if (this.ModelState.IsValid)
             {
-                var lijst = _bierService.VanTotAlcohol(vanTotAlcoholViewModel.VanAlcohol, vanTotAlcoholViewModel.TotAlcohol);
-                if (lijst.Count <= 10) vanTotAlcoholViewModel.Bieren = lijst;
-                else this.ModelState.AddModelError("", "Te veel resultaten");
+                var lijst = _bierService.BierenTussen2AlcoholPercentages(vanTotAlcoholViewModel.VanAlcohol, vanTotAlcoholViewModel.TotAlcohol);
+                if (lijst.Count <= 10)
+                    vanTotAlcoholViewModel.Bieren = lijst;
+                else
+                    this.ModelState.AddModelError("", "Te veel resultaten");
                 //vanTotAlcoholViewModel.Bieren = _bierService.VanTotAlcohol(vanTotAlcoholViewModel.VanAlcohol, vanTotAlcoholViewModel.TotAlcohol);
             }
             return View(nameof(VanTotAlcohol), vanTotAlcoholViewModel);
@@ -89,9 +93,10 @@ namespace BierenApplication.Controllers
             if (this.ModelState.IsValid)
             {
                 _bierService.Add(b);
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
-            else return View(b);
+            else
+                return View(b);
         }
     }
 }

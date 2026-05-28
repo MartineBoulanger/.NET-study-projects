@@ -301,7 +301,6 @@ C:\Users\marti\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\refi
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\Eindoefening.pdb
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\Eindoefening.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\ref\Eindoefening.dll
-C:\Users\marti\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\compressed\dy6soz64vl-{0}-mj02gvttrd-mj02gvttrd.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\bin\Debug\net10.0\appsettings.json
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\bin\Debug\net10.0\Eindoefening.staticwebassets.runtime.json
@@ -606,3 +605,4 @@ C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\Ei
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\Eindoefening.genruntimeconfig.cache
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\ref\Eindoefening.dll
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\compressed\dy6soz64vl-{0}-i89loziwmt-i89loziwmt.gz
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Eindoefening\obj\Debug\net10.0\compressed\dy6soz64vl-{0}-i89loziwmt-i89loziwmt.gz

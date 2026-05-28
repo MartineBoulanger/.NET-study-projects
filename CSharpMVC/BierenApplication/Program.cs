@@ -1,12 +1,17 @@
+﻿using BierenApplication.Models;
 using BierenApplication.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MvcbierenContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MVCBierenConnection") ?? throw new InvalidOperationException("Connection string 'MVCBierenConnection' not found.")));
+builder.Services.AddTransient<IBierenService, SQLBierenService>();
 
 // Add services to the container.
 //builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider();
 builder.Services.AddSession();
-builder.Services.AddSingleton<BierService>();
+//builder.Services.AddSingleton<DummyBierService>();
 
 var app = builder.Build();
 
