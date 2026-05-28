@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tuincentrum.Models;
@@ -8,11 +9,13 @@ namespace Tuincentrum.Controllers
     public class PlantController:Controller
     {
         private readonly MvctuinCentrumContext _context;
-
-        public PlantController(MvctuinCentrumContext context)
-        {
-            _context = context;
-        }
+//        private readonly IWebHostEnvironmentwebHost Environment;
+//public PlantController(M vct uin centrumContext context,
+//I WebHost Environment environment)
+//        {
+//            _context = context;
+//            webHostEnvironment = environment;
+//        }
 
         // GET: Plant
         public async Task<IActionResult> Index()
@@ -160,6 +163,14 @@ namespace Tuincentrum.Controllers
         private bool PlantExists(int id)
         {
             return _context.Planten.Any(e => e.PlantNr == id);
+        }
+
+        [HttpGet]
+        public IActionResult Uploaden(int id)
+        {
+            var fotoUploadViewModel = new FotoUploadViewModel();
+            fotoUploadViewModel.PlantNr = id;
+            return View(fotoUploadViewModel);
         }
     }
 }
