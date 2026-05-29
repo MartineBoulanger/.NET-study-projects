@@ -1,5 +1,4 @@
-﻿using Humanizer;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Tuincentrum.Models;
@@ -9,13 +8,13 @@ namespace Tuincentrum.Controllers
     public class PlantController:Controller
     {
         private readonly MvctuinCentrumContext _context;
-//        private readonly IWebHostEnvironmentwebHost Environment;
-//public PlantController(M vct uin centrumContext context,
-//I WebHost Environment environment)
-//        {
-//            _context = context;
-//            webHostEnvironment = environment;
-//        }
+        private readonly IWebHostEnvironment webHostEnvironment;
+        public PlantController(MvctuinCentrumContext context,
+        IWebHostEnvironment environment)
+        {
+            _context = context;
+            webHostEnvironment = environment;
+        }
 
         // GET: Plant
         public async Task<IActionResult> Index()
@@ -171,6 +170,20 @@ namespace Tuincentrum.Controllers
             var fotoUploadViewModel = new FotoUploadViewModel();
             fotoUploadViewModel.PlantNr = id;
             return View(fotoUploadViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> FotoUpload(FotoUploadViewModel vm)
+        {
+            if (vm.Foto != null && Path.GetExtension(vm.Foto.FileName) == ".jpg")
+            {
+                var fileName = vm.PlantNr.ToString() + ".jpg";
+                var uploadfolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
+                var filePath = Path.Combine(uploadfolder, fileName);
+                using var fs = new FileStream(filePath, FileMode.Create);
+                await vm.Foto.CopyToAsync(fs);
+            }
+            return RedirectToAction(nameof(Index));
         }
     }
 }
