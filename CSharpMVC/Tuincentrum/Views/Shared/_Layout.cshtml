@@ -24,6 +24,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Plant" asp-action="Index">Planten</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Soort" asp-action="Index">Soorten</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Leverancier" asp-action="Index">Leveranciers</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
@@ -33,6 +42,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <img class="m-3" src="~/images/tuincentrum.png" alt="tuincentrumlogo" />
             @RenderBody()
         </main>
     </div>

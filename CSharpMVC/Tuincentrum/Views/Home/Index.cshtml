@@ -2,7 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron">
+    <h1>Welkom op de Tuincentrum - website</h1>
+        <p class="lead">
+            De tuincentrum - website is een voorbeeld website uit de
+            ASP .NET Core MVC cursus.
+        </p>
+        <p>
+            <a href ="https://learn.microsoft.com/en-us/aspnet/core" class ="btn btn-primary btn-lg">Meer over MVC &raquo;</a>
+        </p>
 </div>
+
+<div class ="row">
+    <div class="col-md-4">
+        <h2>
+            <a asp-action="Index" asp-controller="Plant">
+                Planten </a></h2>
+                <p>
+                    Overzicht van het plantenassortiment. </p>
+                </div>
+                <div class="col-md-4">
+                    <h2>
+                        <a asp-action="Index" asp-controller="Soort">
+                            Soor ten </a></h2>
+                            <p>
+                                Informatie over de diverse soorten planten. </p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>
+                                    <a asp-action="Index"
+                                           asp-controller="Leverancier">
+                                        Leveranciers </a></h2>
+                                        <p>
+                                            De leveranciersgegevens. </p>
+                                        </div>
+                                    </div>

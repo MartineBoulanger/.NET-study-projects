@@ -602,7 +602,6 @@ C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\rjs
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\scopedcss\bundle\Tuincentrum.styles.css
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\scopedcss\projectbundle\Tuincentrum.bundle.scp.css
-C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\8jg9xqy89t-{0}-5dlc1y70d9-5dlc1y70d9.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\w259j6pua7-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\d6c1ehph2h-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\79wublruyf-{0}-t1cqhe9u97-t1cqhe9u97.gz
@@ -678,3 +677,11 @@ C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\ref
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.pdb
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.genruntimeconfig.cache
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\ref\Tuincentrum.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\fr\Tuincentrum.resources.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\nl\Tuincentrum.resources.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Views.Home.Index.fr.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Views.Home.Index.nl.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.csproj.GenerateResource.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\fr\Tuincentrum.resources.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\nl\Tuincentrum.resources.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\8jg9xqy89t-{0}-wmgr69xjhy-wmgr69xjhy.gz

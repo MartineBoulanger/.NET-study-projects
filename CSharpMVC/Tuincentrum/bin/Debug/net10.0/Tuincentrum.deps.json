@@ -15,6 +15,14 @@
         },
         "runtime": {
           "Tuincentrum.dll": {}
+        },
+        "resources": {
+          "fr/Tuincentrum.resources.dll": {
+            "locale": "fr"
+          },
+          "nl/Tuincentrum.resources.dll": {
+            "locale": "nl"
+          }
         }
       },
       "Azure.Core/1.47.1": {
