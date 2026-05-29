@@ -185,5 +185,24 @@ namespace Tuincentrum.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult ZoekForm()
+        {
+            return View(new ZoekPlantViewModel());
+        }
+
+        public async Task<IActionResult> VanafPrijs(ZoekPlantViewModel form)
+        {
+            if (this.ModelState.IsValid)
+            {
+                var planten = await _context.Planten.OrderBy(s => s.Naam).Where(s => s.VerkoopPrijs >= form.Vanaf).ToListAsync();
+                form.Planten = planten;
+                if (planten.Count == 0)
+                    ViewBag.ErrorMessage = $"Er zijn geen planten met een prijs vanaf {form.Vanaf}";
+                else
+                    ViewBag.ErrorMessage = String.Empty;
+            }
+            return View("ZoekForm", form);
+        }
     }
 }

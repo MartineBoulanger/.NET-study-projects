@@ -18,9 +18,9 @@ public partial class Plant
     [StringLength(10)]
     public string Kleur { get; set; } = null!;
 
-    [Display(Name = "Prijs")]
+    [Display(Name = "LabelPrijs")]
     [DisplayFormat(DataFormatString = "{0:€ #,##0.00}")]
-    [Range(0, 1000)]
+    [Range(0, 1000, ErrorMessage = "RangePrijs")]
     public decimal VerkoopPrijs { get; set; }
 
     [Display(Name = "Leverancier")]
