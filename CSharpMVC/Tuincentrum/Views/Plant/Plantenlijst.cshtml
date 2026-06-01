@@ -1,0 +1,27 @@
+﻿@model List<Plant>
+
+<h1>@ViewBag.Title</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Naam</th>
+            <th>Soort</th>
+            <th>Leverancier</th>
+            <th>Kleur</th>
+            <th>Prijs</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Naam</td>
+                <td>@item.SoortNrNavigation.Naam</td>
+                <td>@item.LevnrNavigation.Naam</td>
+                <td>@item.Kleur</td>
+                <td>@Html.DisplayFor(m => item.VerkoopPrijs)</td>
+            </tr>
+        }
+    </tbody>
+</table>

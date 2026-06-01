@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Home/StatusCodeErrorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdGF0dXNDb2RlRXJyb3JQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Leverancier/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV2ZXJhbmNpZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Plantenlijst.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcUGxhbnRlbmxpanN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Uploaden.cshtml]

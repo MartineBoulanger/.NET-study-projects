@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using Tuincentrum;
+using Tuincentrum.Constraints;
 using Tuincentrum.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,6 +39,8 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
+    //app.UseStatusCodePages();
+    app.UseStatusCodePagesWithRedirects("/Home/StatusCodeErrorPage?statusCode={0}");
     app.UseHsts();
 }
 
@@ -49,9 +53,45 @@ app.UseAuthorization();
 app.MapStaticAssets();
 
 app.MapControllerRoute(
+    name: "PlantenMetGekendeKleur",
+    pattern: "plant/{kleur}",
+    defaults: new { controller = "Plant", action = "FindPlantenByKleur" },
+    constraints: new { kleur = new KleurenConstraint() } // met custom constraint
+);
+app.MapControllerRoute(
+    name: "PlantenVanEenLeverancier",
+    pattern: "leverancier/{levnr}/planten",
+    defaults: new { controller = "Plant", action = "FindPlantenByLeverancier" },
+    constraints: new { levnr = new MaxRouteConstraint(10) } // enkel integer wordt hier aanvaard
+);
+app.MapControllerRoute(
+    name: "PlantenVanEenSoort",
+    pattern: "soort/{soortnaam}/planten",
+    defaults: new { controller = "Plant", action = "FindPlantenBySoortNaam" },
+    constraints: new { soortnaam = new CompositeRouteConstraint(
+        new List<IRouteConstraint>
+        {
+            new AlphaRouteConstraint(), // enkel letters (hoofd of klein) worden aanvaard hier
+            new MinLengthRouteConstraint(3),
+            new MaxLengthRouteConstraint(10)
+        })
+    }
+);
+app.MapControllerRoute(
+    name: "PlantByNr",
+    pattern: "Plant/{id}",
+    defaults: new { controller = "Plant", action = "Details" },
+    constraints: new { id = new IntRouteConstraint() }
+);
+app.MapControllerRoute(
+    name: "AllePlanten",
+    pattern: "Plantenlijst",
+    defaults: new { controller = "Plant", action = "Index" }
+);
+app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+).WithStaticAssets();
 
 
 app.Run();

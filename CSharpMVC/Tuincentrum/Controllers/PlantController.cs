@@ -7,7 +7,7 @@ using Tuincentrum.Models;
 namespace Tuincentrum.Controllers
 {
     //[StatistiekActionFilter] // action filter specifiek voor deze controller
-    public class PlantController:Controller
+    public class PlantController : Controller
     {
         private readonly MvctuinCentrumContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
@@ -207,6 +207,32 @@ namespace Tuincentrum.Controllers
                     ViewBag.ErrorMessage = String.Empty;
             }
             return View("ZoekForm", form);
+        }
+
+        public IActionResult FindPlantenBySoortNaam(string soortnaam)
+        {
+            List<Plant> plantenLijst = new List<Plant>();
+            plantenLijst = (from plant in _context.Planten.Include(plant => plant.SoortNrNavigation).Include(plant => plant.LevnrNavigation)
+                            where plant.SoortNrNavigation.Naam.StartsWith(soortnaam)
+                            select plant).ToList();
+            ViewBag.Title = "Planten van de soort '" + soortnaam + "'";
+            return View(plantenLijst);
+        }
+
+        public IActionResult FindPlantenByLeverancier(int levnr)
+        {
+            List<Plant> plantenlijst = new List<Plant>();
+            plantenlijst = (from plant in _context.Planten.Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation) where plant.LevnrNavigation.LevNr == levnr select plant).ToList();
+            var leverancier = _context.Leveranciers.Find(levnr);
+            ViewBag.Title = "Planten van leverancier '" + leverancier.Naam + "'";
+            return View("plantenlijst", plantenlijst);
+        }
+
+        public IActionResult FindPlantenByKleur(string kleur)
+        {
+            List<Plant> plantenlijst = new List<Plant>();
+            plantenlijst = (from plant in _context.Planten.Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation) where plant.Kleur.ToLower() == kleur.ToLower() select plant).ToList();
+            return View(nameof(Index), plantenlijst);
         }
     }
 }

@@ -33,4 +33,12 @@
         <h2><a asp-action="Index" asp-controller="Leverancier">@SharedLocalizer["Leveranciers"]</a></h2>
         <p>De leveranciersgegevens.</p>
     </div>
+    <div class="col-md-4">
+        <a asp-action="AllePlanten" class="btn btn-primary">Alle Planten</a>
+        <a asp-action="PlantenVanEenLeverancier" asp-route-levnr="3" class="btn btn-primary">Plantenlijst van leverancier 3</a>
+    </div>
+    <div class="col-md-4"> 
+        <a href="@Url.RouteUrl("AllePlanten")" class="btn btn-primary">Alle Planten</a>
+        <a href="@Url.RouteUrl("PlantenVanEenLeverancier", new { levnr = 3 })" class="btn btn-primary">Plantenlijst van leverancier 3</a>
+    </div>
 </div>

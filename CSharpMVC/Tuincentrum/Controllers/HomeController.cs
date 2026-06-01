@@ -35,6 +35,18 @@ namespace Tuincentrum.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        public IActionResult StatusCodeErrorPage(int statusCode)
+        {
+            Response.StatusCode = statusCode;
+            switch (statusCode)
+            {
+                case 404:
+                    ViewBag.ErrorMessage = "De gevraagde URL werd niet gevonden.";
+                    break;
+            }
+            return View();
+        }
+
         public IActionResult TaalInstellen(string culture, string returnUrl)
         {
             RequestCulture requestCulture = new RequestCulture(culture);
