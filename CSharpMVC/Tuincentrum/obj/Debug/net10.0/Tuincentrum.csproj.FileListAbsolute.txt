@@ -337,7 +337,6 @@ C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\ru\Mi
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\8jg9xqy89t-{0}-5dlc1y70d9-5dlc1y70d9.gz
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\appsettings.json
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\Tuincentrum.staticwebassets.runtime.json
@@ -685,3 +684,19 @@ C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tui
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\fr\Tuincentrum.resources.dll
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\nl\Tuincentrum.resources.dll
 C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\8jg9xqy89t-{0}-wmgr69xjhy-wmgr69xjhy.gz
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\fr\Tuincentrum.resources.dll
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\bin\Debug\net10.0\nl\Tuincentrum.resources.dll
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Views.Home.Index.fr.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Views.Home.Index.nl.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.csproj.GenerateResource.cache
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\fr\Tuincentrum.resources.dll
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\nl\Tuincentrum.resources.dll
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\compressed\8jg9xqy89t-{0}-wmgr69xjhy-wmgr69xjhy.gz
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Controllers.HomeController.fr.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Controllers.HomeController.nl.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Resources.SharedResource.fr.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Resources.SharedResource.nl.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.Plant.fr.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.Plant.nl.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.ZoekSoortViewModel.fr.resources
+C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.ZoekSoortViewModel.nl.resources

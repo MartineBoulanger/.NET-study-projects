@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Tuincentrum.Resources
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer
+@inject IViewLocalizer Localizer 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -24,16 +29,36 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Plant" asp-action="Index">Planten</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Plant" asp-action="Index">@SharedLocalizer["Planten"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Soort" asp-action="Index">Soorten</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Soort" asp-action="Index">@SharedLocalizer["Soorten"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Leverancier" asp-action="Index">Leveranciers</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Leverancier" asp-action="Index">@SharedLocalizer["Leveranciers"]</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        @{
+                            var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+                        }
+                        <li class="nav-item">
+                            <a asp-action="TaalInstellen" asp-controller="Home" asp-route-returnUrl="@returnUrl" asp-route-culture="nl-BE">
+                                <img src="~/images/nederlands.png" alt="nederlands" class="me-3" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="TaalInstellen" asp-controller="Home" asp-route-returnUrl="@returnUrl" asp-route-culture="fr-BE">
+                                <img src="~/images/francais.png" alt="francais" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-action="TaalInstellen" asp-controller="Home" asp-route-returnUrl="@returnUrl" asp-route-culture="en-GB">
+                                <img src="~/images/english.png" alt="english" class="ms-3" />
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -54,6 +79,17 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        var cultureInfo = '@System.Globalization.CultureInfo.CurrentCulture.Name';
+        if (cultureInfo != 'en-GB') {
+            $.validator.methods.number = function (value, element) {
+                return this.optional(element) ||
+                /^-?(?:\d+|\d{1,3}(?:\.\d{3})+)?(?:,\d+)?$/.test(value);
+            }
+        }
+    </script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

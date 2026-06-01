@@ -6,6 +6,7 @@ namespace Tuincentrum.Models
     {
         [Display(Name = "Begin soortnaam:")]
         [Required(ErrorMessage = "Verplicht")]
+        [StringLength(8, ErrorMessage = "VerkeerdeLengte", MinimumLength = 2)]
         public string BeginNaam { get; set; }
         public List<Soort> Soorten { get; set; } = new List<Soort>();
     }

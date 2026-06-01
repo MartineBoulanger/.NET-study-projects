@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj": {}
+    "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj": {
+    "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj",
         "projectName": "ViewComponenten",
-        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj",
-        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\obj\\",
+        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\ViewComponenten.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\CSharpMVC\\ViewComponenten\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
