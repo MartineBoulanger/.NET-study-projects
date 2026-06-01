@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFramework = net10.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.RootNamespace = Tuincentrum
+build_property.RootNamespace = Tuincentrum
+build_property.ProjectDir = C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Leverancier/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV2ZXJhbmNpZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Components/Afbeelding/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcQ29tcG9uZW50c1xBZmJlZWxkaW5nXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/Uploaden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcVXBsb2FkZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Plant/ZoekForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbnRcWm9la0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Shared/ArithmeticError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFyaXRobWV0aWNFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Shared/DatabaseError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhdGFiYXNlRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Soort/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29vcnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Soort/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29vcnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Soort/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29vcnRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Soort/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29vcnRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Soort/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29vcnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Soort/ZoekForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29vcnRcWm9la0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Statistiek/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGlla1xFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Statistiek/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGlla1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-y00wyew0c2
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Controllers.HomeController.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Controllers.HomeController.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Controllers.HomeController.nl.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Controllers.HomeController.nl.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Models.Plant.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Models.Plant.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Models.Plant.nl.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Models.Plant.nl.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Models.ZoekSoortViewModel.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Models.ZoekSoortViewModel.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Models.ZoekSoortViewModel.nl.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Models.ZoekSoortViewModel.nl.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Resources.SharedResource.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Resources.SharedResource.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Resources.SharedResource.nl.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Resources.SharedResource.nl.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Views.Home.Index.fr.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Views.Home.Index.fr.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Tuincentrum/Resources/Views.Home.Index.nl.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\Views.Home.Index.nl.resx
+build_metadata.AdditionalFiles.CssScope = 

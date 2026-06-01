@@ -700,3 +700,11 @@ C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuinc
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.Plant.nl.resources
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.ZoekSoortViewModel.fr.resources
 C:\Users\marti\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.ZoekSoortViewModel.nl.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Controllers.HomeController.fr.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Controllers.HomeController.nl.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.Plant.fr.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.Plant.nl.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.ZoekSoortViewModel.fr.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Models.ZoekSoortViewModel.nl.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Resources.SharedResource.fr.resources
+C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Tuincentrum\obj\Debug\net10.0\Tuincentrum.Resources.Resources.SharedResource.nl.resources

@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+//using Tuincentrum.Filters;
 using Tuincentrum.Models;
 
 namespace Tuincentrum.Controllers
 {
+    //[TypeFilter(typeof(CustomExceptionFilter))]
     public class SoortController:Controller
     {
         private readonly MvctuinCentrumContext _context;
@@ -16,6 +18,9 @@ namespace Tuincentrum.Controllers
         // GET: Soort
         public async Task<IActionResult> Index()
         {
+            //int deler = 0;
+            //int resultaat = 5 / deler; // om een arithmetic error te triggeren
+            //throw new Exception(); // om een algemen error te triggeren
             return View(await _context.Soorten.ToListAsync());
         }
 

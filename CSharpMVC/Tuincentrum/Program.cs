@@ -24,7 +24,10 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 });
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 //builder.Services.AddControllersWithViews();
-builder.Services.AddControllersWithViews((options) => { options.ModelBinderProviders.Insert(0, new CustomBinderProvider()); }).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization(); // aangeven op welke manier de resource file moeten worden opgeslagen - suffix & SubFolder
+builder.Services.AddControllersWithViews((options) => { 
+    options.ModelBinderProviders.Insert(0, new CustomBinderProvider()); 
+    //options.Filters.Add(new Tuincentrum.Filters.StatistiekActionFilter()); // om er een globale fiilter van te maken
+}).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization(); // aangeven op welke manier de resource file moeten worden opgeslagen - suffix & SubFolder
 builder.Services.AddDbContext<MvctuinCentrumContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TuincentrumConnection"))); // connetion to db
 builder.Services.AddTransient<ILeveranciersRepository, SQLLeveranciersRepository>();
 
@@ -34,10 +37,10 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseRequestLocalization();

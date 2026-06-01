@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Tuincentrum.Filters;
 using Tuincentrum.Models;
 
 namespace Tuincentrum.Controllers
 {
+    //[StatistiekActionFilter] // action filter specifiek voor deze controller
     public class PlantController:Controller
     {
         private readonly MvctuinCentrumContext _context;
@@ -17,6 +19,8 @@ namespace Tuincentrum.Controllers
         }
 
         // GET: Plant
+        //[StatistiekActionFilter] // action filter specifiek voor deze action method
+        //[StatistiekActionFilter(Order = 10)] // action filter voorzien met Order property
         public async Task<IActionResult> Index()
         {
             var mvctuinCentrumContext = _context.Planten.Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation);

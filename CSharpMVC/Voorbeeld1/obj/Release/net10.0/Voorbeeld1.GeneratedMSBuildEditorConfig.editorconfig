@@ -34,6 +34,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFhbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/Filiaal/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFhbFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/Filiaal/Read.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsaWFhbFxSZWFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +56,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/WebShop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViU2hvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/WebShop/Registreer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViU2hvcFxSZWdpc3RyZWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/WebShop/WinkelMandje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViU2hvcFxXaW5rZWxNYW5kamUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Voorbeeld1/Views/_ViewImports.cshtml]
