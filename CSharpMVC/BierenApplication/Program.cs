@@ -32,6 +32,16 @@ app.UseAuthorization();
 app.MapStaticAssets();
 
 app.MapControllerRoute(
+    name: "BierenUit",
+    pattern: "bierenuit/{postcode}",
+    defaults: new { controller = "Bier", action = "FindBierenByPostcode" }
+);
+app.MapControllerRoute(
+    name: "BierenVanEenSoort",
+    pattern: "bieren/{soortnaam}",
+    defaults: new { controller = "Bier", action = "FindBierenBySoortNaam" }
+);
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();

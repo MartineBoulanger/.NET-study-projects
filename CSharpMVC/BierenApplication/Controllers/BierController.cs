@@ -98,5 +98,17 @@ namespace BierenApplication.Controllers
             else
                 return View(b);
         }
+
+        public IActionResult FindBierenBySoortNaam(string soortnaam)
+        {
+            var bierenLijst = _bierService.BierenVanEenSoort(soortnaam);
+            return View(nameof(Index), bierenLijst);
+        }
+
+        public IActionResult FindBierenByPostcode(short postcode)
+        {
+            var bierenLijst = _bierService.BierenMetPostcode(postcode);
+            return View(nameof(Index), bierenLijst);
+        }
     }
 }

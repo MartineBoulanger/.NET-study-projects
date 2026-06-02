@@ -1,4 +1,6 @@
 ﻿using BierenApplication.Models;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 
 namespace BierenApplication.Services
 {
@@ -79,6 +81,16 @@ namespace BierenApplication.Services
         {
             b.Id = bieren.Keys.Max() + 1;
             bieren.Add(b.Id, b);
+        }
+
+        public List<Bier> BierenVanEenSoort(string soortnaam)
+        {
+            return bieren.Values.ToList().Where(b => b.Soort.Naam.ToUpper() == soortnaam.ToUpper()).ToList<Bier>();
+        }
+
+        public List<Bier> BierenMetPostcode(short postcode)
+        {
+            return bieren.Values.ToList().Where(b => b.Brouwer.PostCode == postcode).ToList<Bier>();
         }
     }
 }

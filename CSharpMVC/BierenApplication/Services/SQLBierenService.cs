@@ -1,4 +1,5 @@
 ﻿using BierenApplication.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BierenApplication.Services
 {
@@ -50,6 +51,18 @@ namespace BierenApplication.Services
                 b.Prijs *= (1m + percentage / 100m);
             }
             _context.SaveChanges();
+            //throw new NotImplementedException();
+        }
+
+        public List<Bier> BierenVanEenSoort(string soortnaam)
+        {
+            return (from bier in _context.Bieren.Include(b => b.Soort) where bier.Soort.Naam == soortnaam select bier).ToList();
+            //throw new NotImplementedException();
+        }
+
+        public List<Bier> BierenMetPostcode(short postcode)
+        {
+            return (from bier in _context.Bieren.Include(b => b.Brouwer) where bier.Brouwer.PostCode == postcode select bier).ToList();
             //throw new NotImplementedException();
         }
     }
