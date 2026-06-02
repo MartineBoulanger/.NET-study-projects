@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index van de prive area</h1>
+
+<p>@Html.ActionLink("Klik om naar de indexpagina van de Publiek-area te gaan", "Index", new { area = "Publiek" })</p>
+
+<a asp-action="Index" asp-controller="Home" asp-area="Publiek" class="btn btn-primary">Naar Publiek</a>

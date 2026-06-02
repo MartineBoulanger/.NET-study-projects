@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Areas/Areas.csproj" Id="4a6b5d25-bc4a-4ef0-aa72-0a1b649de3f0" />
   <Project Path="BierenApplication/BierenApplication.csproj" Id="2dc1f8e0-22fe-486c-9375-e2d675439822">
     <Build Solution="Debug|*" Project="false" />
   </Project>
