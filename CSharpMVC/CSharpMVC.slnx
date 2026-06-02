@@ -10,6 +10,7 @@
     <Build Solution="Debug|*" Project="false" />
   </Project>
   <Project Path="Scopes/Scopes.csproj" Id="95220066-924f-4540-9d93-d58c95f870f2" />
+  <Project Path="Security/Security.csproj" Id="5a2e6838-8fdb-48bb-9fb6-70fa763eefee" />
   <Project Path="State/State.csproj" Id="20188264-bfc1-41fe-9818-d72785b40a58" />
   <Project Path="Tuincentrum/Tuincentrum.csproj" Id="3b63dcd3-22d5-4bab-9628-9b9681ece0c0" />
   <Project Path="ViewComponenten/ViewComponenten.csproj" Id="184923cd-fc68-42ad-8367-fbc5fee3cfc7" />

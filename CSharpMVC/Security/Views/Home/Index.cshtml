@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Aangelogd? : @User.Identity.IsAuthenticated</p>
+    <p>Ingelogde gebruiker : @User.Identity.Name</p>
+    <p>Is een admin? : @User.IsInRole("Admin")</p>
+</div>
