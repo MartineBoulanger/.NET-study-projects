@@ -32,6 +32,7 @@ builder.Services.AddControllersWithViews((options) => {
 }).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization(); // aangeven op welke manier de resource file moeten worden opgeslagen - suffix & SubFolder
 builder.Services.AddDbContext<MvctuinCentrumContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TuincentrumConnection"))); // connetion to db
 builder.Services.AddTransient<ILeveranciersRepository, SQLLeveranciersRepository>();
+builder.Services.Configure<RouteOptions>(options => options.ConstraintMap.Add("values", typeof(ValuesConstraint)));
 
 var app = builder.Build();
 
@@ -52,6 +53,12 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+app.MapControllerRoute(
+    name: "FindPlantenByPrijsBetween",
+    pattern: "planten",
+    defaults: new { controller = "Plant", action = "FindPlantenBetweenPrijzen" },
+    constraints: new { query = new QueryStringConstraint(new string[] { "minprijs", "maxprijs" }) } // met custom constraint
+);
 app.MapControllerRoute(
     name: "PlantenMetGekendeKleur",
     pattern: "plant/{kleur}",

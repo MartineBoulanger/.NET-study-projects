@@ -7,6 +7,8 @@ using Tuincentrum.Resources;
 
 namespace Tuincentrum.Controllers
 {
+    //[Route("Home")] // prefix voor alle routes in deze controller
+    [Route("[controller]")] // prefix voor alle routes in deze controller
     public class HomeController:Controller
     {
         private readonly IStringLocalizer<HomeController> localizer;
@@ -17,6 +19,9 @@ namespace Tuincentrum.Controllers
             this.sharedLocalizer = sharedLocalizer;
         }
 
+        [Route("")] // matched de route "Home"
+        [Route("/")] // matched de route ""
+        [Route("Index")]
         public IActionResult Index()
         {
             //ViewBag.Welkomstekst = localizer["Welkom"];
@@ -24,17 +29,20 @@ namespace Tuincentrum.Controllers
             return View();
         }
 
+        [Route("Prive")]
         public IActionResult Privacy()
         {
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [Route("Error")]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [Route("StatusCodeErrorPage")]
         public IActionResult StatusCodeErrorPage(int statusCode)
         {
             Response.StatusCode = statusCode;
@@ -47,6 +55,7 @@ namespace Tuincentrum.Controllers
             return View();
         }
 
+        [Route("TaalInstellen")]
         public IActionResult TaalInstellen(string culture, string returnUrl)
         {
             RequestCulture requestCulture = new RequestCulture(culture);
@@ -55,6 +64,19 @@ namespace Tuincentrum.Controllers
             option.Expires = DateTime.Now.AddYears(1);
             Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName, cultureCookie, option);
             return LocalRedirect(returnUrl); // refresh the current page
+        }
+
+        [HttpGet("Invulform")]
+        public IActionResult FormTonen()
+        {
+            return View();
+        }
+
+        [HttpPost("Invulform")]
+        public IActionResult FormVerwerken()
+        {
+            // Verwerk de formuliergegevens hier
+            return Redirect("/");
         }
     }
 }

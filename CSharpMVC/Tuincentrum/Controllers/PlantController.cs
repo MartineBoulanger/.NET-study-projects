@@ -216,7 +216,7 @@ namespace Tuincentrum.Controllers
                             where plant.SoortNrNavigation.Naam.StartsWith(soortnaam)
                             select plant).ToList();
             ViewBag.Title = "Planten van de soort '" + soortnaam + "'";
-            return View(plantenLijst);
+            return View("Plantenlijst", plantenLijst);
         }
 
         public IActionResult FindPlantenByLeverancier(int levnr)
@@ -225,7 +225,7 @@ namespace Tuincentrum.Controllers
             plantenlijst = (from plant in _context.Planten.Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation) where plant.LevnrNavigation.LevNr == levnr select plant).ToList();
             var leverancier = _context.Leveranciers.Find(levnr);
             ViewBag.Title = "Planten van leverancier '" + leverancier.Naam + "'";
-            return View("plantenlijst", plantenlijst);
+            return View("Plantenlijst", plantenlijst);
         }
 
         public IActionResult FindPlantenByKleur(string kleur)
@@ -233,6 +233,50 @@ namespace Tuincentrum.Controllers
             List<Plant> plantenlijst = new List<Plant>();
             plantenlijst = (from plant in _context.Planten.Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation) where plant.Kleur.ToLower() == kleur.ToLower() select plant).ToList();
             return View(nameof(Index), plantenlijst);
+        }
+
+        public IActionResult FindPlantenBetweenPrijzen(decimal minPrijs, decimal maxPrijs)
+        {
+            List<Plant> plantenlijst = new List<Plant>();
+            plantenlijst = (from plant in _context.Planten.Include(p => p.SoortNrNavigation).Include(p => p.LevnrNavigation) where plant.VerkoopPrijs >= minPrijs && plant.VerkoopPrijs <= maxPrijs select plant).ToList();
+            ViewBag.Title = $"Planten met prijs tussen €{minPrijs} en €{maxPrijs}";
+            return View("Plantenlijst", plantenlijst);
+        }
+
+        [Route("plantinfo/{id:int}")]
+        public IActionResult FindPlantById(int id)
+        {
+            var plant = _context.Planten.Where(p => p.PlantNr == id).Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation).FirstOrDefault();
+            if (plant == null)
+                return NotFound();
+            return ToonPlantInfo(plant);
+        }
+
+        [Route("plantinfo/{naam}")]
+        public IActionResult FindPlantByName(string naam)
+        {
+            var plant = _context.Planten.Where(p => p.Naam.ToLower() == naam.ToLower()).Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation).FirstOrDefault();
+            if (plant == null)
+                return NotFound();
+            return ToonPlantInfo(plant);
+        }
+
+        [NonAction]
+        private IActionResult ToonPlantInfo(Plant plant)
+        {
+            if (plant != null) return View(nameof(Details), plant);
+            else
+            {
+                var planten = _context.Planten.Include(p => p.LevnrNavigation).Include(p => p.SoortNrNavigation);
+                return View(nameof(Index), planten.ToList());
+            }
+        }
+
+        [Route("plantenprijzen/{btw:values(inclusief|exclusief)}", Name = "btwinex")]
+        public IActionResult PrijsLijst (string btw)
+        {
+            ViewBag.Btw = btw;
+            return View(_context.Planten.ToList());
         }
     }
 }

@@ -36,6 +36,12 @@ namespace Tuincentrum.Models
             //throw new NotImplementedException();
         }
 
+        public async Task<List<Leverancier>> GetLeveranciersMetPostNr(string postnr)
+        {
+            return await context.Leveranciers.Where(l => l.PostNr == postnr).ToListAsync();
+            //throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<Leverancier>> GetLeveranciers()
         {
             return await context.Leveranciers.ToListAsync();
