@@ -1,0 +1,12 @@
+﻿@model IdentityRole
+@{
+    ViewData["Title"] = "RoleToevoegen";
+}
+
+<h1>RoleToevoegen</h1>
+
+<form action="RoleToevoegen" method="post">
+    <label asp-for="@Model.Name"></label>
+    <input asp-for="@Model.Name"/>
+    <input type="submit" value="Toevoegen"/>
+</form>

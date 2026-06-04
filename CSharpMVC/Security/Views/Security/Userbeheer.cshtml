@@ -1,0 +1,28 @@
+﻿@model IQueryable<IdentityUser>
+@{
+    ViewData["Title"] = "Userbeheer";
+}
+
+<h1>Userbeheer</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Delete User</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td><a asp-action="UserDetails" asp-route-id="@user.Id">@user.UserName</a></td>
+                <td><a asp-action="VerwijderUser" asp-route-id="@user.Id"><img src="~/images/delete.png" alt="verwijderen" /></a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-primary mt-4">Terug naar user- en rolebeheer</a>

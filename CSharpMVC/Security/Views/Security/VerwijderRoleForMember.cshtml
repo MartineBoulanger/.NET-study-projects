@@ -1,0 +1,9 @@
+﻿@model IdentityUser
+@{
+    ViewData["Title"] = "VerwijderRoleForMember";
+}
+<h1>Role @ViewBag.Role verwijderen voor user @Model.UserName ?</h1>
+<form asp-action="VerwijderenRoleForMemberDoorvoeren" method="post" asp-route-userid="@Model.Id" asp-route-rolenaam="@ViewBag.Role">
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="UserDetail" asp-route-id="@Model.Id" class="btn btn-primary">Cancel</a>
+</form>

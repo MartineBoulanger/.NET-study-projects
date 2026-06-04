@@ -1,0 +1,34 @@
+﻿@model IQueryable<IdentityRole>
+@{
+    ViewData["Title"] = "Rolebeheer";
+}
+
+<h1>Rolebeheer</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Delete Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rol in Model)
+        {
+            <tr>
+                <td>@rol.Id</td>
+                <td><a asp-action="RoleDetails" asp-route-rolename="@rol.Name">@rol.Name</a></td>
+                <td>
+                    @if (rol.Name != "Admin")
+                    {
+                        <a asp-action="VerwijderRole" asp-route-id="@rol.Id"><img src="~/images/delete.png" alt="verwijderen" /></a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="RoleToevoegen" class="btn btn-success mt-4">Nieuwe rol toevoegen</a>
+<a asp-action="Index" class="btn btn-primary mt-4">Terug naar user- en rolebeheer</a>

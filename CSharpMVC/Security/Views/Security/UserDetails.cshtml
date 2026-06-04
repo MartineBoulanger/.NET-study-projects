@@ -1,0 +1,32 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "UserDetails";
+}
+
+<h1 class="m-3">@ViewBag.username</h1>
+
+@if (Model.Count != 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th colspan="2">Roles</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>@role</td>
+                    <td align="center"><a asp-action="VerwijderRoleForMember" asp-route-userid="@ViewBag.userid" asp-route-rolename="@role"><img src="~/images/delete.png" alt="verwijderen" /></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>User @ViewBag.username behoort tot geen enkele rol.</p>
+}
+
+<a asp-action="Userbeheer" class="btn btn-primary">Terug naar Userbeheer</a>

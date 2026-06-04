@@ -1,0 +1,11 @@
+﻿@model IdentityUser
+@{
+    ViewData["Title"] = "VerwijderUser";
+}
+
+<h1>User @Model.UserName verwijderen?</h1>
+
+<form asp-action="VerwijderUserDoorvoeren" asp-route-id="@Model.Id" method="post">
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Userbeheer" class="btn btn-primary">Cancel</a>
+</form>
