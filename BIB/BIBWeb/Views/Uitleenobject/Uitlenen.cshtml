@@ -1,0 +1,14 @@
+﻿@model UitleenViewModel
+@{
+    ViewData["Title"] = "Uitlenen";
+}
+
+<h1>@Model!.Naam</h1>
+<img src="@Model.ImageUrl" alt="@Model.Naam" class="afbeelding" />
+<form asp-action="UitleningRegistreren" asp-route-itemId="@Model.ItemId" asp-route-GekozenLenerId="@Model.GekozenLenerId" method="post">
+    <div>
+        <label asp-for="@Model.GekozenLenerId" class="form-label">Selecteer een lener :</label>
+        <select asp-for="@Model.GekozenLenerId" class="form-control" asp-items="@Model.Leners"></select>
+    </div>
+    <button type="submit" class="btn btn-success btn-lg">Uitlening registreren</button>
+</form>
