@@ -13,6 +13,7 @@ namespace BIBWeb.Models
         public string Details { get; set; }
         public string Type { get; set; }
         public string? HuidigeUitlener { get; set; }
-        public Lener? EersteInWachtlijst { get; set; }
+        //public Lener? EersteInWachtlijst { get; set; }
+        public IEnumerable<Lener> Wachtlijst { get; set; }
     }
 }

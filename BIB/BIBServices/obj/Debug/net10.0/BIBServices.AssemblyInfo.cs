@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BIBServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43a267b357851baa2787d8a291729c6ad45cb386")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1268b594a78abcb888ef4ee05fe3e562066fcd67")]
 [assembly: System.Reflection.AssemblyProductAttribute("BIBServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BIBServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

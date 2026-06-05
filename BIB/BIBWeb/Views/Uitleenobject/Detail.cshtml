@@ -17,7 +17,15 @@
         }
         else if (Model.Status == Status.Gereserveerd)
         {
-            @: door @Model.EersteInWachtlijst?.Voornaam @Model.EersteInWachtlijst?.Familienaam
+            @* @: door @Model.EersteInWachtlijst?.Voornaam @Model.EersteInWachtlijst?.Familienaam *@
+            <div>
+                Wachtlijst:
+                @{
+                    var builder = new StringBuilder();
+                    builder.AppendJoin(", ", Model.Wachtlijst.Select(l => l.Voornaam + " " + l.Familienaam));
+                    @builder
+                }
+            </div>
         }
     </p>
     <img src="@Model.ImageUrl" alt="@Model.Naam" class="afbeelding" />
@@ -29,7 +37,7 @@
     {
         if (Model.Status == Status.Gereserveerd)
         {
-            <form asp-action="ReserveringOphalen" method="post" asp-route-itemId="@Model.Id" asp-route-lenerId="@Model.EersteInWachtlijst?.Id">
+            <form asp-action="ReserveringOphalen" method="post" asp-route-itemId="@Model.Id" asp-route-lenerId="@Model.Wachtlijst.FirstOrDefault()?.Id">
                 <div>
                     <button type="submit" class="btn btn-success btn-lg">Reservering ophalen</button>
                 </div>

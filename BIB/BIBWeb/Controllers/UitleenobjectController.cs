@@ -54,7 +54,8 @@ namespace BIBWeb.Controllers
                     Details = service.GetDetails(id),
                     Type = service.GetUitleenobjectType(id),
                     HuidigeUitlener = uitleningService.GetHuidigeUitlener(id),
-                    EersteInWachtlijst = reserveringService.GetEersteLenerOpReserveringslijst(id)
+                    //EersteInWachtlijst = reserveringService.GetEersteLenerOpReserveringslijst(id),
+                    Wachtlijst = reserveringService.GetReserveringslijst(id)
                 };
             }
             else
