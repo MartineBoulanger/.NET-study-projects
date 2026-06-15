@@ -8,3 +8,24 @@
     <p>Ingelogde gebruiker : @User.Identity.Name</p>
     <p>Is een admin? : @User.IsInRole("Admin")</p>
 </div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>
+            <a asp-action="Index" asp-controller="Student">Studenten</a>
+        </h2>
+        <p><a class="btn btn-primary" href="~/Student">Naar de pagina voor studenten &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>
+            <a asp-action="Index" asp-controller="Leraar">Leraren</a>
+        </h2>
+        <p><a class="btn btn-primary" href="~/Leraar">Naar de pagina voor leraren &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>
+            <a asp-action="Index" asp-controller="Security">User administrators</a>
+        </h2>
+        <p><a class="btn btn-primary" href="~/Security">Naar de pagina voor user admins &raquo;</a></p>
+    </div>
+</div>

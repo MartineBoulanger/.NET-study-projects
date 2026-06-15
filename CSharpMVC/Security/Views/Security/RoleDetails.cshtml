@@ -1,0 +1,41 @@
+﻿@model RoleDetailsViewModel
+@{
+    ViewData["Title"] = "RoleDetails";
+}
+<h1>@Model.RoleName</h1>
+@if (Model.UsersUitRole.Count != 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th colspan="2">Users</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var username in Model.UsersUitRole)
+            {
+                <tr>
+                    <td>@username</td>
+                    <td><a asp-action="VerwijderMemberFromRole" asp-route-username="@username" asp-route-rolename="@Model.RoleName"><img src="~/images/delete.png" alt="verwijderen" /></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>De role @Model.RoleName heeft geen members.</p>
+}
+<br/>
+<form asp-action="MemberToevoegen" asp-route-rolename="@Model.RoleName" method="post">
+    <div class="card">
+        <div class="card-header">
+            <b>User toevoegen</b>
+        </div>
+        <div class="card-body">
+            <select class="custom-select" asp-for="@Model.SelectedUser" asp-items="@Model.SelectUser"></select>
+            <input type="submit" value="Toevoegen" class="btn btn-success mt-4" />
+        </div>
+    </div>
+</form>
+<a asp-action="Rolebeheer" class="btn btn-primary mt-4">Terug naar rolebeheer</a>

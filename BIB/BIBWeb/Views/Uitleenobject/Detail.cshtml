@@ -1,0 +1,62 @@
+﻿@model UitleenobjectDetailViewModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@if (Model != null)
+{
+    <h1>@Model.Type <i>@Model.Naam</i></h1>
+    <h2>@Model.Details</h2>
+    <p>Aankoopjaar : @Model.Jaar</p>
+    <p>Kostprijs : @Model.Kostprijs.ToString("€ #,##0.00")</p>
+    <p>
+        Status : @Model.Status
+        @if (Model.Status == Status.Uitgeleend)
+        {
+            @: door @Model.HuidigeUitlener
+        }
+        else if (Model.Status == Status.Gereserveerd)
+        {
+            @* @: door @Model.EersteInWachtlijst?.Voornaam @Model.EersteInWachtlijst?.Familienaam *@
+            <div>
+                Wachtlijst:
+                @{
+                    var builder = new StringBuilder();
+                    builder.AppendJoin(", ", Model.Wachtlijst.Select(l => l.Voornaam + " " + l.Familienaam));
+                    @builder
+                }
+            </div>
+        }
+    </p>
+    <img src="@Model.ImageUrl" alt="@Model.Naam" class="afbeelding" />
+    @if (Model.Status == Status.Beschikbaar)
+    {
+        <p><a asp-action="Uitlenen" asp-route-id="@Model.Id" class="btn btn-lg btn-info">Uitlenen</a></p>
+    }
+    else
+    {
+        if (Model.Status == Status.Gereserveerd)
+        {
+            <form asp-action="ReserveringOphalen" method="post" asp-route-itemId="@Model.Id" asp-route-lenerId="@Model.Wachtlijst.FirstOrDefault()?.Id">
+                <div>
+                    <button type="submit" class="btn btn-success btn-lg">Reservering ophalen</button>
+                </div>
+            </form>
+        }
+        else
+        {
+            <form asp-action="Terugbrengen" method="post" asp-route-id="@Model.Id">
+                <div>
+                    <button class="btn btn-lg btn-success">Terugbrengen</button>
+                </div>
+            </form>
+        }
+        <p>
+            <a class="btn btn-lg btn-warning" asp-action="Reserveren" asp-route-id="@Model.Id">Reserveren</a>
+        </p>
+    }
+}
+else
+{
+    <p class="btn btn-danger">@ViewBag.ErrorMessage</p>
+}
