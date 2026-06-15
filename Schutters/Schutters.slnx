@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SchuttersData/SchuttersData.csproj" />
+  <Project Path="SchuttersServices/SchuttersServices.csproj" Id="23091f04-4b83-46b1-a81e-0dd032d78306" />
+  <Project Path="SchuttersWeb/SchuttersWeb.csproj" />
+</Solution>

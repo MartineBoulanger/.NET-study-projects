@@ -1,0 +1,16 @@
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\bin\Debug\net10.0\SchuttersServices.deps.json
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\bin\Debug\net10.0\SchuttersServices.dll
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\bin\Debug\net10.0\SchuttersServices.pdb
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.dll
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\refint\SchuttersServices.dll
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.pdb
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\ref\SchuttersServices.dll
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\bin\Debug\net10.0\SchuttersData.dll
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\bin\Debug\net10.0\SchuttersData.pdb
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\SchuttersServices.csproj.AssemblyReference.cache
+C:\Users\cursist\source\repos\DOTNET\Schutters\SchuttersServices\obj\Debug\net10.0\Schutter.86516ABC.Up2Date
