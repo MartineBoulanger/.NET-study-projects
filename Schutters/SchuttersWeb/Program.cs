@@ -7,7 +7,7 @@ using SchuttersWeb.Data;
 
 // Gebruik dit command in de Package Manager Console, om de security database aan te maken.
 // dotnet ef --startup-project SchuttersWeb/SchuttersWeb.csproj database update --context ApplicationDbContext
-// daarna de SQL script voor de security script in de SSMS uitvoeren - heb het bestand met de juiste database naam in de folder gezet
+// Gelieve de README file te lezen voor meer informatie!
 
 var builder = WebApplication.CreateBuilder(args);
 
