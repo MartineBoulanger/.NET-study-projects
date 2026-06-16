@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Lid>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="generic-link">Create New</a>
+    <text> | </text>
+}
+<a asp-action="Search" class="generic-link">Search</a>
+
+<table class="table generic-table">
+    <thead>
+        <tr>
+            <th>Lidnr</th>
+            <th>Naam</th>
+            <th>Voornaam</th>
+            <th>Geslacht</th>
+            <th>Niveau</th>
+            <th>Club</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Lidnummer.ToString()</td>
+                <td>@item.Naam</td>
+                <td>@item.Voornaam</td>
+                <td>@item.Geslacht</td>
+                <td>@item.Niveau</td>
+                <td>@item.Club?.Naam</td>
+                <td class="last-column">
+                    <a asp-action="Details" asp-route-id="@item.Lidnummer">Details</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <text> | </text>
+                        <a asp-action="Edit" asp-route-id="@item.Lidnummer">Edit</a>
+                        <text> | </text>
+                        <a asp-action="Delete" asp-route-id="@item.Lidnummer">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

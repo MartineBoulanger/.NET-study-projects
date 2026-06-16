@@ -1,0 +1,72 @@
+﻿@model ZoekLedenViewModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Leden Zoeken</h1>
+
+<form asp-action="Search" method="post" class="form-generic">
+    <div>
+        <label asp-for="Voornaam" class="control-label">Deel van de voornaam:</label>
+        <input asp-for="Voornaam" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Naam" class="control-label">Deel van de naam:</label>
+        <input asp-for="Naam" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Geslacht" class="control-label">Geslacht:</label>
+        <input asp-for="Geslacht" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Niveau" class="control-label">Niveau:</label>
+        <input asp-for="Niveau" class="form-control" />
+    </div>
+
+    <div>
+        <label asp-for="Clubnaam" class="control-label">Deel van de clubnaam:</label>
+        <input asp-for="Clubnaam" class="form-control" />
+    </div>
+
+    <div class="form-buttons">
+        <input type="submit" value="Zoeken" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Terug Naar Lijst</a>
+    </div>
+</form>
+
+@if (Model.Resultaten != null)
+{
+    @if (!Model.Resultaten.Any())
+    {
+        <p class="search-table">Er werden geen leden gevonden</p>
+    }
+    else
+    {
+        <table class="table table-striped search-table">
+            <thead>
+                <tr>
+                    <th>Voornaam</th>
+                    <th>Naam</th>
+                    <th>Geslacht</th>
+                    <th>Niveau</th>
+                    <th>Club</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Resultaten)
+                {
+                    <tr>
+                        <td>@item.Voornaam</td>
+                        <td>@item.Naam</td>
+                        <td>@item.Geslacht</td>
+                        <td>@item.Niveau</td>
+                        <td>@item.Club?.Naam</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}

@@ -10,6 +10,6 @@ namespace SchuttersData.Repositories
         void Update(Lid lid);
         void Delete(long lidnummer);
         bool Exists(long lidnummer);
-        IEnumerable<Lid> Search(string? voornaam, string? naam, Geslacht? geslacht, Niveau? niveau, string? clubnaam);
+        IEnumerable<Lid> Search(string? voornaam, string? naam, string? geslacht, string? niveau, string? clubnaam);
     }
 }

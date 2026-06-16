@@ -1,0 +1,68 @@
+﻿@model LidFormViewModel
+@{
+    ViewData["Title"] = "Edit Lid";
+}
+@if (Model != null)
+{
+    <h1>Edit</h1>
+    <h3>Lid</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit" method="post" class="form-generic">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input type="hidden" asp-for="Lidnummer" />
+
+                <div class="form-group">
+                    <label asp-for="Lidnummer" class="control-label"></label>
+                    <input asp-for="Lidnummer" class="form-control" disabled />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Naam" class="control-label"></label>
+                    <input asp-for="Naam" class="form-control" />
+                    <span asp-validation-for="Naam" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Voornaam" class="control-label"></label>
+                    <input asp-for="Voornaam" class="form-control" />
+                    <span asp-validation-for="Voornaam" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Geslacht" class="control-label"></label>
+                    <select asp-for="Geslacht" class="form-select" asp-items="Model.GeslachtOpties">
+                        <option value="">-- kies --</option>
+                    </select>
+                    <span asp-validation-for="Geslacht" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Niveau" class="control-label"></label>
+                    <select asp-for="Niveau" class="form-select" asp-items="Model.NiveauOpties">
+                        <option value="">-- kies --</option>
+                    </select>
+                    <span asp-validation-for="Niveau" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ClubId" class="control-label"></label>
+                    <select asp-for="ClubId" class="form-select" asp-items="Model.Clubs"></select>
+                    <span asp-validation-for="ClubId" class="text-danger"></span>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-success">Terug Naar Lijst</a>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+    <p class="text-danger mb-3">@ViewBag.ErrorMessage</p>
+    <a asp-action="Index" class="btn btn-success">Terug Naar Lijst</a>
+}

@@ -29,3 +29,57 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* styling for all tables */
+.generic-table {
+    border: 1px solid #e5e7eb;
+    margin-top: 5px;
+}
+
+/* styling for the search table */
+.search-table {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 15px;
+}
+
+/* styling for the last column on leden en clubs lijsten - including the links styling in the column */
+.last-column {
+    border-left: 1px solid #e5e7eb;
+}
+
+.last-column a {
+    text-decoration: none;
+    color: #2563eb;
+}
+
+.last-column a:hover {
+    text-decoration: underline;
+    color: #44a511;
+}
+
+/* styling for all other links that are not styled as buttons */
+.generic-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #44a511;
+}
+
+.generic-link:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* styling for all forms */
+.form-generic {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+}

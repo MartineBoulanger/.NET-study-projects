@@ -19,97 +19,97 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = Security
 build_property.RootNamespace = Security
-build_property.ProjectDir = C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Security\
+build_property.ProjectDir = C:\Users\marti\source\repos\DOTNET\CSharpMVC\Security\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\cursist\source\repos\DOTNET\CSharpMVC\Security
+build_property.MSBuildProjectDirectory = C:\Users\marti\source\repos\DOTNET\CSharpMVC\Security
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Home/Index.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Home/Privacy.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Leraar/Index.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Leraar/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVyYWFyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/Index.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/Rolebeheer.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/Rolebeheer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcUm9sZWJlaGVlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/RoleDetails.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/RoleDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcUm9sZURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/RoleToevoegen.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/RoleToevoegen.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcUm9sZVRvZXZvZWdlbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/Userbeheer.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/Userbeheer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcVXNlcmJlaGVlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/UserDetails.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/UserDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcVXNlckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderMemberFromRole.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderMemberFromRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcVmVyd2lqZGVyTWVtYmVyRnJvbVJvbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderRole.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcVmVyd2lqZGVyUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderRoleForMember.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderRoleForMember.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcVmVyd2lqZGVyUm9sZUZvck1lbWJlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderUser.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Security/VerwijderUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJpdHlcVmVyd2lqZGVyVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/Error.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Student/Index.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/_ViewImports.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/_ViewStart.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cursist/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/_Layout.cshtml]
+[C:/Users/marti/source/repos/DOTNET/CSharpMVC/Security/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-s7yktjphq3

@@ -2,7 +2,7 @@
 
 namespace SchuttersData.Models;
 
-public partial class SchuttersDbContext : DbContext
+public partial class SchuttersDbContext:DbContext
 {
     public SchuttersDbContext() { }
 

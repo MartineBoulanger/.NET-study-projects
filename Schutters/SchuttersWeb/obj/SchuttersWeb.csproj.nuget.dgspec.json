@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj": {}
+    "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
+    "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj",
         "projectName": "SchuttersData",
-        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj",
-        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\obj\\",
+        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,6 +31,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -49,6 +50,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
@@ -366,20 +368,20 @@
         }
       }
     },
-    "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj": {
+    "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
         "projectName": "SchuttersServices",
-        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
-        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\obj\\",
+        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -393,10 +395,11 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
-                "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj"
+              "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
+                "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj"
               }
             }
           }
@@ -415,6 +418,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -710,20 +714,20 @@
         }
       }
     },
-    "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj": {
+    "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj",
         "projectName": "SchuttersWeb",
-        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj",
-        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\obj\\",
+        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\SchuttersWeb.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -737,13 +741,14 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
-                "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj"
+              "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
+                "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj"
               },
-              "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj": {
-                "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj"
+              "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj": {
+                "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj"
               }
             }
           }
@@ -762,6 +767,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
@@ -790,6 +796,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[10.0.2, )"
             }
           },
           "imports": [
