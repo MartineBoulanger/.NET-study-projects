@@ -1,0 +1,6 @@
+@BrouwerService_HostAddress = http://localhost:5058
+
+GET {{BrouwerService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
