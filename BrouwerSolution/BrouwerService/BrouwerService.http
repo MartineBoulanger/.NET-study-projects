@@ -9,3 +9,22 @@ Accept: application/json
 ### onbestaande brouwer:
 GET {{beginURL}}/brouwers/666
 Accept: application/json 
+### brouwer 3 verwijderen:
+DELETE {{beginURL}}/brouwers/3
+Accept: application/json
+### een brouwer toevoegen:
+POST {{beginURL}}/brouwers
+Content-Type: application/json
+{
+  "naam": "Bios",
+  "postcode": 9940,
+  "gemeente": "Ertvelde"
+}
+### brouwer 2 wijzigen:
+PUT {{beginURL}}/brouwers/2
+Content-Type: application/json
+{
+  "naam": "Alken",
+  "postcode": 1000,
+  "gemeente": "Brussel"
+}
