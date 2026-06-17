@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "FindAll",
+    "RelativePath": "brouwers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "FindById",
+    "RelativePath": "brouwers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "FindByBeginNaam",
+    "RelativePath": "brouwers/naam",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "begin",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
