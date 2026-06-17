@@ -28,3 +28,11 @@ Content-Type: application/json
   "postcode": 1000,
   "gemeente": "Brussel"
 }
+### brouwer met postcode 10 toevoegen:
+POST {{beginURL}}/brouwers
+Content-Type: application/json
+{
+  "naam": "Inbev",
+  "postcode": 10,
+  "gemeente": "Jupille"
+}

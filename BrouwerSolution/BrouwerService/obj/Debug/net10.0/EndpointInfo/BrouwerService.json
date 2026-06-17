@@ -189,9 +189,13 @@
             "format": "int32"
           },
           "naam": {
+            "maxLength": 50,
+            "minLength": 1,
             "type": "string"
           },
           "postcode": {
+            "maximum": 9999,
+            "minimum": 1000,
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
               "integer",
@@ -200,6 +204,8 @@
             "format": "int32"
           },
           "gemeente": {
+            "maxLength": 50,
+            "minLength": 1,
             "type": "string"
           }
         }
