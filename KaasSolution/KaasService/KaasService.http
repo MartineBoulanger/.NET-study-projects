@@ -1,0 +1,6 @@
+@KaasService_HostAddress = http://localhost:5236
+
+GET {{KaasService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
