@@ -1,6 +1,11 @@
-@BrouwerService_HostAddress = http://localhost:5058
+@beginURL = http://localhost:5000
 
-GET {{BrouwerService_HostAddress}}/weatherforecast/
+### alle brouwers:
+GET {{beginURL}}/brouwers
 Accept: application/json
-
-###
+### brouwer 1:
+GET {{beginURL}}/brouwers/1
+Accept: application/json 
+### onbestaande brouwer:
+GET {{beginURL}}/brouwers/666
+Accept: application/json 
