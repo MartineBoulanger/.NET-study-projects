@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "KaasService.Controllers.KaasController",
+    "Method": "FindAll",
+    "RelativePath": "kazen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KaasService.Controllers.KaasController",
+    "Method": "FindById",
+    "RelativePath": "kazen/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KaasService.Controllers.KaasController",
+    "Method": "FindByBeginNaam",
+    "RelativePath": "kazen/naam",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "begin",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "KaasService | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/kazen": {
+      "get": {
+        "tags": [
+          "Kaas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/kazen/{id}": {
+      "get": {
+        "tags": [
+          "Kaas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/kazen/naam": {
+      "get": {
+        "tags": [
+          "Kaas"
+        ],
+        "parameters": [
+          {
+            "name": "begin",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Kaas"
+    }
+  ]
+}
