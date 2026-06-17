@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchuttersServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0f78ad2246a29aa3e78cf35544910be9172cc30")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec72f8cb95c6b7af09b287e5b3ebf65f74959431")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchuttersServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchuttersServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
