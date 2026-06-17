@@ -1,6 +1,7 @@
 ﻿using KaasService.Models;
 using KaasService.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace KaasService.Controllers
 {
@@ -16,5 +17,24 @@ namespace KaasService.Controllers
 
         [HttpGet("naam")]
         public ActionResult FindByBeginNaam(string begin) => base.Ok(repository.FindByBeginNaam(begin));
+
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, Kaas kaas)
+        {
+            try
+            {
+                kaas.Id = id;
+                repository.Update(kaas);
+                return base.Ok();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return base.NotFound();
+            }
+            catch
+            {
+                return base.Problem();
+            }
+        }
     }
 }

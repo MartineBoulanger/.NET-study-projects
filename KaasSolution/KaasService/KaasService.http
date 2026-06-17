@@ -1,6 +1,14 @@
-@KaasService_HostAddress = http://localhost:5236
+@beginURL = http://localhost:5000
 
-GET {{KaasService_HostAddress}}/weatherforecast/
+### alle kazen:
+GET {{beginURL}}/kazen
 Accept: application/json
 
-###
+### update kaas 2:
+PUT {{beginURL}}/kazen/2
+Content-Type: application/json
+{
+  "naam": "Wattou",
+  "soort": "zacht",
+  "smaak": "romig"
+}
