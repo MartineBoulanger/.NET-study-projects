@@ -74,3 +74,4 @@ C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net1
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net10.0\BrouwerService.pdb
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net10.0\BrouwerService.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net10.0\ref\BrouwerService.dll
+C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Scalar.AspNetCore.dll
