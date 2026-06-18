@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Both",
+    "Projects": [
+      {
+        "Path": "KaasService\\KaasService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "KaasClient\\KaasClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -75,3 +75,6 @@ C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\Ka
 C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\KaasService.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\ref\KaasService.dll
 C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\bin\Debug\net10.0\Scalar.AspNetCore.dll
+C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\bin\Debug\net10.0\System.Net.Http.Formatting.dll
+C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\bin\Debug\net10.0\Newtonsoft.Json.Bson.dll
