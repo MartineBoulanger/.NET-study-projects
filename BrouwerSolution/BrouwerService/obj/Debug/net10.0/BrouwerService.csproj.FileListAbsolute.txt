@@ -8,6 +8,7 @@ C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net1
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\BrouwerService.pdb
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Azure.Core.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\System.Net.Http.Formatting.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
@@ -26,6 +27,9 @@ C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net1
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Microsoft.OpenApi.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Newtonsoft.Json.Bson.dll
+C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Scalar.AspNetCore.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\System.ClientModel.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
@@ -74,4 +78,3 @@ C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net1
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net10.0\BrouwerService.pdb
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net10.0\BrouwerService.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\obj\Debug\net10.0\ref\BrouwerService.dll
-C:\Users\marti\source\repos\DOTNET\BrouwerSolution\BrouwerService\bin\Debug\net10.0\Scalar.AspNetCore.dll

@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="BrouwerClient/BrouwerClient.csproj" Id="8d3b8da3-f97f-4ce0-885c-85dbd552dc99" />
   <Project Path="BrouwerService/BrouwerService.csproj" />
 </Solution>
