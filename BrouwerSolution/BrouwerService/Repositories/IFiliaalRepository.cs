@@ -1,6 +1,6 @@
-﻿using KaasService.Models;
+﻿using BrouwerService.Models;
 
-namespace KaasService.Repositories
+namespace BrouwerService.Repositories
 {
     public interface IFiliaalRepository
     {

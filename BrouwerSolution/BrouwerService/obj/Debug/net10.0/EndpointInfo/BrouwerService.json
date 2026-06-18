@@ -169,6 +169,18 @@
           }
         }
       }
+    },
+    "/filialen": {
+      "get": {
+        "tags": [
+          "Filiaal"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -215,6 +227,9 @@
   "tags": [
     {
       "name": "Brouwer"
+    },
+    {
+      "name": "Filiaal"
     }
   ]
 }

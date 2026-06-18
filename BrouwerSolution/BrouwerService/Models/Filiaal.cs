@@ -1,4 +1,4 @@
-﻿namespace KaasService.Models
+﻿namespace BrouwerService.Models
 {
     public class Filiaal
     {

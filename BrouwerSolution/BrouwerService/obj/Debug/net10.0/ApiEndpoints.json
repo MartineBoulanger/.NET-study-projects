@@ -93,5 +93,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.FiliaalController",
+    "Method": "FindAll",
+    "RelativePath": "filialen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
