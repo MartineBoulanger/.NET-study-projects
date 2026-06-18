@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddCors();
 
 builder.Services.AddDbContext<KaaslandContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("kaasland")));
 builder.Services.AddScoped<IKaasRepository, KaasRepository>();
@@ -23,6 +24,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader());
 
 app.MapControllers();
 
