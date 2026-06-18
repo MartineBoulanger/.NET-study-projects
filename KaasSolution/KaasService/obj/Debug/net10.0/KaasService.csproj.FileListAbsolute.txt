@@ -74,3 +74,4 @@ C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\re
 C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\KaasService.pdb
 C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\KaasService.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\obj\Debug\net10.0\ref\KaasService.dll
+C:\Users\marti\source\repos\DOTNET\KaasSolution\KaasService\bin\Debug\net10.0\Scalar.AspNetCore.dll

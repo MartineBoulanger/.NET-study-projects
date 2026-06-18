@@ -20,10 +20,65 @@
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Kaas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kaas"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kaas"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kaas"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/kazen/{id}": {
       "get": {
+        "tags": [
+          "Kaas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
         "tags": [
           "Kaas"
         ],
@@ -135,12 +190,18 @@
             "format": "int32"
           },
           "naam": {
+            "maxLength": 50,
+            "minLength": 1,
             "type": "string"
           },
           "soort": {
+            "maxLength": 50,
+            "minLength": 1,
             "type": "string"
           },
           "smaak": {
+            "maxLength": 50,
+            "minLength": 1,
             "type": "string"
           }
         }

@@ -11,9 +11,41 @@
   },
   {
     "ContainingType": "KaasService.Controllers.KaasController",
+    "Method": "Post",
+    "RelativePath": "kazen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "kaas",
+        "Type": "KaasService.Models.Kaas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KaasService.Controllers.KaasController",
     "Method": "FindById",
     "RelativePath": "kazen/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KaasService.Controllers.KaasController",
+    "Method": "Delete",
+    "RelativePath": "kazen/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
