@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using SchuttersData.Models;
 using SchuttersServices;
+using SchuttersWeb.Models;
 
 namespace SchuttersWeb.Controllers
 {
-    public class ClubController : Controller
+    [Authorize(Roles = "Leden, Admin")]
+    public class ClubController:Controller
     {
         private readonly ClubService clubService;
         public ClubController(ClubService clubService)
@@ -36,19 +38,26 @@ namespace SchuttersWeb.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Club club)
+        public IActionResult Create(ClubFormViewModel model)
         {
-            if (clubService.StamnummerBestaat(club.Stamnummer))
+            if (clubService.StamnummerBestaat(model.Stamnummer))
             {
                 ModelState.AddModelError("Stamnummer", "Een club met dit stamnummer komt al voor in de database. Kies een ander nummer.");
             }
             if (ModelState.IsValid)
             {
+                var club = new Club
+                {
+                    Stamnummer = model.Stamnummer,
+                    Naam = model.Naam,
+                    Postcode = model.Postcode,
+                    Gemeente = model.Gemeente,
+                    Adres = model.Adres
+                };
                 clubService.AddClub(club);
                 return RedirectToAction(nameof(Index));
             }
-            return View(club);
+            return View(model);
         }
 
         [Authorize(Roles = "Admin")]
@@ -58,23 +67,37 @@ namespace SchuttersWeb.Controllers
             if (club == null)
             {
                 ViewBag.ErrorMessage = $"Geen club gevonden met stamnummer {id}.";
-                return View((Club?)null);
+                return View((ClubFormViewModel?)null);
             }
-            return View(club);
+            var model = new ClubFormViewModel
+            {
+                Stamnummer = club.Stamnummer,
+                Naam = club.Naam,
+                Postcode = club.Postcode,
+                Gemeente = club.Gemeente,
+                Adres = club.Adres,
+            };
+            return View(model);
         }
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Club club)
+        public IActionResult Edit(ClubFormViewModel model)
         {
-            if (id != club.Stamnummer) return NotFound();
             if (ModelState.IsValid)
             {
+                var club = new Club
+                {
+                    Stamnummer = model.Stamnummer,
+                    Naam = model.Naam,
+                    Postcode = model.Postcode,
+                    Gemeente = model.Gemeente,
+                    Adres = model.Adres
+                };
                 clubService.UpdateClub(club);
                 return RedirectToAction(nameof(Index));
             }
-            return View(club);
+            return View(model);
         }
 
         [Authorize(Roles = "Admin")]
@@ -82,15 +105,12 @@ namespace SchuttersWeb.Controllers
         {
             var club = clubService.GetClub(id);
             if (club == null)
-            {
                 ViewBag.ErrorMessage = $"Geen club gevonden met stamnummer {id}.";
-            }
             return View(club);
         }
 
         [HttpPost, ActionName("Delete")]
         [Authorize(Roles = "Admin")]
-        [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
             clubService.DeleteClub(id);

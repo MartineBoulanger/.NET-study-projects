@@ -1,0 +1,107 @@
+[
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "FindAll",
+    "RelativePath": "brouwers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "Post",
+    "RelativePath": "brouwers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brouwer",
+        "Type": "BrouwerService.Models.Brouwer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "FindById",
+    "RelativePath": "brouwers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "Delete",
+    "RelativePath": "brouwers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "Put",
+    "RelativePath": "brouwers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "brouwer",
+        "Type": "BrouwerService.Models.Brouwer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.BrouwerController",
+    "Method": "FindByBeginNaam",
+    "RelativePath": "brouwers/naam",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "begin",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BrouwerService.Controllers.FiliaalController",
+    "Method": "FindAll",
+    "RelativePath": "filialen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

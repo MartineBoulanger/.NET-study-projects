@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Both",
+    "Projects": [
+      {
+        "Path": "BrouwerService\\BrouwerService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "BrouwerClient\\BrouwerClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

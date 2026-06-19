@@ -1693,23 +1693,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cursist\\.nuget\\packages\\": {},
+    "C:\\Users\\marti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
       "projectName": "SchuttersServices",
-      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
-      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\obj\\",
+      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\SchuttersServices.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1726,8 +1726,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
-              "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj"
+            "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj": {
+              "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Schutters\\SchuttersData\\SchuttersData.csproj"
             }
           }
         }

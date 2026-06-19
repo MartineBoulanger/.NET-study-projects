@@ -20,7 +20,7 @@ namespace SchuttersServices
         public void UpdateLid(Lid lid) => lidRepository.Update(lid);
         public void DeleteLid(long lidnummer) => lidRepository.Delete(lidnummer);
         public IEnumerable<Club> GetAllClubs() => clubRepository.GetAll();
-        public IEnumerable<Lid> Search(string? voornaam, string? naam, Geslacht? geslacht, Niveau? niveau, string? clubnaam) 
+        public IEnumerable<Lid> Search(string? voornaam, string? naam, string? geslacht, string? niveau, string? clubnaam)
             => lidRepository.Search(voornaam, naam, geslacht, niveau, clubnaam);
     }
 }

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Club>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <a asp-action="Create" class="generic-link">Create New</a>
+}
+
+<table class="table generic-table">
+    <thead>
+        <tr>
+            <th>Stamnr</th>
+            <th>Clubnaam</th>
+            <th>Postcode</th>
+            <th>Gemeente</th>
+            <th>Adres</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Stamnummer.ToString()</td>
+                <td>@item.Naam</td>
+                <td>@item.Postcode</td>
+                <td>@item.Gemeente</td>
+                <td>@item.Adres</td>
+                <td class="last-column">
+                    <a asp-action="Details" asp-route-id="@item.Stamnummer">Details</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <text> | </text>
+                        <a asp-action="Edit" asp-route-id="@item.Stamnummer">Edit</a>
+                        <text> | </text>
+                        <a asp-action="Delete" asp-route-id="@item.Stamnummer">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

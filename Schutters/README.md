@@ -16,7 +16,7 @@
 
 ## Twee databases
 
-1. **Security database** (`aspnet-SchuttersWeb`, connectionstring `DefaultConnection`)
+1. **Security database** (`aspnet-Schutters`, connectionstring `DefaultConnection`)
    ASP.NET Core Identity: `AspNetUsers`, `AspNetRoles`, ...
 
 2. **Schutters database** (`Schutters`, connectionstring `SchuttersConnection`)
@@ -24,12 +24,8 @@
 
 ## Setup stappen
 
-### 1. Client-side libraries herstellen
-Open de solution in Visual Studio. Klik met de rechtermuisknop op `libman.json` in
-`SchuttersWeb` en kies **Restore Client-Side Libraries** (of dit gebeurt automatisch
-bij build). Dit haalt bootstrap, jquery en jquery-validation binnen in `wwwroot/lib`.
+### 1. Schutters-database aanmaken
 
-### 2. Schutters-database aanmaken
 Voer het script `createMVCSchutters.sql` uit in SQL Server Management Studio. Dit
 maakt de database `Schutters` aan met de tabellen `Clubs` en `Leden`, inclusief
 data en de FK-constraint met `ON DELETE CASCADE`.
@@ -50,24 +46,30 @@ voor toekomstige migraties (en markeer de migration eventueel als reeds toegepas
 met `dotnet ef database update InitialCreate` pas NA controle, of gebruik
 `Add-Migration` met een lege up/down als je enkel het model wil "bevestigen").
 
-### 3. Security database aanmaken (Identity)
+### 2. Security database aanmaken (Identity)
+
 Voer vanuit de map `Schutters` uit:
 
 ```
 dotnet ef --startup-project SchuttersWeb/SchuttersWeb.csproj migrations add InitialIdentity -p SchuttersWeb/SchuttersWeb.csproj --context ApplicationDbContext
+```
+
+```
 dotnet ef --startup-project SchuttersWeb/SchuttersWeb.csproj database update --context ApplicationDbContext
 ```
 
-Dit maakt de database `aspnet-SchuttersWeb` aan met de Identity-tabellen
+Dit maakt de database `aspnet-Schutters` aan met de Identity-tabellen
 (`AspNetUsers`, `AspNetRoles`, `AspNetUserRoles`, ...).
 
-### 4. Rollen en gebruikers toevoegen
-Voer daarna `eindoefening_securityscript.sql` uit op de database `aspnet-SchuttersWeb`
-(pas de `USE [aspnet-...]` regel aan naar de juiste databasenaam, bv.
-`USE [aspnet-SchuttersWeb]`). Dit voegt de rollen `Admin` en `Leden` toe, en de
+### 3. Rollen en gebruikers toevoegen
+
+Voer daarna `eindoefening_securityscript.sql` uit op de database `aspnet-Schutters`
+(pas de `USE [aspnet-...]` regel aan naar de juiste databasenaam -
+`USE [aspnet-Schutters]`). Dit voegt de rollen `Admin` en `Leden` toe, en de
 testgebruikers met hun wachtwoorden (zie commentaar onderaan het script).
 
-### 5. Connectionstrings controleren
+### 4. Connectionstrings controleren
+
 Controleer in `SchuttersWeb/appsettings.json` of de databasenamen overeenkomen met
 wat je in stap 2-4 hebt gebruikt.
 
@@ -77,16 +79,15 @@ wat je in stap 2-4 hebt gebruikt.
   hebben `[Authorize]`).
 - Ingelogd (eender welke rol): clublijst en -details (`ClubController`
   Index/Details).
-- Rol **Leden** (en Admin): ledenlijst, -details en de zoekpagina
-  (`LidController` heeft `[Authorize(Roles = "Leden,Admin")]`).
+- Rol **Leden** (en Admin): ledenlijst, -details en de zoekpagina.
 - Rol **Admin**: Create/Edit/Delete voor zowel Clubs als Leden.
 
 ## Validatie
 
 - Verplichte velden en maximale lengtes via data annotations op de modellen
-  (`Club`, `Lid`, `LidFormViewModel`).
+  (`LidFormViewModel` en `ClubFormViewModel`).
 - Stamnummer/lidnummer-uniciteit wordt enkel gecontroleerd in de **Create**-actions
-  via `ModelState.AddModelError`, zoals aangegeven in de opdracht (tip).
+  via `ModelState.AddModelError`, zoals aangegeven in de opdracht.
 - Bij Edit is het stamnummer/lidnummer een disabled veld (visueel) met een
   bijhorend hidden field zodat de waarde toch wordt doorgestuurd.
 - Verwijderen van een club verwijdert automatisch de bijhorende leden via de

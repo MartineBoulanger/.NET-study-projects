@@ -7,7 +7,8 @@ using SchuttersWeb.Models;
 
 namespace SchuttersWeb.Controllers
 {
-    public class LidController : Controller
+    [Authorize(Roles = "Leden, Admin")]
+    public class LidController:Controller
     {
         private readonly LidService lidService;
         public LidController(LidService lidService)
@@ -23,7 +24,8 @@ namespace SchuttersWeb.Controllers
         public IActionResult Details(long id)
         {
             var lid = lidService.GetLid(id);
-            if (lid == null) ViewBag.ErrorMessage = $"Geen lid gevonden met lidnummer {id}";
+            if (lid == null)
+                ViewBag.ErrorMessage = $"Geen lid gevonden met lidnummer {id}";
             return View(lid);
         }
 
@@ -34,7 +36,6 @@ namespace SchuttersWeb.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Search(ZoekLedenViewModel model)
         {
             model.Resultaten = lidService.Search(model.Voornaam, model.Naam, model.Geslacht, model.Niveau, model.Clubnaam);
@@ -55,10 +56,10 @@ namespace SchuttersWeb.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        [ValidateAntiForgeryToken]
         public IActionResult Create(LidFormViewModel model)
         {
-            if (lidService.LidnummerBestaat(model.Lidnummer)) ModelState.AddModelError("Lidnummer", "Een lid met dit lidnummer komt al voor in de database. Kies een ander nummer.");
+            if (lidService.LidnummerBestaat(model.Lidnummer))
+                ModelState.AddModelError("Lidnummer", "Een lid met dit lidnummer komt al voor in de database. Kies een ander nummer.");
             if (ModelState.IsValid)
             {
                 var lid = new Lid
@@ -105,10 +106,8 @@ namespace SchuttersWeb.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(long id, LidFormViewModel model)
+        public IActionResult Edit(LidFormViewModel model)
         {
-            if (id != model.Lidnummer) return NotFound();
             if (ModelState.IsValid)
             {
                 var lid = new Lid
@@ -133,19 +132,20 @@ namespace SchuttersWeb.Controllers
         public IActionResult Delete(long id)
         {
             var lid = lidService.GetLid(id);
-            if (lid == null) ViewBag.ErrorMessage = $"Geen lid gevonden met lidnummer {id}";
+            if (lid == null)
+                ViewBag.ErrorMessage = $"Geen lid gevonden met lidnummer {id}";
             return View(lid);
         }
 
         [HttpPost, ActionName("Delete")]
         [Authorize(Roles = "Admin")]
-        [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(long id)
         {
             lidService.DeleteLid(id);
             return RedirectToAction(nameof(Index));
         }
 
+        // functies die de selectie opties samenstellen voor de dropdown velden in de formulieren
         private IEnumerable<SelectListItem> GetClubSelectList(int? selected = null)
         {
             return lidService.GetAllClubs().Select(c => new SelectListItem
@@ -156,26 +156,27 @@ namespace SchuttersWeb.Controllers
             });
         }
 
-        private static IEnumerable<SelectListItem> GetGeslachtSelectList(Geslacht? selected = null)
+        private static IEnumerable<SelectListItem> GetGeslachtSelectList(string? selected = null)
         {
-            var opties = new [] { Geslacht.M, Geslacht.V, Geslacht.X };
+            var opties = new[] { "M", "V", "X" };
             return opties.Select(o => new SelectListItem
             {
-                Text = o.ToString(),
-                Value = o.ToString(),
+                Text = o,
+                Value = o,
                 Selected = o == selected
             });
         }
 
-        private static IEnumerable<SelectListItem> GetNiveauSelectList(Niveau? selected = null)
+        private static IEnumerable<SelectListItem> GetNiveauSelectList(string? selected = null)
         {
             var opties = new[]
             {
-                new SelectListItem { Text = "C (Competitiespeler)", Value = Niveau.C.ToString() },
-                new SelectListItem { Text = "R (Recreant)", Value = Niveau.R.ToString() },
-                new SelectListItem { Text = "J (Jeugd)", Value = Niveau.J.ToString() }
+                new SelectListItem { Text = "C (Competitiespeler)", Value = "C" },
+                new SelectListItem { Text = "R (Recreant)", Value = "R" },
+                new SelectListItem { Text = "J (Jeugd)", Value = "J" }
             };
-            foreach (var optie in opties) optie.Selected = optie.Value == selected.ToString();
+            foreach (var optie in opties)
+                optie.Selected = optie.Value == selected;
             return opties;
         }
     }

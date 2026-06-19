@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="KaasClient/KaasClient.csproj" Id="b6d2bc32-e170-42d5-8116-d088bfb1a1e3" />
+  <Project Path="KaasService/KaasService.csproj" />
+</Solution>
