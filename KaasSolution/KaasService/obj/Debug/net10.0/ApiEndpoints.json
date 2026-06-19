@@ -80,14 +80,14 @@
   },
   {
     "ContainingType": "KaasService.Controllers.KaasController",
-    "Method": "FindByBeginNaam",
-    "RelativePath": "kazen/naam",
+    "Method": "FindBySmaak",
+    "RelativePath": "kazen/smaken",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "begin",
+        "Name": "smaak",
         "Type": "System.String",
         "IsRequired": false
       }

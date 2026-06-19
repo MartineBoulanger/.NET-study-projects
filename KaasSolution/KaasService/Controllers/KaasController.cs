@@ -5,8 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace KaasService.Controllers
 {
-    [Route("kazen")]
-    [ApiController]
+    [Route("kazen"), ApiController]
     public class KaasController(IKaasRepository repository):ControllerBase
     {
         [HttpGet]
@@ -17,9 +16,9 @@ namespace KaasService.Controllers
         //public ActionResult FindById(int id) => repository.FindById(id) is Kaas kaas ? base.Ok(kaas) : base.NotFound();
         public async Task<ActionResult> FindById(int id) => await repository.FindByIdAsync(id) is Kaas kaas ? base.Ok(kaas) : base.NotFound();
 
-        [HttpGet("naam")]
-        //public ActionResult FindByBeginNaam(string begin) => base.Ok(repository.FindByBeginNaam(begin));
-        public async Task<ActionResult> FindByBeginNaam(string begin) => base.Ok(await repository.FindByBeginNaamAsync(begin));
+        [HttpGet("smaken")]
+        //public ActionResult FindBySmaak(string smaak) => base.Ok(repository.FindBySmaak(smaak));
+        public async Task<ActionResult> FindBySmaak(string smaak) => base.Ok(await repository.FindBySmaakAsync(smaak));
 
         [HttpPost]
         //public ActionResult Post(Kaas kaas)

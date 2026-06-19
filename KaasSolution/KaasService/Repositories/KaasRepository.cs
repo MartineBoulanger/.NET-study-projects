@@ -7,7 +7,7 @@ namespace KaasService.Repositories
     {
         //public IQueryable<Kaas> FindAll() => context.Kazen.AsNoTracking();
 
-        //public IQueryable<Kaas> FindByBeginNaam(string begin) => context.Kazen.AsNoTracking().Where(k => k.Naam.StartsWith(begin));
+        //public IQueryable<Kaas> FindBySmaak(string smaak) => context.Kazen.AsNoTracking().Where(k => k.Smaak == smaak);
 
         //public Kaas? FindById(int id) => context.Kazen.Find(id);
 
@@ -31,7 +31,7 @@ namespace KaasService.Repositories
 
         public async Task<List<Kaas>> FindAllAsync() => await context.Kazen.AsNoTracking().ToListAsync();
 
-        public async Task<List<Kaas>> FindByBeginNaamAsync(string begin) => await context.Kazen.AsNoTracking().Where(k => k.Naam.StartsWith(begin)).ToListAsync();
+        public async Task<List<Kaas>> FindBySmaakAsync(string smaak) => await context.Kazen.AsNoTracking().Where(k => k.Smaak == smaak).ToListAsync();
 
         public async Task<Kaas?> FindByIdAsync(int id) => await context.Kazen.FindAsync(id);
 
