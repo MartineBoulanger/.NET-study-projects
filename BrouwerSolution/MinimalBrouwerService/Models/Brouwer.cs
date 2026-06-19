@@ -1,0 +1,15 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MinimalBrouwerService.Models
+{
+    public class Brouwer
+    {
+        public int Id { get; set; }
+        [Length(1, 50)]
+        public required string Naam { get; set; }
+        [Range(1000, 9999)]
+        public int Postcode { get; set; }
+        [Length(1, 50)]
+        public required string Gemeente { get; set; }
+    }
+}

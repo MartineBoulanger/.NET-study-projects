@@ -1,0 +1,6 @@
+@MinimalBrouwerService_HostAddress = http://localhost:5124
+
+GET {{MinimalBrouwerService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
