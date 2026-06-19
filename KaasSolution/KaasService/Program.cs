@@ -12,7 +12,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddCors();
 
 builder.Services.AddDbContext<KaaslandContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("kaasland")));
-builder.Services.AddScoped<IKaasRepository, KaasRepository>();
+builder.Services.AddTransient<IKaasRepository, KaasRepository>();
 
 var app = builder.Build();
 

@@ -149,14 +149,14 @@
         }
       }
     },
-    "/kazen/naam": {
+    "/kazen/smaken": {
       "get": {
         "tags": [
           "Kaas"
         ],
         "parameters": [
           {
-            "name": "begin",
+            "name": "smaak",
             "in": "query",
             "schema": {
               "type": "string"

@@ -1,18 +1,18 @@
-'use strict';
-
-document.getElementById('zoeken').onclick = async function () {
-  const response = await fetch(
-    `http://localhost:5000/kazen/${document.getElementById('id').value}`,
-  );
-
+"use strict";
+leesKazen();
+async function leesKazen() {
+  const response = await fetch("http://localhost:5000/kazen");
   if (response.ok) {
     const kazen = await response.json();
-    document.getElementById('naam').innerText = kazen.naam;
-    document.getElementById('soort').innerText = kazen.soort;
-    document.getElementById('smaak').innerText = kazen.smaak;
+    const ul = document.getElementById("kazen");
+    for (const kaas of kazen) {
+      const li = document.createElement("li");
+      li.innerText = `${kaas.naam}: ${kaas.soort}, ${kaas.smaak}`;
+      ul.appendChild(li);
+    }
   } else if (response.status === 404) {
-    alert('Kaas niet gevonden.');
+    alert("Kaas niet gevonden.");
   } else {
-    alert('Technisch probleem, contacteer de helpdesk.');
+    alert("Technisch probleem, contacteer de helpdesk.");
   }
-};
+}
