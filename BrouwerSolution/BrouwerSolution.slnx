@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="BrouwerClient/BrouwerClient.csproj" Id="8d3b8da3-f97f-4ce0-885c-85dbd552dc99" />
   <Project Path="BrouwerService/BrouwerService.csproj" />
+  <Project Path="BrouwerServiceIntegrationTests/BrouwerServiceIntegrationTests.csproj" Id="8b922baa-da55-4420-832d-b22621c59978" />
   <Project Path="BrouwerServiceUnitTests/BrouwerServiceUnitTests.csproj" Id="21153d12-3e06-461d-85fd-14fadb44a062" />
 </Solution>

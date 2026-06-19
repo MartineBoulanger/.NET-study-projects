@@ -2,10 +2,10 @@
   "profiles": {
     "BrouwerClient": {
       "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
     }
-    //"WSL": {
-    //  "commandName": "WSL2",
-    //  "distributionName": ""
-    //}
   }
 }
