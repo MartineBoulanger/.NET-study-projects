@@ -1,0 +1,33 @@
+[
+  {
+    "ContainingType": "SterrenbeeldService.Controllers.SterrenbeeldController",
+    "Method": "GetAll",
+    "RelativePath": "sterrenbeelden",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SterrenbeeldService.Controllers.SterrenbeeldController",
+    "Method": "GetSterrenbeeld",
+    "RelativePath": "sterrenbeelden/{maand}/{dag}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maand",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dag",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

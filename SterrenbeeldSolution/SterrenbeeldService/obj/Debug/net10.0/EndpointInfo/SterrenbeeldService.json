@@ -1,0 +1,71 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "SterrenbeeldService | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/sterrenbeelden": {
+      "get": {
+        "tags": [
+          "Sterrenbeeld"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/sterrenbeelden/{maand}/{dag}": {
+      "get": {
+        "tags": [
+          "Sterrenbeeld"
+        ],
+        "parameters": [
+          {
+            "name": "maand",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "dag",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Sterrenbeeld"
+    }
+  ]
+}

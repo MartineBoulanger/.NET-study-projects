@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SterrenbeeldClient/SterrenbeeldClient.csproj" Id="96522331-d345-4f3c-9db7-82f14912390a" />
+  <Project Path="SterrenbeeldService/SterrenbeeldService.csproj" />
+</Solution>
