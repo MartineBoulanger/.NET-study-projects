@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OJo/25CZLD0=",
+  "dgSpecHash": "gEkmiv6UfCY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasClient\\KaasClient.csproj",
+  "projectFilePath": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\KaasClient\\KaasClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
   ],
   "logs": []
 }

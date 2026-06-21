@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KaasServiceIntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e6359e7e13716deaaa32fef8aa0fe2506c23f73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3df7bde041e72a997a33a33f4112e083899de8b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("KaasServiceIntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KaasServiceIntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
