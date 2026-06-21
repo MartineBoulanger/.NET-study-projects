@@ -1,0 +1,175 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "MinimalKaasService | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/kazen": {
+      "get": {
+        "tags": [
+          "MinimalKaasService"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kaas"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/kazen/{id}": {
+      "get": {
+        "tags": [
+          "MinimalKaasService"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Program"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kaas"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/kazen/smaken": {
+      "get": {
+        "tags": [
+          "MinimalKaasService"
+        ],
+        "parameters": [
+          {
+            "name": "smaak",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kaas"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Kaas": {
+        "required": [
+          "naam",
+          "soort",
+          "smaak"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "naam": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "soort": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "smaak": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "MinimalKaasService"
+    },
+    {
+      "name": "Program"
+    }
+  ]
+}

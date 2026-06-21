@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KaasClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3df7bde041e72a997a33a33f4112e083899de8b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa7ab3f3ed76761025b7c1e96bf28e30c0bb6597")]
 [assembly: System.Reflection.AssemblyProductAttribute("KaasClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KaasClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
