@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FactoryDersignPattern/FactoryDersignPattern.csproj" />
+  <Project Path="SingletonDesignPattern/SingletonDesignPattern.csproj" />
+</Solution>
