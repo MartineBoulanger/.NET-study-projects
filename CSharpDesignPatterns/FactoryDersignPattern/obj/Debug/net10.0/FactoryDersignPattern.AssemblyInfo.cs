@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FactoryDersignPattern")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd3a30c5063bd3184bfcbc03aaa92f9f8702a75c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f529735a0a6c64dcb5198a2594638477d404513a")]
 [assembly: System.Reflection.AssemblyProductAttribute("FactoryDersignPattern")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FactoryDersignPattern")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
