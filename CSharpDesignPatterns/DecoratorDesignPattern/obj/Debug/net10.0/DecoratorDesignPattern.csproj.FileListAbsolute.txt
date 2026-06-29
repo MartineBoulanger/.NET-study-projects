@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\bin\Debug\net10.0\DecoratorDesignPattern.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\bin\Debug\net10.0\DecoratorDesignPattern.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\bin\Debug\net10.0\DecoratorDesignPattern.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\bin\Debug\net10.0\DecoratorDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\bin\Debug\net10.0\DecoratorDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\refint\DecoratorDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\DecoratorDesignPattern.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratorDesignPattern\obj\Debug\net10.0\ref\DecoratorDesignPattern.dll

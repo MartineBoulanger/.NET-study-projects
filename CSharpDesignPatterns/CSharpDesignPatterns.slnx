@@ -2,6 +2,7 @@
   <Project Path="AdapterDesignPattern/AdapterDesignPattern.csproj" Id="6977edb4-0290-4b6a-8e30-e3f48a9e838e" />
   <Project Path="BuilderDesignPattern/BuilderDesignPattern.csproj" />
   <Project Path="CompositeDesignPattern/CompositeDesignPattern.csproj" Id="0964d907-b8aa-4385-a839-7072bdec8920" />
+  <Project Path="DecoratorDesignPattern/DecoratorDesignPattern.csproj" Id="226fcd91-12a0-4674-a0a1-f0832660d7a7" />
   <Project Path="FacadeDesignPattern/FacadeDesignPattern.csproj" />
   <Project Path="FactoryDersignPattern/FactoryDersignPattern.csproj" />
   <Project Path="SingletonDesignPattern/SingletonDesignPattern.csproj" />
