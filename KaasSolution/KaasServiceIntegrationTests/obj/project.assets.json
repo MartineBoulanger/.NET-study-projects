@@ -5348,23 +5348,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marti\\.nuget\\packages\\": {},
+    "C:\\Users\\cursist\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\KaasServiceIntegrationTests.csproj",
+      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\KaasServiceIntegrationTests.csproj",
       "projectName": "KaasServiceIntegrationTests",
-      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\KaasServiceIntegrationTests.csproj",
-      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\obj\\",
+      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\KaasServiceIntegrationTests.csproj",
+      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5381,8 +5381,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\KaasService\\KaasService.csproj": {
-              "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\KaasService\\KaasService.csproj"
+            "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasService\\KaasService.csproj": {
+              "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasService\\KaasService.csproj"
             }
           }
         }
@@ -5714,5 +5714,13 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\KaasServiceIntegrationTests\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

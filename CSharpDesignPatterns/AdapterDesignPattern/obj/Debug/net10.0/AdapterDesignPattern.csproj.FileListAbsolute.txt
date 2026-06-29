@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\bin\Debug\net10.0\AdapterDesignPattern.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\bin\Debug\net10.0\AdapterDesignPattern.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\bin\Debug\net10.0\AdapterDesignPattern.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\bin\Debug\net10.0\AdapterDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\bin\Debug\net10.0\AdapterDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\refint\AdapterDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\AdapterDesignPattern.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\AdapterDesignPattern\obj\Debug\net10.0\ref\AdapterDesignPattern.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MinimalKaasService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40e70b2344abc52f94e4504e54a69cd360c6ffa9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+888835bc35be1623bd64a44caa9ec5fa0c470091")]
 [assembly: System.Reflection.AssemblyProductAttribute("MinimalKaasService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MinimalKaasService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

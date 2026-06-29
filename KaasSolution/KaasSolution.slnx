@@ -3,5 +3,7 @@
   <Project Path="KaasService/KaasService.csproj" />
   <Project Path="KaasServiceIntegrationTests/KaasServiceIntegrationTests.csproj" Id="8edc16cb-0fce-44a6-a8c6-d7e8372594f0" />
   <Project Path="KaasServiceUnitTests/KaasServiceUnitTests.csproj" Id="4357a7d3-4041-4072-9150-2698c6db9650" />
-  <Project Path="MinimalKaasService/MinimalKaasService.csproj" Id="fe306af5-ded4-4ad2-b312-a9f3b05dc663" />
+  <Project Path="MinimalKaasService/MinimalKaasService.csproj" Id="fe306af5-ded4-4ad2-b312-a9f3b05dc663">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
 </Solution>
