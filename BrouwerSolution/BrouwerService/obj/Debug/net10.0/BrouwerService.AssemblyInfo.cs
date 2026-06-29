@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrouwerService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f497d9198b1a8501bc12cd3ecdc81d4d6c30b1d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40e70b2344abc52f94e4504e54a69cd360c6ffa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrouwerService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrouwerService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

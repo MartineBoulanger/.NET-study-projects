@@ -1,0 +1,32 @@
+﻿using Microsoft.EntityFrameworkCore;
+using MinimalBrouwerService.Models;
+
+namespace MinimalBrouwerService.Repositories
+{
+    public class BrouwerRepository(BierlandContext context):IBrouwerRepository
+    {
+        public async Task<List<Brouwer>> FindAllAsync() => await context.Brouwers.AsNoTracking().ToListAsync();
+
+        public async Task<List<Brouwer>> FindByBeginNaamAsync(string begin) => await context.Brouwers.AsNoTracking().Where(b => b.Naam.StartsWith(begin)).ToListAsync();
+
+        public async Task<Brouwer?> FindByIdAsync(int id) => await context.Brouwers.FindAsync(id);
+
+        public async Task InsertAsync(Brouwer brouwer)
+        {
+            await context.Brouwers.AddAsync(brouwer);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Brouwer brouwer)
+        {
+            context.Brouwers.Remove(brouwer);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Brouwer brouwer)
+        {
+            context.Brouwers.Update(brouwer);
+            await context.SaveChangesAsync();
+        }
+    }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Both",
+    "Projects": [
+      {
+        "Path": "SterrenbeeldClient\\SterrenbeeldClient.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "SterrenbeeldService\\SterrenbeeldService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
