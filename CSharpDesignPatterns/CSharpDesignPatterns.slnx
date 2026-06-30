@@ -7,4 +7,5 @@
   <Project Path="FactoryDesignPattern/FactoryDesignPattern.csproj" />
   <Project Path="ObserverDesignPattern/ObserverDesignPattern.csproj" />
   <Project Path="SingletonDesignPattern/SingletonDesignPattern.csproj" />
+  <Project Path="StrategyDesignPattern/StrategyDesignPattern.csproj" />
 </Solution>
