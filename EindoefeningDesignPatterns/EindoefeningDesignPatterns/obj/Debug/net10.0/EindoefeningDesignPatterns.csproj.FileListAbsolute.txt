@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\bin\Debug\net10.0\EindoefeningDesignPatterns.exe
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\bin\Debug\net10.0\EindoefeningDesignPatterns.deps.json
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\bin\Debug\net10.0\EindoefeningDesignPatterns.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\bin\Debug\net10.0\EindoefeningDesignPatterns.dll
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\bin\Debug\net10.0\EindoefeningDesignPatterns.pdb
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.dll
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\refint\EindoefeningDesignPatterns.dll
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.pdb
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\EindoefeningDesignPatterns.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\EindoefeningDesignPatterns\EindoefeningDesignPatterns\obj\Debug\net10.0\ref\EindoefeningDesignPatterns.dll
