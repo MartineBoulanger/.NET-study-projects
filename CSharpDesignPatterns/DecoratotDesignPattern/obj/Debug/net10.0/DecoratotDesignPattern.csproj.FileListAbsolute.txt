@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\bin\Debug\net10.0\DecoratotDesignPattern.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\bin\Debug\net10.0\DecoratotDesignPattern.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\bin\Debug\net10.0\DecoratotDesignPattern.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\bin\Debug\net10.0\DecoratotDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\bin\Debug\net10.0\DecoratotDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\refint\DecoratotDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\DecoratotDesignPattern.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\DecoratotDesignPattern\obj\Debug\net10.0\ref\DecoratotDesignPattern.dll

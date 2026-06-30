@@ -5,5 +5,6 @@
   <Project Path="DecoratotDesignPattern/DecoratotDesignPattern.csproj" />
   <Project Path="FacadeDesignPattern/FacadeDesignPattern.csproj" />
   <Project Path="FactoryDesignPattern/FactoryDesignPattern.csproj" />
+  <Project Path="ObserverDesignPattern/ObserverDesignPattern.csproj" />
   <Project Path="SingletonDesignPattern/SingletonDesignPattern.csproj" />
 </Solution>
