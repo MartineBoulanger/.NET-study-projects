@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\bin\Debug\net10.0\CompositeDesignPattern.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\bin\Debug\net10.0\CompositeDesignPattern.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\bin\Debug\net10.0\CompositeDesignPattern.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\bin\Debug\net10.0\CompositeDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\bin\Debug\net10.0\CompositeDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\refint\CompositeDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\CompositeDesignPattern.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\CompositeDesignPattern\obj\Debug\net10.0\ref\CompositeDesignPattern.dll

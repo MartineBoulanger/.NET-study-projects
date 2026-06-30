@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj": {}
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj": {
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj",
+        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj",
         "projectName": "MinimalKaasService",
-        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\obj\\",
+        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\MinimalKaasService.csproj",
+        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\KaasSolution\\MinimalKaasService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,7 +46,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

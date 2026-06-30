@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\bin\Debug\net10.0\ObserverDesignPattern.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\bin\Debug\net10.0\ObserverDesignPattern.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\bin\Debug\net10.0\ObserverDesignPattern.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\bin\Debug\net10.0\ObserverDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\bin\Debug\net10.0\ObserverDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\refint\ObserverDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ObserverDesignPattern.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\ObserverDesignPattern\obj\Debug\net10.0\ref\ObserverDesignPattern.dll

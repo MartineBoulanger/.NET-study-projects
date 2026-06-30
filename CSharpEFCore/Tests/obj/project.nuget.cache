@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VCDIK5+smdw=",
+  "dgSpecHash": "tH2EzwFGH64=",
   "success": true,
   "projectFilePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
@@ -76,5 +76,18 @@
     "C:\\Users\\cursist\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.4\\system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
     "C:\\Users\\cursist\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\Tests\\Tests.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\CSharpEFCore\\Tests\\Tests.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

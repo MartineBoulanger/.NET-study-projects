@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\bin\Debug\net10.0\FactoryDesignPattern.exe
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\bin\Debug\net10.0\FactoryDesignPattern.deps.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\bin\Debug\net10.0\FactoryDesignPattern.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\bin\Debug\net10.0\FactoryDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\bin\Debug\net10.0\FactoryDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\refint\FactoryDesignPattern.dll
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.pdb
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\FactoryDesignPattern.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\CSharpDesignPatterns\FactoryDesignPattern\obj\Debug\net10.0\ref\FactoryDesignPattern.dll

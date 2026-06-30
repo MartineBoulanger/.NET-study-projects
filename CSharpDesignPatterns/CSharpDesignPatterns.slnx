@@ -1,6 +1,11 @@
 <Solution>
+  <Project Path="AdapterDesignPattern/AdapterDesignPattern.csproj" />
   <Project Path="BuilderDesignPattern/BuilderDesignPattern.csproj" />
+  <Project Path="CompositeDesignPattern/CompositeDesignPattern.csproj" />
+  <Project Path="DecoratotDesignPattern/DecoratotDesignPattern.csproj" />
   <Project Path="FacadeDesignPattern/FacadeDesignPattern.csproj" />
-  <Project Path="FactoryDersignPattern/FactoryDersignPattern.csproj" />
+  <Project Path="FactoryDesignPattern/FactoryDesignPattern.csproj" />
+  <Project Path="ObserverDesignPattern/ObserverDesignPattern.csproj" />
   <Project Path="SingletonDesignPattern/SingletonDesignPattern.csproj" />
+  <Project Path="StrategyDesignPattern/StrategyDesignPattern.csproj" />
 </Solution>
