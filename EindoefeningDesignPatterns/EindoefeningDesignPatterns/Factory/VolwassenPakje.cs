@@ -1,8 +1,8 @@
 ﻿namespace EindoefeningDesignPatterns.Factory
 {
-    public class VolwassenPakje:Pakje
+    public class VolwassenPakje(decimal prijs):Pakje
     {
-        public override decimal Prijs => 25m;
-        public override string ToString() => $"Volwassene({Prijs} euro)";
+        public override decimal Prijs => prijs;
+        public override string ToString() => $"Volwassene ({Prijs} euro)";
     }
 }

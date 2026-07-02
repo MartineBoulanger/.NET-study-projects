@@ -5,36 +5,37 @@ using EindoefeningDesignPatterns.Inheritance;
 using EindoefeningDesignPatterns.Singleton;
 
 var facade = new KerstdagFacade();
+IKerstboom boom = new Kerstboom();
 
 // ----- Familie Hermans ----- //
 Console.WriteLine(Kerstdag.GetInstance());
 Console.WriteLine();
-IKerstboom kerstboomHermans = new Slingers(new Lichtjes(new Ballen(new Kerstboom())));
 Gezin hermans = new GezinBuilder()
     .SetNaam("Hermans")
     .VoegGezinslidToe("Opa", 85)
     .VoegGezinslidToe("Oma", 83)
-    .SetKerstboom(kerstboomHermans)
+    .SetKerstboom(new Slingers(new Lichtjes(new Ballen(boom))))
     .VoegVerlichtingToe(new BinnenVerlichting())
     .VoegVerlichtingToe(new BuitenVerlichting())
     .Build();
 facade.ToonGezin(hermans);
+
 Console.WriteLine("\n----------------------------------------------------------------------------------------------------\n");
 
 // ----- Familie Janssens ----- //
 Console.WriteLine(Kerstdag.GetInstance());
 Console.WriteLine();
-IKerstboom kerstboomJanssens = new Lichtjes(new Ballen(new Kerstboom()));
 Gezin janssens = new GezinBuilder()
     .SetNaam("Janssens")
     .VoegGezinslidToe("pa", 47)
     .VoegGezinslidToe("ma", 45)
     .VoegGezinslidToe("dochter", 13)
     .VoegGezinslidToe("zoon", 11)
-    .SetKerstboom(kerstboomJanssens)
+    .SetKerstboom(new Lichtjes(new Ballen(boom)))
     .VoegVerlichtingToe(new BinnenVerlichting())
     .Build();
 facade.ToonGezin(janssens);
+
 Console.WriteLine("\n----------------------------------------------------------------------------------------------------\n");
 
 // ----- Familie Peeters ----- //
@@ -47,4 +48,5 @@ Gezin peeters = new GezinBuilder()
     .VoegVerlichtingToe(new BuitenVerlichting())
     .Build();
 facade.ToonGezin(peeters);
+
 Console.WriteLine("\n----------------------------------------------------------------------------------------------------\n");

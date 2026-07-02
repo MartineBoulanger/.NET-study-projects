@@ -2,7 +2,7 @@
 {
     public interface IKerstboom
     {
-        decimal Kostprijs();
+        decimal Kost();
         string Print();
     }
 }

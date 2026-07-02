@@ -6,9 +6,9 @@
         {
             return leeftijd switch
             {
-                > 18 => new VolwassenPakje(),
-                >= 12 => new JeugdPakje(),
-                _ => new KinderPakje()
+                > 18 => new VolwassenPakje(25m),
+                >= 12 => new JeugdPakje(15m),
+                _ => new KinderPakje(10m)
             };
         }
     }
