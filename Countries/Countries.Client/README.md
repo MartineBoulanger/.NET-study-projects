@@ -57,3 +57,27 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Important Note!
+
+Normally, I know, you can start both projects, Web Api and Angular, together in Visual Studio.
+But because Angular gets worked on in VSC, I have changed the package manager from NPM to PNPM (because it is better and faster).
+
+**VS does not recognise PNPM!!**
+
+So, what does this mean?
+It basically means you cannot start both projects at the same time in VS, that is all.
+
+What do I do now?
+You start the Web Api project in VS, as normal.
+Then you start in VSC the Angular project with `pnpm start`
+
+What are the cons and pros of this?
+The con is that you just cannot start both projects at the same time in VS.
+The good part is, though, you mostly just have to start the Web Api in VS,
+and then you can go and work on the frontend as long as you want without needing to restart the whole thing all the time.
+
+The question is, what do you want?
+If you want to start both projects in VS, then you have to make sure that Angular is using NPM again.
+If not, then you only have to stop the Web Api project for if you add code there, and further you can let it keep running,
+so you can easily just work on the Angualr project without worrying about the Web Api. 
