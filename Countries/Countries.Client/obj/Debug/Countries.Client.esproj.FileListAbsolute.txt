@@ -1,0 +1,1 @@
+C:\Users\marti\source\repos\DOTNET\Countries\Countries.Client\obj\Debug\Countries.Client.esproj.CoreCompileInputs.cache
