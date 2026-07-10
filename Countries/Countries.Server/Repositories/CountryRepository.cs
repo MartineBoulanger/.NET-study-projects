@@ -13,6 +13,9 @@ namespace Countries.Server.Repositories
 
         public async Task<Country?> Find(int id) => await context.Countries.FindAsync(id);
 
+        public async Task<List<Country>> FindByName(string searchstring) =>
+            await context.Countries.Where(c => c.Name.Contains(searchstring)).ToListAsync();
+
         public async Task<List<Country>> GetAll() =>
             await context.Countries.AsNoTracking().ToListAsync();
 

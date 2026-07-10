@@ -9,21 +9,26 @@ const httpOptions = { headers: new HttpHeaders({}) };
   providedIn: 'root',
 })
 export class CountryService {
-  private baseUrl = 'http://localhost:5000/';
-
   constructor(private http: HttpClient) {}
+
+  searchCountry(searchstring: string): Observable<Country[]> {
+    if (!searchstring.trim()) return of([]);
+    return this.http
+      .get<Country[]>(`api/search-country?name=${searchstring}`)
+      .pipe(catchError(this.handleError<Country[]>('searchCountry', [])));
+  }
 
   deleteCountry(country: Country | number): Observable<any> {
     const id = typeof country === 'number' ? country : country.id;
     return this.http
-      .delete<number>(`${this.baseUrl}}delete-country/${id}`, httpOptions)
+      .delete<number>(`api/delete-country/${id}`, httpOptions)
 
       .pipe(catchError(this.handleError<Country>('deleteCountry')));
   }
 
   getTop(top: number): Observable<Country[]> {
     return this.http
-      .get<Country[]>(`${this.baseUrl}top-population/${top}`)
+      .get<Country[]>(`api/top-population/${top}`)
       .pipe(catchError(this.handleError('getTop', [])));
   }
 
@@ -31,14 +36,14 @@ export class CountryService {
 
   readCountries() {
     this.http
-      .get<Country[]>(`${this.baseUrl}countries`)
+      .get<Country[]>('api/countries')
       .pipe(catchError(this.handleError('readCountries', [])))
       .subscribe((res) => this.countries.update(() => res));
   }
 
   findCountryById(id: number) {
     return this.http
-      .get<Country>(`${this.baseUrl}country/${id}`)
+      .get<Country>(`api/detail/${id}`)
       .pipe(catchError(this.handleError('findCountryById', [])));
   }
 

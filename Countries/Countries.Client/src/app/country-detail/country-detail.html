@@ -1,0 +1,18 @@
+@if (country) {
+  <div>
+    <h2>{{ country.name }} details!</h2>
+    <div><label>id: </label>{{ country.id }}</div>
+    <div>
+      <label>naam: </label>
+      <input [(ngModel)]="country.name" />
+    </div>
+    <div>
+      <label>hoofdstad: </label>
+      <input [(ngModel)]="country.capital" />
+    </div>
+    <div>
+      <label>inwoners: </label>
+      <input [(ngModel)]="country.population" />
+    </div>
+  </div>
+}

@@ -8,5 +8,6 @@ namespace Countries.Server.Repositories
         Task<List<Country>> GetAll();
         Task Delete(Country country);
         Task<Country?> Find(int id);
+        Task<List<Country>> FindByName(string searchstring);
     }
 }

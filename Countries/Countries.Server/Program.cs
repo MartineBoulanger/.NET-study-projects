@@ -40,6 +40,14 @@ app.MapGet(
         return countries.Select(c => c.ToModel()).ToList();
     }
 );
+app.MapGet(
+    "/search-country",
+    async (string name, ICountryRepository repository) =>
+    {
+        var countries = await repository.FindByName(name);
+        return countries.Select(c => c.ToModel()).ToList();
+    }
+);
 
 app.MapDelete("/delete-country/{id}", DeleteCountry);
 
