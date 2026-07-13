@@ -1,0 +1,8 @@
+@if (country) {
+  <h2>Talen van land {{ country.name }}</h2>
+  <ul>
+    @for (language of languagesFromCountry(); track language.id) {
+      <li>{{ language.name }}</li>
+    }
+  </ul>
+}

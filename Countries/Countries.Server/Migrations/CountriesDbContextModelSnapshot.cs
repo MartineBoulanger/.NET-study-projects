@@ -117,6 +117,20 @@ namespace Countries.Server.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Countries.Server.Models.Flag", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("Image")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Flags");
+                });
+
             modelBuilder.Entity("Countries.Server.Models.Language", b =>
                 {
                     b.Property<int>("Id")
@@ -171,6 +185,17 @@ namespace Countries.Server.Migrations
                     b.ToTable("CountryLanguage");
                 });
 
+            modelBuilder.Entity("Countries.Server.Models.Flag", b =>
+                {
+                    b.HasOne("Countries.Server.Models.Country", "Country")
+                        .WithOne("Flag")
+                        .HasForeignKey("Countries.Server.Models.Flag", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
             modelBuilder.Entity("CountryLanguage", b =>
                 {
                     b.HasOne("Countries.Server.Models.Country", null)
@@ -184,6 +209,11 @@ namespace Countries.Server.Migrations
                         .HasForeignKey("LanguagesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Countries.Server.Models.Country", b =>
+                {
+                    b.Navigation("Flag");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,100 @@
+<h2>Nieuw land</h2>
+<div>
+  <form (ngSubmit)="onSubmit(); countryForm.reset()" #countryForm="ngForm">
+    <div class="form-group">
+      <label for="name">Naam</label>
+      <input
+        type="text"
+        [(ngModel)]="country.name"
+        name="name"
+        #name="ngModel"
+        class="form-control"
+        id="name"
+        required
+        existsCountryName="0"
+      />
+      @if (name.invalid && (name.dirty || name.touched)) {
+        <div class="alert alert-danger">
+          @if (name.errors?.['required']) {
+            <div>Naam is verplicht.</div>
+          }
+          @if (name.errors?.['existsCountryName']) {
+            <div>Land bestaat al.</div>
+          }
+        </div>
+      }
+    </div>
+    <div class="form-group">
+      <label for="capital">Hoofdstad</label>
+      <input
+        type="text"
+        [(ngModel)]="country.capital"
+        name="capital"
+        #capital="ngModel"
+        class="form-control"
+        id="capital"
+        required
+      />
+      @if (capital.invalid && (capital.dirty || capital.touched)) {
+        <div class="alert alert-danger">
+          @if (capital.errors?.['required']) {
+            <div>Hoofdstad is verplicht.</div>
+          }
+        </div>
+      }
+    </div>
+    <div class="form-group">
+      <label for="population">Aantal inwoners</label>
+      <input
+        type="number"
+        [(ngModel)]="country.population"
+        name="population"
+        #population="ngModel"
+        class="form-control"
+        id="population"
+        required
+        min="0"
+        value="0"
+        pattern="^[0-9]*$"
+      />
+      @if (population.invalid && (population.dirty || population.touched)) {
+        <div class="alert alert-danger">
+          @if (population.errors?.['required']) {
+            <div>Aantal inwoners is verplicht</div>
+          } @else if (population.errors?.['min']) {
+            <div>Negatief getal is verboden</div>
+          } @else {
+            <div>Enkel cijfers zijn toegelaten</div>
+          }
+        </div>
+      }
+    </div>
+    <div class="form-group">
+      <label for="fileName">Vlag</label>
+      <input
+        type="file"
+        class="form-control"
+        name="fileName"
+        id="fileName"
+        (change)="selectedFiles($event)"
+      />
+      @if (!isFileSizeValid || !isFileTypeValid) {
+        <div class="alert alert-danger">
+          @if (!isFileSizeValid) {
+            <div>Maximaal grootte is 2 MB</div>
+          }
+          @if (!isFileTypeValid) {
+            <div>Enkel PNG bestand toegelaten</div>
+          }
+        </div>
+      }
+    </div>
+    <button
+      type="submit"
+      [disabled]="!countryForm.valid || !isFileSizeValid || !isFileTypeValid"
+      class="btn btn-success mt-3"
+    >
+      Toevoegen
+    </button>
+  </form>
+</div>

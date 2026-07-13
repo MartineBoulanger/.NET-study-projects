@@ -8,5 +8,6 @@
         public required long Population { get; set; }
         public virtual ICollection<Language> Languages { get; set; }
         = new List<Language>();
+        public Flag? Flag { get; set; } = null!;
     }
 }

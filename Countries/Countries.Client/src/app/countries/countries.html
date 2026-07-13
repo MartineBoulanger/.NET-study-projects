@@ -15,6 +15,9 @@
         @defer {
           <app-country-card [country]="country"></app-country-card>
         }
+        <button class="btn" (click)="update(country)">
+          <fa-icon [icon]="pencil"></fa-icon>
+        </button>
         <button class="btn" (click)="select(country)">
           <fa-icon [icon]="trash"></fa-icon>
         </button>

@@ -12,10 +12,25 @@
         id="lastName"
         #lastName="ngModel"
         required
+        minlength="4"
+        forbiddenName="Verboden"
       />
-      <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+      <!-- <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
         Familienaam is verplicht.
-      </div>
+      </div> -->
+      @if (lastName.invalid && (lastName.dirty || lastName.touched)) {
+        <div class="alert alert-danger">
+          @if (lastName.errors?.['required']) {
+            <div>Familienaam is verplicht.</div>
+          }
+          @if (lastName.errors?.['minlength']) {
+            <div>Een familienaam moet minimum 4 tekens lang.</div>
+          }
+          @if (lastName.errors?.['forbiddenName']) {
+            <div>Familienaam kan niet "Verboden" zijn.</div>
+          }
+        </div>
+      }
     </div>
     <div class="form-group">
       <label for="firstName">Voornaam</label>

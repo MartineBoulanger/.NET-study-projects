@@ -157,4 +157,5 @@ C:\Users\marti\source\repos\DOTNET\Countries\Countries.Server\bin\Debug\net10.0\
 C:\Users\marti\source\repos\DOTNET\Countries\Countries.Server\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\marti\source\repos\DOTNET\Countries\Countries.Server\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\marti\source\repos\DOTNET\Countries\Countries.Server\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\marti\source\repos\DOTNET\Countries\Countries.Server\bin\Debug\net10.0\MiniValidation.dll
 C:\Users\marti\source\repos\DOTNET\Countries\Countries.Server\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

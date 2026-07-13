@@ -4,10 +4,10 @@
   <ul>
     @for (country of countries(); track country.id) {
       <li>
-        <a routerLink="/detail/{{ country.id }}">
-          {{ country.name }}
-        </a>
+        {{ country.name }}
+        <a routerLink="{{ country.id }}/talen"> Toon talen </a>
       </li>
     }
   </ul>
+  <router-outlet></router-outlet>
 </div>

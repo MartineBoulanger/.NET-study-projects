@@ -1,12 +1,12 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 import { Country } from '@app/model/country';
 import { CountryService } from '@app/country-service';
 
 @Component({
   selector: 'app-search-country',
-  imports: [RouterLink],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './search-country.html',
   styleUrl: './search-country.css',
 })
