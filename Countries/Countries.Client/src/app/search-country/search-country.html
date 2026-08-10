@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h2>Landen zoeken</h2>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <ul>
+    @for (country of countries(); track country.id) {
+      <li>
+        {{ country.name }}
+        <a routerLink="{{ country.id }}/talen"> Toon talen </a>
+      </li>
+    }
+  </ul>
+  <router-outlet></router-outlet>
+</div>

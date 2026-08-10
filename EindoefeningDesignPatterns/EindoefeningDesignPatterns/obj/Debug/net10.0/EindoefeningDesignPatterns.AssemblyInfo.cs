@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EindoefeningDesignPatterns")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87151775b5ff37ab0b411d00fd1f29abd532a89c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df367bcb7c5f45d3d999603ebba15c225359015a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EindoefeningDesignPatterns")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EindoefeningDesignPatterns")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

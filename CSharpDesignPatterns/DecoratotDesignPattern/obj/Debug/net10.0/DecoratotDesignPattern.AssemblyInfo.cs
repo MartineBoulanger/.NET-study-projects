@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DecoratotDesignPattern")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b3b207ccf00a5fa616c3cac4e68373b876740e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+862c3ed14c49969f6554e70a18181ed33c1ebf32")]
 [assembly: System.Reflection.AssemblyProductAttribute("DecoratotDesignPattern")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DecoratotDesignPattern")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

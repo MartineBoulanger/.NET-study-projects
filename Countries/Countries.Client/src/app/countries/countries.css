@@ -1,0 +1,30 @@
+.countries li{
+  cursor:pointer;
+}
+.countries li:hover{
+  background-color: #BBD8DC;
+  color: white;
+}
+.selected{
+  background-color: #CFD8DC;
+  color: white;
+}
+ul {
+  display:grid;
+  list-style-type: none;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 0px;
+}
+ul li{
+  text-align: center;
+  border: solid blue 1px;
+  padding-bottom: 20px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}

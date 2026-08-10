@@ -1,0 +1,27 @@
+@if (this.selectedCountryId() > 0) {
+  <h2>Land verwijderen?</h2>
+  <h3>Wil je {{ this.selectedCountry().name }} verwijderen?</h3>
+  @defer {
+    <app-country-card [country]="this.selectedCountry()"></app-country-card>
+  }
+  <button class="btn btn-primary" (click)="close()">Nee</button>
+  <button class="btn btn-danger" (click)="delete(this.selectedCountry())">Ja</button>
+} @else {
+  <h2>Mijn landen</h2>
+  <ul class="countries">
+    @for (country of this.countryService.countries(); track country.id) {
+      <li>
+        <h3>{{ country.name }}</h3>
+        @defer {
+          <app-country-card [country]="country"></app-country-card>
+        }
+        <button class="btn" (click)="update(country)">
+          <fa-icon [icon]="pencil"></fa-icon>
+        </button>
+        <button class="btn" (click)="select(country)">
+          <fa-icon [icon]="trash"></fa-icon>
+        </button>
+      </li>
+    }
+  </ul>
+}

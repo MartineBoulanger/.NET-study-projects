@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchuttersWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e43f38fb2b072fd8206c80e1259ecab2b9816925")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96a28993a122880267614cdf31146385ef6d174f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchuttersWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchuttersWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

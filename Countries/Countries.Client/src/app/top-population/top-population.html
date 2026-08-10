@@ -1,0 +1,6 @@
+<h2>Top landen (# inwoners)</h2>
+<ul class="px-5">
+  @for (country of topCountries(); track $index) {
+    <li class="list-decimal">{{ country.name }}</li>
+  }
+</ul>

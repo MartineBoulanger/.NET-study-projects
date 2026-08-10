@@ -1,0 +1,38 @@
+<img [ngSrc]="logoSrc" [alt]="logoAlt" [width]="logoWidth" [height]="logoHeight" priority />
+<h1>{{ title }}</h1>
+<div class="d-flex align-items-center justify-content-between">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav list-group list-group-horizontal column-gap-3">
+        <li>
+          <a class="btn btn-secondary" routerLink="/landen">Landen</a>
+        </li>
+        <li>
+          <a class="btn btn-secondary" routerLink="/top">Top Inwoners</a>
+        </li>
+        <li>
+          <a class="btn btn-secondary" routerLink="/zoeken">Zoek Landen</a>
+        </li>
+        <li>
+          <a class="btn btn-secondary" routerLink="/nieuw-land">Nieuw Land</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <nav class="navbar">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav list-group list-group-horizontal column-gap-3">
+        <li>
+          <a class="btn btn-secondary" routerLink="/registreer">Registratie Formulier</a>
+        </li>
+        <li>
+          <a class="btn btn-secondary" routerLink="/wagen">Favoriet Automerk</a>
+        </li>
+        <li>
+          <a class="btn btn-secondary" routerLink="/persoon">Persoon Formulier</a>
+        </li>
+      </ul>
+    </div>
+  </nav> -->
+</div>
+<router-outlet></router-outlet>

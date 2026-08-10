@@ -1,0 +1,126 @@
+<h3>Registratie formulier</h3>
+<form [formGroup]="registrationModel" (ngSubmit)="registerOnSubmit()">
+  <div class="form-group row">
+    <label for="firstName" class="col-sm-2 col-form-label"> Voornaam </label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="firstName" formControlName="firstName" />
+    </div>
+    @if (f['firstName'].invalid && (f['firstName'].dirty || f['firstName'].touched)) {
+      <div class="text-danger">
+        @if (f['firstName'].errors?.['minLength']) {
+          <p>Voornaam moet minstens 4 tekens lang zijn.</p>
+        }
+      </div>
+    }
+  </div>
+  <div class="form-group row">
+    <label for="lastName" class="col-sm-2 col-form-label"> Familienaam </label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="lastName" formControlName="lastName" />
+    </div>
+    @if (f['lastName'].invalid && (f['lastName'].dirty || f['lastName'].touched)) {
+      <div class="text-danger">
+        @if (f['lastName'].errors?.['exists']) {
+          <div>Deze naam bestaat al.</div>
+        }
+      </div>
+    }
+  </div>
+  <div formGroupName="passwordsGroup">
+    <div class="form-group row">
+      <label for="password" class="col-sm-2 col-form-label"> Paswoord </label>
+      <div class="col-sm-5">
+        <input type="password" class="form-control" id="password" formControlName="password" />
+      </div>
+      @if (password.invalid && (password.dirty || password.touched)) {
+        <div class="text-danger">
+          @if (password.errors?.['required']) {
+            <div>Paswoord moet ingevuld worden.</div>
+          }
+          @if (password.errors?.['minlength']) {
+            <div>Paswoord moet minimum 8 tekens lang zijn.</div>
+          }
+          @if (password.errors?.['passwordStrengthIsNotOK']) {
+            <div>Minimaal 1 hoofdletter, 1 kleine letter en 1 cijfer is verplicht.</div>
+          }
+        </div>
+      }
+    </div>
+    <div class="form-group row">
+      <label for="confirmPassword" class="col-sm-2 col-form-label"> Herhaal paswoord </label>
+      <div class="col-sm-5">
+        <input
+          type="password"
+          class="form-control"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+        />
+      </div>
+      @if (
+        passwordsGroup.errors?.['noMatch'] && (confirmPassword.touched || confirmPassword.dirty)
+      ) {
+        <div class="text-danger">Paswoorden komen niet overeen.</div>
+      }
+    </div>
+  </div>
+  <div formGroupName="address">
+    <div class="form-group row">
+      <label for="street" class="col-sm-2 col-form-label"> Straat </label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="street" formControlName="street" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="zipcode" class="col-sm-2 col-form-label"> Postcode </label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="zipcode" formControlName="zipcode" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="city" class="col-sm-2 col-form-label"> Gemeente </label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="city" formControlName="city" />
+      </div>
+    </div>
+  </div>
+  <div formArrayName="phoneNumbers">
+    @for (t of phoneNumbers.controls; track t; let i = $index) {
+      <div class="form-group row">
+        <label for="{{ i }}" class="col-sm-2 col-form-label"> Telefoonnummer {{ i + 1 }} </label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" id="{{ i }}" [formControlName]="i" />
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-danger" (click)="removePhoneNumberAt(i)">X</button>
+        </div>
+        @if (t.invalid && (t.dirty || t.touched)) {
+          <div class="text-danger">
+            @if (t.errors?.['pattern']) {
+              <p>Geldig formaat: +32 9 999 99 99 of +32 99 99 99 99 of +32 999 99 99 99</p>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5">
+      <button class="btn btn-primary" (click)="addPhoneNumber()">Nieuw telefoonnummer</button>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!registrationModel.valid">
+    Registreer
+  </button>
+</form>
+
+<div class="d-flex gap-3 my-4">
+  <button class="btn btn-dark" (click)="toAntwerp()">Naar Antwerpen</button>
+  <button class="btn btn-dark" (click)="johnnyLivesInAntwerp()">Johnny lives in Antwerp</button>
+</div>
+
+<p>
+  {{ registrationModel.value | json }}
+</p>
+
+<p>Formulier Status: {{ registrationModel.status }}</p>

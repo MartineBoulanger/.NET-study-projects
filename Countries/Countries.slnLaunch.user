@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Both",
+    "Projects": [
+      {
+        "Path": "Countries.Server\\Countries.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Countries.Client\\Countries.Client.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
