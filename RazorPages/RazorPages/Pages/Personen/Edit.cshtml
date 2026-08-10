@@ -1,0 +1,61 @@
+﻿@page "{id}"
+@model EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<form method="post">
+    <input hidden asp-for="Persoon.Id"  />
+
+    <div class="mb-3 row">
+        <label asp-for="Persoon.Voornaam" class="col-sm-2 form-label">
+        </label>
+        <div class="col-auto">
+            <input asp-for="Persoon.Voornaam" class="form-control" />
+            <span asp-validation-for="Persoon.Voornaam" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label asp-for="Persoon.Familienaam" class="col-sm-2 form-label">
+        </label>
+        <div class="col-auto">
+            <input asp-for="Persoon.Familienaam" class="form-control" />
+            <span asp-validation-for="Persoon.Familienaam" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label asp-for="Persoon.Geboren" class="col-sm-2 form-label">
+        </label>
+        <div class="col-auto">
+            <input asp-for="Persoon.Geboren" type="date" class="form-control" />
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label asp-for="Persoon.Geslacht" class="col-sm-2 form-label">
+        </label>
+        <div class="col-auto">
+            <input asp-for="Persoon.Geslacht" size="1" class="form-control" />
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label asp-for="Persoon.Gehuwd" class="col-sm-2 form-label"></label>
+        <div class="col-auto">
+            <input asp-for="Persoon.Gehuwd" type="checkbox" />
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label asp-for="Persoon.Opmerkingen" class="col-sm-2 form-label">
+        </label>
+        <div class="col-auto">
+            <input asp-for="Persoon.Opmerkingen" size="50" class="form-control" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-page="Index" class="btn btn-primary">Cancel</a>
+</form>

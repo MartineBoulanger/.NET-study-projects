@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RazorPages.Data/RazorPages.Data.csproj" />
+  <Project Path="RazorPages/RazorPages.csproj" />
+</Solution>

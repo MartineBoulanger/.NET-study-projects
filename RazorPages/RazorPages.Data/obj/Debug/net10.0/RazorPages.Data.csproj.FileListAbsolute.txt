@@ -1,0 +1,12 @@
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\bin\Debug\net10.0\RazorPages.Data.deps.json
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\bin\Debug\net10.0\RazorPages.Data.dll
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\bin\Debug\net10.0\RazorPages.Data.pdb
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.dll
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\refint\RazorPages.Data.dll
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\RazorPages.Data.pdb
+C:\Users\cursist\source\repos\DOTNET\RazorPages\RazorPages.Data\obj\Debug\net10.0\ref\RazorPages.Data.dll

@@ -1,0 +1,43 @@
+﻿@page "/Personenlijst"
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Personenlijst</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Naam</th>
+            <th>Geboortedatum</th>
+            <th>Geslacht</th>
+            <th>Gehuwd</th>
+            <th>Opmerking</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var persoon in Model.Personen)
+        {
+            <tr>
+                <td><a asp-page="Details" asp-route-id="@persoon.Id">@persoon.Id</a></td>
+                <td>@persoon.Voornaam @persoon.Familienaam</td>
+                <td>@persoon.Geboren.ToShortDateString()</td>
+                <td>@persoon.Geslacht</td>
+                <td>
+                    <input @(persoon.Gehuwd ? "checked" : "") class="check-box" disabled="disabled" type="checkbox" />
+                </td>
+                <td>@persoon.Opmerkingen</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@persoon.Id">Edit</a> | 
+                    <a asp-page="Delete" asp-route-id="@persoon.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.Boodschap != null)
+{
+    <h5 class="alert alert-info mt-3">@Model.Boodschap</h5>
+}

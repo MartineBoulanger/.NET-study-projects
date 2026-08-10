@@ -1,0 +1,52 @@
+﻿@page "/Personen/Details/{id:int}"
+@model DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Details</h1>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Voornaam)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Voornaam)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Familienaam)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Familienaam)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Geboren)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Geboren)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Geslacht)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Geslacht)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Gehuwd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Gehuwd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Persoon.Opmerkingen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Persoon.Opmerkingen)
+        </dd>
+    </dl>
+</div>
