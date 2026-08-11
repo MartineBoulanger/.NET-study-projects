@@ -9,5 +9,6 @@ namespace RazorPages.Data.Repos
         void UpdatePersoon(Persoon updatedPersoon);
         void AddPersoon(Persoon newPersoon);
         void DeletePersoon(int id);
+        IEnumerable<Persoon> ZoekPersonen(string zoekTerm);
     }
 }

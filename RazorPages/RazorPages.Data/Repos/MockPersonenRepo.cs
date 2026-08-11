@@ -81,5 +81,12 @@ namespace RazorPages.Data.Repos
             if (persoon != null)
                 personenLijst.Remove(persoon);
         }
+
+        public IEnumerable<Persoon> ZoekPersonen(string zoekTerm)
+        {
+            return GetAllePersonen()
+            .Where(p => (p.Voornaam + " " + p.Familienaam).ToUpper()
+            .Contains(zoekTerm.ToUpper()));
+        }
     }
 }

@@ -1,9 +1,17 @@
-﻿@page "/Personenlijst"
+﻿@page "/Personenlijst/{handler?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Index";
 }
 <h1>Personenlijst</h1>
+<form method="get" asp-page-handler="OnGet">
+    <div class="input-group">
+        <input class="form-control" asp-for="ZoekTerm" />
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    </div>
+</form>
 <div class="m-3">
     <a asp-page="Create">Create</a>
 </div>
@@ -43,4 +51,22 @@
 @if (Model.Boodschap != null)
 {
     <h5 class="alert alert-info mt-3">@Model.Boodschap</h5>
+}
+<form method="get" asp-page-handler="SendEmail">
+    <div class="col-sm-5">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">@@</span>
+            </div>
+            <input asp-for="Email" type="text" class="form-control"
+                   placeholder="Your emailaddress">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Send List</button>
+            </div>
+        </div>
+    </div>
+</form>
+@if (Model.MailBoodschap != null)
+{
+    <h5 class="alert alert-info mt-3">@Model.MailBoodschap</h5>
 }
