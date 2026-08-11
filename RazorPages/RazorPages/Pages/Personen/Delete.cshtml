@@ -1,0 +1,13 @@
+﻿@page "{id}"
+@model DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+<h1>Verwijdering @Model.Persoon.Voornaam @Model.Persoon.Familienaam</h1>
+<div class="alert alert-danger mt-3">
+    <h5>Weet je zeker dat je deze persoon wil verwijderen uit de lijst?</h5>
+    <form method="post">
+        <button class="btn btn-danger m-2" type="submit">Yes</button>
+        <a asp-page="index" class="btn btn-primary m-2">No</a>
+    </form>
+</div>

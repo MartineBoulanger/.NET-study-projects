@@ -8,5 +8,6 @@ namespace RazorPages.Data.Repos
         Persoon? GetPersoon(int id);
         void UpdatePersoon(Persoon updatedPersoon);
         void AddPersoon(Persoon newPersoon);
+        void DeletePersoon(int id);
     }
 }

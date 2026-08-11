@@ -74,5 +74,12 @@ namespace RazorPages.Data.Repos
             newPersoon.Id = personenLijst.Max(p => p.Id) + 1;
             personenLijst.Add(newPersoon);
         }
+
+        public void DeletePersoon(int id)
+        {
+            Persoon? persoon = personenLijst.FirstOrDefault(p => p.Id == id);
+            if (persoon != null)
+                personenLijst.Remove(persoon);
+        }
     }
 }
