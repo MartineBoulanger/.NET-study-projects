@@ -7,5 +7,6 @@ namespace RazorPages.Data.Repos
         IEnumerable<Persoon> GetAllePersonen();
         Persoon? GetPersoon(int id);
         void UpdatePersoon(Persoon updatedPersoon);
+        void AddPersoon(Persoon newPersoon);
     }
 }

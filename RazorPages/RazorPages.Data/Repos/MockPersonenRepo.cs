@@ -69,5 +69,10 @@ namespace RazorPages.Data.Repos
                 persoon.Opmerkingen = updatedPersoon.Opmerkingen;
             }
         }
+        public void AddPersoon(Persoon newPersoon)
+        {
+            newPersoon.Id = personenLijst.Max(p => p.Id) + 1;
+            personenLijst.Add(newPersoon);
+        }
     }
 }
