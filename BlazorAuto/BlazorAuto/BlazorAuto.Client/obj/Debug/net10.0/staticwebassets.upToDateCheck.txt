@@ -1,0 +1,6 @@
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json
+Layout\ReconnectModal.razor.js
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\wwwroot\appsettings.Development.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\wwwroot\appsettings.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\Layout\ReconnectModal.razor.js

@@ -1,0 +1,4 @@
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json
+C:\Users\marti\source\repos\DOTNET\BlazorWebAssembly\BlazorWebAssembly\BlazorWebAssembly.Client\wwwroot\appsettings.Development.json
+C:\Users\marti\source\repos\DOTNET\BlazorWebAssembly\BlazorWebAssembly\BlazorWebAssembly.Client\wwwroot\appsettings.json
