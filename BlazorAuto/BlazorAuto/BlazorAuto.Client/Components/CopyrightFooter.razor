@@ -1,0 +1,12 @@
+﻿<div class="alert alert-info">
+    <p>&copy; @Auteur</p>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Auteur { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}
