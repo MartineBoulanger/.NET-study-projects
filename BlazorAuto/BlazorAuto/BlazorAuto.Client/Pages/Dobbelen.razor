@@ -1,15 +1,16 @@
 ﻿@page "/dobbelen"
+@page "/dobbelen/{aantal:int}"
 
 <h3>Dobbelen</h3>
+<h3>We spelen met @Aantal stenen</h3>
 
 <button class ="btn btn-primary m-3" @onclick="GooiStenen">Gooi de stenen</button >
-
 <div class ="mb-3">
-    @if (steen1 != 0 && steen2 != 0) {
-        var steenEen = $"/images/{steen1}.png";
-        var steenTwee = $"/images/{steen2}.png";
-        <img src=@steenEen width="48" />
-        <img src=@steenTwee width="48" />
+    @if (currentScore != 0) {
+        foreach (int score in stenen)
+        {
+            <img src=@($"/images/{score}.png") width="48" />
+        }
     }
 </div>
 
@@ -17,13 +18,27 @@
 
 @code {
     private int currentScore = 0;
-    private int steen1;
-    private int steen2;
+    private List<int> stenen = new List<int>();
+
+    [Parameter]
+    public int Aantal { get; set; }
+
     private void GooiStenen()
     {
+        currentScore = 0;
+        stenen.Clear();
         Random random = new Random();
-        steen1 = random.Next(1, 7);
-        steen2 = random.Next(1, 7);
-        currentScore = steen1 + steen2;
+        for (var index = 1; index < Aantal; index++)
+        {
+            var ogen = random.Next(1, 7);
+            stenen.Add(ogen);
+            currentScore += ogen;
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        if (Aantal == 0) Aantal = 2;
     }
 }
