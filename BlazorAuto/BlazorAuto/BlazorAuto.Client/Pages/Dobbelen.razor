@@ -1,0 +1,29 @@
+﻿@page "/dobbelen"
+
+<h3>Dobbelen</h3>
+
+<button class ="btn btn-primary m-3" @onclick="GooiStenen">Gooi de stenen</button >
+
+<div class ="mb-3">
+    @if (steen1 != 0 && steen2 != 0) {
+        var steenEen = $"/images/{steen1}.png";
+        var steenTwee = $"/images/{steen2}.png";
+        <img src=@steenEen width="48" />
+        <img src=@steenTwee width="48" />
+    }
+</div>
+
+<p class="alert alert-info">Jouw score : @currentScore</p>
+
+@code {
+    private int currentScore = 0;
+    private int steen1;
+    private int steen2;
+    private void GooiStenen()
+    {
+        Random random = new Random();
+        steen1 = random.Next(1, 7);
+        steen2 = random.Next(1, 7);
+        currentScore = steen1 + steen2;
+    }
+}

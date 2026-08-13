@@ -8,6 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\1.png" Link="wwwroot\images\1.png" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\2.png" Link="wwwroot\images\2.png" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\3.png" Link="wwwroot\images\3.png" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\4.png" Link="wwwroot\images\4.png" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\5.png" Link="wwwroot\images\5.png" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\6.png" Link="wwwroot\images\6.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BlazorAuto.Client\BlazorAuto.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.10" />
   </ItemGroup>
