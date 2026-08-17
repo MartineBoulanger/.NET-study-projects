@@ -1,5 +1,6 @@
 ﻿<div class="alert alert-info">
-    <p>&copy; @Auteur</p>
+    <p>@Doelgroep - @Cursus</p>
+    <p>&copy; @Auteur (@Jaartal)</p>
     @ChildContent
 </div>
 
@@ -8,5 +9,19 @@
     public string Auteur { get; set; }
 
     [Parameter]
+    public string? Cursus { get; set; }
+
+    [Parameter]
+    public string? Doelgroep { get; set; }
+
+    [Parameter]
+    public int Jaartal { get; set; }
+
+    [Parameter]
     public RenderFragment? ChildContent { get; set; }
+
+    public string AlleInfo()
+    {
+        return $" {Auteur} {Cursus} {Jaartal} {Doelgroep} ";
+    }
 }

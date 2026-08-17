@@ -14,9 +14,17 @@
 
 <p class="alert alert-info">Jouw score : @currentScore</p>
 
-<CopyrightFooter Auteur="Marti">
-    <p>Blazore Rocks.... nots</p>
+<CopyrightFooter @attributes="footerAttributes" @ref="reffooter">
+    <h4>Blazor Rocks</h4>
 </CopyrightFooter>
+
+<button class="btn btn-primary m-3" @onclick="InfoOphalen">Info</button>
+<div>@cursus</div>
+<div>@info</div>
+
+<button class="btn btn-primary m-3" @onclick="Verander">
+Verander auteur
+</button>
 
 @code {
     private int currentScore = 0;
@@ -24,6 +32,24 @@
     private static readonly string[] Soorten = { "H", "D", "C", "S" };
     private static readonly string[] Beelden = { "7", "8", "9", "10", "J", "Q", "K", "A" };
     private static readonly byte[] Waarden = { 7, 8, 9, 10, 1, 2, 3, 11 };
+
+    private void Verander() => footerAttributes["auteur"] = "Jantje";
+    private CopyrightFooter? reffooter;
+
+    private string? cursus;
+    private string? info;
+    private void InfoOphalen() {
+        cursus = reffooter?.Cursus;
+        info = reffooter?.AlleInfo();
+    }
+
+    private Dictionary<string, object> footerAttributes = new Dictionary<string, object>()
+    {
+        {"auteur", "Marti"},
+        {"cursus", "Blazor"},
+        {"jaartal", 2026},
+        {"doelgroep", ".NET ontwikkeling met C#"}
+    };
 
     private string GetRandomCard()
     {
