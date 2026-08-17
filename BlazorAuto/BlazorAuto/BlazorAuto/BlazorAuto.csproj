@@ -14,6 +14,9 @@
     <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\4.png" Link="wwwroot\images\4.png" />
     <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\5.png" Link="wwwroot\images\5.png" />
     <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\6.png" Link="wwwroot\images\6.png" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\SchuldEnBoete.jpg" Link="wwwroot\images\SchuldEnBoete.jpg" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\SteenDerWijzen.jpg" Link="wwwroot\images\SteenDerWijzen.jpg" />
+    <Content Include="..\..\..\..\..\oefenbestanden-blazor\images\VerdrietVanBelgie.jpg" Link="wwwroot\images\VerdrietVanBelgie.jpg" />
   </ItemGroup>
 
   <ItemGroup>

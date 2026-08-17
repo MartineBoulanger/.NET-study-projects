@@ -205,4 +205,4 @@ C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\BlazorAuto.genruntimeconfig.cache
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\ref\BlazorAuto.dll
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\r7q089fb32-{0}-owyyl27mkb-owyyl27mkb.gz
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-bw1v8aq37b-bw1v8aq37b.gz
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-aaud0bvyz1-aaud0bvyz1.gz

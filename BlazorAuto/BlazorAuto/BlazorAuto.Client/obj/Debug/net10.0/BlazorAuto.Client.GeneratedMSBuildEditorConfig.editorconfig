@@ -37,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb3B5cmlnaHRGb290ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Components/TableTemplate.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWJsZVRlbXBsYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Blog.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -59,6 +63,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Tables.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFibGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Weather.razor]

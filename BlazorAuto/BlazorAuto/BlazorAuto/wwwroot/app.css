@@ -71,3 +71,12 @@ h1:focus {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
 }
+
+.links {
+    float: left;
+    margin-right: 20px;
+}
+
+.rechts {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
