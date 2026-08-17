@@ -1,4 +1,5 @@
 ﻿@page "/eenentwintig"
+@inherits EenentwintigBase
 
 <h1>Eenentwintig</h1>
 
@@ -26,45 +27,3 @@
 Verander auteur
 </button>
 
-@code {
-    private int currentScore = 0;
-    private List<string> kaarten = new List<string>();
-    private static readonly string[] Soorten = { "H", "D", "C", "S" };
-    private static readonly string[] Beelden = { "7", "8", "9", "10", "J", "Q", "K", "A" };
-    private static readonly byte[] Waarden = { 7, 8, 9, 10, 1, 2, 3, 11 };
-
-    private void Verander() => footerAttributes["auteur"] = "Jantje";
-    private CopyrightFooter? reffooter;
-
-    private string? cursus;
-    private string? info;
-    private void InfoOphalen() {
-        cursus = reffooter?.Cursus;
-        info = reffooter?.AlleInfo();
-    }
-
-    private Dictionary<string, object> footerAttributes = new Dictionary<string, object>()
-    {
-        {"auteur", "Marti"},
-        {"cursus", "Blazor"},
-        {"jaartal", 2026},
-        {"doelgroep", ".NET ontwikkeling met C#"}
-    };
-
-    private string GetRandomCard()
-    {
-        Random random = new Random();
-        var soort = Soorten[random.Next(0, 4)];
-        var kaart = random.Next(0, 8);
-        var beeld = Beelden[kaart];
-        var waarde = Waarden[kaart];
-        currentScore += waarde;
-        return $"{beeld}{soort}";
-    }
-
-    private void TrekKaart()
-    {
-        kaarten.Add(GetRandomCard());
-        if (currentScore > 21) throw new InvalidOperationException("Je bent verbrand!");
-    }
-}
