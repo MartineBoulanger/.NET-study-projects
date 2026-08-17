@@ -37,12 +37,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb3B5cmlnaHRGb290ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Components/SubComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdWJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Components/SubSubComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdWJTdWJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Components/TableTemplate.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWJsZVRlbXBsYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Blog.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Cascade.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FzY2FkZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Counter.razor]

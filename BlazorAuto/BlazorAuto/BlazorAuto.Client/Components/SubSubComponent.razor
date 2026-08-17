@@ -1,0 +1,26 @@
+﻿<div class="ms-4 mt-4" style="background-color: cornflowerblue; padding: 30px;">
+    <h3>SubSubComponent</h3>
+    <p>Doorgegeven waarde : @SubSubGetal</p>
+    <p>Doorgegeven woord : @Doorgegevenwoord</p>
+    <p>Doorgegeven gegevens : @Gegevens?.Eerste, @Gegevens?.Tweede, @Gegevens?.Derde</p>
+    <p>Getal van subcomponent: @SubGetal</p>
+    <p>@Persoon?.Voornaam @Persoon?.Familienaam</p>
+</div>
+
+@code {
+    [CascadingParameter(Name = "HetGetal")]
+    public int SubSubGetal { get; set; }
+
+    // [CascadingParameter(Name = "HetWoord")]
+    [CascadingParameter]
+    public string? Doorgegevenwoord { get; set; }
+
+    [CascadingParameter(Name = "Gegevens")]
+    public Gegevens? Gegevens { get; set; }
+
+    [CascadingParameter(Name = "GetalVanSubComponent")]
+    public int SubGetal { get; set; }
+
+    [CascadingParameter(Name = "DePersoon")]
+    public Persoon? Persoon { get; set; }
+}
