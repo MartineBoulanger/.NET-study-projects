@@ -85,3 +85,7 @@ C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\r
 C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\BlazorServer.pdb
 C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\BlazorServer.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\ref\BlazorServer.dll
+C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\bin\Debug\net10.0\Blazor.Storage.dll
+C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\BlazorServer.csproj.AssemblyReference.cache
+C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\compressed\12x8ovv9tc-{0}-4ooi3bhemj-4ooi3bhemj.gz
+C:\Users\marti\source\repos\DOTNET\BlazorServer\BlazorServer\obj\Debug\net10.0\BlazorSe.19EF1096.Up2Date

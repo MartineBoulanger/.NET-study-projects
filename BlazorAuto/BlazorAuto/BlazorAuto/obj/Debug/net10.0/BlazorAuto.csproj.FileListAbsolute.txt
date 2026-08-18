@@ -206,3 +206,5 @@ C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-aaud0bvyz1-aaud0bvyz1.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-aaud0bvyz1-aaud0bvyz1.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\r7q089fb32-{0}-owyyl27mkb-owyyl27mkb.gz
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\bin\Debug\net10.0\Blazor.Storage.dll
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\12x8ovv9tc-{0}-4ooi3bhemj-4ooi3bhemj.gz

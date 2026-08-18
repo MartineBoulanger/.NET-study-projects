@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorAuto.Client\BlazorAuto.Client.csproj" />
+    <PackageReference Include="Blazor.Storage" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.10" />
   </ItemGroup>
 
