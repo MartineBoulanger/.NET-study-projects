@@ -41,7 +41,6 @@ C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\ne
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\jsmodules\jsmodules.build.manifest.json
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\scopedcss\bundle\BlazorAuto.styles.css
-C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-khy4lop6wu-khy4lop6wu.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\tv3cv67lkc-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\i5fex44xnp-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\uhpi9yewft-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -89,7 +88,6 @@ C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\ne
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\2ijgvfywiq-{0}-rebfl1bnxw-rebfl1bnxw.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ylkcs9mhyr-{0}-f7fxoh55ae-f7fxoh55ae.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\y85qoxp6qy-{0}-68qhiysw0j-68qhiysw0j.gz
-C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\r7q089fb32-{0}-830rot7vs9-830rot7vs9.gz
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\staticwebassets.development.json
@@ -206,3 +204,5 @@ C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\ref\BlazorAuto.dll
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\r7q089fb32-{0}-owyyl27mkb-owyyl27mkb.gz
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-aaud0bvyz1-aaud0bvyz1.gz
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\ffpe3vhw9v-{0}-aaud0bvyz1-aaud0bvyz1.gz
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\obj\Debug\net10.0\compressed\r7q089fb32-{0}-owyyl27mkb-owyyl27mkb.gz
