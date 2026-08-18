@@ -15,7 +15,7 @@ namespace BlazorAuto.Client.Pages
             currentScore = 0;
             stenen.Clear();
             Random random = new Random();
-            for (var index = 1; index < Aantal; index++)
+            for (var index = 0; index < Aantal; index++)
             {
                 var ogen = random.Next(1, 7);
                 stenen.Add(ogen);
@@ -26,7 +26,15 @@ namespace BlazorAuto.Client.Pages
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            if (Aantal == 0) Aantal = 2;
+            //if (Aantal == 0)
+            //    Aantal = 2;
+        }
+
+        public override async Task SetParametersAsync(ParameterView parameters)
+        {
+            await base.SetParametersAsync(parameters);
+            if (Aantal == 0)
+                Aantal = 2;
         }
     }
 }

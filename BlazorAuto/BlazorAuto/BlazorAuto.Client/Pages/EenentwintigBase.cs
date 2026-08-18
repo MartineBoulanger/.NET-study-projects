@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace BlazorAuto.Client.Pages
 {
-    public class EenentwintigBase : ComponentBase
+    public class EenentwintigBase:ComponentBase
     {
         protected int currentScore = 0;
         protected List<string> kaarten = new List<string>();
@@ -44,7 +44,13 @@ namespace BlazorAuto.Client.Pages
         protected void TrekKaart()
         {
             kaarten.Add(GetRandomCard());
-            if (currentScore > 21) throw new InvalidOperationException("Je bent verbrand!");
+            //if (currentScore > 21)
+            //    throw new InvalidOperationException("Je bent verbrand!");
+        }
+
+        protected override bool ShouldRender()
+        {
+            return currentScore <= 21;
         }
     }
 }

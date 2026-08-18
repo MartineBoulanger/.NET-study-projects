@@ -16,4 +16,9 @@
         GetalInChild++;
         await GetalInChildChanged.InvokeAsync(GetalInChild);
     }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+    }
 }
