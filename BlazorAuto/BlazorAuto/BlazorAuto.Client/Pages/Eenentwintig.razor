@@ -15,9 +15,11 @@
 
 <p class="alert alert-info">Jouw score : @currentScore</p>
 
-<CopyrightFooter @attributes="footerAttributes" @ref="reffooter">
-    <h4>Blazor Rocks</h4>
-</CopyrightFooter>
+<div>
+    <CopyrightFooter @attributes="footerAttributes" @ref="reffooter">
+        <h4>Blazor Rocks</h4>
+    </CopyrightFooter>
+</div>
 
 <button class="btn btn-primary m-3" @onclick="InfoOphalen">Info</button>
 <div>@cursus</div>

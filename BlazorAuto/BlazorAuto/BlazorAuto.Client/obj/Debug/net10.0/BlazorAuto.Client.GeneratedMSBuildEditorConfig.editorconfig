@@ -73,10 +73,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG9iYmVsZW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Eenentwintig.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWVuZW50d2ludGlnLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Events.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -128,3 +124,7 @@ build_metadata.AdditionalFiles.CssScope = b-svg2pxokjq
 [C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFJlY29ubmVjdE1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-f7ydpzk0qv
+
+[C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Eenentwintig.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWVuZW50d2ludGlnLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-vucfcwr5u4

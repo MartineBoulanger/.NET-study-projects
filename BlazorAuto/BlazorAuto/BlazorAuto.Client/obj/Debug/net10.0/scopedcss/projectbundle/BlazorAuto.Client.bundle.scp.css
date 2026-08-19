@@ -365,3 +365,11 @@ main[b-38bnj8cx9b] {
         opacity: 0;
     }
 }
+/* /Pages/Eenentwintig.razor.rz.scp.css */
+h1[b-vucfcwr5u4] {
+    color: red;
+}
+
+[b-vucfcwr5u4] h1 {
+    color: blue;
+}
