@@ -85,6 +85,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/FileSelector.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZVNlbGVjdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Gastenboek.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FzdGVuYm9lay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -119,6 +127,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Pictures.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGljdHVyZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Sollicitatieformulier.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29sbGljaXRhdGllZm9ybXVsaWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/marti/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Tables.razor]

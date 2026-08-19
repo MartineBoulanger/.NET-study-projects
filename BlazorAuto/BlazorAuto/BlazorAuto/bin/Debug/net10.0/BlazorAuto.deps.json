@@ -10,6 +10,7 @@
         "dependencies": {
           "Blazor.Storage": "5.0.0",
           "BlazorAuto.Client": "1.0.0",
+          "Microsoft.AspNetCore.Components.DataAnnotations.Validation": "3.2.0-rc1.20223.4",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.10"
         },
         "runtime": {
@@ -21,6 +22,14 @@
           "lib/net10.0/Blazor.Storage.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.DataAnnotations.Validation/3.2.0-rc1.20223.4": {
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.AspNetCore.Components.DataAnnotations.Validation.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.200.20.22304"
           }
         }
       },
@@ -57,6 +66,7 @@
       "BlazorAuto.Client/1.0.0": {
         "dependencies": {
           "Blazor.Storage": "5.0.0",
+          "Microsoft.AspNetCore.Components.DataAnnotations.Validation": "3.2.0-rc1.20223.4",
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.10"
         },
         "runtime": {
@@ -80,6 +90,13 @@
       "sha512": "sha512-IjOU4sRnowb6tNr2Vosk7x5QXoGU7Cdf26TnHiQ56WnSznVumtHvhWvtsKbk+sfUF3DrKpYXf/YkR867IlkoWg==",
       "path": "blazor.storage/5.0.0",
       "hashPath": "blazor.storage.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.DataAnnotations.Validation/3.2.0-rc1.20223.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyZAAbuXuAVrh4Vii5Aq1N841iVhSjE4mTf/lVh+AgrKinaltE0IeEWPKv889j4ineX7i9BUiAqlGP7UpZwlnQ==",
+      "path": "microsoft.aspnetcore.components.dataannotations.validation/3.2.0-rc1.20223.4",
+      "hashPath": "microsoft.aspnetcore.components.dataannotations.validation.3.2.0-rc1.20223.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Components.WebAssembly/10.0.10": {
       "type": "package",

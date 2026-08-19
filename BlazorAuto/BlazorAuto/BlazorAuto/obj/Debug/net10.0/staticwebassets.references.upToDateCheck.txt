@@ -91,3 +91,17 @@ C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\D
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\staticwebassets.build.json

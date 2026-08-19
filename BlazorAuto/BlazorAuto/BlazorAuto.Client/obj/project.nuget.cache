@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jg+33NcGc+0=",
+  "dgSpecHash": "gZv5NudI74Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\marti\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\BlazorAuto.Client.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.10\\microsoft.aspnetcore.authorization.10.0.10.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components\\10.0.10\\microsoft.aspnetcore.components.10.0.10.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\10.0.10\\microsoft.aspnetcore.components.analyzers.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.dataannotations.validation\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.dataannotations.validation.3.2.0-rc1.20223.4.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\10.0.10\\microsoft.aspnetcore.components.forms.10.0.10.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.web\\10.0.10\\microsoft.aspnetcore.components.web.10.0.10.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.10\\microsoft.aspnetcore.components.webassembly.10.0.10.nupkg.sha512",
