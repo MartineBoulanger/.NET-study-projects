@@ -91,7 +91,6 @@ wwwroot\images\SteenDerWijzen.jpg
 wwwroot\images\VerdrietVanBelgie.jpg
 C:\Users\marti\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.10\build\..\_framework\blazor.web.js
 C:\Users\marti\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.10\build\..\_framework\blazor.server.js
-C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\app.css
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -138,3 +137,4 @@ C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\lib\
 C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Users\marti\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.10\_framework\blazor.web.js
 C:\Users\marti\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.10\_framework\blazor.server.js
+C:\Users\marti\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto\wwwroot\app.css
