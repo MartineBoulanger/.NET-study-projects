@@ -2196,10 +2196,10 @@ C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\dskjpoe2c5-{0}-gaz9e4thdm-gaz9e4thdm.gz
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\ylbcroubn3-{0}-luddpe7zjl-luddpe7zjl.gz
 C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\5tqtojk4d7-{0}-f11zl4202d-f11zl4202d.gz
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.uzyxt61t9v.wasm
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.nuiw87nqz7.pdb
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.uzyxt61t9v.wasm.gz
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.nuiw87nqz7.pdb.gz
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\ndvss40ic0-{0}-uzyxt61t9v-uzyxt61t9v.gz
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\tdfywuolh7-{0}-nuiw87nqz7-nuiw87nqz7.gz
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\3ulywij87h-{0}-ghpwnm25i9-ghpwnm25i9.gz
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.ztkftpvxa5.wasm
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.tz09runqwg.pdb
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.ztkftpvxa5.wasm.gz
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\bin\Debug\net10.0\wwwroot\_framework\BlazorAuto.Client.tz09runqwg.pdb.gz
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\ndvss40ic0-{0}-ztkftpvxa5-ztkftpvxa5.gz
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\tdfywuolh7-{0}-tz09runqwg-tz09runqwg.gz
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\obj\Debug\net10.0\compressed\3ulywij87h-{0}-dgekovph13-dgekovph13.gz

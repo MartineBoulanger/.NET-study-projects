@@ -1,0 +1,35 @@
+﻿@page "/JSInterop"
+@inject IJSRuntime JSRuntime;
+
+<h1>JSInterop</h1>
+<h3 id="welkomstTekst"></h3>
+
+<span for="getal">Getal:</span>
+<input id="getal" type="number" @bind-value="@Getal" />
+<button type ="button" class="btn btn-primary ms-2" @onclick="BerekenKwadraat">Bereken kwadraat</button>
+
+<p class="mt-2 h3">
+    @* <span class="badge bg-success p-3">Het kwadraat van @Getal is @hetKwadraat.</span> *@
+    <span class="badge bg-success p-3" @ref="spanElement"></span>
+</p>
+
+@code {
+    public int Getal { get; set; }
+    // private int hetKwadraat = 0;
+    private ElementReference spanElement;
+    private async Task BerekenKwadraat()
+    {
+        // hetKwadraat = await JSRuntime.InvokeAsync<int>("kwadraat", Getal);
+        var kwadraat = await JSRuntime.InvokeAsync<int>("kwadraat", Getal);
+        await JSRuntime.InvokeVoidAsync("setElementText", spanElement, $"Het kwadraat van {Getal} is {kwadraat}");
+    }
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var naam = await JSRuntime.InvokeAsync<string>("userInputFunctions.vraagNaam", "Jouw naam: ");
+            await JSRuntime.InvokeVoidAsync("userInputFunctions.toonBoodschap", $"Hallo {naam} ! Welkom bij Blazor!");
+            await JSRuntime.InvokeVoidAsync("userInputFunctions.zetdefocus");
+        }
+    }
+}
