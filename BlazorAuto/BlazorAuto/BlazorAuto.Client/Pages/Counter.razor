@@ -1,5 +1,8 @@
 ﻿@page "/counter"
 @inject Blazored.SessionStorage.ISessionStorageService sessionStore
+@inject IJSRuntime JSRuntime
+
+<NavigationLock ConfirmExternalNavigation OnBeforeInternalNavigation="OnBeforeInternalNavigation" />
 
 <PageTitle>Counter</PageTitle>
 
@@ -29,5 +32,11 @@
                 currentCount = (int)sessionCounter;
             StateHasChanged();
         }
+    }
+
+    private async Task OnBeforeInternalNavigation(LocationChangingContext context)
+    {
+        var doorgaan = await JSRuntime.InvokeAsync<bool>("confirm", "Weet je zeker dat je de pagina wil verlaten?");
+        if (!doorgaan) context.PreventNavigation();
     }
 }

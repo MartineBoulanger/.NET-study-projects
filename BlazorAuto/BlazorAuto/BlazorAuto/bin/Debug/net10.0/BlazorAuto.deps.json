@@ -11,7 +11,8 @@
           "Blazor.Storage": "5.0.0",
           "BlazorAuto.Client": "1.0.0",
           "Microsoft.AspNetCore.Components.DataAnnotations.Validation": "3.2.0-rc1.20223.4",
-          "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.10"
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.10",
+          "RazorClassLibrary": "1.0.0"
         },
         "runtime": {
           "BlazorAuto.dll": {}
@@ -67,10 +68,19 @@
         "dependencies": {
           "Blazor.Storage": "5.0.0",
           "Microsoft.AspNetCore.Components.DataAnnotations.Validation": "3.2.0-rc1.20223.4",
-          "Microsoft.AspNetCore.Components.WebAssembly": "10.0.10"
+          "Microsoft.AspNetCore.Components.WebAssembly": "10.0.10",
+          "RazorClassLibrary": "1.0.0"
         },
         "runtime": {
           "BlazorAuto.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RazorClassLibrary/1.0.0": {
+        "runtime": {
+          "RazorClassLibrary.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -120,6 +130,11 @@
       "hashPath": "microsoft.jsinterop.webassembly.10.0.10.nupkg.sha512"
     },
     "BlazorAuto.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RazorClassLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

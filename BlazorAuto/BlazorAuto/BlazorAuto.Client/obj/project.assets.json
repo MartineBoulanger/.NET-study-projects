@@ -558,6 +558,19 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
+      },
+      "RazorClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "10.0.10"
+        },
+        "compile": {
+          "bin/placeholder/RazorClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorClassLibrary.dll": {}
+        }
       }
     },
     "net10.0/browser-wasm": {
@@ -1116,6 +1129,19 @@
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
+        }
+      },
+      "RazorClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "10.0.10"
+        },
+        "compile": {
+          "bin/placeholder/RazorClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RazorClassLibrary.dll": {}
         }
       }
     }
@@ -2003,6 +2029,11 @@
         "tools/net472/Microsoft.NET.Sdk.WebAssembly.Pack.Tasks.dll",
         "tools/net472/Microsoft.NET.WebAssembly.Webcil.dll"
       ]
+    },
+    "RazorClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../RazorClassLibrary/RazorClassLibrary.csproj",
+      "msbuildProject": "../../RazorClassLibrary/RazorClassLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2012,27 +2043,28 @@
       "Microsoft.AspNetCore.Components.DataAnnotations.Validation >= 3.2.0-rc1.20223.4",
       "Microsoft.AspNetCore.Components.WebAssembly >= 10.0.10",
       "Microsoft.NET.ILLink.Tasks >= 10.0.10",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 10.0.10"
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 10.0.10",
+      "RazorClassLibrary >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marti\\.nuget\\packages\\": {},
+    "C:\\Users\\cursist\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\BlazorAuto.Client.csproj",
+      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\BlazorAuto.Client.csproj",
       "projectName": "BlazorAuto.Client",
-      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\BlazorAuto.Client.csproj",
-      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\obj\\",
+      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\BlazorAuto.Client.csproj",
+      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2048,7 +2080,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\RazorClassLibrary\\RazorClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\RazorClassLibrary\\RazorClassLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

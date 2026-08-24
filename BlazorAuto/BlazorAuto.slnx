@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="BlazorAuto/BlazorAuto.Client/BlazorAuto.Client.csproj" />
   <Project Path="BlazorAuto/BlazorAuto/BlazorAuto.csproj" />
+  <Project Path="RazorClassLibrary/RazorClassLibrary.csproj" Id="b91e8d21-5377-45be-811b-13334060b589" />
 </Solution>

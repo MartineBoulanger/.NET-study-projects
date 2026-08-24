@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\RazorClassLibrary\\obj\\Debug\\net10.0\\scopedcss\\projectbundle\\RazorClassLibrary.bundle.scp.css",
+      "PackagePath": "staticwebassets\\RazorClassLibrary.8ugwwkntft.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\RazorClassLibrary\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\RazorClassLibrary\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.RazorClassLibrary.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.RazorClassLibrary.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.build.RazorClassLibrary.props",
+      "PackagePath": "build\\RazorClassLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.buildMultiTargeting.RazorClassLibrary.props",
+      "PackagePath": "buildMultiTargeting\\RazorClassLibrary.props"
+    },
+    {
+      "Id": "obj\\Debug\\net10.0\\staticwebassets\\msbuild.buildTransitive.RazorClassLibrary.props",
+      "PackagePath": "buildTransitive\\RazorClassLibrary.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

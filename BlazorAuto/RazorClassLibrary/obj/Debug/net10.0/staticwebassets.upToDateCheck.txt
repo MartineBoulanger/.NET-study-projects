@@ -1,0 +1,3 @@
+wwwroot\background.png
+wwwroot\exampleJsInterop.js
+C:\Users\cursist\source\repos\DOTNET\BlazorAuto\RazorClassLibrary\wwwroot\exampleJsInterop.js

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\RazorClassLibrary\RazorClassLibrary.csproj" />
     <ProjectReference Include="..\BlazorAuto.Client\BlazorAuto.Client.csproj" />
     <PackageReference Include="Blazor.Storage" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.DataAnnotations.Validation" Version="3.2.0-rc1.20223.4" />

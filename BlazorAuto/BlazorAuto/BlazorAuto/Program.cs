@@ -33,6 +33,6 @@ app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(BlazorAuto.Client._Imports).Assembly);
+    .AddAdditionalAssemblies(typeof(BlazorAuto.Client._Imports).Assembly, typeof(RazorClassLibrary.Component1).Assembly);
 
 app.Run();
