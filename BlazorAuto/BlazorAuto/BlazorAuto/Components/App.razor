@@ -12,8 +12,9 @@
     <ImportMap />
     <link rel="icon" type="image/png" href="favicon.png" />
     <HeadOutlet @rendermode="InteractiveAuto" />
-    <script>kwadraat = getal => getal**2;</script>
     <script>
+        kwadraat = getal => getal**2;
+        setElementText = (element, text) => element.innerText = text;
         userInputFunctions = {
             vraagNaam: function (text) {
                 return prompt(text, 'Tik hier jouw naam');
@@ -25,9 +26,27 @@
                 document.getElementById('getal').focus();
             }
         };
-    </script>
-    <script>
-        setElementText = (element, text) => element.innerText = text;
+        returnPersonenlijstJs = function () {
+            DotNet.invokeMethodAsync('BlazorAuto.Client', 'GetPersonen').then(data => {
+                    const tbody = document.querySelector("tbody");
+                    for ( let teller = 0; teller < data.length; ++teller) {
+                        const tr = tbody.insertRow();
+                        const idTd = tr.insertCell();
+                        idTd.innerText = data[teller].id;
+                        const voornaamTd = tr.insertCell();
+                        voornaamTd.innerText = data[teller].voornaam;
+                        const famnaamTd = tr.insertCell();
+                        famnaamTd.innerText = data[teller].familienaam;
+                    }
+                }
+            );
+        };
+        callGroeter = function (objectReference) {
+            return objectReference.invokeMethodAsync('Begroet').then(r => {
+                const p = document.querySelector("#boodschap");
+                p.innerText = r;
+            });
+        };
     </script>
 </head>
 

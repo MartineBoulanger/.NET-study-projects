@@ -101,6 +101,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSlNJbnRlcm9wLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/JSIsolation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSlNJc29sYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cursist/source/repos/DOTNET/BlazorAuto/BlazorAuto/BlazorAuto.Client/Pages/Kleur.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS2xldXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
