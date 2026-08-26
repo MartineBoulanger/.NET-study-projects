@@ -1,0 +1,2 @@
+C:\Users\marti\source\repos\DOTNET\WebAssemblySecurity\WebAssemblySecurity\WebAssemblySecurity.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\WebAssemblySecurity\WebAssemblySecurity\WebAssemblySecurity.Client\obj\Debug\net10.0\staticwebassets.build.json

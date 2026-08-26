@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="WebAssemblySecurity/WebAssemblySecurity.Client/WebAssemblySecurity.Client.csproj" />
+  <Project Path="WebAssemblySecurity/WebAssemblySecurity/WebAssemblySecurity.csproj" />
+</Solution>

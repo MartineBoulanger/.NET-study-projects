@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "eEJzZ13NPV8=",
+  "dgSpecHash": "crIsCDNHmHs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto\\BlazorAuto.csproj",
+  "projectFilePath": "C:\\Users\\marti\\source\\repos\\DOTNET\\BlazorAuto\\BlazorAuto\\BlazorAuto\\BlazorAuto.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cursist\\.nuget\\packages\\blazor.storage\\5.0.0\\blazor.storage.5.0.0.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.dataannotations.validation\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.dataannotations.validation.3.2.0-rc1.20223.4.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.10\\microsoft.aspnetcore.components.webassembly.10.0.10.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.10\\microsoft.aspnetcore.components.webassembly.server.10.0.10.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.10\\microsoft.jsinterop.webassembly.10.0.10.nupkg.sha512"
+    "C:\\Users\\marti\\.nuget\\packages\\blazor.storage\\5.0.0\\blazor.storage.5.0.0.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.dataannotations.validation\\3.2.0-rc1.20223.4\\microsoft.aspnetcore.components.dataannotations.validation.3.2.0-rc1.20223.4.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.10\\microsoft.aspnetcore.components.webassembly.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.10\\microsoft.aspnetcore.components.webassembly.server.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.10\\microsoft.jsinterop.webassembly.10.0.10.nupkg.sha512"
   ],
   "logs": []
 }
