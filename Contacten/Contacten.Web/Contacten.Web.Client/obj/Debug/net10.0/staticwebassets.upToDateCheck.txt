@@ -1,0 +1,4 @@
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\wwwroot\appsettings.json
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\wwwroot\appsettings.Development.json
+wwwroot\appsettings.Development.json
+wwwroot\appsettings.json

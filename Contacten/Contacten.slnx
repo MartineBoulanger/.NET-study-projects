@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Contacten.Data/Contacten.Data.csproj" />
+  <Project Path="Contacten.Models/Contacten.Models.csproj" />
+  <Project Path="Contacten.Web/Contacten.Web.Client/Contacten.Web.Client.csproj" />
+  <Project Path="Contacten.Web/Contacten.Web/Contacten.Web.csproj" />
+</Solution>

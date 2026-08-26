@@ -1,0 +1,12 @@
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\bin\Debug\net10.0\Contacten.Models.deps.json
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\bin\Debug\net10.0\Contacten.Models.dll
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\bin\Debug\net10.0\Contacten.Models.pdb
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.AssemblyInfoInputs.cache
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.AssemblyInfo.cs
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.csproj.CoreCompileInputs.cache
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.sourcelink.json
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.dll
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\refint\Contacten.Models.dll
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\Contacten.Models.pdb
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Models\obj\Debug\net10.0\ref\Contacten.Models.dll
