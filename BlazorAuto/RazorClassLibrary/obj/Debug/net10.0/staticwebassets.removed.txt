@@ -1,1 +1,0 @@
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\RazorClassLibrary\wwwroot\exampleJsInterop.js

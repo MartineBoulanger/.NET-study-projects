@@ -1,0 +1,48 @@
+﻿@page "/contactenlijst"
+
+<h3 >Contactenlijst</h3>
+
+<a href="/editcontact" class="btn btn-primary">Create</a>
+
+@if(Contacten != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th >Voornaam</th>
+                <th>Naam</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Contacten) {
+            <tr>
+                <td><a href="contactdetail/@c.ContactId"><span class="bi bi-search" aria-hidden="true"></span></a></td>
+                <td>@c.Voornaam</td>
+                <td>@c.Naam</td>
+                <td>@c.Email</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>@boodschap</p>  
+}
+
+@code {
+    [Inject]
+    public ContactenService ContactenService { get; set; }
+    private string boodschap = "Retrieving data...";
+    public IEnumerable<Contact> Contacten { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        var contacten = await ContactenService.GetContacten();
+        if (contacten != null)
+            Contacten = contacten.ToList();
+        else
+            boodschap = " Database error... ";
+    }
+}

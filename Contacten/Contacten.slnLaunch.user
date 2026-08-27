@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Startup",
+    "Projects": [
+      {
+        "Path": "Contacten.Data\\Contacten.Data.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

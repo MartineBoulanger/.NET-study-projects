@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Contacten.Web.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c0b3047ac3799a03439b949d6d2792f65bca00c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40b803e0fa13933390638407a4707d000a856b76")]
 [assembly: System.Reflection.AssemblyProductAttribute("Contacten.Web.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Contacten.Web.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

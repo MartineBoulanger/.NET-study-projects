@@ -1,4 +1,0 @@
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\wwwroot\appsettings.Development.json
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\wwwroot\appsettings.json
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\Layout\ReconnectModal.razor.js
-C:\Users\cursist\source\repos\DOTNET\BlazorAuto\BlazorAuto\BlazorAuto.Client\wwwroot\js\scripts.js

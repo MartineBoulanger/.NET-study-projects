@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "Contacten.Web.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-skEeWlaNLPM2CRsB/q07nUn30Amv+VdUkW8F1mGXCts=",
+    "hash": "sha256-+VqbnbXtKODO+v0xenrbQVh2Sd4/MM1uphkTEvNEcRE=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.puryxhmhq9.js"
@@ -1236,8 +1236,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Contacten.Models.wasm",
-        "name": "Contacten.Models.6hv7arybl9.wasm",
-        "hash": "sha256-5u4UPyvoC9aN20L4fXZz+FfzcB118vQE9vD6U0hKemY=",
+        "name": "Contacten.Models.b5zwyianfu.wasm",
+        "hash": "sha256-ETzMJjy/FM2VFpHvz2XV2qpVSSo01dgNWhzHXKM08wI=",
         "cache": "force-cache"
       },
       {
@@ -1248,22 +1248,22 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Contacten.Web.Client.wasm",
-        "name": "Contacten.Web.Client.yu472fta5z.wasm",
-        "hash": "sha256-pr3Ttzvt7Nv/ddGNwqCm0u5n4CNRt3oeK6XqCKUPrZs=",
+        "name": "Contacten.Web.Client.7qz8utiq5c.wasm",
+        "hash": "sha256-IYfNQpekd9SIx6zMb3JmCshKjx8C3ij5L5muyiyTTsI=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "Contacten.Models.pdb",
-        "name": "Contacten.Models.20pvp783e1.pdb",
-        "hash": "sha256-UgVHN5ZoyhkZA3bOQE077Wiw/lOXWH9CRx14R6tYk7I=",
+        "name": "Contacten.Models.s16am4v6yc.pdb",
+        "hash": "sha256-4Oy/kG5r3j3QdOlZwYHhdIJ5RqbGILYo5d4BB3T+Pho=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "Contacten.Web.Client.pdb",
-        "name": "Contacten.Web.Client.7wj06shkks.pdb",
-        "hash": "sha256-SdUaXR5FGu/CQUlrUJK0NMeyhctkRViBXPy3pABUztk=",
+        "name": "Contacten.Web.Client.dmity9ak30.pdb",
+        "hash": "sha256-ezYtq5lgF72+cciq2g/2a2Xa+NXYW6meiZ5uqNonn5M=",
         "cache": "force-cache"
       }
     ],
