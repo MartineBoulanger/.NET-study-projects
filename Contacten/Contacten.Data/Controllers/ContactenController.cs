@@ -6,7 +6,7 @@ namespace Contacten.Data.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ContactenController : Controller
+    public class ContactenController:Controller
     {
         private readonly IContactenRepository contactenRepository;
         public ContactenController(IContactenRepository contactenRepository)
@@ -38,7 +38,8 @@ namespace Contacten.Data.Controllers
             try
             {
                 var result = await contactenRepository.GetContact(id);
-                if (result == null) return NotFound();
+                if (result == null)
+                    return NotFound();
                 return result;
             }
             catch (Exception)
@@ -91,6 +92,33 @@ namespace Contacten.Data.Controllers
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data");
+            }
+        }
+
+        [HttpGet]
+        [Route("/api/aantalcontacten")]
+        public async Task<ActionResult> GetAantalContacten()
+        {
+            try
+            {
+                return Ok(await contactenRepository.GetAantalContacten());
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Database error");
+            }
+        }
+
+        [HttpGet("{from:int}/{number:int}")]
+        public async Task<ActionResult> GetContactenSubset(int from, int number)
+        {
+            try
+            {
+                return Ok(await contactenRepository.GetContactenSubset(from, number));
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Database error");
             }
         }
     }

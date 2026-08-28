@@ -91,7 +91,6 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Deb
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\y32g0ke1wt-{0}-rebfl1bnxw-rebfl1bnxw.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\kwkxapzgyq-{0}-f7fxoh55ae-f7fxoh55ae.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\26t8knxxrv-{0}-68qhiysw0j-68qhiysw0j.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\0ji5nwvnxi-{0}-gi5r9qof99-gi5r9qof99.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\staticwebassets.development.json
@@ -210,3 +209,7 @@ C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\D
 C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\Contacten.Web.pdb
 C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\Contacten.Web.genruntimeconfig.cache
 C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\ref\Contacten.Web.dll
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\bin\Debug\net10.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\unlu0xluo6-{0}-eu7w3d5g1a-eu7w3d5g1a.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\1x45lb54o8-{0}-boiwgh0w5b-boiwgh0w5b.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web\obj\Debug\net10.0\compressed\0ji5nwvnxi-{0}-b4jdwa23pm-b4jdwa23pm.gz

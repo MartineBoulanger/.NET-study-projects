@@ -10,7 +10,7 @@
                     <h1>@Contact.Voornaam @Contact.Naam</h1>
                 </div>
                 <div class="card-body">
-                    <h4><span class="bi bi-house" aria-hidden="true" style="widh:30px;"></span>@Contact.Adres</h4>
+                    <h4><span class="bi bi-house" aria-hidden="true" style="width:30px;"></span>@Contact.Adres</h4>
                     <h4 style="margin-left:36px;">@Contact.Postcode @Contact.Gemeente</h4>
                     <h4><span class="bi bi-phone" aria-hidden="true" style="width:30px;"></span>@Contact.Telefoon</h4>
                     <h4><span class="bi bi-envelope" aria-hidden="true" style="width:30px;"></span>@Contact.Email</h4>
@@ -60,6 +60,6 @@ else
     private async void DeleteContact()
     {
         await ContactenService.DeleteContact(Id);
-        navmanager.NavigateTo("/contactenlijst");
+        navmanager.NavigateTo("/contactengrid");
     }
 }

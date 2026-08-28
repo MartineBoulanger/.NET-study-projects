@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "Contacten.Web.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-+VqbnbXtKODO+v0xenrbQVh2Sd4/MM1uphkTEvNEcRE=",
+    "hash": "sha256-73jBUUyHTWExppAFWbx3Wb2XUjIaQBJuidRgq7slgD8=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.puryxhmhq9.js"
@@ -74,6 +74,12 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
         "virtualPath": "Microsoft.AspNetCore.Components.Forms.wasm",
         "name": "Microsoft.AspNetCore.Components.Forms.y5xx1fx6r9.wasm",
         "hash": "sha256-JvMWXAOhDPo+zB8yHSWOEHEeT9/fcwZCQDwAxCPHXlg=",
+        "cache": "force-cache"
+      },
+      {
+        "virtualPath": "Microsoft.AspNetCore.Components.QuickGrid.wasm",
+        "name": "Microsoft.AspNetCore.Components.QuickGrid.iflppzzqav.wasm",
+        "hash": "sha256-QvIwtHtkDvXqUEjkVIlT7LG6VtD0cN4UL6/rcSNfvHc=",
         "cache": "force-cache"
       },
       {
@@ -1236,8 +1242,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Contacten.Models.wasm",
-        "name": "Contacten.Models.b5zwyianfu.wasm",
-        "hash": "sha256-ETzMJjy/FM2VFpHvz2XV2qpVSSo01dgNWhzHXKM08wI=",
+        "name": "Contacten.Models.lo8qwc5ckl.wasm",
+        "hash": "sha256-izE7X+6RMrDZL+MUtf7wHMzAZbHQVbSqvQ72VAzACD4=",
         "cache": "force-cache"
       },
       {
@@ -1248,22 +1254,22 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "Contacten.Web.Client.wasm",
-        "name": "Contacten.Web.Client.7qz8utiq5c.wasm",
-        "hash": "sha256-IYfNQpekd9SIx6zMb3JmCshKjx8C3ij5L5muyiyTTsI=",
+        "name": "Contacten.Web.Client.qfffslylkl.wasm",
+        "hash": "sha256-5mv7MCsvZ0l7nlXfYi5aw2zdDluXjX67kBiw9rEHTNg=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "Contacten.Models.pdb",
-        "name": "Contacten.Models.s16am4v6yc.pdb",
-        "hash": "sha256-4Oy/kG5r3j3QdOlZwYHhdIJ5RqbGILYo5d4BB3T+Pho=",
+        "name": "Contacten.Models.l13lghtoe5.pdb",
+        "hash": "sha256-VzlFrQpkKROfCzUkJzqIk8sEUTq7h40/b30XgsqP+/w=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "Contacten.Web.Client.pdb",
-        "name": "Contacten.Web.Client.dmity9ak30.pdb",
-        "hash": "sha256-ezYtq5lgF72+cciq2g/2a2Xa+NXYW6meiZ5uqNonn5M=",
+        "name": "Contacten.Web.Client.mfzyguhprv.pdb",
+        "hash": "sha256-HoBinLVF1Mro3gHYsoDKHLCk1lBPH35CtsZsWzuPAvk=",
         "cache": "force-cache"
       }
     ],

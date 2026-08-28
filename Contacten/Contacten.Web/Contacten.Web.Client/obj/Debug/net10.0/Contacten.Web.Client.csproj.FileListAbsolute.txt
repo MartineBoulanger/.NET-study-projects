@@ -1,8 +1,4 @@
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\Contacten.Web.Client.runtimeconfig.json
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.20pvp783e1.pdb
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.6hv7arybl9.wasm
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.7wj06shkks.pdb
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.yu472fta5z.wasm
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.4w3z20tuqk.wasm
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.0z8r7oen0q.wasm
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.y5xx1fx6r9.wasm
@@ -226,7 +222,6 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Linq.Queryable.9agv5eul41.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Text.Encoding.Extensions.p7ksnf6eqq.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Security.Principal.cb0msvc61t.wasm.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.20pvp783e1.pdb.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Web.nquguxbga8.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.Options.llivjk1whj.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.Configuration.qjwtydrbeh.wasm.gz
@@ -337,7 +332,6 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Reflection.Emit.1ir4e7atax.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Win32.Registry.vw7gs5u6x3.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.XmlSerializer.dzxtf0jve0.wasm.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.6hv7arybl9.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Private.Xml.q1h1022344.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.DependencyInjection.0lh9y2h2sj.wasm.gz
@@ -358,7 +352,6 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Globalization.Extensions.lymlf1y54s.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Private.CoreLib.juov5x1i7w.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Security.Cryptography.Primitives.lvrn81knoi.wasm.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.yu472fta5z.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.Linq.mr3gbysv2k.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Reflection.TypeExtensions.do7opdhcum.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
@@ -417,7 +410,6 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Net.NetworkInformation.5gv80uqpl0.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\netstandard.6qjyqs9cni.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Reflection.Extensions.ryls3wcjtu.wasm.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.7wj06shkks.pdb.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.7ebfchnp6m.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.IO.Compression.Brotli.01wsvlce97.wasm.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\System.Data.DataSetExtensions.x6usn7lchy.wasm.gz
@@ -863,8 +855,6 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\dotnet.js
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\75mhqfeoy2-{0}-99zm1jdh75-99zm1jdh75.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\mnccf9ixsx-{0}-w3qd1tpl0e-w3qd1tpl0e.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\6tc1ri7ld7-{0}-d9dhpqvl21-d9dhpqvl21.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\dy1gcl5m65-{0}-d9dhpqvl21-d9dhpqvl21.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\624wkptcb5-{0}-4w3z20tuqk-4w3z20tuqk.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\gmjzd8eqro-{0}-0z8r7oen0q-0z8r7oen0q.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\7c3fsesle2-{0}-y5xx1fx6r9-y5xx1fx6r9.gz
@@ -1071,12 +1061,7 @@ C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\gani78lc4y-{0}-tjcz0u77k5-tjcz0u77k5.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\9aosq3w6ad-{0}-tptq2av103-tptq2av103.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\pw42ktwt4o-{0}-lfu7j35m59-lfu7j35m59.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\m5k7vpczyl-{0}-6hv7arybl9-6hv7arybl9.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\2nl49t4bw3-{0}-20pvp783e1-20pvp783e1.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\q7vudx9zbd-{0}-ccsptreuls-ccsptreuls.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\pguzsyrtb8-{0}-yu472fta5z-yu472fta5z.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\ynb31z644n-{0}-7wj06shkks-7wj06shkks.gz
-C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\sysqq4h9w5-{0}-amvr94pg07-amvr94pg07.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\dohrku0joq-{0}-tswichycbp-tswichycbp.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\3nozxr2pg8-{0}-tswichycbp-tswichycbp.gz
 C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\staticwebassets.build.json
@@ -2182,3 +2167,23 @@ C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Clien
 C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\pguzsyrtb8-{0}-7qz8utiq5c-7qz8utiq5c.gz
 C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\ynb31z644n-{0}-dmity9ak30-dmity9ak30.gz
 C:\Users\cursist\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\sysqq4h9w5-{0}-aa6yvzpqih-aa6yvzpqih.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.l13lghtoe5.pdb
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.lo8qwc5ckl.wasm
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.l13lghtoe5.pdb.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Models.lo8qwc5ckl.wasm.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\dy1gcl5m65-{0}-s94a8mxeui-s94a8mxeui.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\m5k7vpczyl-{0}-lo8qwc5ckl-lo8qwc5ckl.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\2nl49t4bw3-{0}-l13lghtoe5-l13lghtoe5.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.QuickGrid.iflppzzqav.wasm
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Components.QuickGrid.iflppzzqav.wasm.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\webcil\Microsoft.AspNetCore.Components.QuickGrid.wasm
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\6tc1ri7ld7-{0}-7d2huoxtrv-7d2huoxtrv.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\re1h83ef8z-{0}-iflppzzqav-iflppzzqav.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.mfzyguhprv.pdb
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.qfffslylkl.wasm
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.qfffslylkl.wasm.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\bin\Debug\net10.0\wwwroot\_framework\Contacten.Web.Client.mfzyguhprv.pdb.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\pguzsyrtb8-{0}-qfffslylkl-qfffslylkl.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\ynb31z644n-{0}-mfzyguhprv-mfzyguhprv.gz
+C:\Users\marti\source\repos\DOTNET\Contacten\Contacten.Web\Contacten.Web.Client\obj\Debug\net10.0\compressed\sysqq4h9w5-{0}-dsofcmqfd6-dsofcmqfd6.gz

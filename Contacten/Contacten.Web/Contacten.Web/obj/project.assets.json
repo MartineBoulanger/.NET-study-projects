@@ -12,6 +12,25 @@
           "buildMultiTargeting/Microsoft.AspNetCore.App.Internal.Assets.targets": {}
         }
       },
+      "Microsoft.AspNetCore.Components.QuickGrid/10.0.11": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Components.QuickGrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Components.QuickGrid.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.AspNetCore.Components.QuickGrid.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Components.WebAssembly/10.0.10": {
         "type": "package",
         "dependencies": {
@@ -81,6 +100,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Contacten.Models": "1.0.0",
+          "Microsoft.AspNetCore.Components.QuickGrid": "10.0.11",
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.10"
         },
         "compile": {
@@ -114,6 +134,29 @@
         "buildTransitive/Microsoft.AspNetCore.App.Internal.Assets.targets",
         "microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
         "microsoft.aspnetcore.app.internal.assets.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.QuickGrid/10.0.11": {
+      "sha512": "TWnY2na/NO+ngSq8nDSUpTd7CfJXHtpVIt0YQttT/ye13HtlDdXTqiebabxNGWoBHTff/ZJPKa/I3oCWGd5Bdw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.quickgrid/10.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Microsoft.AspNetCore.Components.QuickGrid.props",
+        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/Microsoft.AspNetCore.Components.QuickGrid.props",
+        "buildTransitive/Microsoft.AspNetCore.Components.QuickGrid.props",
+        "lib/net10.0/Microsoft.AspNetCore.Components.QuickGrid.dll",
+        "lib/net10.0/Microsoft.AspNetCore.Components.QuickGrid.xml",
+        "microsoft.aspnetcore.components.quickgrid.10.0.11.nupkg.sha512",
+        "microsoft.aspnetcore.components.quickgrid.nuspec",
+        "staticwebassets/Microsoft.AspNetCore.Components.QuickGrid.boiwgh0w5b.bundle.scp.css",
+        "staticwebassets/QuickGrid.razor.js"
       ]
     },
     "Microsoft.AspNetCore.Components.WebAssembly/10.0.10": {
@@ -197,23 +240,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cursist\\.nuget\\packages\\": {},
+    "C:\\Users\\marti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
+      "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
       "projectName": "Contacten.Web",
-      "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
-      "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\obj\\",
+      "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
+      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -230,8 +273,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\cursist\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web.Client\\Contacten.Web.Client.csproj": {
-              "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web.Client\\Contacten.Web.Client.csproj"
+            "C:\\Users\\marti\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web.Client\\Contacten.Web.Client.csproj": {
+              "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web.Client\\Contacten.Web.Client.csproj"
             }
           }
         }

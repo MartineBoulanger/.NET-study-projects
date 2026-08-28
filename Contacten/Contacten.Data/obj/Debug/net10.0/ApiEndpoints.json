@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "Contacten.Data.Controllers.ContactenController",
+    "Method": "GetAantalContacten",
+    "RelativePath": "api/aantalcontacten",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Contacten.Data.Controllers.ContactenController",
     "Method": "Index",
     "RelativePath": "api/Contacten",
     "HttpMethod": "",
@@ -44,6 +54,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Contacten.Data.Controllers.ContactenController",
+    "Method": "GetContactenSubset",
+    "RelativePath": "api/Contacten/{from}/{number}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "number",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Contacten.Data.Controllers.ContactenController",

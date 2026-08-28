@@ -60,5 +60,29 @@ namespace Contacten.Web.Client.Services
             else
                 return null;
         }
+
+        public async Task<int> GetAantalContacten()
+        {
+            var response = await httpClient.GetAsync("api/aantalcontacten");
+            switch (response.StatusCode)
+            {
+                case HttpStatusCode.OK:
+                    return await response.Content.ReadFromJsonAsync<int>();
+                default:
+                    return 0;
+            }
+        }
+        public async Task<IEnumerable<Contact>> GetContactenSubset(int from, int number)
+        {
+            var response = await httpClient.GetAsync($"api/contacten/{from}/{number}");
+            switch (response.StatusCode)
+            {
+                case HttpStatusCode.OK:
+                    return await response.Content.ReadFromJsonAsync<List<Contact>>();
+                default:
+                    return null;
+            }
+            ;
+        }
     }
 }

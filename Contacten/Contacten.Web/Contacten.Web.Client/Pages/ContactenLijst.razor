@@ -4,7 +4,7 @@
 
 <a href="/editcontact" class="btn btn-primary">Create</a>
 
-@if(Contacten != null)
+@if (totaalContacten > 0)
 {
     <table class="table">
         <thead>
@@ -13,36 +13,59 @@
                 <th >Voornaam</th>
                 <th>Naam</th>
                 <th>Email</th>
+                <th>Geboortedatum</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var c in Contacten) {
-            <tr>
-                <td><a href="contactdetail/@c.ContactId"><span class="bi bi-search" aria-hidden="true"></span></a></td>
-                <td>@c.Voornaam</td>
-                <td>@c.Naam</td>
-                <td>@c.Email</td>
-            </tr>
-            }
+            @* @foreach (var c in Contacten) { } *@
+            <Virtualize ItemsProvider="LoadContacten" TItem="Contact" Context="c" ItemSize="75" OverscanCount="1">
+                <ItemContent>
+                    <tr>
+                        <td><a href="contactdetail/@c.ContactId"><span class="bi bi-search" aria-hidden="true"></span></a></td>
+                        <td>@c.Voornaam</td>
+                        <td>@c.Naam</td>
+                        <td>@c.Email</td>
+                        <td>@c.Geboortedatum</td>
+                    </tr>
+                </ItemContent>
+                <Placeholder>
+                    <tr><td colspan="6">Loading&heelip;</td></tr>
+                </Placeholder>
+            </Virtualize>
         </tbody>
     </table>
 }
+else if (totaalContacten == 0)
+{
+    <p>No data found...</p>
+}
 else
 {
-    <p>@boodschap</p>  
+    <p>Retrieving data...</p>
 }
 
 @code {
     [Inject]
     public ContactenService ContactenService { get; set; }
-    private string boodschap = "Retrieving data...";
-    public IEnumerable<Contact> Contacten { get; set; }
+    private int totaalContacten = -1;
+    // private string boodschap = "Retrieving data...";
+    // public IEnumerable<Contact> Contacten { get; set; } // for the foreach loop
+    public ICollection<Contact> Contacten { get; set; } // for the Virtualize
+
+    private async ValueTask<ItemsProviderResult<Contact>> LoadContacten(ItemsProviderRequest request)
+    {
+        var aantalContacten = Math.Min(request.Count, totaalContacten - request.StartIndex);
+        var contacten = await ContactenService.GetContactenSubset(request.StartIndex, aantalContacten);
+        return new ItemsProviderResult<Contact>(contacten, totaalContacten);
+    }
+
     protected override async Task OnInitializedAsync()
     {
-        var contacten = await ContactenService.GetContacten();
-        if (contacten != null)
-            Contacten = contacten.ToList();
-        else
-            boodschap = " Database error... ";
+        totaalContacten = (await ContactenService.GetAantalContacten());
+        // var contacten = await ContactenService.GetContacten();
+        // if (contacten != null)
+        //     Contacten = contacten.ToList();
+        // else
+        //     boodschap = " Database error... ";
     }
 }

@@ -1,0 +1,56 @@
+﻿@page "/contactengrid"
+
+<h3>Contactenlijst</h3>
+
+@if (totaalContacten > 0)
+{
+    <QuickGrid ItemsProvider="LoadContacten" TGridItem="Contact" Virtualize="true" Pagination="pagination">
+        <TemplateColumn SortBy="GridSort<Contact>.ByAscending(p => p.ContactId)" Title="Id">
+            <a href="@($"/contactdetail/{context.ContactId}")">@context.ContactId</a>
+        </TemplateColumn>
+        <PropertyColumn Property="@(c => c.Voornaam)" Sortable="true" />
+        <PropertyColumn Property="@(c => c.Naam)" Sortable="true" />
+        <PropertyColumn Property="@(c => c. Email)" Sortable="true" />
+        <PropertyColumn Property="@(c => c.Postcode + " " + c.Gemeente)" Sortable="true" Title="Woonplaats"/>
+        <TemplateColumn >
+            <a href ="@($"/editcontact/{context.ContactId}")">Edit</a> |
+            <a href ="@($"/contactdetail/{context.ContactId}")">Details</a>
+        </TemplateColumn>
+    </QuickGrid>
+    <Paginator State="pagination" />
+}
+else if (totaalContacten == 0)
+{
+    <p>No data found...</p>
+}
+else
+{
+    <p>Retrieving data...</p>
+}
+
+<a href="/editcontact" class ="btn btn-primary">Create</a>
+
+@code {
+    [Inject]
+    public ContactenService ContactenService { get; set; }
+    // private string boodschap = "Retrieving data...";
+    // public IQueryable<Contact> Contacten { get; set; }
+    private int totaalContacten = -1;
+    public ICollection<Contact> Contacten { get; set; }
+
+    private async ValueTask<GridItemsProviderResult<Contact>> LoadContacten(GridItemsProviderRequest<Contact> request)
+    {
+        var aantalContacten = Math.Min(request.Count ?? 0, totaalContacten - request.StartIndex);
+        var contacten = await ContactenService.GetContactenSubset(request.StartIndex, aantalContacten);
+        return GridItemsProviderResult.From<Contact>(items: contacten.ToList(), totalItemCount: totaalContacten);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // var contacten = await ContactenService.GetContacten();
+        // if (contacten != null) Contacten = contacten.AsQueryable();
+        // else boodschap = "Database error...";
+        totaalContacten = (await ContactenService.GetAantalContacten());
+    }
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 16 };
+}

@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "qCyg6ydHmLU=",
+  "dgSpecHash": "kYmVj8t3yQs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
+  "projectFilePath": "C:\\Users\\marti\\source\\repos\\DOTNET\\Contacten\\Contacten.Web\\Contacten.Web\\Contacten.Web.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.10\\microsoft.aspnetcore.components.webassembly.10.0.10.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.10\\microsoft.aspnetcore.components.webassembly.server.10.0.10.nupkg.sha512",
-    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.10\\microsoft.jsinterop.webassembly.10.0.10.nupkg.sha512"
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\10.0.11\\microsoft.aspnetcore.components.quickgrid.10.0.11.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.10\\microsoft.aspnetcore.components.webassembly.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.10\\microsoft.aspnetcore.components.webassembly.server.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.10\\microsoft.jsinterop.webassembly.10.0.10.nupkg.sha512"
   ],
   "logs": []
 }

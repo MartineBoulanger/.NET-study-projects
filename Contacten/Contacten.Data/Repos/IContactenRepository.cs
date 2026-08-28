@@ -9,5 +9,7 @@ namespace Contacten.Data.Repos
         Task<Contact> AddContact(Contact contact);
         Task<Contact> UpdateContact(Contact contact);
         Task<Contact> DeleteContact(int contactId);
+        Task<int> GetAantalContacten();
+        Task<IEnumerable<Contact>> GetContactenSubset(int from, int number);
     }
 }
