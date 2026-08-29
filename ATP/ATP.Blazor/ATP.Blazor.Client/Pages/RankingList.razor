@@ -1,0 +1,43 @@
+﻿@page "/ranking-list"
+@inject PlayersService playerService
+@inject NavigationManager navManager
+
+<PageTitle>Ranking List</PageTitle>
+
+<h1>Ranking List</h1>
+
+@if (Players != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Player</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var player in Players)
+            {
+                <tr>
+                    <td><a href="/ranking-list/edit/@player.PlayerId" class="btn btn-primary">Edit</a></td>
+                    <td>@player.Name (@player.CountryCode)</td>
+                    <td>@player.Points</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Players is null) {
+    <p>Retrieving players...</p>
+}
+else
+{
+    <p>Database error...</p>
+}
+
+@code {
+    public IEnumerable<Player>? Players { get; set; }
+
+    protected override async Task OnInitializedAsync() { Players = await playerService.GetPlayersAsync(); }
+}

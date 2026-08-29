@@ -1,0 +1,45 @@
+﻿@page "/weeks-on-one"
+@inject PlayersService playersService
+
+<PageTitle>Number Ones</PageTitle>
+
+<h1>Number Ones List</h1>
+<button class="btn-link btn-primary">Sort on weeks</button>
+<button class="btn-link btn-primary">Sort on date</button>
+
+@if (Players != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#Weeks</th>
+                <th>Player</th>
+                <th>First on One</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var player in Players)
+            {
+                <tr>
+                    <td>@player.WeeksNumberOne</td>
+                    <td>@player.Name (@player.CountryCode)</td>
+                    <td>@player.FirstOnOne</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Players is null)
+{
+    <p>Retrieving number one players...</p>
+}
+else
+{
+    <p>Database error...</p>
+}
+
+@code {
+    public IEnumerable<Player>? Players { get; set; }
+
+    protected override async Task OnInitializedAsync() { Players = await playersService.GetPlayersOnOneAsync(); }
+}

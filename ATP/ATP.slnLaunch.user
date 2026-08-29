@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "localhost",
+    "Projects": [
+      {
+        "Path": "ATP.API\\ATP.API.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "ATP.Blazor\\ATP.Blazor\\ATP.Blazor.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

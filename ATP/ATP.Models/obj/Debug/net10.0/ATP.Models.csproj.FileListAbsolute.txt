@@ -1,0 +1,12 @@
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\bin\Debug\net10.0\ATP.Models.deps.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\bin\Debug\net10.0\ATP.Models.dll
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\bin\Debug\net10.0\ATP.Models.pdb
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.AssemblyInfoInputs.cache
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.AssemblyInfo.cs
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.csproj.CoreCompileInputs.cache
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.sourcelink.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.dll
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\refint\ATP.Models.dll
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ATP.Models.pdb
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Models\obj\Debug\net10.0\ref\ATP.Models.dll

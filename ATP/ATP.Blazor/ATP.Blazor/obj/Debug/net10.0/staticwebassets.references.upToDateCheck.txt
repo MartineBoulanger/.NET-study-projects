@@ -1,0 +1,8 @@
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\obj\Debug\net10.0\staticwebassets.build.json

@@ -1,0 +1,13 @@
+@baseUrl = https://localhost:5000
+
+### get all players
+GET {{baseUrl}}/players
+Accept: application/json
+
+### get 1 player
+GET {{baseUrl}}/players/1
+Accept: application/json
+
+### get players on one
+GET {{baseUrl}}/playersonone
+Accept: application/json

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ATP.API/ATP.API.csproj" />
+  <Project Path="ATP.Blazor/ATP.Blazor.Client/ATP.Blazor.Client.csproj" />
+  <Project Path="ATP.Blazor/ATP.Blazor/ATP.Blazor.csproj" />
+  <Project Path="ATP.Models/ATP.Models.csproj" />
+</Solution>

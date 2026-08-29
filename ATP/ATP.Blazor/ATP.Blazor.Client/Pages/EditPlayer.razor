@@ -1,0 +1,47 @@
+﻿@page "/ranking-list/edit/{id:int}"
+@inject PlayersService playersService
+@inject NavigationManager navManager
+
+<PageTitle>Edit Player</PageTitle>
+
+<h1>Edit Player</h1>
+
+@if (Player != null)
+{
+    <EditForm Model="Player" OnValidSubmit="UpdatePlayer">
+        <DataAnnotationsValidator />
+
+        <div class="mb-3">
+            <label class="form-label">Player</label>
+
+            <div>
+                @Player.Name (@Player.CountryCode)
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="points" class="form-label">
+                Points
+            </label>
+
+            <InputNumber id="points"  class="form-control" @bind-Value="Player.Points" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a class="btn btn-destructive ms-2" href="/ranking-list">Cancel</a>
+    </EditForm>
+}
+
+@code {
+    public Player Player { get; set; } = new Player();
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected async override Task OnParametersSetAsync() { Player = await playersService.GetPlayerAsync(Id); }
+    private async void UpdatePlayer()
+    {
+        await playersService.UpdatePlayerAsync(Player);
+        navManager.NavigateTo("/ranking-list");
+    }
+}
