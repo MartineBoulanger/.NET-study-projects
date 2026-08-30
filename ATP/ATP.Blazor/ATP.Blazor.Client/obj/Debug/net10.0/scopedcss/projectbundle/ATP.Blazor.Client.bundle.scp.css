@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 
-main[b-vztq8i1nh3] {
+.main[b-vztq8i1nh3] {
     flex: 1;
 }
 
@@ -202,4 +202,16 @@ main[b-vztq8i1nh3] {
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }
+}
+/* /Pages/EditPlayer.razor.rz.scp.css */
+/* CSS for EditPlayer component */
+.edit-title[b-dmat5trvx4] {
+    margin-bottom: 2rem;
+}
+.form-row[b-dmat5trvx4] {
+    width: 360px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 0.875rem;
 }

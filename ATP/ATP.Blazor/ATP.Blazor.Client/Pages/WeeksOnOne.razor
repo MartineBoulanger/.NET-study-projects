@@ -1,45 +1,51 @@
 ﻿@page "/weeks-on-one"
 @inject PlayersService playersService
 
-<PageTitle>Number Ones</PageTitle>
+<PageTitle>Number Ones List</PageTitle>
 
-<h1>Number Ones List</h1>
-<button class="btn-link btn-primary">Sort on weeks</button>
-<button class="btn-link btn-primary">Sort on date</button>
+<h1 class="mb-3">Number Ones List</h1>
+
+<div class="mb-3">
+    <button class="btn btn-primary mr-3" @onclick="SortOnWeeks">Sort on weeks</button>
+    <button class="btn btn-primary" @onclick="SortOnDate">Sort on date</button>
+</div>
 
 @if (Players != null)
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#Weeks</th>
-                <th>Player</th>
-                <th>First on One</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var player in Players)
-            {
-                <tr>
-                    <td>@player.WeeksNumberOne</td>
-                    <td>@player.Name (@player.CountryCode)</td>
-                    <td>@player.FirstOnOne</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else if (Players is null)
-{
-    <p>Retrieving number one players...</p>
+    <QuickGrid Items="Players" TGridItem="Player" Virtualize="true" Pagination="pagination" class="table">
+        <PropertyColumn Property="@(p => p.WeeksNumberOne)" Title="#Weeks" Sortable="false" />
+        <PropertyColumn Property="@(p => p.Name + " " + $"({p.CountryCode})")" Title="Player" Sortable="false"  />
+        <PropertyColumn Property="@(p => p.FirstOnOne.ToString())" Title="First on One" Sortable="false" />
+    </QuickGrid>
+    <Paginator State="pagination" />
 }
 else
 {
-    <p>Database error...</p>
+    <p class="if(Players is null ? text-bg-info : text-bg-danger) p-3">@boodschap</p>
 }
 
 @code {
-    public IEnumerable<Player>? Players { get; set; }
+    public IQueryable<Player>? Players { get; set; }
+    private string boodschap = "Retrieving number one players...";
 
-    protected override async Task OnInitializedAsync() { Players = await playersService.GetPlayersOnOneAsync(); }
+    protected override async Task OnInitializedAsync()
+    {
+        var players = await playersService.GetPlayersOnOneAsync();
+        if (players != null)
+            Players = players.AsQueryable();
+        else
+            boodschap = "Database error...";
+    }
+
+    private new PaginationState pagination = new PaginationState { ItemsPerPage = 15 };
+
+    private void SortOnWeeks()
+    {
+        Players = Players?.OrderByDescending(p => p.WeeksNumberOne).ToList().AsQueryable();
+    }
+
+    private void SortOnDate()
+    {
+        Players = Players?.OrderBy(p => p.FirstOnOne).ToList().AsQueryable();
+    }
 }

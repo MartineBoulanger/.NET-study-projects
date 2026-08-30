@@ -17,7 +17,7 @@ namespace ATP.API.Repos
             var response = await context.Players.FirstOrDefaultAsync(p => p.PlayerId == player.PlayerId);
             if (response != null)
             {
-                response.Points = player.Points;
+                response.Points = player.Points > 0 ? player.Points : 0; // geen negatieve punten
                 await context.SaveChangesAsync();
                 return response;
             }

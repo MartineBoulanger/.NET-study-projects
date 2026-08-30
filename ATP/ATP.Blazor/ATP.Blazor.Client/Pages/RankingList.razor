@@ -1,43 +1,38 @@
 ﻿@page "/ranking-list"
 @inject PlayersService playerService
-@inject NavigationManager navManager
 
 <PageTitle>Ranking List</PageTitle>
 
-<h1>Ranking List</h1>
+<h1 class="mb-3">Ranking List</h1>
 
 @if (Players != null)
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Player</th>
-                <th>Points</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var player in Players)
-            {
-                <tr>
-                    <td><a href="/ranking-list/edit/@player.PlayerId" class="btn btn-primary">Edit</a></td>
-                    <td>@player.Name (@player.CountryCode)</td>
-                    <td>@player.Points</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else if (Players is null) {
-    <p>Retrieving players...</p>
+    <QuickGrid Items="Players" TGridItem="Player" Virtualize="true" Pagination="pagination" class="table">
+        <TemplateColumn>
+            <a href="@($"/players/edit/{@context.PlayerId}")" class="btn btn-primary mb-0.5">Edit</a>
+        </TemplateColumn>
+        <PropertyColumn Property="@(p => p.Name + " " + $"({p.CountryCode})")" Sortable="false" Title="Player" />
+        <PropertyColumn Property="@(p => p.Points)" Sortable="false" />
+    </QuickGrid>
+    <Paginator State="pagination" />
 }
 else
 {
-    <p>Database error...</p>
+    <p class="if(Players is null ? text-bg-info : text-bg-danger) p-3">@boodschap</p>
 }
 
 @code {
-    public IEnumerable<Player>? Players { get; set; }
+    public IQueryable<Player>? Players { get; set; }
+    private string boodschap = "Retrieving players...";
 
-    protected override async Task OnInitializedAsync() { Players = await playerService.GetPlayersAsync(); }
+    protected override async Task OnInitializedAsync()
+    {
+        var players = await playerService.GetPlayersAsync();
+        if (players != null)
+            Players = players.AsQueryable();
+        else
+            boodschap = "Database error...";
+    }
+
+    private new PaginationState pagination = new PaginationState { ItemsPerPage = 10 };
 }

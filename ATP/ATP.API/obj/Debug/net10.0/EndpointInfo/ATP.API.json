@@ -158,6 +158,8 @@
             "type": "string"
           },
           "points": {
+            "maximum": 2147483647,
+            "minimum": 0,
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
               "integer",

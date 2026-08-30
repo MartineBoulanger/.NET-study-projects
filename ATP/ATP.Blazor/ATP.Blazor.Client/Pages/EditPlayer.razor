@@ -1,47 +1,61 @@
-﻿@page "/ranking-list/edit/{id:int}"
+﻿@page "/players/edit/{id:int}"
 @inject PlayersService playersService
 @inject NavigationManager navManager
 
 <PageTitle>Edit Player</PageTitle>
 
-<h1>Edit Player</h1>
-
 @if (Player != null)
 {
+    <h1 class="edit-title">Edit @Player.Name</h1>
+
     <EditForm Model="Player" OnValidSubmit="UpdatePlayer">
         <DataAnnotationsValidator />
 
-        <div class="mb-3">
+        <div class="form-row">
             <label class="form-label">Player</label>
-
             <div>
                 @Player.Name (@Player.CountryCode)
             </div>
         </div>
 
-        <div class="mb-3">
+        <div class="form-row">
             <label for="points" class="form-label">
                 Points
             </label>
-
-            <InputNumber id="points"  class="form-control" @bind-Value="Player.Points" />
+            <div>
+                <InputNumber id="points" class="form-control" @bind-Value="Player.Points" />
+                <ValidationMessage For="@(() => Player.Points)" />
+            </div>
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>
-        <a class="btn btn-destructive ms-2" href="/ranking-list">Cancel</a>
+        <a class="btn btn-danger ms-1" href="/ranking-list">Cancel</a>
     </EditForm>
+}
+else
+{
+    <p class="if(Player is null ? text-bg-info : text-bg-danger) p-3">@boodschap</p>
 }
 
 @code {
     public Player Player { get; set; } = new Player();
+    private string boodschap = "Retrieving player data...";
 
     [Parameter]
     public int Id { get; set; }
 
-    protected async override Task OnParametersSetAsync() { Player = await playersService.GetPlayerAsync(Id); }
+    protected async override Task OnParametersSetAsync()
+    {
+        var player = await playersService.GetPlayerAsync(Id);
+        if (player != null)
+            Player = player;
+        else
+            boodschap = "Database error...";
+    }
+
     private async void UpdatePlayer()
     {
         await playersService.UpdatePlayerAsync(Player);
-        navManager.NavigateTo("/ranking-list");
+        navManager.NavigateTo("/ranking-list"); // na het bewerken worden doorgestuurd naar de ranking lijst
     }
 }

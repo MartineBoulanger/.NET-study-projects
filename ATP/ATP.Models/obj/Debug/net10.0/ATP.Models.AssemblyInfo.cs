@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ATP.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b21f85b775b35a4e4056d378fafcebe8d8b65800")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bdb9d0041c311c536d7e2f136510ea3d0f014a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ATP.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ATP.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

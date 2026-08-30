@@ -103,4 +103,7 @@ C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\r
 C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\ATP.Blazor.pdb
 C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\ATP.Blazor.genruntimeconfig.cache
 C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\ref\ATP.Blazor.dll
-C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\compressed\9daas3dvtv-{0}-w9os521gp5-w9os521gp5.gz
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\bin\Debug\net10.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\compressed\unlu0xluo6-{0}-eu7w3d5g1a-eu7w3d5g1a.gz
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\compressed\1x45lb54o8-{0}-boiwgh0w5b-boiwgh0w5b.gz
+C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor\obj\Debug\net10.0\compressed\9daas3dvtv-{0}-ucm8qhz9o3-ucm8qhz9o3.gz

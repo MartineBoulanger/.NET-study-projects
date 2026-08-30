@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Oy3rWIkSxO4=",
+  "dgSpecHash": "xEfmSQ8TG04=",
   "success": true,
   "projectFilePath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor\\ATP.Blazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
+    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\10.0.11\\microsoft.aspnetcore.components.quickgrid.10.0.11.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.11\\microsoft.aspnetcore.components.webassembly.10.0.11.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.11\\microsoft.aspnetcore.components.webassembly.server.10.0.11.nupkg.sha512",
     "C:\\Users\\marti\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.11\\microsoft.jsinterop.webassembly.10.0.11.nupkg.sha512"

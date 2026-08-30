@@ -1,0 +1,11 @@
+/* CSS for EditPlayer component */
+.edit-title {
+    margin-bottom: 2rem;
+}
+.form-row {
+    width: 360px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 0.875rem;
+}
