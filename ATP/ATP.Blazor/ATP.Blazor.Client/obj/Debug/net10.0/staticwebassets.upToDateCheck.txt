@@ -1,4 +1,4 @@
-C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\wwwroot\appsettings.Development.json
-C:\Users\marti\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\wwwroot\appsettings.json
+C:\Users\cursist\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\wwwroot\appsettings.Development.json
+C:\Users\cursist\source\repos\DOTNET\ATP\ATP.Blazor\ATP.Blazor.Client\wwwroot\appsettings.json
 wwwroot\appsettings.Development.json
 wwwroot\appsettings.json

@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "xEfmSQ8TG04=",
+  "dgSpecHash": "Poec9BQzzzQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor\\ATP.Blazor.csproj",
+  "projectFilePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor\\ATP.Blazor.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\10.0.11\\microsoft.aspnetcore.components.quickgrid.10.0.11.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.11\\microsoft.aspnetcore.components.webassembly.10.0.11.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.11\\microsoft.aspnetcore.components.webassembly.server.10.0.11.nupkg.sha512",
-    "C:\\Users\\marti\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.11\\microsoft.jsinterop.webassembly.10.0.11.nupkg.sha512"
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.10\\microsoft.aspnetcore.app.internal.assets.10.0.10.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\10.0.11\\microsoft.aspnetcore.components.quickgrid.10.0.11.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.11\\microsoft.aspnetcore.components.webassembly.10.0.11.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.11\\microsoft.aspnetcore.components.webassembly.server.10.0.11.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.jsinterop.webassembly\\10.0.11\\microsoft.jsinterop.webassembly.10.0.11.nupkg.sha512"
   ],
   "logs": []
 }

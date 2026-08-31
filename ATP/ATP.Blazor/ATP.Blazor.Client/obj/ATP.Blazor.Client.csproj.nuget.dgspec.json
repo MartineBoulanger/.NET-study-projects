@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj": {}
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj": {
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj",
+        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj",
         "projectName": "ATP.Blazor.Client",
-        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\obj\\",
+        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\ATP.Blazor.Client.csproj",
+        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Blazor\\ATP.Blazor.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -34,8 +34,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj": {
-                "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj"
+              "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj": {
+                "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj"
               }
             }
           }
@@ -389,20 +389,20 @@
         }
       }
     },
-    "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj": {
+    "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj",
+        "projectUniqueName": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj",
         "projectName": "ATP.Models",
-        "projectPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\source\\repos\\DOTNET\\ATP\\ATP.Models\\obj\\",
+        "projectPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Models\\ATP.Models.csproj",
+        "packagesPath": "C:\\Users\\cursist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\ATP\\ATP.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cursist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
