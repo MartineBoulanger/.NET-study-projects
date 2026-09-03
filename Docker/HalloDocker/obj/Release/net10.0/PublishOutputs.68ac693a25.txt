@@ -1,0 +1,5 @@
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Release\net10.0\publish\HalloDocker.exe
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Release\net10.0\publish\HalloDocker.dll
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Release\net10.0\publish\HalloDocker.deps.json
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Release\net10.0\publish\HalloDocker.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Release\net10.0\publish\HalloDocker.pdb

@@ -1,0 +1,15 @@
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Debug\net10.0\HalloDocker.exe
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Debug\net10.0\HalloDocker.deps.json
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Debug\net10.0\HalloDocker.runtimeconfig.json
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Debug\net10.0\HalloDocker.dll
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\bin\Debug\net10.0\HalloDocker.pdb
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.AssemblyInfoInputs.cache
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.AssemblyInfo.cs
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.csproj.CoreCompileInputs.cache
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.sourcelink.json
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.dll
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\refint\HalloDocker.dll
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.pdb
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\HalloDocker.genruntimeconfig.cache
+C:\Users\cursist\source\repos\DOTNET\Docker\HalloDocker\obj\Debug\net10.0\ref\HalloDocker.dll
