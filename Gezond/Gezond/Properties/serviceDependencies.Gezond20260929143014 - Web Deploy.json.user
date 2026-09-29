@@ -1,0 +1,44 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2026-09-29T12:32:48.8348843Z"
+    },
+    "storage1": {
+      "restored": true,
+      "restoreTime": "2026-09-29T12:34:03.6763796Z"
+    }
+  },
+  "parameters": {
+    "storage1.serviceConnectorResourceGroupName": {
+      "Name": "storage1.serviceConnectorResourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "gezondgroep"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "1ac136b5-4c9f-44f5-b859-46ab7ec3bfa2"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "gezondgroep"
+    },
+    "storage1.resourceGroupName": {
+      "Name": "storage1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "gezondgroep"
+    },
+    "storage1.subscriptionId": {
+      "Name": "storage1.subscriptionId",
+      "Type": "subscription",
+      "Value": "1ac136b5-4c9f-44f5-b859-46ab7ec3bfa2"
+    },
+    "mssql1.serviceConnectorResourceGroupName": {
+      "Name": "mssql1.serviceConnectorResourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "gezondgroep"
+    }
+  }
+}

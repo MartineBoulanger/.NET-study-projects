@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "GezondeFunctions": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 1433",
+      "launchBrowser": false
+    }
+  }
+}
