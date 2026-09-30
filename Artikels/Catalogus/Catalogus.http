@@ -1,0 +1,5 @@
+@Catalogus_HostAddress = http://localhost:5000
+
+POST {{Catalogus_HostAddress}}/artikels
+Content-Type: application/json
+"ui"

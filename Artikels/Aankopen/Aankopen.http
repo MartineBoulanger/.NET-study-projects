@@ -1,0 +1,5 @@
+@Aankopen_HostAddress = http://localhost:5069
+
+POST {{Aankopen_HostAddress}}/aankopen
+Accept: application/json
+{ "Id": 1, "ArtikelId" : 1, "Datum" : "2020-05-13", "Aantal" : 5, "Prijs" : 1.2m }

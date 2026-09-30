@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Aankopen.Controllers.AankoopController",
+    "Method": "Post",
+    "RelativePath": "aankopen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aankoop",
+        "Type": "Aankopen.Models.Aankoop",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

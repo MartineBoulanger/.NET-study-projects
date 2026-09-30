@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Aankopen/Aankopen.csproj" />
+  <Project Path="Catalogus/Catalogus.csproj" />
+  <Project Path="Voorraad/Voorraad.csproj" />
+</Solution>

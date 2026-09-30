@@ -1,0 +1,6 @@
+@Voorraad_HostAddress = http://localhost:5001
+
+GET {{Voorraad_HostAddress}}/artikels/
+Accept: application/json
+
+###
