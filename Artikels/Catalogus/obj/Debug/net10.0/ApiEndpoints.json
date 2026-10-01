@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "Catalogus.Controllers.ArtikelController",
+    "Method": "Post",
+    "RelativePath": "artikels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "naam",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Catalogus.Controllers.ArtikelController",
+    "Method": "FindAll",
+    "RelativePath": "artikels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
