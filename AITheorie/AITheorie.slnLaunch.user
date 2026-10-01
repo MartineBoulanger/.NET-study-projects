@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Beide",
+    "Projects": [
+      {
+        "Path": "AIConsole\\AIConsole.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "MijnMCPServer\\MijnMCPServer.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

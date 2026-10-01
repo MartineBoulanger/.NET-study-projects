@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "etfuTdFarik=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cursist\\source\\repos\\DOTNET\\AITheorie\\MijnMCPServer\\MijnMCPServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\10.8.3\\microsoft.extensions.ai.abstractions.10.8.3.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\modelcontextprotocol\\2.2.0\\modelcontextprotocol.2.2.0.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\modelcontextprotocol.aspnetcore\\2.2.0\\modelcontextprotocol.aspnetcore.2.2.0.nupkg.sha512",
+    "C:\\Users\\cursist\\.nuget\\packages\\modelcontextprotocol.core\\2.2.0\\modelcontextprotocol.core.2.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

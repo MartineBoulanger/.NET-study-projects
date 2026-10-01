@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="AIConsole/AIConsole.csproj" />
+  <Project Path="MijnMCPServer/MijnMCPServer.csproj" Id="96c29079-59e5-4d06-9300-09c2894a2d67" />
+</Solution>

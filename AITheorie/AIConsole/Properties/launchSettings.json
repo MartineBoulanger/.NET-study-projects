@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AIConsole": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "mijnKey": "ElhiG7YtLkVH2YR2ecEryMKlkVg0idmt247evVpIT8wqT0o44lPQJQQJ99CJAC5T7U2XJ3w3AAAAACOG8VKb"
+      }
+    }
+  }
+}
